@@ -1,10 +1,26 @@
 var express = require('express');
 var router = express.Router();
+var fs = require('fs');
 
 router.get('/', function (req, res) {
-  
+
   res.render('index');
 
+});
+
+router.get('/content/:url', function (req, res) {
+  var url = req.params["url"];
+  var content;
+
+  fs.readFile(__dirname + '/content/' + url + '.html', function(err, data) {
+    if (err) {
+      throw err;
+    }
+
+    content = data.toString();
+
+    res.render('content', { content: content });
+  });
 });
 
 
