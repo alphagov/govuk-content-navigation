@@ -1,5 +1,17 @@
 {% extends "layout.html" %}
 
+{% block head %}
+  {% include "includes/head.html" %}
+
+  <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/static-8a12287bbfbbd5578bce466aa22d77dd8767752f48ca98bf3c281463c25a240a.css">
+  <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/frontend/application-704a08450e1cb44cc56c3de0a7ff428210953c963a37eadd223c48fc04230ca9.css">
+  <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/government/assets/frontend/base-c6b8b520d24a2faa79a3ce3212c74cebdc70f6bcabde4fa303fc419f488a972d.css">
+{% endblock %}
+
 {% block content %}
-  {{ content | safe }}
+  <div id="wrapper">
+    <div class="grid-row">
+      {{ content | safe }}
+    </div>
+  </div>
 {% endblock %}
