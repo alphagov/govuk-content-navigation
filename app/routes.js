@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
+var path = require('path');
 
 router.get('/', function (req, res) {
 
@@ -11,8 +12,19 @@ router.get('/', function (req, res) {
 router.get('/content/:url', function (req, res) {
   var url = req.params["url"];
   var content;
+  directory = __dirname + '/content/';
+  contentFile = url + '.html';
 
-  fs.readFile(__dirname + '/content/' + url + '.html', function(err, data) {
+  formatsArray = getDirectories(directory);
+
+  for (var format in formatsArray) {
+    filePath = directory + formatsArray[format] + '/' + contentFile;
+    if (fileExists(filePath)) {
+      filename = filePath;
+    }
+  }
+
+  fs.readFile(filename, function(err, data) {
     if (err) {
       throw err;
     }
@@ -22,7 +34,6 @@ router.get('/content/:url', function (req, res) {
     res.render('content', { content: content });
   });
 });
-
 
 // Example routes - feel free to delete these
 
@@ -54,6 +65,23 @@ router.get('/examples/over-18', function (req, res) {
   }
 
 });
+
+function fileExists(filePath) {
+  try
+  {
+    return fs.statSync(filePath).isFile();
+  }
+  catch (err)
+  {
+    return false;
+  }
+}
+
+function getDirectories(srcpath) {
+  return fs.readdirSync(srcpath).filter(function(file) {
+    return fs.statSync(path.join(srcpath, file)).isDirectory();
+  });
+}
 
 // add your routes here
 
