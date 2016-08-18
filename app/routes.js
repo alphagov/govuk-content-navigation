@@ -24,7 +24,6 @@ router.get('/:url', function (req, res) {
                   'whitehall/publication'];
 
   //formatsArray = getDirectories(directory);
-  console.log('formatsArray', formatsArray);
 
   for (var format in formatsArray) {
     filePath = directory + formatsArray[format] + '/' + contentFile;
