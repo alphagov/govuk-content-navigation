@@ -9,13 +9,22 @@ router.get('/', function (req, res) {
 
 });
 
-router.get('/content/:url', function (req, res) {
+router.get('/:url', function (req, res) {
   var url = req.params["url"];
   var content;
   directory = __dirname + '/content/';
   contentFile = url + '.html';
 
-  formatsArray = getDirectories(directory);
+  formatsArray = ['answer',
+                  'detailed_guidance',
+                  'statistics_anouncement',
+                  'transaction',
+                  'whitehall/consultation',
+                  'whitehall/news_article',
+                  'whitehall/publication'];
+
+  //formatsArray = getDirectories(directory);
+  console.log('formatsArray', formatsArray);
 
   for (var format in formatsArray) {
     filePath = directory + formatsArray[format] + '/' + contentFile;
