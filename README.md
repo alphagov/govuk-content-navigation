@@ -1,44 +1,32 @@
-# GOV.UK Prototype kit
+# GOV.UK Navigation Prototype 2016
 
-## News
+This app serves up prototype navigation flows for the work-in-progress GOV.UK navigation.
 
-**Upgrading from version 1 to 2:** the latest version of the kit (2.0.0 and later) is not compatible with previous versions. If you update your old prototypes you'll need to [convert them as well](https://github.com/alphagov/govuk_prototype_kit/blob/master/docs/updating-the-kit.md).
+See also the previous prototype: [https://github.com/alphagov/govuk-navigation-prototype](govuk-navigation-prototype).
 
-## About the prototype kit
+## Nomenclature
 
-The prototype kit provides a simple way to make interactive prototypes that look like pages on GOV.UK. These prototypes can be used to show ideas to people you work with, and to do user research.
+- **Taxon**: a single node within the taxonomy
 
-Read the [project principles](docs/principles.md).
+## Technical documentation
+This is a node app built using the govuk_prototype_kit. 
 
-## Security
+The data for the prototype comes from a cached JSON file that is based on data from the content store and rummager.
+You can generate this with `bundle exec rake`.
 
-If you publish your prototypes online, they **must** be protected by a [username and password](docs/guides/publishing-on-heroku.md). This is to prevent members of the public finding prototypes and thinking they are real services.
+The main part of the content pages are HTML taken from the live site.
 
-You must protect user privacy at all times, even when using prototypes. Prototypes made with the kit look like GOV.UK, but do not have the same security provisions. Always make sure you are handling user data appropriately. 
+### Dependencies
 
-## Installation instructions
+- [alphagov/content-store](Content store) - provides taxon data
+- [alphagov/rummager](Rummager) - provides data about pages tagged to the new taxonomy
 
-- [Installation guide for new users (non technical)](docs/install/introduction.md)
-- [Installation guide for developers (technical)](docs/developer-install-instructions.md)
+### Running the application
 
-## Guides
+Run `npm start`
 
-1. [Setting up git](docs/guides/setting-up-git.md)
-2. [Publishing on the web (Heroku)](docs/guides/publishing-on-heroku.md)
-3. [Using GOV.UK Verify](docs/guides/using-verify.md)
+Open the app at http://localhost:3000/
 
-## Other documentation
+## Licence
 
-- [Prototype kit principles](docs/principles.md)
-- [Making pages](docs/making-pages.md)
-- [Writing CSS](docs/writing-css.md)
-- [Updating the kit to the latest version](docs/updating-the-kit.md)
-- [Tips and tricks](docs/tips-and-tricks.md)
-- [Creating routes (server-side programming)](docs/creating-routes.md)
-
-## Community
-
-We have two Slack channels for the Prototype kit. You'll need a government email address to join them.
-
-* [Slack channel for users of the prototype kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit/)
-* [Slack channel for developers of the prototype kit](https://ukgovernmentdigital.slack.com/messages/prototype-kit-dev/)
+[MIT License](LICENCE)
