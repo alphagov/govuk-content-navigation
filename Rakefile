@@ -7,7 +7,6 @@ require 'set'
 require 'json'
 
 
-
 task default: [:generate_json]
 
 task :generate_json do
@@ -37,13 +36,14 @@ task :generate_json do
     documents_in_taxon[taxon] = get_documents_by_taxon(taxon_information[taxon]['content_id'])
   end
 
-  pp documents_in_taxon
+  #pp documents_in_taxon
 
   puts(
     JSON.pretty_generate(
       "taxons_for_content" => taxons_for_content,
-"ancestors_of_taxon" => ancestors_of_taxon,
-"taxon_information" => taxon_information
+      "ancestors_of_taxon" => ancestors_of_taxon,
+      "taxon_information" => taxon_information,
+      "documents_in_taxon" => documents_in_taxon
     )
   )
 

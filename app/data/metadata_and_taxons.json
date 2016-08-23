@@ -1,0 +1,190 @@
+{
+  "taxons_for_content": {
+    "complain-ofsted-report": [
+      "/alpha-taxonomy/inspections"
+    ],
+    "guidance/being-inspected-as-a-childrens-centre-guidance-for-providers": [
+
+    ],
+    "government/statistics/announcements/childcare-providers-and-inspections": [
+      "/alpha-taxonomy/inspections"
+    ],
+    "government/consultations/better-inspection-for-all": [
+      "/alpha-taxonomy/inspections"
+    ],
+    "government/news/consultation-on-radical-changes-to-inspection": [
+      "/alpha-taxonomy/inspections"
+    ],
+    "government/publications/early-years-newsletter-2015": [
+
+    ],
+    "government/statistics/official-statistics-early-years-and-childcare-registered-providers-inspections-and-outcomes": [
+      "/alpha-taxonomy/inspections"
+    ]
+  },
+  "ancestors_of_taxon": {
+    "/alpha-taxonomy/inspections": [
+      {
+        "analytics_identifier": null,
+        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/childcare-and-early-years",
+        "base_path": "/alpha-taxonomy/childcare-and-early-years",
+        "content_id": "502eac33-76ad-499e-b15f-a1544be548c5",
+        "description": null,
+        "document_type": "taxon",
+        "locale": "en",
+        "public_updated_at": "2016-04-15T12:44:37Z",
+        "schema_name": "taxon",
+        "title": "Childcare and early years",
+        "web_url": "https://www.gov.uk/alpha-taxonomy/childcare-and-early-years",
+        "links": {
+          "parent": [
+            {
+              "analytics_identifier": null,
+              "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/education",
+              "base_path": "/alpha-taxonomy/education",
+              "content_id": "9224b0fb-0701-4fb3-a563-1fb744e60359",
+              "description": null,
+              "document_type": "taxon",
+              "locale": "en",
+              "public_updated_at": "2016-01-29T14:58:52Z",
+              "schema_name": "taxon",
+              "title": "Education",
+              "web_url": "https://www.gov.uk/alpha-taxonomy/education",
+              "links": {
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "taxon_information": {
+    "/alpha-taxonomy/inspections": {
+      "title": "Inspections",
+      "content_id": "e184c8d6-7142-4637-ae1e-3270247e0f4f"
+    }
+  },
+  "documents_in_taxon": {
+    "/alpha-taxonomy/inspections": {
+      "results": [
+        {
+          "title": "Find an Ofsted inspection report",
+          "description": "Search for Ofsted inspection reports for childminders and childcare providers, schools, colleges, further education providers, children and families services",
+          "link": "/find-ofsted-inspection-report",
+          "format": "transaction",
+          "public_timestamp": "2014-12-17T10:35:47+00:00",
+          "index": "mainstream",
+          "es_score": null,
+          "_id": "/find-ofsted-inspection-report",
+          "document_type": "edition"
+        },
+        {
+          "title": "School inspection handbook",
+          "description": "Guidance for inspecting schools under the common inspection framework, with a mythbuster document on common misconceptions.",
+          "link": "/government/publications/school-inspection-handbook-from-september-2015",
+          "format": "publication",
+          "public_timestamp": "2016-08-23T10:58:59.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/school-inspection-handbook-from-september-2015",
+          "document_type": "edition"
+        },
+        {
+          "title": "Common inspection framework: education, skills and early years from September 2015",
+          "description": "How Ofsted inspects maintained schools and academies, non-association independent schools, further education and skills provision and early years settings.",
+          "link": "/government/publications/common-inspection-framework-education-skills-and-early-years-from-september-2015",
+          "format": "publication",
+          "public_timestamp": "2015-08-28T10:30:12.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/common-inspection-framework-education-skills-and-early-years-from-september-2015",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years inspection handbook from September 2015",
+          "description": "Guidance for inspecting early years providers under the common inspection framework from September 2015.",
+          "link": "/government/publications/early-years-inspection-handbook-from-september-2015",
+          "format": "publication",
+          "public_timestamp": "2015-08-28T10:30:16.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/early-years-inspection-handbook-from-september-2015",
+          "document_type": "edition"
+        },
+        {
+          "title": "Being inspected as a childminder or childcare provider",
+          "description": "Find out when you'll be inspected by Ofsted, how to prepare, how you'll be inspected and how you'll be graded",
+          "link": "/ofsted-inspection-childcare-provider",
+          "format": "answer",
+          "public_timestamp": "2014-11-27T15:14:39+00:00",
+          "index": "mainstream",
+          "es_score": null,
+          "_id": "/ofsted-inspection-childcare-provider",
+          "document_type": "edition"
+        },
+        {
+          "title": "Inspecting early years providers: online self evaluation form",
+          "description": "Self evaluation form linked to the judgements that Ofsted will make at inspection.",
+          "link": "/government/publications/early-years-online-self-evaluation-form-sef-and-guidance-for-providers-delivering-the-early-years-foundation-stage",
+          "format": "publication",
+          "public_timestamp": "2015-09-24T14:28:15.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/early-years-online-self-evaluation-form-sef-and-guidance-for-providers-delivering-the-early-years-foundation-stage",
+          "document_type": "edition"
+        },
+        {
+          "title": "Disclosure and Barring Service (DBS) checks: childcare providers",
+          "description": "Ofsted’s position on Disclosure and Barring (DBS) checks for childcare providers who register with Ofsted.",
+          "link": "/government/publications/disclosure-and-barring-service-dbs-checks-for-childcare-providers-who-register-with-ofsted",
+          "format": "publication",
+          "public_timestamp": "2014-09-22T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/disclosure-and-barring-service-dbs-checks-for-childcare-providers-who-register-with-ofsted",
+          "document_type": "edition"
+        },
+        {
+          "title": "Inspecting safeguarding in early years, education and skills",
+          "description": "Guidance for Ofsted inspectors to use when inspecting safeguarding under the common inspection framework. ",
+          "link": "/government/publications/inspecting-safeguarding-in-early-years-education-and-skills-from-september-2015",
+          "format": "publication",
+          "public_timestamp": "2016-08-23T09:30:24.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/inspecting-safeguarding-in-early-years-education-and-skills-from-september-2015",
+          "document_type": "edition"
+        },
+        {
+          "title": "Changes to education inspection from September 2015",
+          "description": "Details of the changes to how Ofsted will inspect early years provision, schools and further education and skills from September 2015.",
+          "link": "/guidance/changes-to-education-inspection-from-september-2015",
+          "format": "detailed_guidance",
+          "public_timestamp": "2015-06-15T17:00:00.000+01:00",
+          "index": "detailed",
+          "es_score": null,
+          "_id": "/guidance/changes-to-education-inspection-from-september-2015",
+          "document_type": "edition"
+        },
+        {
+          "title": "Inspecting registered childcare providers: guidance for inspectors",
+          "description": "Guidance for Ofsted inspectors inspecting providers registered on the compulsory and voluntary parts of the Childcare Register.",
+          "link": "/government/publications/conducting-childcare-register-inspections",
+          "format": "publication",
+          "public_timestamp": "2014-08-20T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/conducting-childcare-register-inspections",
+          "document_type": "edition"
+        }
+      ],
+      "total": 52,
+      "start": 0,
+      "facets": {
+      },
+      "suggested_queries": [
+
+      ]
+    }
+  }
+}

@@ -1,7 +1,12 @@
 {% extends "layout.html" %}
 
+
 {% block content %}
+
   <div id="wrapper">
+    {% block breadcrumb %}
+      {% include '_breadcrumb.html' %}
+    {% endblock %}
     <div class="grid-row">
       {{ content | safe }}
     </div>
