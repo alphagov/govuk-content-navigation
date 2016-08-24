@@ -3,7 +3,7 @@
 
 {% block content %}
 
-  <div id="wrapper">
+  <div id="{% if whitehall %}whitehall-{% endif %}wrapper">
     {% block breadcrumb %}
       {% include '_breadcrumb.html' %}
     {% endblock %}

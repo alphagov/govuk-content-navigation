@@ -29,10 +29,20 @@ router.get(/\/.+/, function (req, res) {
     var filePath = file[0];
     return filePath;
   }).then(function(filePath) {
+
+    var format = filePath.match(/(answer|statistics_announcement)/);
+
+    var whitehall = false;
+    if (format == null) {
+      whitehall = true;
+    }
+
+    console.log("whitehall: "+whitehall);
+
     readFile(filePath).then( function(data) {
       content = data.toString();
       breadcrumb = getBreadcrumb(url);
-      res.render('content', { content: content, breadcrumb: breadcrumb });
+      res.render('content', { content: content, breadcrumb: breadcrumb, whitehall: whitehall });
     });
   });
 });
