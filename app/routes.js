@@ -23,12 +23,10 @@ router.get(/\/.+/, function (req, res) {
   var content;
   directory = __dirname + '/content/';
 
-
   var globPage = glob(directory + "/**/" + basename + ".html");
 
   var filePath = globPage.then(function (file){
     var filePath = file[0];
-    console.log('>>>>glob filePath', filePath);
     return filePath;
   }).then(function(filePath) {
     readFile(filePath).then( function(data) {
@@ -37,9 +35,6 @@ router.get(/\/.+/, function (req, res) {
       res.render('content', { content: content, breadcrumb: breadcrumb });
     });
   });
-
-
-
 });
 
 
@@ -54,16 +49,22 @@ function getMetadata() {
 
 function getBreadcrumb(page) {
   // Pick the first taxon to generate a breadcrumb from
-  taxonForPage = metadata['taxons_for_content'][page][0];
+  var taxonForPage = metadata['taxons_for_content'][page];
+
+  if(taxonForPage.length === 0) {
+    return null;
+  }
+
+  var firstTaxon = taxonForPage[0];
 
   taxonAncestors = [
     {
-      title: metadata['taxon_information'][taxonForPage]['title'],
-      basePath: taxonForPage,
+      title: metadata['taxon_information'][firstTaxon]['title'],
+      basePath: firstTaxon,
     }
   ];
 
-  taxonParents = metadata['ancestors_of_taxon'][taxonForPage];
+  taxonParents = metadata['ancestors_of_taxon'][firstTaxon];
 
   while (taxonParents && taxonParents.length > 0) {
     // Pick the first parent to use in the breadcrumb
