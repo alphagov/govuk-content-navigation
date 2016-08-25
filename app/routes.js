@@ -25,14 +25,17 @@ router.get(/\/.+/, function (req, res) {
 
   var globPage = glob(directory + "/**/" + basename + ".html");
 
-  var filePath = globPage.then(function (file){
+  globPage.then(function (file){
     var filePath = file[0];
     return filePath;
   }).then(function(filePath) {
-    readFile(filePath).then( function(data) {
+    readFile(filePath).then(function(data) {
       content = data.toString();
       breadcrumb = getBreadcrumb(url);
       res.render('content', { content: content, breadcrumb: breadcrumb });
+    },
+    function (e) {
+      res.render('content', {content: 'Page not found'});
     });
   });
 });
