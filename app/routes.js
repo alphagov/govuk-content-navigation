@@ -3,7 +3,9 @@ var router = express.Router();
 var fs = require('fs');
 var path = require('path');
 var expressNunjucks = require('express-nunjucks');
-var app = express();
+var Promise = require("bluebird");
+var glob = Promise.promisify(require('glob'));
+var readFile = Promise.promisify(fs.readFile);
 
 var metadata = getMetadata();
 
@@ -13,38 +15,30 @@ router.get('/', function (req, res) {
 
 });
 
-router.get('/:url', function (req, res) {
-  var url = req.params["url"];
+router.get(/\/.+/, function (req, res) {
+  var url = req.url;
+  url = url.slice(1, url.length); // base path without leading slash
+  var basename = url.replace(/\//g, '_');
+
   var content;
   directory = __dirname + '/content/';
-  contentFile = url + '.html';
 
-  formatsArray = ['answer',
-                  'detailed_guidance',
-                  'statistics_anouncement',
-                  'transaction',
-                  'whitehall/consultation',
-                  'whitehall/news_article',
-                  'whitehall/publication'];
 
-  //formatsArray = getDirectories(directory);
+  var globPage = glob(directory + "/**/" + basename + ".html");
 
-  for (var format in formatsArray) {
-    filePath = directory + formatsArray[format] + '/' + contentFile;
-    if (fileExists(filePath)) {
-      filename = filePath;
-    }
-  }
-
-  fs.readFile(filename, function(err, data) {
-    if (err) {
-      throw err;
-    }
-    content = data.toString();
-    breadcrumb = getBreadcrumb(url);
-
-    res.render('content', { content: content, breadcrumb: breadcrumb });
+  var filePath = globPage.then(function (file){
+    var filePath = file[0];
+    console.log('>>>>glob filePath', filePath);
+    return filePath;
+  }).then(function(filePath) {
+    readFile(filePath).then( function(data) {
+      content = data.toString();
+      breadcrumb = getBreadcrumb(url);
+      res.render('content', { content: content, breadcrumb: breadcrumb });
+    });
   });
+
+
 
 });
 
@@ -88,37 +82,6 @@ function getBreadcrumb(page) {
   return taxonAncestors.reverse();
 }
 
-// Example routes - feel free to delete these
-
-// Passing data into a page
-
-router.get('/examples/template-data', function (req, res) {
-
-  res.render('examples/template-data', { 'name' : 'Foo' });
-
-});
-
-// Branching
-
-router.get('/examples/over-18', function (req, res) {
-
-  // get the answer from the query string (eg. ?over18=false)
-  var over18 = req.query.over18;
-
-  if (over18 == "false"){
-
-    // redirect to the relevant page
-    res.redirect("/examples/under-18");
-
-  } else {
-
-    // if over18 is any other value (or is missing) render the page requested
-    res.render('examples/over-18');
-
-  }
-
-});
-
 function fileExists(filePath) {
   try
   {
@@ -135,7 +98,5 @@ function getDirectories(srcpath) {
     return fs.statSync(path.join(srcpath, file)).isDirectory();
   });
 }
-
-// add your routes here
 
 module.exports = router;
