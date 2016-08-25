@@ -86,6 +86,28 @@
     }
   }
 
+  .document-collection-page {
+    .block-2 {
+      width: 100%;
+    }
+
+    .block-3 {
+      width: 100%;
+    }
+  }
+
+  .statistical-data-set {
+    .statisticaldataset {
+      .block-2 {
+        display: none;
+      }
+
+      .block-3 {
+        width: 100%;
+      }
+    }
+  }
+
   .heading-extra {
     display: none;
   }
@@ -132,6 +154,10 @@
   .document-share-links {
     margin-left: 0;
     padding-left: 0;
+  }
+
+  .history-status-block {
+    margin: 30px 0;
   }
 
 }
