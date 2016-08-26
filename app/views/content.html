@@ -10,5 +10,15 @@
     <div class="grid-row">
       {{ content | safe }}
     </div>
+    <nav>
+      {% for taxon in taxons %}
+      <h1>{{taxon.title}}</h1>
+        <ul>
+          {% for contentItem in taxon.content %}
+          <li>{{contentItem.title}}</li>
+          {% endfor %}
+        </ul>
+      {% endfor %}
+    </nav>
   </div>
 {% endblock %}
