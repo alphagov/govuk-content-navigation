@@ -35,14 +35,20 @@ var readFile = Promise.promisify(fs.readFile);
         content = data.toString();
         var breadcrumb = getBreadcrumb(url);
         var taxons = getTaxons(url);
-        res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons});
+        var format = filePath.match(/(answer|statistics_announcement)/);
+
+        var whitehall = false;
+        if (format == null) {
+          whitehall = true;
+        }
+
+        res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall});
       },
       function (e) {
         res.render('content', {content: 'Page not found'});
       });
     });
   });
-
 
   function getMetadata() {
     fs.readFile('app/data/metadata_and_taxons.json', function(err, data){

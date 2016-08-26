@@ -25,3 +25,145 @@
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+#whitehall-wrapper {
+  #page {
+    @extend %contain-floats;
+    @include grid-column(2/3);
+  }
+
+  .detailed-guides-show {
+    .block-2 {
+      width: 100%;
+    }
+
+    .block-3 {
+      width: 100%;
+    }
+
+    .document-footer-meta {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .aside-more-like-this {
+      h1 {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+
+      section .inner {
+        margin-left: 15px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  #page.consultation {
+    .status-block {
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+
+    .original-consultation {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    .consultation-block {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  .document-page {
+    .block-3 {
+      width: 100%;
+    }
+
+    .block-4 {
+      width: 100%;
+    }
+  }
+
+  .document-collection-page {
+    .block-2 {
+      width: 100%;
+    }
+
+    .block-3 {
+      width: 100%;
+    }
+  }
+
+  .statistical-data-set {
+    .statisticaldataset {
+      .block-2 {
+        display: none;
+      }
+
+      .block-3 {
+        width: 100%;
+      }
+    }
+  }
+
+  .heading-extra {
+    display: none;
+  }
+
+  .headings-block {
+    .heading-with-extra {
+      width: 100%;
+    }
+
+    .inner-heading {
+      padding: 0;
+    }
+  }
+
+  .heading-block {
+    .head-section {
+      width: 100%;
+      float: none;
+
+      h1 {
+        padding: 0 0 $gutter 0;
+      }
+    }
+
+    .content {
+      float: none;
+      width: 100%;
+
+      article {
+        padding: 0;
+      }
+    }
+  }
+
+  .inner-block {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .metadata-list {
+    width: 100%;
+  }
+
+  .document-share-links {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .history-status-block {
+    margin: 30px 0;
+  }
+
+}
+
+.statistics-announcement {
+  .column-two-thirds {
+    width: 100%;
+  }
+}
