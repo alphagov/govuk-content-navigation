@@ -7,107 +7,128 @@ var Promise = require("bluebird");
 var glob = Promise.promisify(require('glob'));
 var readFile = Promise.promisify(fs.readFile);
 
-var metadata = getMetadata();
+(function(){
+  "use strict";
 
-router.get('/', function (req, res) {
+  var metadata = getMetadata();
 
-  res.render('index');
+  router.get('/', function (req, res) {
 
-});
+    res.render('index');
+  });
 
-router.get(/\/.+/, function (req, res) {
-  var url = req.url;
-  url = url.slice(1, url.length); // base path without leading slash
-  var basename = url.replace(/\//g, '_');
+  router.get(/\/.+/, function (req, res) {
+    var url = req.url;
+    url = url.slice(1, url.length); // base path without leading slash
+    var basename = url.replace(/\//g, '_');
 
-  var content;
-  directory = __dirname + '/content/';
+    var content;
+    var directory = __dirname + '/content/';
 
-  var globPage = glob(directory + "/**/" + basename + ".html");
+    var globPage = glob(directory + "/**/" + basename + ".html");
 
-  var filePath = globPage.then(function (file){
-    var filePath = file[0];
-    return filePath;
-  }).then(function(filePath) {
+    globPage.then(function (file){
+      var filePath = file[0];
+      return filePath;
+    }).then(function(filePath) {
+      readFile(filePath).then(function(data) {
+        content = data.toString();
+        var breadcrumb = getBreadcrumb(url);
+        var taxons = getTaxons(url);
+        var format = filePath.match(/(answer|statistics_announcement)/);
 
-    var format = filePath.match(/(answer|statistics_announcement)/);
+        var whitehall = false;
+        if (format == null) {
+          whitehall = true;
+        }
 
-    var whitehall = false;
-    if (format == null) {
-      whitehall = true;
-    }
-
-    console.log("whitehall: "+whitehall);
-
-    readFile(filePath).then( function(data) {
-      content = data.toString();
-      breadcrumb = getBreadcrumb(url);
-      res.render('content', { content: content, breadcrumb: breadcrumb, whitehall: whitehall });
+        res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall});
+      },
+      function (e) {
+        res.render('content', {content: 'Page not found'});
+      });
     });
   });
-});
 
-
-function getMetadata() {
-  fs.readFile('app/data/metadata_and_taxons.json', function(err, data){
-    if (err){
-      console.log('Failed to read metadata and taxons.');
-    }
-    metadata = JSON.parse(data);
-  });
-}
-
-function getBreadcrumb(page) {
-  // Pick the first taxon to generate a breadcrumb from
-  var taxonForPage = metadata['taxons_for_content'][page];
-
-  if(taxonForPage.length === 0) {
-    return null;
-  }
-
-  var firstTaxon = taxonForPage[0];
-
-  taxonAncestors = [
-    {
-      title: metadata['taxon_information'][firstTaxon]['title'],
-      basePath: firstTaxon,
-    }
-  ];
-
-  taxonParents = metadata['ancestors_of_taxon'][firstTaxon];
-
-  while (taxonParents && taxonParents.length > 0) {
-    // Pick the first parent to use in the breadcrumb
-    ancestor = taxonParents[0];
-
-    taxonAncestors.push(
-      {
-        title: ancestor.title,
-        basePath: ancestor.base_path,
+  function getMetadata() {
+    fs.readFile('app/data/metadata_and_taxons.json', function(err, data){
+      if (err){
+        console.log('Failed to read metadata and taxons.');
       }
-    );
-
-    taxonParents = ancestor.links.parent;
+      metadata = JSON.parse(data);
+    });
   }
 
-  return taxonAncestors.reverse();
-}
+  function getBreadcrumb(page) {
+    // Pick the first taxon to generate a breadcrumb from
+    var taxonForPage = metadata.taxons_for_content[page];
 
-function fileExists(filePath) {
-  try
-  {
-    return fs.statSync(filePath).isFile();
+    if(taxonForPage.length === 0) {
+      return null;
+    }
+
+    var firstTaxon = taxonForPage[0];
+
+    var taxonAncestors = [
+      {
+        title: metadata.taxon_information[firstTaxon].title,
+        basePath: firstTaxon,
+      }
+    ];
+
+    var taxonParents = metadata.ancestors_of_taxon.firstTaxon;
+
+    while (taxonParents && taxonParents.length > 0) {
+      // Pick the first parent to use in the breadcrumb
+      var ancestor = taxonParents[0];
+
+      taxonAncestors.push(
+        {
+          title: ancestor.title,
+          basePath: ancestor.base_path,
+        }
+      );
+
+      taxonParents = ancestor.links.parent;
+    }
+
+    return taxonAncestors.reverse();
   }
-  catch (err)
-  {
-    return false;
+
+  function getTaxons(url) {
+    return metadata.taxons_for_content[url].map(function(taxonBasePath) {
+      return Taxon.fromMetadata(taxonBasePath);
+    });
   }
-}
 
-function getDirectories(srcpath) {
-  return fs.readdirSync(srcpath).filter(function(file) {
-    return fs.statSync(path.join(srcpath, file)).isDirectory();
-  });
-}
+  /*
+    Object to describe the structure of a taxon
+    (its child taxons and the documents tagged to it)
+  */
+  class Taxon {
+    constructor(title, basePath) {
+      this.title = title;
+      this.basePath = basePath;
+      this.content = [];
+    }
 
-module.exports = router;
+    addContent(content) {
+      this.content.push(content);
+    }
+
+    static fromMetadata(basePath) {
+      var taxonInformation = metadata.taxon_information[basePath];
+      var taxon = new Taxon(taxonInformation.title, basePath);
+      var contentItems = metadata.documents_in_taxon[basePath].results;
+
+      contentItems.forEach(function(contentItem) {
+        taxon.addContent({title: contentItem.title, basePath: contentItem.link, format: contentItem.format});
+      });
+
+      return taxon;
+    }
+  }
+
+  module.exports = router;
+
+})();
