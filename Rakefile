@@ -60,7 +60,8 @@ end
 def get_documents_by_taxon(taxon_content_id)
   rummager.search(
     filter_taxons: taxon_content_id,
-    fields: %w(title description link format public_timestamp)
+    fields: %w(title description link format public_timestamp),
+    count: 1000
   ).to_h
 end
 
