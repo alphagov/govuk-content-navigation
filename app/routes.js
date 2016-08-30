@@ -76,7 +76,7 @@ var readFile = Promise.promisify(fs.readFile);
       }
     ];
 
-    var taxonParents = metadata.ancestors_of_taxon.firstTaxon;
+    var taxonParents = metadata.ancestors_of_taxon[firstTaxon];
 
     while (taxonParents && taxonParents.length > 0) {
       // Pick the first parent to use in the breadcrumb
