@@ -38,7 +38,7 @@ var readFile = Promise.promisify(fs.readFile);
         var format = filePath.match(/(answer|statistics_announcement)/);
 
         var whitehall = false;
-        if (format == null) {
+        if (format === null) {
           whitehall = true;
         }
 
@@ -62,43 +62,48 @@ var readFile = Promise.promisify(fs.readFile);
   function getBreadcrumb(page) {
     // Pick the first taxon to generate a breadcrumb from
     var taxonForPage = metadata.taxons_for_content[page];
+    try {
 
-    if(taxonForPage.length === 0) {
-      return null;
-    }
-
-    var firstTaxon = taxonForPage[0];
-
-    var taxonAncestors = [
-      {
-        title: metadata.taxon_information[firstTaxon].title,
-        basePath: firstTaxon,
-      }
-    ];
-
-    var taxonParents = metadata.ancestors_of_taxon[firstTaxon];
-
-    while (taxonParents && taxonParents.length > 0) {
-      // Pick the first parent to use in the breadcrumb
-      var ancestor = taxonParents[0];
-
-      taxonAncestors.push(
+      var firstTaxon = taxonForPage[0];
+      var taxonAncestors = [
         {
-          title: ancestor.title,
-          basePath: ancestor.base_path,
+          title: metadata.taxon_information[firstTaxon].title,
+          basePath: firstTaxon,
         }
-      );
+      ];
+      var taxonParents = metadata.ancestors_of_taxon[firstTaxon];
 
-      taxonParents = ancestor.links.parent;
+      while (taxonParents && taxonParents.length > 0) {
+        // Pick the first parent to use in the breadcrumb
+        var ancestor = taxonParents[0];
+
+        taxonAncestors.push(
+          {
+            title: ancestor.title,
+            basePath: ancestor.base_path,
+          }
+        );
+
+        taxonParents = ancestor.links.parent;
+      }
+
+      return taxonAncestors.reverse();
     }
-
-    return taxonAncestors.reverse();
+    catch (e) {
+      console.log("Problem getting taxon metadata");
+    }
   }
 
   function getTaxons(url) {
-    return metadata.taxons_for_content[url].map(function(taxonBasePath) {
-      return Taxon.fromMetadata(taxonBasePath);
-    });
+    try
+    {
+      return metadata.taxons_for_content[url].map(function(taxonBasePath) {
+        return Taxon.fromMetadata(taxonBasePath);
+      });
+    }
+    catch(e){
+      console.log("Problem getting taxons");
+    }
   }
 
   /*
