@@ -219,12 +219,22 @@
          padding-top: 45px;
          margin-bottom: 5px;
       }
+      .govuk-title h1 {
+         font-size: 48px;
+         line-height: 50px;
+      }
    }
 }
   
 #whitehall-wrapper {  
   .headings-block {
      min-height: 45vh;
+     .heading-with-extra {
+         h1 {
+            font-size: 48px;
+            line-height: 50px;
+         }
+     }
   }
 }
 
