@@ -160,10 +160,90 @@
     margin: 30px 0;
   }
 
+  
+
 }
 
 .statistics-announcement {
   .column-two-thirds {
     width: 100%;
+  }  
+}
+
+
+// fix breadcrumbs 
+
+.breadcrumbs {
+   position: absolute;
+   max-width: 960px;
+   z-index: 100;
+   a {
+      color: black;
+      text-decoration: underline;
+   }
+}
+#whitehall-wrapper {  
+   .breadcrumbs {
+      left: 50%;
+      margin-left: -480px;
+      a {
+         color: black;
+         text-decoration: underline;
+      }
+   }
+}
+
+// add minimum height to header blocks, align the headers
+
+#wrapper {
+   position: relative;
+   .govuk-title,
+   .page-header {
+     min-height: 45vh;
+     margin-bottom: 0;
+   }
+   .page-header h1 {
+      padding-top: 55px;
+   }
+   .statistics-announcement .govuk-title,
+   header.page-header div {
+      margin-top: 0;
+      margin-bottom: 0;
+   }
+   .statistics-announcement {
+      .context {
+         padding-top: 45px;
+         margin-bottom: 5px;
+      }
+   }
+}
+  
+#whitehall-wrapper {  
+  .headings-block {
+     min-height: 45vh;
   }
+}
+
+#wrapper .page-header h1,
+#wrapper .statistics-announcement .context,
+#wrapper .statistics-announcement h1,
+#whitehall-wrapper .heading-with-extra {
+   position: relative;
+   top: 5vh;
+}
+
+// align related nav to the content 
+
+.related-container {
+   padding-top: 45vh;
+   .related {
+      margin-top: -25px;
+   }
+}
+
+.primary-metadata,
+#whitehall-wrapper .metadata-list,
+.status-block,
+.history-status-block {
+   display: none;
 }
