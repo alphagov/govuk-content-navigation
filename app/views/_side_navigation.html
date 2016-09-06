@@ -3,7 +3,8 @@
   <aside class="related" id="related">
     {% for taxon in taxons %}
     <div>
-      <h2 id="parent-other">Related content in {{taxon.title|lower}}</h2>
+      <h2 id="parent-other">{{taxon.title|lower}}</h2>
+      <p>A short description of this topic to make it easier to understand</p>
 
       <nav role="navigation" aria-labelledby="parent-other">
         <ul>
