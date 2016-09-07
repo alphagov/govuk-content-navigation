@@ -171,6 +171,12 @@
 }
 
 
+#whitehall-wrapper {
+   max-width: 960px;
+   margin: 0 auto;
+   position: relative;
+}
+
 // fix breadcrumbs 
 
 .breadcrumbs {
@@ -184,8 +190,6 @@
 }
 #whitehall-wrapper {  
    .breadcrumbs {
-      left: 50%;
-      margin-left: -480px;
       a {
          color: black;
          text-decoration: underline;
@@ -215,12 +219,22 @@
          padding-top: 45px;
          margin-bottom: 5px;
       }
+      .govuk-title h1 {
+         font-size: 48px;
+         line-height: 50px;
+      }
    }
 }
   
 #whitehall-wrapper {  
   .headings-block {
      min-height: 45vh;
+     .heading-with-extra {
+         h1 {
+            font-size: 48px;
+            line-height: 50px;
+         }
+     }
   }
 }
 
@@ -236,9 +250,7 @@
 
 .related-container {
    padding-top: 45vh;
-   .related {
-      margin-top: -25px;
-   }
+   margin-top: 18px;
 }
 
 .primary-metadata,
@@ -247,3 +259,62 @@
 .history-status-block {
    display: none;
 }
+
+
+// related nav styles
+
+#whitehall-wrapper {
+   .whitehall-content {
+      float: left;
+      margin-left: -100%;
+      left: 100%;
+   }
+   .related-container {
+      position: relative;
+      float: left;
+      width: 33.33333%;
+      margin-left: -100%;
+      left: 166.666%;
+   }
+}
+
+.related {
+//   background: linear-gradient(to bottom, 
+//      #eee 0%, 
+//      #eee 19%, 
+//      #fff 20%,
+//      #fff 100%);
+//   background-size: 100% 5px;
+   border-top: 10px solid #005ea5;
+   padding-top: 5px;
+   h2 {
+      padding-top: 17px;
+      font-size: 24px;
+      line-height: 30px;
+      padding-bottom: 6px;
+      margin-bottom: 0;
+      font-weight: bold;
+   }
+   p {
+      font-size: 16px;
+      line-height: 20px;
+      margin: 0;
+   }
+   ul {
+      padding: 10px 0 10px 30px;
+   }
+   li {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: bold;
+      margin: 0;
+      list-style: disc;
+      a {
+         text-decoration: none;
+         &:hover, &:focus {
+            text-decoration: underline;
+         }
+      }
+   }
+}
+
