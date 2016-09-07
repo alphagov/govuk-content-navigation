@@ -35,7 +35,7 @@ var readFile = Promise.promisify(fs.readFile);
         content = data.toString();
         var breadcrumb = getBreadcrumb(url);
         var taxons = getTaxons(url);
-        var format = filePath.match(/(answer|detailed_guidance|statistics_announcement|transaction|news_article)/);
+        var format = filePath.match(/(answer|detailed_guidance|statistics_announcement|transaction)/);
 
         var whitehall = false;
         if (format === null) {
