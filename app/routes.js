@@ -35,12 +35,7 @@ var readFile = Promise.promisify(fs.readFile);
         content = data.toString();
         var breadcrumb = getBreadcrumb(url);
         var taxons = getTaxons(url);
-        var format = filePath.match(/(answer|detailed_guidance|statistics_announcement|transaction)/);
-
-        var whitehall = false;
-        if (format === null) {
-          whitehall = true;
-        }
+        var whitehall = filePath.match(/whitehall/);
 
         res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall});
       },
