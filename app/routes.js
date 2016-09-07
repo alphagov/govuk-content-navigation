@@ -90,7 +90,7 @@ var readFile = Promise.promisify(fs.readFile);
       return taxonAncestors.reverse();
     }
     catch (e) {
-      console.log("Problem getting taxon metadata");
+      console.log("Problem getting breadcrumb data for " + page );
     }
   }
 
@@ -102,7 +102,7 @@ var readFile = Promise.promisify(fs.readFile);
       });
     }
     catch(e){
-      console.log("Problem getting taxons");
+      console.log("Problem getting taxons for sidebar");
     }
   }
 
