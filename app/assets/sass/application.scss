@@ -279,20 +279,23 @@
 }
 
 .related {
-//   background: linear-gradient(to bottom, 
-//      #eee 0%, 
-//      #eee 19%, 
-//      #fff 20%,
-//      #fff 100%);
-//   background-size: 100% 5px;
+/*
+   background: linear-gradient(to bottom, 
+      #ddd 0%, 
+      #ddd 19%, 
+      #fff 20%,
+      #fff 100%);
+   background-size: 100% 5px;
+*/
    border-top: 10px solid #005ea5;
    padding-top: 5px;
    h2 {
-      padding-top: 17px;
+      padding-top: 20px;
       font-size: 24px;
       line-height: 30px;
       padding-bottom: 6px;
       margin-bottom: 0;
+      margin-top: 0;
       font-weight: bold;
    }
    p {
@@ -301,7 +304,7 @@
       margin: 0;
    }
    ul {
-      padding: 10px 0 10px 30px;
+      padding: 10px 0 8px 30px;
    }
    li {
       font-size: 16px;
@@ -315,6 +318,10 @@
             text-decoration: underline;
          }
       }
+   }
+   .reveal {
+      font-weight: bold;
+      text-decoration: underline!important;
    }
 }
 
