@@ -13,9 +13,21 @@ var readFile = Promise.promisify(fs.readFile);
   var metadata = getMetadata();
 
   router.get('/', function (req, res) {
-
     res.render('index');
   });
+
+
+  router.get('/alpha-taxonomy/:taxons', function (req, res) {
+    var taxon = req.url.substring(0, req.url.length-1);
+    try {
+      var taxons = Taxon.fromMetadata(taxon);
+      res.render('taxonomy', {taxon: taxons});
+    }
+    catch (e) {
+      res.render('taxonomy');
+    }
+  });
+
 
   router.get(/\/.+/, function (req, res) {
     var url = req.url;
