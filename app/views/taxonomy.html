@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+<main id="content" role="main">
+  <div class="grid-row">
+    <div class="column-two-thirds">
+      {% if taxon %}
+      {% block taxonomy %}
+          <h1>{{ taxon.title }}</h1>
+          <p>A short description of this topic to make it easier to understand</p>
+
+          <nav role="navigation" aria-labelledby="parent-other">
+            <ul>
+              {% for contentItem in taxon.content %}
+              <li>
+                <a href="{{contentItem.basePath}}">{{contentItem.title}}</a>
+              </li>
+              {% endfor %}
+            </ul>
+            <a class="reveal" href="/">See everything in this prototype</a>
+          </nav>
+      {% endblock %}
+      {% else %}
+      <p>No taxon information available</p>
+      {% endif %}
+    </div>
+  </div>
+  </main>
+
+{% endblock %}
