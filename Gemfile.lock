@@ -3,9 +3,9 @@ GEM
   specs:
     PriorityQueue (0.1.2)
     ast (2.3.0)
-    domain_name (0.5.20160615)
+    domain_name (0.5.20160826)
       unf (>= 0.0.5, < 1.0.0)
-    gds-api-adapters (33.2.0)
+    gds-api-adapters (36.0.0)
       link_header
       lrucache (~> 0.1.1)
       null_logger
@@ -58,7 +58,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  gds-api-adapters (~> 33.2)
+  gds-api-adapters (~> 36.0)
   govuk-lint
   rake (~> 11.2, >= 11.2.2)
 
