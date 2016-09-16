@@ -2,15 +2,18 @@
 {% block content %}
 
 
-<main id="content" role="main">
-  <div class="grid-row">
+<main id="content" class="taxonomy" role="main">
+    {% block breadcrumb %}
+      {% include '_breadcrumb.html' %}
+    {% endblock %}  
+    <div class="grid-row">
     <div class="column-two-thirds">
       {% if taxon %}
       {% block taxonomy %}
           <h1>{{ taxon.title }}</h1>
           <p>A short description of this topic to make it easier to understand</p>
 
-          <nav role="navigation" aria-labelledby="parent-other">
+          <nav role="navigation" aria-labelledby="parent-other" class="full-list">
             <ul>
               {% for contentItem in taxon.content %}
               <li>
@@ -18,7 +21,6 @@
               </li>
               {% endfor %}
             </ul>
-            <a class="reveal" href="/">See everything in this prototype</a>
           </nav>
       {% endblock %}
       {% else %}
