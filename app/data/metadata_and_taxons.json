@@ -1,7 +1,7 @@
 {
   "taxons_for_content": {
     "government/publications/early-years-foundation-stage-eyfs": [
-      "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5"
+      "/alpha-taxonomy/early-years-foundation-stage-eyfs"
     ],
     "government/organisations/department-for-education/about": [
       "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills"
@@ -28,13 +28,13 @@
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "government/collections/key-stage-2-tests-administer-the-tests": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "government/collections/key-stage-2-tests-past-papers": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "government/collections/national-curriculum-assessments-2016-sample-materials": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "government/collections/national-curriculum-assessments-guidance-for-local-authorities": [
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
@@ -66,14 +66,11 @@
     "government/collections/statutory-guidance-schools": [
       "/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18"
     ],
-    "government/collections/teacher-assessment-key-stage-1-and-key-stage-2": [
-
-    ],
     "government/publications/2015-ks2-level-thresholds": [
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "government/publications/key-stage-1-phonics-screening-check-monitoring-visits-guidance-and-form": [
-      "/alpha-taxonomy/phonics"
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "government/publications/key-stage-2-english-grammar-punctuation-and-spelling-test-framework-document-2013-to-2015": [
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
@@ -274,7 +271,7 @@
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "government/publications/national-curriculum-assessments-future-test-dates": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/awarding-organisations-understanding-our-regulatory-requirements": [
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
@@ -346,7 +343,7 @@
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/scaled-scores": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/teacher-assessment-how-to-use-the-nca-tools-website": [
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
@@ -587,15 +584,6 @@
     "government/organisations/sutherland-inquiry": [
       "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance"
     ],
-    "government/publications/eyfs-and-key-stage-1-national-curriculum-assessments-wall-chart": [
-      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
-    ],
-    "government/publications/national-curriculum-tests-changes-from-2016": [
-      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
-    ],
-    "guidance/early-administration-of-national-curriculum-key-stage-1-tests-for-standard-setting": [
-
-    ],
     "government/collections/tickell-review-reports": [
       "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5"
     ],
@@ -708,7 +696,7 @@
       "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5"
     ],
     "government/publications/a-know-how-guide-the-eyfs-progress-check-at-age-two": [
-      "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5"
+      "/alpha-taxonomy/early-years-foundation-stage-eyfs"
     ],
     "government/publications/a-whole-school-approach-to-art-craft-and-design": [
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
@@ -728,9 +716,6 @@
     ],
     "government/publications/art-craft-and-design-education-making-a-mark": [
       "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance"
-    ],
-    "government/publications/assessment-curriculum-and-qualifications-research-priorities-and-questions": [
-
     ],
     "government/publications/assessment-framework-for-the-development-of-the-year-1-phonics-screening-check": [
       "/alpha-taxonomy/phonics"
@@ -817,7 +802,7 @@
       "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5"
     ],
     "government/publications/early-years-foundation-stage-framework": [
-      "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5"
+      "/alpha-taxonomy/early-years-foundation-stage-eyfs"
     ],
     "government/publications/early-years-foundation-stage-profile-2012-guide": [
       "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5"
@@ -1076,7 +1061,7 @@
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "government/publications/key-stage-2-teacher-assessment-data-collection-2015-technical-specification": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "government/publications/key-stage-2-teacher-assessment-data-collection-2016-technical-specification": [
       "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
@@ -1585,40 +1570,40 @@
       "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5"
     ],
     "guidance/key-stage-2-tests-administering-braille-versions": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/key-stage-2-tests-administering-modified-large-print-versions": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/key-stage-2-tests-guidance-for-test-administrators": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/key-stage-2-tests-guide-to-dealing-with-issues-during-the-tests": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/key-stage-2-tests-headteachers-responsibilities": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/key-stage-2-tests-how-to-administer-the-tests": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/key-stage-2-tests-planning-to-use-the-modified-tests": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/key-stage-2-tests-testing-pupils-who-have-a-hearing-impairment": [
-
+      "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2"
     ],
     "guidance/phonics-screening-check-check-administrators-responsibilities": [
-
+      "/alpha-taxonomy/phonics"
     ],
     "guidance/phonics-screening-check-headteachers-responsibilities": [
-
+      "/alpha-taxonomy/phonics"
     ],
     "guidance/phonics-screening-check-how-to-administer-the-check": [
-
+      "/alpha-taxonomy/phonics"
     ],
     "guidance/progress-check-at-age-2-and-eyfs-profile": [
-
+      "/alpha-taxonomy/early-years-foundation-stage-eyfs"
     ],
     "government/speeches/assessment-after-levels": [
       "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance"
@@ -1737,19 +1722,19 @@
     ]
   },
   "ancestors_of_taxon": {
-    "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5": [
+    "/alpha-taxonomy/early-years-foundation-stage-eyfs": [
       {
         "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
-        "base_path": "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
-        "content_id": "c58fdadd-7743-46d6-9629-90bb3ccc4ef0",
-        "description": "",
+        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/childcare-and-early-years",
+        "base_path": "/alpha-taxonomy/childcare-and-early-years",
+        "content_id": "502eac33-76ad-499e-b15f-a1544be548c5",
+        "description": null,
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-09-15T09:29:58Z",
+        "public_updated_at": "2016-04-15T12:44:37Z",
         "schema_name": "taxon",
-        "title": "Education, training and skills",
-        "web_url": "https://www.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+        "title": "Childcare and early years",
+        "web_url": "https://www.gov.uk/alpha-taxonomy/childcare-and-early-years",
         "links": {
         }
       }
@@ -1758,7 +1743,7 @@
     "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2": [
       {
         "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
+        "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
         "base_path": "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
         "content_id": "ff9bcd45-4dac-4e9d-a78b-0e790e24a47c",
         "description": "",
@@ -1767,12 +1752,12 @@
         "public_updated_at": "2016-09-15T09:29:27Z",
         "schema_name": "taxon",
         "title": "School curriculum, assessment and performance",
-        "web_url": "https://www.gov.uk/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
+        "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
         "links": {
           "parent_taxons": [
             {
               "analytics_identifier": null,
-              "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
+              "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
               "base_path": "/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
               "content_id": "7c75c541-403f-4cb1-9b34-4ddde816a80d",
               "description": "",
@@ -1781,12 +1766,12 @@
               "public_updated_at": "2016-09-15T09:29:44Z",
               "schema_name": "taxon",
               "title": "School education (5 to 18 years)",
-              "web_url": "https://www.gov.uk/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
+              "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
               "links": {
                 "parent_taxons": [
                   {
                     "analytics_identifier": null,
-                    "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+                    "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
                     "base_path": "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
                     "content_id": "c58fdadd-7743-46d6-9629-90bb3ccc4ef0",
                     "description": "",
@@ -1795,7 +1780,7 @@
                     "public_updated_at": "2016-09-15T09:36:54Z",
                     "schema_name": "taxon",
                     "title": "Education, training and skills",
-                    "web_url": "https://www.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+                    "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
                     "links": {
                     }
                   }
@@ -1809,16 +1794,33 @@
     "/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18": [
       {
         "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+        "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
         "base_path": "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
         "content_id": "c58fdadd-7743-46d6-9629-90bb3ccc4ef0",
         "description": "",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-09-15T09:29:58Z",
+        "public_updated_at": "2016-09-15T09:36:54Z",
         "schema_name": "taxon",
         "title": "Education, training and skills",
-        "web_url": "https://www.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+        "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+        "links": {
+        }
+      }
+    ],
+    "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5": [
+      {
+        "analytics_identifier": null,
+        "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+        "base_path": "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+        "content_id": "c58fdadd-7743-46d6-9629-90bb3ccc4ef0",
+        "description": "",
+        "document_type": "taxon",
+        "locale": "en",
+        "public_updated_at": "2016-09-15T09:36:54Z",
+        "schema_name": "taxon",
+        "title": "Education, training and skills",
+        "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
         "links": {
         }
       }
@@ -1826,7 +1828,7 @@
     "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance": [
       {
         "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
+        "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
         "base_path": "/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
         "content_id": "7c75c541-403f-4cb1-9b34-4ddde816a80d",
         "description": "",
@@ -1835,21 +1837,21 @@
         "public_updated_at": "2016-09-15T09:29:44Z",
         "schema_name": "taxon",
         "title": "School education (5 to 18 years)",
-        "web_url": "https://www.gov.uk/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
+        "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
         "links": {
           "parent_taxons": [
             {
               "analytics_identifier": null,
-              "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+              "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
               "base_path": "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
               "content_id": "c58fdadd-7743-46d6-9629-90bb3ccc4ef0",
               "description": "",
               "document_type": "taxon",
               "locale": "en",
-              "public_updated_at": "2016-09-15T09:29:58Z",
+              "public_updated_at": "2016-09-15T09:36:54Z",
               "schema_name": "taxon",
               "title": "Education, training and skills",
-              "web_url": "https://www.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+              "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
               "links": {
               }
             }
@@ -1860,7 +1862,7 @@
     "/alpha-taxonomy/phonics": [
       {
         "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5",
+        "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5",
         "base_path": "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5",
         "content_id": "07299ca5-bc4d-48dd-a3f1-edd3b170bb4a",
         "description": "",
@@ -1869,12 +1871,12 @@
         "public_updated_at": "2016-09-15T09:25:51Z",
         "schema_name": "taxon",
         "title": "Early years curriculum (0 to 5 years)",
-        "web_url": "https://www.gov.uk/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5",
+        "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5",
         "links": {
           "parent_taxons": [
             {
               "analytics_identifier": null,
-              "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+              "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
               "base_path": "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
               "content_id": "c58fdadd-7743-46d6-9629-90bb3ccc4ef0",
               "description": "",
@@ -1883,7 +1885,7 @@
               "public_updated_at": "2016-09-15T09:36:54Z",
               "schema_name": "taxon",
               "title": "Education, training and skills",
-              "web_url": "https://www.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+              "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
               "links": {
               }
             }
@@ -1892,7 +1894,7 @@
       },
       {
         "analytics_identifier": null,
-        "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
+        "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "base_path": "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
         "description": "",
@@ -1901,12 +1903,12 @@
         "public_updated_at": "2016-09-15T09:28:35Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 1 and key stage 2",
-        "web_url": "https://www.gov.uk/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
+        "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "links": {
           "parent_taxons": [
             {
               "analytics_identifier": null,
-              "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
+              "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
               "base_path": "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
               "content_id": "ff9bcd45-4dac-4e9d-a78b-0e790e24a47c",
               "description": "",
@@ -1915,12 +1917,12 @@
               "public_updated_at": "2016-09-15T09:29:27Z",
               "schema_name": "taxon",
               "title": "School curriculum, assessment and performance",
-              "web_url": "https://www.gov.uk/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
+              "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
               "links": {
                 "parent_taxons": [
                   {
                     "analytics_identifier": null,
-                    "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
+                    "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
                     "base_path": "/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
                     "content_id": "7c75c541-403f-4cb1-9b34-4ddde816a80d",
                     "description": "",
@@ -1929,12 +1931,12 @@
                     "public_updated_at": "2016-09-15T09:29:44Z",
                     "schema_name": "taxon",
                     "title": "School education (5 to 18 years)",
-                    "web_url": "https://www.gov.uk/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
+                    "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
                     "links": {
                       "parent_taxons": [
                         {
                           "analytics_identifier": null,
-                          "api_url": "https://www.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+                          "api_url": "https://www-origin.staging.publishing.service.gov.uk/api/content/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
                           "base_path": "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
                           "content_id": "c58fdadd-7743-46d6-9629-90bb3ccc4ef0",
                           "description": "",
@@ -1943,7 +1945,7 @@
                           "public_updated_at": "2016-09-15T09:36:54Z",
                           "schema_name": "taxon",
                           "title": "Education, training and skills",
-                          "web_url": "https://www.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+                          "web_url": "https://www-origin.staging.publishing.service.gov.uk/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
                           "links": {
                           }
                         }
@@ -1993,9 +1995,9 @@
     ]
   },
   "taxon_information": {
-    "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5": {
-      "title": "Early years curriculum (0 to 5 years)",
-      "content_id": "07299ca5-bc4d-48dd-a3f1-edd3b170bb4a"
+    "/alpha-taxonomy/early-years-foundation-stage-eyfs": {
+      "title": "Early years foundation stage (EYFS)",
+      "content_id": "7fdb2159-12ff-4967-bfb2-9619504203bb"
     },
     "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills": {
       "title": "Education, training and skills",
@@ -2008,6 +2010,10 @@
     "/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18": {
       "title": "School education (5 to 18 years)",
       "content_id": "7c75c541-403f-4cb1-9b34-4ddde816a80d"
+    },
+    "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5": {
+      "title": "Early years curriculum (0 to 5 years)",
+      "content_id": "07299ca5-bc4d-48dd-a3f1-edd3b170bb4a"
     },
     "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance": {
       "title": "School curriculum, assessment and performance",
@@ -2027,860 +2033,76 @@
     }
   },
   "documents_in_taxon": {
-    "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5": {
+    "/alpha-taxonomy/early-years-foundation-stage-eyfs": {
       "results": [
         {
-          "title": "Early years foundation stage profile: 2016 handbook",
-          "description": "This handbook supports practitioners in making accurate judgements about each pupil's attainment.",
-          "link": "/government/publications/early-years-foundation-stage-profile-handbook",
+          "title": "Early years (under 5s) foundation stage framework (EYFS)",
+          "description": "Guidance on the standards that school and childcare providers must meet for the learning, development and care of children under 5.\r\n\r\n",
+          "link": "/government/publications/early-years-foundation-stage-framework--2",
           "format": "publication",
-          "public_timestamp": "2016-09-06T15:12:37.000+01:00",
+          "public_timestamp": "2014-07-29T16:11:28.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/early-years-foundation-stage-profile-handbook",
+          "_id": "/government/publications/early-years-foundation-stage-framework--2",
           "document_type": "edition"
         },
         {
-          "title": "Early years foundation stage profile: exemplification materials",
-          "description": "A series of materials for practitioners assessing children's development at the end of the early years foundation stage (EYFS). \r\n",
-          "link": "/government/publications/eyfs-profile-exemplication-materials",
-          "format": "publication",
-          "public_timestamp": "2014-10-07T13:27:34.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/eyfs-profile-exemplication-materials",
-          "document_type": "edition"
-        },
-        {
-          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA)",
-          "description": "Statutory guidance for headteachers and local authority assessment co-ordinators assessing and reporting the early years foundation stage (EYFS) during the 2015 to 2016 academic year. ",
-          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara",
-          "format": "manual",
-          "public_timestamp": "2016-01-14T13:56:02Z",
+          "title": "Early years foundation stage",
+          "description": "The early years foundation stage (EYFS) sets standards for the learning, development and care of children from birth to 5",
+          "link": "/early-years-foundation-stage",
+          "format": "answer",
+          "public_timestamp": "2015-05-11T10:31:21+01:00",
           "index": "mainstream",
           "es_score": null,
-          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara",
-          "document_type": "manual"
+          "_id": "/early-years-foundation-stage",
+          "document_type": "edition"
         },
         {
-          "title": "Early years foundation stage profile results: 2014 to 2015",
-          "description": "Early years foundation stage profile (EYFSP) results for the 2014 to 2015 academic year, at national and local authority level.",
-          "link": "/government/statistics/early-years-foundation-stage-profile-results-2014-to-2015",
+          "title": "Supporting families in the foundation years",
+          "description": "Our plans to create an effective support system for parents with children in their earliest years and the practitioners who work with them.",
+          "link": "/government/publications/supporting-families-in-the-foundation-years",
           "format": "publication",
-          "public_timestamp": "2015-11-19T09:30:34.000+00:00",
+          "public_timestamp": "2011-08-31T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/statistics/early-years-foundation-stage-profile-results-2014-to-2015",
+          "_id": "/government/publications/supporting-families-in-the-foundation-years",
           "document_type": "edition"
         },
         {
-          "title": "Reception baseline assessment: guide to signing up your school",
-          "description": "Information for primary schools about the reception baseline assessment for 2016 to 2017.",
-          "link": "/guidance/reception-baseline-assessment-guide-to-signing-up-your-school",
-          "format": "detailed_guidance",
-          "public_timestamp": "2016-04-14T14:16:05.000+01:00",
-          "index": "detailed",
-          "es_score": null,
-          "_id": "/guidance/reception-baseline-assessment-guide-to-signing-up-your-school",
-          "document_type": "edition"
-        },
-        {
-          "title": "Paediatric first aid: EYFS statutory framework amendments",
-          "description": "We are seeking views on proposals for newly qualified level 2 or 3 early years staff to hold a paediatric first aid certificate.",
-          "link": "/government/consultations/paediatric-first-aid-eyfs-statutory-framework-amendments",
-          "format": "consultation",
-          "public_timestamp": "2016-07-01T09:32:53.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/consultations/paediatric-first-aid-eyfs-statutory-framework-amendments",
-          "document_type": "edition"
-        },
-        {
-          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 2: Early years foundation stage profile",
-          "description": "An overview of the EYFS profile and information about completing the profile and exemptions from assessment",
-          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-2-early-years-foundation-stage-profile",
-          "format": "manual_section",
-          "index": "mainstream",
-          "es_score": null,
-          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-2-early-years-foundation-stage-profile",
-          "document_type": "manual_section"
-        },
-        {
-          "title": "Statistics: early years foundation stage profile",
-          "description": "Statistics on early years foundation stage profile assessments including breakdowns by pupil characteristics.",
-          "link": "/government/collections/statistics-early-years-foundation-stage-profile",
-          "format": "document_collection",
-          "public_timestamp": "2015-10-21T16:30:40.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/collections/statistics-early-years-foundation-stage-profile",
-          "document_type": "edition"
-        },
-        {
-          "title": "Reception baseline comparability study published",
-          "description": "Reception baseline assessment will not be used as a starting point to measure pupil progress following a comparability study.",
-          "link": "/government/news/reception-baseline-comparability-study-published",
-          "format": "news_article",
-          "public_timestamp": "2016-04-07T16:51:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/reception-baseline-comparability-study-published",
-          "document_type": "edition"
-        },
-        {
-          "title": "Reading by six - how the best schools do it",
-          "description": "Survey of primary schools showing how the best schools in England teach virtually every child to read.",
-          "link": "/government/publications/reading-by-six-how-the-best-schools-do-it",
+          "title": "Better communication research project",
+          "description": "Report into whether teacher assessment at the end of the early years foundation stage provides a valid measure of current development.",
+          "link": "/government/publications/better-communication-research-project-language-and-literacy-attainment-of-pupils-during-early-years-and-through-key-stage-2",
           "format": "publication",
-          "public_timestamp": "2010-11-14T00:00:00.000+00:00",
+          "public_timestamp": "2011-11-24T00:00:00.000+00:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/reading-by-six-how-the-best-schools-do-it",
+          "_id": "/government/publications/better-communication-research-project-language-and-literacy-attainment-of-pupils-during-early-years-and-through-key-stage-2",
           "document_type": "edition"
         },
         {
-          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 1: Introduction",
-          "description": "About the EYFS ARA and how to use the new manuals format",
-          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-1-introduction",
-          "format": "manual_section",
-          "index": "mainstream",
-          "es_score": null,
-          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-1-introduction",
-          "document_type": "manual_section"
-        },
-        {
-          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 5: Legal requirements and responsibilities ",
-          "description": "The legal status of the ARA, how it applies to different EYFS settings, responsibilities of those who assess or report on EYFS and legal definitions",
-          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-5-legal-requirements-and-responsibilities",
-          "format": "manual_section",
-          "index": "mainstream",
-          "es_score": null,
-          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-5-legal-requirements-and-responsibilities",
-          "document_type": "manual_section"
-        },
-        {
-          "title": "The importance of music: a national plan for music education",
-          "description": "Introducing the national plan for music education and its initiatives.",
-          "link": "/government/publications/the-importance-of-music-a-national-plan-for-music-education",
+          "title": "Traveller children uptake in the Early Years Foundation Stage",
+          "description": "Ofsted good practice example showing how Holy Family Catholic Primary School raises Traveller pupil uptake at Early Years Foundation Stage.",
+          "link": "/government/publications/traveller-children-uptake-in-the-early-years-foundation-stage",
           "format": "publication",
-          "public_timestamp": "2011-11-25T00:00:00.000+00:00",
+          "public_timestamp": "2015-03-26T09:31:20.000+00:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/the-importance-of-music-a-national-plan-for-music-education",
+          "_id": "/government/publications/traveller-children-uptake-in-the-early-years-foundation-stage",
           "document_type": "edition"
         },
         {
-          "title": "Tickell review of the early years foundation stage",
-          "description": "A review into the impact of the early years foundation stage (EYFS) on children's learning and development, and  early years practitioners.",
-          "link": "/government/publications/the-early-years-foundations-for-life-health-and-learning-an-independent-report-on-the-early-years-foundation-stage-to-her-majestys-government",
+          "title": "Neighbourhood statistics: small area pupil attainment - 2009",
+          "description": "The tables provide 2009 information on residency-based pupil attainment broken down by gender, free school meal eligibility and ethnicity.",
+          "link": "/government/statistics/neighbourhood-statistics-small-area-early-years-foundation-stage-profile-national-curriculum-assessment-gcse-and-equivalent-and-post-16-attainment",
           "format": "publication",
-          "public_timestamp": "2011-03-30T01:00:00.000+01:00",
+          "public_timestamp": "2010-05-13T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/the-early-years-foundations-for-life-health-and-learning-an-independent-report-on-the-early-years-foundation-stage-to-her-majestys-government",
-          "document_type": "edition"
-        },
-        {
-          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 4: Reporting and using results",
-          "description": "Reporting to parents, governing body responsibilities and how EYFS profile assessment results are used",
-          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-4-reporting-and-using-results",
-          "format": "manual_section",
-          "index": "mainstream",
-          "es_score": null,
-          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-4-reporting-and-using-results",
-          "document_type": "manual_section"
-        },
-        {
-          "title": "Removing barriers to literacy",
-          "description": "Ofsted survey report illustrating effective approaches in literacy that might help others to improve their practice.",
-          "link": "/government/publications/removing-barriers-to-literacy",
-          "format": "publication",
-          "public_timestamp": "2011-01-21T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/removing-barriers-to-literacy",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile results: 2013 to 2014",
-          "description": "Early years foundation stage profile  (EYFSP) results in England, for the 2013 to 2014 academic year, at national and local authority level.",
-          "link": "/government/statistics/early-years-foundation-stage-profile-results-2013-to-2014",
-          "format": "publication",
-          "public_timestamp": "2014-10-16T09:30:14.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/early-years-foundation-stage-profile-results-2013-to-2014",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile results in England: 2015 to 2016",
-          "description": "Early years foundation stage profile (EYFSP) results for the 2015 to 2016 academic year, at national and local authority level.",
-          "link": "/government/statistics/announcements/early-years-foundation-stage-profile-results-in-england-2015-to-2016",
-          "format": "statistics_announcement",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/announcements/early-years-foundation-stage-profile-results-in-england-2015-to-2016",
-          "document_type": "edition"
-        },
-        {
-          "title": "Improving early years teaching: learning from others",
-          "description": "Ofsted good practice example showing how Broomhall Nursery School and Children’s Centre learns from others to enhance early years provision.",
-          "link": "/government/publications/collaborating-to-support-early-years-teaching-and-learning",
-          "format": "publication",
-          "public_timestamp": "2015-07-13T10:15:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/collaborating-to-support-early-years-teaching-and-learning",
-          "document_type": "edition"
-        },
-        {
-          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 3: Moderation",
-          "description": "Information about independent moderation and the responsibilities of headteachers, governing bodies and managers",
-          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-3-moderation",
-          "format": "manual_section",
-          "index": "mainstream",
-          "es_score": null,
-          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-3-moderation",
-          "document_type": "manual_section"
-        },
-        {
-          "title": "Children’s wellbeing, learning and development: parent/carer partnerships",
-          "description": "Ofsted good practice example showing how a childminder develops partnerships to support wellbeing, learning and development.",
-          "link": "/government/publications/partnerships-between-parents-and-carers",
-          "format": "publication",
-          "public_timestamp": "2013-07-03T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/partnerships-between-parents-and-carers",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile return: how to submit data",
-          "description": "How local authorities should submit data from early years providers to complete the early years foundation stage profile (EYFSP) return.",
-          "link": "/guidance/early-years-foundation-stage-profile",
-          "format": "detailed_guidance",
-          "public_timestamp": "2016-05-20T11:45:42.000+01:00",
-          "index": "detailed",
-          "es_score": null,
-          "_id": "/guidance/early-years-foundation-stage-profile",
-          "document_type": "edition"
-        },
-        {
-          "title": "Integrated review at age 2: implementation study",
-          "description": "Exploring the effect of integrating the early years foundation stage (EYFS) progress check with the healthy child programme (HCP) check.",
-          "link": "/government/publications/integrated-review-at-age-2-implementation-study",
-          "format": "publication",
-          "public_timestamp": "2014-11-21T09:30:04.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/integrated-review-at-age-2-implementation-study",
-          "document_type": "edition"
-        },
-        {
-          "title": "Supporting children’s learning through teaching and play",
-          "description": "Ofsted good practice example showing how a childminder supports children’s learning with skill and care.",
-          "link": "/government/publications/supporting-childrens-learning-through-teaching-and-play",
-          "format": "publication",
-          "public_timestamp": "2015-07-13T10:15:02.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/supporting-childrens-learning-through-teaching-and-play",
-          "document_type": "edition"
-        },
-        {
-          "title": "Learning together through play in the early years",
-          "description": "This good practice example shows how St John Vianney Primary School Childcare involves parents in their children's learning.",
-          "link": "/government/publications/learning-together-through-play-in-the-early-years",
-          "format": "publication",
-          "public_timestamp": "2015-07-13T10:15:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/learning-together-through-play-in-the-early-years",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP attainment by pupil characteristics: 2010 to 2011",
-          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2010 to 2011.",
-          "link": "/government/statistics/early-years-foundation-stage-profile-attainment-by-pupil-characteristics-academic-year-2010-to-2011",
-          "format": "publication",
-          "public_timestamp": "2011-12-01T00:01:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/early-years-foundation-stage-profile-attainment-by-pupil-characteristics-academic-year-2010-to-2011",
-          "document_type": "edition"
-        },
-        {
-          "title": "Improving boys’ literacy skills",
-          "description": "Ofsted good practice example showing how Greenfields Children’s Centre uses assessment to close gaps, especially in literacy.",
-          "link": "/government/publications/improving-boys-literacy-skills",
-          "format": "publication",
-          "public_timestamp": "2015-07-13T10:15:02.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/improving-boys-literacy-skills",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP attainment by pupil characteristics: 2013 to 2014",
-          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2013 to 2014.",
-          "link": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-2013-to-2014",
-          "format": "publication",
-          "public_timestamp": "2014-11-20T09:30:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-2013-to-2014",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFS learning and development requirements: exemptions for providers",
-          "description": "What early years providers and independent schools must do to be exempt from some aspects of the early years foundation stage (EYFS).",
-          "link": "/government/publications/the-early-years-foundation-stage-eyfs-learning-and-development-requirements-guidance-on-exemptions-for-early-years-providers",
-          "format": "publication",
-          "public_timestamp": "2012-10-01T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/the-early-years-foundation-stage-eyfs-learning-and-development-requirements-guidance-on-exemptions-for-early-years-providers",
-          "document_type": "edition"
-        },
-        {
-          "title": "Results of the early years foundation stage profile pilot",
-          "description": "This report describes the results of the pilot to support the introduction of the new profile.",
-          "link": "/government/publications/results-of-the-early-years-foundation-stage-profile-pilot",
-          "format": "publication",
-          "public_timestamp": "2013-03-27T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/results-of-the-early-years-foundation-stage-profile-pilot",
-          "document_type": "edition"
-        },
-        {
-          "title": "Nursery staff development: skills to help children learn",
-          "description": "Ofsted good practice example showing how Our Lady Star of the Sea Nursery ensures staff have the skills to model effective learning.",
-          "link": "/government/publications/we-are-all-learners-here-our-lady-star-of-the-sea-nursery",
-          "format": "publication",
-          "public_timestamp": "2014-07-03T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/we-are-all-learners-here-our-lady-star-of-the-sea-nursery",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early language and literacy: from training to teaching",
-          "description": "Ofsted survey report evaluating how well new early years and primary teachers are trained to teach language and literacy.",
-          "link": "/government/publications/early-language-and-literacy-from-training-to-teaching",
-          "format": "publication",
-          "public_timestamp": "2012-11-16T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/early-language-and-literacy-from-training-to-teaching",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years evidence pack",
-          "description": "Pack summarising evidence on achievement at the early years foundation stage",
-          "link": "/government/publications/early-years-evidence-pack",
-          "format": "publication",
-          "public_timestamp": "2011-07-01T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/early-years-evidence-pack",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile results: 2012 to 2013",
-          "description": "Early years foundation stage profile (EYFSP) results in England, for the 2012 to 2013 academic year, at national and local authority level.",
-          "link": "/government/statistics/early-years-foundation-stage-profile-results-2012-to-2013",
-          "format": "publication",
-          "public_timestamp": "2013-10-24T09:30:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/early-years-foundation-stage-profile-results-2012-to-2013",
-          "document_type": "edition"
-        },
-        {
-          "title": "Information and communication technology is not just computers",
-          "description": "Ofsted good practice example showing how a childminder prepares children for a world that is increasingly dependent on technology.",
-          "link": "/government/publications/information-and-communication-technology-is-not-just-computers",
-          "format": "publication",
-          "public_timestamp": "2012-03-23T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/information-and-communication-technology-is-not-just-computers",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile results: 2011 to 2012",
-          "description": "Results of the 2012 early years foundation stage profile (EYFSP) assessments at a national and local-authority level.",
-          "link": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2011-to-2012",
-          "format": "publication",
-          "public_timestamp": "2012-10-17T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2011-to-2012",
-          "document_type": "edition"
-        },
-        {
-          "title": "New early years framework published",
-          "description": "An announcement on the new EYFS framework to support children's learning and development. The early learning goals are reduced from 69 to 17. ",
-          "link": "/government/news/new-early-years-framework-published",
-          "format": "news_article",
-          "public_timestamp": "2012-03-27T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/new-early-years-framework-published",
-          "document_type": "edition"
-        },
-        {
-          "title": "Pre-school and early home learning: effects on A level outcomes",
-          "description": "Report looking at whether pre-school and early home learning helps students gain more A levels.",
-          "link": "/government/publications/pre-school-and-early-home-learning-effects-on-a-level-outcomes",
-          "format": "publication",
-          "public_timestamp": "2015-12-07T10:00:29.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/pre-school-and-early-home-learning-effects-on-a-level-outcomes",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage to be radically slimmed down",
-          "description": "Dame Clare Tickell recommends streamlining the EYFS to make it more focused on making sure children start school ready to learn.",
-          "link": "/government/news/early-years-foundation-stage-to-be-radically-slimmed-down",
-          "format": "news_article",
-          "public_timestamp": "2011-03-30T00:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/early-years-foundation-stage-to-be-radically-slimmed-down",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP attainment by pupil characteristics: 2012 to 2013",
-          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2012 to 2013.",
-          "link": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-2013",
-          "format": "publication",
-          "public_timestamp": "2013-11-21T09:53:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-2013",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile results: 2009 to 2010",
-          "description": "Results of the 2010 early years foundation stage profile (EYFSP) assessments at a national and local-authority level.",
-          "link": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2009-to-2010",
-          "format": "publication",
-          "public_timestamp": "2010-10-12T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2009-to-2010",
-          "document_type": "edition"
-        },
-        {
-          "title": "Assessment updates for schools",
-          "description": "Information about the Standards and Testing Agency's email newsletters for early years providers and key stage 1 and key stage 2 schools.",
-          "link": "/government/news/assessment-updates-for-schools",
-          "format": "news_article",
-          "public_timestamp": "2015-03-19T11:40:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/assessment-updates-for-schools",
-          "document_type": "edition"
-        },
-        {
-          "title": "Nicky Morgan and David Walliams launch literacy drive",
-          "description": "The Education Secretary and children’s author issue a call to publishers and schools to make English pupils Europe’s most literate.",
-          "link": "/government/news/nicky-morgan-and-david-walliams-launch-literacy-drive",
-          "format": "news_article",
-          "public_timestamp": "2015-09-24T09:59:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/nicky-morgan-and-david-walliams-launch-literacy-drive",
-          "document_type": "edition"
-        },
-        {
-          "title": "The impact of the Early Years Foundation Stage",
-          "description": "Ofsted survey report evaluating the impact that the introduction of the Early Years Foundation Stage has had on provision.",
-          "link": "/government/publications/the-impact-of-the-early-years-foundation-stage",
-          "format": "publication",
-          "public_timestamp": "2011-02-10T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/the-impact-of-the-early-years-foundation-stage",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile return: closed collections",
-          "description": "Documents for software suppliers and anyone else interested in past early years foundation stage profile (EYFSP) returns.",
-          "link": "/government/collections/early-years-foundation-stage-profile-return",
-          "format": "document_collection",
-          "public_timestamp": "2016-02-01T11:50:03.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/collections/early-years-foundation-stage-profile-return",
-          "document_type": "edition"
-        },
-        {
-          "title": "Practitioners' experiences of the early years foundation stage",
-          "description": "This research report describes the context, design, conduct and findings of an inquiry into practitioners' experiences of the early years foundation stage. ",
-          "link": "/government/publications/practitioners-experiences-of-the-early-years-foundation-stage",
-          "format": "publication",
-          "public_timestamp": "2010-08-26T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/practitioners-experiences-of-the-early-years-foundation-stage",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFS learning and development requirements: exemptions for children",
-          "description": "What early years settings need to do to disapply or modify some aspects of the early years foundation stage (EYFS) for an individual child.",
-          "link": "/government/publications/the-early-years-foundation-stage-eyfs-learning-and-development-requirements-guidance-on-exemptions-for-individual-children",
-          "format": "publication",
-          "public_timestamp": "2012-08-05T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/the-early-years-foundation-stage-eyfs-learning-and-development-requirements-guidance-on-exemptions-for-individual-children",
-          "document_type": "edition"
-        },
-        {
-          "title": "Investigating the role of language in children's early educational outcomes",
-          "description": "A report that looks at the early communication environment in a child's first 2 years of life, and its role in preparing them for school.",
-          "link": "/government/publications/investigating-the-role-of-language-in-childrens-early-educational-outcomes",
-          "format": "publication",
-          "public_timestamp": "2011-06-30T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/investigating-the-role-of-language-in-childrens-early-educational-outcomes",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile results: 2015 to 2016 - additional tables containing characteristic breakdowns ",
-          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2015 to 2016.",
-          "link": "/government/statistics/announcements/early-years-foundation-stage-profile-results-2015-to-2016-additional-tables-containing-characteristic-breakdowns",
-          "format": "statistics_announcement",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/announcements/early-years-foundation-stage-profile-results-2015-to-2016-additional-tables-containing-characteristic-breakdowns",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early learning for 2-year-olds: trials",
-          "description": "This report brings together learning from trials of 10 local authorities offering early learning to 2-year-olds.",
-          "link": "/government/publications/early-learning-for-two-year-olds-trials",
-          "format": "publication",
-          "public_timestamp": "2013-06-12T14:16:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/early-learning-for-two-year-olds-trials",
-          "document_type": "edition"
-        },
-        {
-          "title": "The early education pilot for 2-year-old children: age 5 follow up",
-          "description": "A follow-up evaluation of the early education pilot for 2-year-old children.",
-          "link": "/government/publications/the-early-education-pilot-for-two-year-old-children-age-five-follow-up",
-          "format": "publication",
-          "public_timestamp": "2013-03-07T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/the-early-education-pilot-for-two-year-old-children-age-five-follow-up",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP attainment by pupil characteristics: 2009 to 2010",
-          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2009 to 2010.",
-          "link": "/government/statistics/foundation-stage-profile-attainment-by-pupil-characteristics-england-academic-year-2009-to-2010",
-          "format": "publication",
-          "public_timestamp": "2010-12-16T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/foundation-stage-profile-attainment-by-pupil-characteristics-england-academic-year-2009-to-2010",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP attainment by pupil characteristics: 2011 to 2012",
-          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2011 to 2012.",
-          "link": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-in-england-academic-year-2011-to-2012",
-          "format": "publication",
-          "public_timestamp": "2012-11-21T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-in-england-academic-year-2011-to-2012",
-          "document_type": "edition"
-        },
-        {
-          "title": "Achievement of children in the early years foundation stage profile",
-          "description": "Report on children's achievement by the end of the EYFS to find the proportion of children achieving a good level of development.",
-          "link": "/government/publications/achievement-of-children-in-the-early-years-foundation-stage-profile",
-          "format": "publication",
-          "public_timestamp": "2010-09-30T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/achievement-of-children-in-the-early-years-foundation-stage-profile",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile return 2015: guide",
-          "description": "Guide for local authorities and schools submitting early years foundation stage profile (EYFSP) data for 2015.",
-          "link": "/government/publications/early-years-foundation-stage-profile-return-2015-guide",
-          "format": "publication",
-          "public_timestamp": "2015-05-27T10:52:08.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/early-years-foundation-stage-profile-return-2015-guide",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP return 2014: guide",
-          "description": "A guide for schools and local authorities submitting early years foundation stage profile (EYFSP) returns for 2014.",
-          "link": "/government/publications/eyfsp-return-2014-guide",
-          "format": "publication",
-          "public_timestamp": "2014-06-23T14:48:42.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/eyfsp-return-2014-guide",
-          "document_type": "edition"
-        },
-        {
-          "title": "Children's experiences of the early years foundation stage",
-          "description": "This project gathered children's views on their experiences in a range of early years settings.",
-          "link": "/government/publications/childrens-experiences-of-the-early-years-foundation-stage",
-          "format": "publication",
-          "public_timestamp": "2010-12-23T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/childrens-experiences-of-the-early-years-foundation-stage",
-          "document_type": "edition"
-        },
-        {
-          "title": "Reception baseline research",
-          "description": "Research on how primary schools assess the progress of pupils from ages 4 to 11.",
-          "link": "/government/publications/reception-baseline-research",
-          "format": "publication",
-          "public_timestamp": "2015-07-16T10:05:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/reception-baseline-research",
-          "document_type": "edition"
-        },
-        {
-          "title": "I CAN's early talk programme: evaluation",
-          "description": "This evaluates the effect of the programme on the ability of staff to provide high quality communication support in children's centres.",
-          "link": "/government/publications/i-cans-early-talk-programme-independent-evaluation-of-the-impact-of-early-talk-on-addressing-speech-communication-and-language-needs-in-sure-start",
-          "format": "publication",
-          "public_timestamp": "2011-01-27T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/i-cans-early-talk-programme-independent-evaluation-of-the-impact-of-early-talk-on-addressing-speech-communication-and-language-needs-in-sure-start",
-          "document_type": "edition"
-        },
-        {
-          "title": "Early years foundation stage profile results: 2010 to 2011",
-          "description": "Results of the 2011 early years foundation stage profile (EYFSP) assessments at a national and local-authority level.",
-          "link": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2010-to-2011",
-          "format": "publication",
-          "public_timestamp": "2011-11-11T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2010-to-2011",
-          "document_type": "edition"
-        },
-        {
-          "title": "Developing a communication supporting classrooms observation tool",
-          "description": "This study aimed to develop a tool for Reception and key stage 1, pilot its feasibility in classrooms and examine its use by practitioners.",
-          "link": "/government/publications/developing-a-communication-supporting-classrooms-observation-tool",
-          "format": "publication",
-          "public_timestamp": "2012-12-27T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/developing-a-communication-supporting-classrooms-observation-tool",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP attainment by pupil characteristics: England - 2015",
-          "description": "National and LA information for early years (under 5s) foundation stage profile assessments in England in the academic year 2015.",
-          "link": "/government/statistics/announcements/eyfsp-attainment-by-pupil-characteristics-england-2015",
-          "format": "statistics_announcement",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/statistics/announcements/eyfsp-attainment-by-pupil-characteristics-england-2015",
-          "document_type": "edition"
-        },
-        {
-          "title": "Impact assessment opinion: Early Years Foundation Stage (Learning and Development Requirements) (Amendment) Order 2012",
-          "description": "Evaluation of the Department for Education impact assessment for the Early Years Foundation Stage (Learning and Development Requirements) (Amendment) Order 2012",
-          "link": "/government/publications/impact-assessment-opinion-early-years-foundation-stage-learning-and-development-requirements-amendment-order-2012",
-          "format": "publication",
-          "public_timestamp": "2014-12-30T09:30:55.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/impact-assessment-opinion-early-years-foundation-stage-learning-and-development-requirements-amendment-order-2012",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP 2013: technical specification",
-          "description": "This document defines the scope of, and business rationale for, the early years foundation stage profile (EYFSP) 2013 return.",
-          "link": "/government/publications/eyfs-profile-2013-technical-specification",
-          "format": "publication",
-          "public_timestamp": "2013-05-07T00:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/eyfs-profile-2013-technical-specification",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP 2013: guide",
-          "description": "Guide for local authorities to help them collect and return the 2013 early years foundation stage profile (EYFSP) return.",
-          "link": "/government/publications/early-years-foundation-stage-profile-2013-guide",
-          "format": "publication",
-          "public_timestamp": "2013-05-16T00:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/early-years-foundation-stage-profile-2013-guide",
-          "document_type": "edition"
-        },
-        {
-          "title": "Surveys of practitioners with early years professional status",
-          "description": "Findings from national surveys of practitioners who've achieved early years professional status.",
-          "link": "/government/publications/first-national-survey-of-practitioners-with-early-years-professional-status",
-          "format": "publication",
-          "public_timestamp": "2011-01-15T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/first-national-survey-of-practitioners-with-early-years-professional-status",
-          "document_type": "edition"
-        },
-        {
-          "title": "Dame Clare Tickell responds to inaccurate reports about her review of the EYFS",
-          "description": "Dame Clare Tickell writes to the Times Educational Supplement about her independent review of the early years foundation stage.",
-          "link": "/government/news/dame-clare-tickell-responds-to-inaccurate-reports-about-her-review-of-the-eyfs",
-          "format": "news_article",
-          "public_timestamp": "2011-04-01T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/dame-clare-tickell-responds-to-inaccurate-reports-about-her-review-of-the-eyfs",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP 2012: guide",
-          "description": "Information for local authorities to help them collect and return the 2012 early years foundation stage profile (EYFSP).",
-          "link": "/government/publications/early-years-foundation-stage-profile-2012-guide",
-          "format": "publication",
-          "public_timestamp": "2012-04-24T00:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/early-years-foundation-stage-profile-2012-guide",
-          "document_type": "edition"
-        },
-        {
-          "title": "Review of early years foundation stage",
-          "description": "Information on Sarah Teather's invitation to Clare Tickell to lead a review into the early years foundation stage. ",
-          "link": "/government/news/review-of-early-years-foundation-stage",
-          "format": "news_article",
-          "public_timestamp": "2010-07-06T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/review-of-early-years-foundation-stage",
-          "document_type": "edition"
-        },
-        {
-          "title": "Sarah Teather on reforming Early Years",
-          "description": "Children’s Minister Sarah Teather confirms plans for a reformed Early Years Foundation Stage.",
-          "link": "/government/speeches/sarah-teather-on-reforming-early-years",
-          "format": "speech",
-          "public_timestamp": "2011-12-20T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/sarah-teather-on-reforming-early-years",
-          "document_type": "edition"
-        },
-        {
-          "title": "Call for evidence for the review of the early years foundation stage",
-          "description": "Dame Clare Tickell launches a call for evidence to inform the independent review of the early years foundation stage. Includes a link to the online consultation.",
-          "link": "/government/news/call-for-evidence-for-the-review-of-the-early-years-foundation-stage",
-          "format": "news_article",
-          "public_timestamp": "2010-08-02T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/call-for-evidence-for-the-review-of-the-early-years-foundation-stage",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP 2014: technical specification",
-          "description": "This document defines the scope of, and business rationale for, the early years foundation stage profile (EYFSP) return 2014.",
-          "link": "/government/publications/eyfsp-2014-technical-specification",
-          "format": "publication",
-          "public_timestamp": "2014-04-09T10:21:50.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/eyfsp-2014-technical-specification",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP 2012: technical specification",
-          "description": "This document defines the scope of, and business rationale for, the early years foundation stage profile 2012 (EYFSP) return.",
-          "link": "/government/publications/eyfs-profile-2012-technical-specification",
-          "format": "publication",
-          "public_timestamp": "2011-12-01T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/eyfs-profile-2012-technical-specification",
-          "document_type": "edition"
-        },
-        {
-          "title": "Written ministerial statement by Sarah Teather on the early years foundation stage",
-          "description": "Sarah Teather MP on the new, simpler and clearer early years foundation stage framework.",
-          "link": "/government/speeches/written-ministerial-statement-by-sarah-teather-on-the-early-years-foundation-stage",
-          "format": "speech",
-          "public_timestamp": "2012-03-27T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/written-ministerial-statement-by-sarah-teather-on-the-early-years-foundation-stage",
-          "document_type": "edition"
-        },
-        {
-          "title": "Quality nurseries urged to make full use of flexibility",
-          "description": "Elizabeth Truss speaks about improving teaching practices in early years education and giving more flexibility to nurseries.",
-          "link": "/government/news/quality-nurseries-urged-to-make-full-use-of-flexibility",
-          "format": "news_article",
-          "public_timestamp": "2013-04-19T00:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/quality-nurseries-urged-to-make-full-use-of-flexibility",
-          "document_type": "edition"
-        },
-        {
-          "title": "Revised early years foundation stage: consultation closes 30 September",
-          "description": "Closing date of consultation on EYFS.",
-          "link": "/government/news/revised-early-years-foundation-stage-consultation-closes-30-september",
-          "format": "news_article",
-          "public_timestamp": "2011-10-27T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/revised-early-years-foundation-stage-consultation-closes-30-september",
-          "document_type": "edition"
-        },
-        {
-          "title": "Foundation learning national evaluation",
-          "description": "Evaluation to review the implementation of foundation learning and to assess its effects.",
-          "link": "/government/publications/foundation-learning-national-evaluation",
-          "format": "publication",
-          "public_timestamp": "2011-06-30T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/foundation-learning-national-evaluation",
-          "document_type": "edition"
-        },
-        {
-          "title": "EYFSP 2015: technical specification",
-          "description": "This document defines the scope of the early years foundation stage profile (EYFSP) return 2015.",
-          "link": "/government/publications/eyfsp-2015-technical-specification",
-          "format": "publication",
-          "public_timestamp": "2015-04-17T16:58:17.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/eyfsp-2015-technical-specification",
+          "_id": "/government/statistics/neighbourhood-statistics-small-area-early-years-foundation-stage-profile-national-curriculum-assessment-gcse-and-equivalent-and-post-16-attainment",
           "document_type": "edition"
         }
       ],
-      "total": 78,
+      "total": 6,
       "start": 0,
       "facets": {
       },
@@ -3133,28 +2355,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Charlie Taylor talks about developing the birth-to-18 system",
-          "description": "Charlie Taylor, Chief Executive of the National College for Teaching and Leadership (NCTL) speaks to the Nursery and Primary Show.",
-          "link": "/government/speeches/charlie-taylor-talks-about-developing-the-birth-to-18-system",
-          "format": "speech",
-          "public_timestamp": "2014-04-30T14:25:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/charlie-taylor-talks-about-developing-the-birth-to-18-system",
-          "document_type": "edition"
-        },
-        {
-          "title": "Nick Gibb: the fruits of autonomy",
-          "description": "School Reform Minister Nick Gibb speaks to Reform about the changes that have led to more freedom in the education system.",
-          "link": "/government/speeches/nick-gibb-the-fruits-of-autonomy",
-          "format": "speech",
-          "public_timestamp": "2014-11-13T14:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/nick-gibb-the-fruits-of-autonomy",
-          "document_type": "edition"
-        },
-        {
           "title": "Michael Gove to the National Conference of Directors of Children's and Adult Services",
           "description": "The Education Secretary on the coalition plans for education, including how schools will be identified for the Academies programme.",
           "link": "/government/speeches/michael-gove-to-the-national-conference-of-directors-of-childrens-and-adult-services",
@@ -3163,17 +2363,6 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/speeches/michael-gove-to-the-national-conference-of-directors-of-childrens-and-adult-services",
-          "document_type": "edition"
-        },
-        {
-          "title": "Michael Gove to the Local Government Association",
-          "description": "At the LGA conference in Bournemouth, the Secretary of State outlines planned improvements in education and children's services.",
-          "link": "/government/speeches/michael-gove-to-the-local-government-association",
-          "format": "speech",
-          "public_timestamp": "2010-11-25T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/michael-gove-to-the-local-government-association",
           "document_type": "edition"
         },
         {
@@ -3188,6 +2377,28 @@
           "document_type": "edition"
         },
         {
+          "title": "Michael Gove to the Local Government Association",
+          "description": "At the LGA conference in Bournemouth, the Secretary of State outlines planned improvements in education and children's services.",
+          "link": "/government/speeches/michael-gove-to-the-local-government-association",
+          "format": "speech",
+          "public_timestamp": "2010-11-25T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/michael-gove-to-the-local-government-association",
+          "document_type": "edition"
+        },
+        {
+          "title": "Charlie Taylor talks about developing the birth-to-18 system",
+          "description": "Charlie Taylor, Chief Executive of the National College for Teaching and Leadership (NCTL) speaks to the Nursery and Primary Show.",
+          "link": "/government/speeches/charlie-taylor-talks-about-developing-the-birth-to-18-system",
+          "format": "speech",
+          "public_timestamp": "2014-04-30T14:25:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/charlie-taylor-talks-about-developing-the-birth-to-18-system",
+          "document_type": "edition"
+        },
+        {
           "title": "Nick Gibb speaks at the Centre for Social Justice",
           "description": "The Schools Minister talks about the importance of creating a world class education system.",
           "link": "/government/speeches/nick-gibb-speaks-at-the-centre-for-social-justice",
@@ -3196,6 +2407,17 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/speeches/nick-gibb-speaks-at-the-centre-for-social-justice",
+          "document_type": "edition"
+        },
+        {
+          "title": "Nick Gibb: the fruits of autonomy",
+          "description": "School Reform Minister Nick Gibb speaks to Reform about the changes that have led to more freedom in the education system.",
+          "link": "/government/speeches/nick-gibb-the-fruits-of-autonomy",
+          "format": "speech",
+          "public_timestamp": "2014-11-13T14:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/nick-gibb-the-fruits-of-autonomy",
           "document_type": "edition"
         },
         {
@@ -3220,6 +2442,17 @@
     },
     "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2": {
       "results": [
+        {
+          "title": "Key stage 1 and key stage 2 test dates",
+          "description": "Future dates for the key stage 1 and key stage 2 tests (commonly referred to as SATs), phonics screening check, and science sampling tests.",
+          "link": "/guidance/key-stage-1-and-key-stage-2-test-dates",
+          "format": "detailed_guidance",
+          "public_timestamp": "2016-09-06T15:13:52.000+01:00",
+          "index": "detailed",
+          "es_score": null,
+          "_id": "/guidance/key-stage-1-and-key-stage-2-test-dates",
+          "document_type": "edition"
+        },
         {
           "title": "National curriculum in England: framework for key stages 1 to 4",
           "description": "The full national curriculum framework for key stages 1 to 4, including programmes of study and attainment targets.",
@@ -3386,6 +2619,17 @@
           "document_type": "edition"
         },
         {
+          "title": "National curriculum assessments: key stage 2 tests",
+          "description": "Guidance for headteachers, teachers and test administrators involved in administering the key stage 2 national curriculum tests.",
+          "link": "/government/collections/national-curriculum-assessments-key-stage-2-tests",
+          "format": "document_collection",
+          "public_timestamp": "2016-09-12T15:51:34.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/collections/national-curriculum-assessments-key-stage-2-tests",
+          "document_type": "edition"
+        },
+        {
           "title": "National curriculum in England: computing programmes of study",
           "description": "The statutory programmes of study and attainment targets for computing at key stages 1 to 4.",
           "link": "/government/publications/national-curriculum-in-england-computing-programmes-of-study",
@@ -3416,6 +2660,17 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/2016-key-stage-2-english-reading-sample-test-materials-mark-scheme-and-test-administration-instructions",
+          "document_type": "edition"
+        },
+        {
+          "title": "National curriculum assessments: practice materials",
+          "description": "Practice materials for the phonics screening check, key stage 1 and key stage 2 national curriculum tests, including sample papers and past test papers. ",
+          "link": "/government/collections/national-curriculum-assessments-practice-materials",
+          "format": "document_collection",
+          "public_timestamp": "2016-09-12T15:46:40.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/collections/national-curriculum-assessments-practice-materials",
           "document_type": "edition"
         },
         {
@@ -3991,6 +3246,17 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/national-curriculum-video-interviews-for-schools",
+          "document_type": "edition"
+        },
+        {
+          "title": "Key stage 2 tests: applying special consideration to results",
+          "description": "How a pupil's results in the key stage 2 tests can be changed if a pupil is affected by extremely distressing circumstances.",
+          "link": "/guidance/key-stage-2-tests-applying-special-consideration-to-results",
+          "format": "detailed_guidance",
+          "public_timestamp": "2016-07-05T00:02:00.000+01:00",
+          "index": "detailed",
+          "es_score": null,
+          "_id": "/guidance/key-stage-2-tests-applying-special-consideration-to-results",
           "document_type": "edition"
         },
         {
@@ -5408,69 +4674,14 @@
           "document_type": "edition"
         },
         {
-          "title": "National curriculum tests: international schools",
-          "description": "Information about how international schools can access national curriculum tests.",
-          "link": "/government/publications/national-curriculum-tests-international-schools",
-          "format": "publication",
-          "public_timestamp": "2015-03-19T16:07:22.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/national-curriculum-tests-international-schools",
-          "document_type": "edition"
-        },
-        {
-          "title": "NCA tools 'Test orders' section closes this Friday",
-          "description": "Schools can use the NCA tools website to order key stage 1 tasks and test materials and key stage 2 test materials.\r\n\r\n",
-          "link": "/government/news/nca-tools-test-orders-section-closes-this-friday",
+          "title": "Key stage 2 pupil achievement figures",
+          "description": "Statistics on 2010 national curriculum assessments at key stage 2 in England, and a statement from Michael Gove.",
+          "link": "/government/news/key-stage-2-pupil-achievement-figures",
           "format": "news_article",
-          "public_timestamp": "2014-11-25T09:03:00.000+00:00",
+          "public_timestamp": "2010-12-17T00:00:00.000+00:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/nca-tools-test-orders-section-closes-this-friday",
-          "document_type": "edition"
-        },
-        {
-          "title": "Investigation of key stage 2 level 6 tests",
-          "description": "Findings from a study into how the level 6 tests have affected the way schools support their most able pupils.",
-          "link": "/government/publications/investigation-of-key-stage-2-level-6-tests",
-          "format": "publication",
-          "public_timestamp": "2013-04-02T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/investigation-of-key-stage-2-level-6-tests",
-          "document_type": "edition"
-        },
-        {
-          "title": "Key stage 1 assessments collection 2014: guide",
-          "description": "Guide for local authorities on how to return 2014 key stage 1 assessment results to the Department for Education. ",
-          "link": "/government/publications/key-stage-1-assessments-collection-2014-guide",
-          "format": "publication",
-          "public_timestamp": "2014-06-10T12:24:55.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/key-stage-1-assessments-collection-2014-guide",
-          "document_type": "edition"
-        },
-        {
-          "title": "Key stage 1 assessments collection 2013: guide",
-          "description": "Guide for local authorities on how to report key stage 1 assessment data.",
-          "link": "/government/publications/key-stage-1-assessments-collection-2013-guide",
-          "format": "publication",
-          "public_timestamp": "2013-06-12T00:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/key-stage-1-assessments-collection-2013-guide",
-          "document_type": "edition"
-        },
-        {
-          "title": "Government response to Lord Bew key stage 2 review published",
-          "description": "Government’s response to the review and how the recommendations will be taken forward.",
-          "link": "/government/news/government-response-to-lord-bew-key-stage-2-review-published",
-          "format": "news_article",
-          "public_timestamp": "2011-07-18T00:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/government-response-to-lord-bew-key-stage-2-review-published",
+          "_id": "/government/news/key-stage-2-pupil-achievement-figures",
           "document_type": "edition"
         },
         {
@@ -5485,14 +4696,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Key stage 2 pupil achievement figures",
-          "description": "Statistics on 2010 national curriculum assessments at key stage 2 in England, and a statement from Michael Gove.",
-          "link": "/government/news/key-stage-2-pupil-achievement-figures",
+          "title": "Government response to Lord Bew key stage 2 review published",
+          "description": "Government’s response to the review and how the recommendations will be taken forward.",
+          "link": "/government/news/government-response-to-lord-bew-key-stage-2-review-published",
           "format": "news_article",
-          "public_timestamp": "2010-12-17T00:00:00.000+00:00",
+          "public_timestamp": "2011-07-18T00:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/key-stage-2-pupil-achievement-figures",
+          "_id": "/government/news/government-response-to-lord-bew-key-stage-2-review-published",
           "document_type": "edition"
         },
         {
@@ -5518,6 +4729,61 @@
           "document_type": "edition"
         },
         {
+          "title": "Key stage 1 assessments collection 2013: guide",
+          "description": "Guide for local authorities on how to report key stage 1 assessment data.",
+          "link": "/government/publications/key-stage-1-assessments-collection-2013-guide",
+          "format": "publication",
+          "public_timestamp": "2013-06-12T00:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/key-stage-1-assessments-collection-2013-guide",
+          "document_type": "edition"
+        },
+        {
+          "title": "Key stage 1 assessments collection 2014: guide",
+          "description": "Guide for local authorities on how to return 2014 key stage 1 assessment results to the Department for Education. ",
+          "link": "/government/publications/key-stage-1-assessments-collection-2014-guide",
+          "format": "publication",
+          "public_timestamp": "2014-06-10T12:24:55.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/key-stage-1-assessments-collection-2014-guide",
+          "document_type": "edition"
+        },
+        {
+          "title": "Investigation of key stage 2 level 6 tests",
+          "description": "Findings from a study into how the level 6 tests have affected the way schools support their most able pupils.",
+          "link": "/government/publications/investigation-of-key-stage-2-level-6-tests",
+          "format": "publication",
+          "public_timestamp": "2013-04-02T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/investigation-of-key-stage-2-level-6-tests",
+          "document_type": "edition"
+        },
+        {
+          "title": "National curriculum tests: international schools",
+          "description": "Information about how international schools can access national curriculum tests.",
+          "link": "/government/publications/national-curriculum-tests-international-schools",
+          "format": "publication",
+          "public_timestamp": "2015-03-19T16:07:22.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/national-curriculum-tests-international-schools",
+          "document_type": "edition"
+        },
+        {
+          "title": "NCA tools 'Test orders' section closes this Friday",
+          "description": "Schools can use the NCA tools website to order key stage 1 tasks and test materials and key stage 2 test materials.\r\n\r\n",
+          "link": "/government/news/nca-tools-test-orders-section-closes-this-friday",
+          "format": "news_article",
+          "public_timestamp": "2014-11-25T09:03:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/nca-tools-test-orders-section-closes-this-friday",
+          "document_type": "edition"
+        },
+        {
           "title": "2012 maladministration report",
           "description": "This report details the range of allegations of maladministration reported to the STA maladministration team throughout the 2012 test cycle.",
           "link": "/government/publications/2012-maladministration-report",
@@ -5529,17 +4795,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Key Stage 2 science sample test results published",
-          "description": "The provisional results of the 2010 Key Stage 2 attainment test in science from sample schools are available.",
-          "link": "/government/news/key-stage-2-science-sample-test-results-published",
-          "format": "news_article",
-          "public_timestamp": "2010-08-10T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/key-stage-2-science-sample-test-results-published",
-          "document_type": "edition"
-        },
-        {
           "title": "2012 maladministration investigation procedures",
           "description": "The purpose of this document is to outline procedures followed by STA when investigating allegations of maladministration.",
           "link": "/government/publications/2012-maladministration-investigation-procedures",
@@ -5548,28 +4803,6 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/2012-maladministration-investigation-procedures",
-          "document_type": "edition"
-        },
-        {
-          "title": "Elizabeth Truss calls for a renaissance in maths",
-          "description": "The Education Minister calls for a renaissance in maths to help meet the demand of UK employers, and announces the removal of calculators from key stage 2 tests.",
-          "link": "/government/speeches/elizabeth-truss-calls-for-a-renaissance-in-maths",
-          "format": "speech",
-          "public_timestamp": "2012-11-09T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/elizabeth-truss-calls-for-a-renaissance-in-maths",
-          "document_type": "edition"
-        },
-        {
-          "title": "Group performance in the key stage 2 science tests: 2010 and 2011",
-          "description": "A study of how different groups of students performed in the national curriculum science tests in 2010 and 2011.",
-          "link": "/government/publications/group-performance-in-the-key-stage-2-science-tests-2010-and-2011",
-          "format": "publication",
-          "public_timestamp": "2014-02-11T09:30:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/group-performance-in-the-key-stage-2-science-tests-2010-and-2011",
           "document_type": "edition"
         },
         {
@@ -5595,6 +4828,28 @@
           "document_type": "edition"
         },
         {
+          "title": "Key Stage 2 science sample test results published",
+          "description": "The provisional results of the 2010 Key Stage 2 attainment test in science from sample schools are available.",
+          "link": "/government/news/key-stage-2-science-sample-test-results-published",
+          "format": "news_article",
+          "public_timestamp": "2010-08-10T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/key-stage-2-science-sample-test-results-published",
+          "document_type": "edition"
+        },
+        {
+          "title": "Group performance in the key stage 2 science tests: 2010 and 2011",
+          "description": "A study of how different groups of students performed in the national curriculum science tests in 2010 and 2011.",
+          "link": "/government/publications/group-performance-in-the-key-stage-2-science-tests-2010-and-2011",
+          "format": "publication",
+          "public_timestamp": "2014-02-11T09:30:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/group-performance-in-the-key-stage-2-science-tests-2010-and-2011",
+          "document_type": "edition"
+        },
+        {
           "title": "NCA tools 'Test orders' section is open",
           "description": "Schools can use the NCA tools website to order key stage 1 tasks and test materials and key stage 2 test materials.",
           "link": "/government/news/nca-tools-test-orders-section-is-open",
@@ -5603,6 +4858,17 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/news/nca-tools-test-orders-section-is-open",
+          "document_type": "edition"
+        },
+        {
+          "title": "Elizabeth Truss calls for a renaissance in maths",
+          "description": "The Education Minister calls for a renaissance in maths to help meet the demand of UK employers, and announces the removal of calculators from key stage 2 tests.",
+          "link": "/government/speeches/elizabeth-truss-calls-for-a-renaissance-in-maths",
+          "format": "speech",
+          "public_timestamp": "2012-11-09T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/elizabeth-truss-calls-for-a-renaissance-in-maths",
           "document_type": "edition"
         },
         {
@@ -5639,6 +4905,28 @@
           "document_type": "edition"
         },
         {
+          "title": "2013 maladministration report",
+          "description": "This report details the range of allegations of maladministration reported to the STA maladministration team throughout the 2013 test cycle.",
+          "link": "/government/publications/2013-maladministration-report",
+          "format": "publication",
+          "public_timestamp": "2014-11-27T14:48:27.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/2013-maladministration-report",
+          "document_type": "edition"
+        },
+        {
+          "title": "Key stage 1 assessments collection 2012: technical specification",
+          "description": "Specification describing technical requirements for the key stage 1 assessments data collection 2012.",
+          "link": "/government/publications/key-stage-1-assessments-collection-2012-technical-specification",
+          "format": "publication",
+          "public_timestamp": "2011-12-06T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/key-stage-1-assessments-collection-2012-technical-specification",
+          "document_type": "edition"
+        },
+        {
           "title": "Independent review of key stage 2 testing, assessment and accountability: government response",
           "description": "The government's response to recommendations made in the review into key stage 2 testing, assessment and accountability.",
           "link": "/government/publications/department-for-education-independent-review-of-key-stage-2-testing-assessment-and-accountability-july-2011",
@@ -5659,31 +4947,9 @@
           "es_score": null,
           "_id": "/government/publications/key-stage-2-writing-moderation-evaluation-of-the-20112012-interim-arrangements",
           "document_type": "edition"
-        },
-        {
-          "title": "Key stage 1 assessments collection 2012: technical specification",
-          "description": "Specification describing technical requirements for the key stage 1 assessments data collection 2012.",
-          "link": "/government/publications/key-stage-1-assessments-collection-2012-technical-specification",
-          "format": "publication",
-          "public_timestamp": "2011-12-06T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/key-stage-1-assessments-collection-2012-technical-specification",
-          "document_type": "edition"
-        },
-        {
-          "title": "2013 maladministration report",
-          "description": "This report details the range of allegations of maladministration reported to the STA maladministration team throughout the 2013 test cycle.",
-          "link": "/government/publications/2013-maladministration-report",
-          "format": "publication",
-          "public_timestamp": "2014-11-27T14:48:27.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/2013-maladministration-report",
-          "document_type": "edition"
         }
       ],
-      "total": 226,
+      "total": 230,
       "start": 0,
       "facets": {
       },
@@ -5826,14 +5092,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Nick Gibb's speech to Reform-AQA conference",
-          "description": "Schools Minister Nick Gibb's speech to the Reform-AQA conference - \"Raising the bar: Making England’s teachers the best in the world\".",
-          "link": "/government/speeches/nick-gibbs-speech-to-reform-aqa-conference",
+          "title": "Michael Gove: the civil rights struggle of our time",
+          "description": "Secretary of State for Education Michael Gove’s speech to the Mayor of London’s education conference.",
+          "link": "/government/speeches/the-civil-rights-struggle-of-our-time",
           "format": "speech",
-          "public_timestamp": "2011-06-28T01:00:00.000+01:00",
+          "public_timestamp": "2013-11-22T16:40:00.000+00:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/speeches/nick-gibbs-speech-to-reform-aqa-conference",
+          "_id": "/government/speeches/the-civil-rights-struggle-of-our-time",
           "document_type": "edition"
         },
         {
@@ -5848,14 +5114,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Michael Gove: the civil rights struggle of our time",
-          "description": "Secretary of State for Education Michael Gove’s speech to the Mayor of London’s education conference.",
-          "link": "/government/speeches/the-civil-rights-struggle-of-our-time",
+          "title": "Nick Gibb's speech to Reform-AQA conference",
+          "description": "Schools Minister Nick Gibb's speech to the Reform-AQA conference - \"Raising the bar: Making England’s teachers the best in the world\".",
+          "link": "/government/speeches/nick-gibbs-speech-to-reform-aqa-conference",
           "format": "speech",
-          "public_timestamp": "2013-11-22T16:40:00.000+00:00",
+          "public_timestamp": "2011-06-28T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/speeches/the-civil-rights-struggle-of-our-time",
+          "_id": "/government/speeches/nick-gibbs-speech-to-reform-aqa-conference",
           "document_type": "edition"
         },
         {
@@ -5871,6 +5137,867 @@
         }
       ],
       "total": 16,
+      "start": 0,
+      "facets": {
+      },
+      "suggested_queries": [
+
+      ]
+    },
+    "/alpha-taxonomy/05aefd16-99ac-4d76-87c4-54c4123b3012-early-years-curriculum-0-to-5": {
+      "results": [
+        {
+          "title": "Early years foundation stage profile: 2016 handbook",
+          "description": "This handbook supports practitioners in making accurate judgements about each pupil's attainment.",
+          "link": "/government/publications/early-years-foundation-stage-profile-handbook",
+          "format": "publication",
+          "public_timestamp": "2016-09-06T15:12:37.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/early-years-foundation-stage-profile-handbook",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile: exemplification materials",
+          "description": "A series of materials for practitioners assessing children's development at the end of the early years foundation stage (EYFS). \r\n",
+          "link": "/government/publications/eyfs-profile-exemplication-materials",
+          "format": "publication",
+          "public_timestamp": "2014-10-07T13:27:34.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/eyfs-profile-exemplication-materials",
+          "document_type": "edition"
+        },
+        {
+          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA)",
+          "description": "Statutory guidance for headteachers and local authority assessment co-ordinators assessing and reporting the early years foundation stage (EYFS) during the 2015 to 2016 academic year. ",
+          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara",
+          "format": "manual",
+          "public_timestamp": "2016-01-14T13:56:02Z",
+          "index": "mainstream",
+          "es_score": null,
+          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara",
+          "document_type": "manual"
+        },
+        {
+          "title": "Early years foundation stage profile results: 2014 to 2015",
+          "description": "Early years foundation stage profile (EYFSP) results for the 2014 to 2015 academic year, at national and local authority level.",
+          "link": "/government/statistics/early-years-foundation-stage-profile-results-2014-to-2015",
+          "format": "publication",
+          "public_timestamp": "2015-11-19T09:30:34.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/early-years-foundation-stage-profile-results-2014-to-2015",
+          "document_type": "edition"
+        },
+        {
+          "title": "Reception baseline assessment: guide to signing up your school",
+          "description": "Information for primary schools about the reception baseline assessment for 2016 to 2017.",
+          "link": "/guidance/reception-baseline-assessment-guide-to-signing-up-your-school",
+          "format": "detailed_guidance",
+          "public_timestamp": "2016-04-14T14:16:05.000+01:00",
+          "index": "detailed",
+          "es_score": null,
+          "_id": "/guidance/reception-baseline-assessment-guide-to-signing-up-your-school",
+          "document_type": "edition"
+        },
+        {
+          "title": "Paediatric first aid: EYFS statutory framework amendments",
+          "description": "We are seeking views on proposals for newly qualified level 2 or 3 early years staff to hold a paediatric first aid certificate.",
+          "link": "/government/consultations/paediatric-first-aid-eyfs-statutory-framework-amendments",
+          "format": "consultation",
+          "public_timestamp": "2016-07-01T09:32:53.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/consultations/paediatric-first-aid-eyfs-statutory-framework-amendments",
+          "document_type": "edition"
+        },
+        {
+          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 2: Early years foundation stage profile",
+          "description": "An overview of the EYFS profile and information about completing the profile and exemptions from assessment",
+          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-2-early-years-foundation-stage-profile",
+          "format": "manual_section",
+          "index": "mainstream",
+          "es_score": null,
+          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-2-early-years-foundation-stage-profile",
+          "document_type": "manual_section"
+        },
+        {
+          "title": "Statistics: early years foundation stage profile",
+          "description": "Statistics on early years foundation stage profile assessments including breakdowns by pupil characteristics.",
+          "link": "/government/collections/statistics-early-years-foundation-stage-profile",
+          "format": "document_collection",
+          "public_timestamp": "2015-10-21T16:30:40.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/collections/statistics-early-years-foundation-stage-profile",
+          "document_type": "edition"
+        },
+        {
+          "title": "Reception baseline comparability study published",
+          "description": "Reception baseline assessment will not be used as a starting point to measure pupil progress following a comparability study.",
+          "link": "/government/news/reception-baseline-comparability-study-published",
+          "format": "news_article",
+          "public_timestamp": "2016-04-07T16:51:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/reception-baseline-comparability-study-published",
+          "document_type": "edition"
+        },
+        {
+          "title": "Reading by six - how the best schools do it",
+          "description": "Survey of primary schools showing how the best schools in England teach virtually every child to read.",
+          "link": "/government/publications/reading-by-six-how-the-best-schools-do-it",
+          "format": "publication",
+          "public_timestamp": "2010-11-14T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/reading-by-six-how-the-best-schools-do-it",
+          "document_type": "edition"
+        },
+        {
+          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 1: Introduction",
+          "description": "About the EYFS ARA and how to use the new manuals format",
+          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-1-introduction",
+          "format": "manual_section",
+          "index": "mainstream",
+          "es_score": null,
+          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-1-introduction",
+          "document_type": "manual_section"
+        },
+        {
+          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 5: Legal requirements and responsibilities ",
+          "description": "The legal status of the ARA, how it applies to different EYFS settings, responsibilities of those who assess or report on EYFS and legal definitions",
+          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-5-legal-requirements-and-responsibilities",
+          "format": "manual_section",
+          "index": "mainstream",
+          "es_score": null,
+          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-5-legal-requirements-and-responsibilities",
+          "document_type": "manual_section"
+        },
+        {
+          "title": "The importance of music: a national plan for music education",
+          "description": "Introducing the national plan for music education and its initiatives.",
+          "link": "/government/publications/the-importance-of-music-a-national-plan-for-music-education",
+          "format": "publication",
+          "public_timestamp": "2011-11-25T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/the-importance-of-music-a-national-plan-for-music-education",
+          "document_type": "edition"
+        },
+        {
+          "title": "Tickell review of the early years foundation stage",
+          "description": "A review into the impact of the early years foundation stage (EYFS) on children's learning and development, and  early years practitioners.",
+          "link": "/government/publications/the-early-years-foundations-for-life-health-and-learning-an-independent-report-on-the-early-years-foundation-stage-to-her-majestys-government",
+          "format": "publication",
+          "public_timestamp": "2011-03-30T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/the-early-years-foundations-for-life-health-and-learning-an-independent-report-on-the-early-years-foundation-stage-to-her-majestys-government",
+          "document_type": "edition"
+        },
+        {
+          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 4: Reporting and using results",
+          "description": "Reporting to parents, governing body responsibilities and how EYFS profile assessment results are used",
+          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-4-reporting-and-using-results",
+          "format": "manual_section",
+          "index": "mainstream",
+          "es_score": null,
+          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-4-reporting-and-using-results",
+          "document_type": "manual_section"
+        },
+        {
+          "title": "Removing barriers to literacy",
+          "description": "Ofsted survey report illustrating effective approaches in literacy that might help others to improve their practice.",
+          "link": "/government/publications/removing-barriers-to-literacy",
+          "format": "publication",
+          "public_timestamp": "2011-01-21T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/removing-barriers-to-literacy",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile results: 2013 to 2014",
+          "description": "Early years foundation stage profile  (EYFSP) results in England, for the 2013 to 2014 academic year, at national and local authority level.",
+          "link": "/government/statistics/early-years-foundation-stage-profile-results-2013-to-2014",
+          "format": "publication",
+          "public_timestamp": "2014-10-16T09:30:14.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/early-years-foundation-stage-profile-results-2013-to-2014",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile results in England: 2015 to 2016",
+          "description": "Early years foundation stage profile (EYFSP) results for the 2015 to 2016 academic year, at national and local authority level.",
+          "link": "/government/statistics/announcements/early-years-foundation-stage-profile-results-in-england-2015-to-2016",
+          "format": "statistics_announcement",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/announcements/early-years-foundation-stage-profile-results-in-england-2015-to-2016",
+          "document_type": "edition"
+        },
+        {
+          "title": "Improving early years teaching: learning from others",
+          "description": "Ofsted good practice example showing how Broomhall Nursery School and Children’s Centre learns from others to enhance early years provision.",
+          "link": "/government/publications/collaborating-to-support-early-years-teaching-and-learning",
+          "format": "publication",
+          "public_timestamp": "2015-07-13T10:15:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/collaborating-to-support-early-years-teaching-and-learning",
+          "document_type": "edition"
+        },
+        {
+          "title": "2016 Early years foundation stage: assessment and reporting arrangements (ARA): Section 3: Moderation",
+          "description": "Information about independent moderation and the responsibilities of headteachers, governing bodies and managers",
+          "link": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-3-moderation",
+          "format": "manual_section",
+          "index": "mainstream",
+          "es_score": null,
+          "_id": "/guidance/2016-early-years-foundation-stage-assessment-and-reporting-arrangements-ara/section-3-moderation",
+          "document_type": "manual_section"
+        },
+        {
+          "title": "Children’s wellbeing, learning and development: parent/carer partnerships",
+          "description": "Ofsted good practice example showing how a childminder develops partnerships to support wellbeing, learning and development.",
+          "link": "/government/publications/partnerships-between-parents-and-carers",
+          "format": "publication",
+          "public_timestamp": "2013-07-03T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/partnerships-between-parents-and-carers",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile return: how to submit data",
+          "description": "How local authorities should submit data from early years providers to complete the early years foundation stage profile (EYFSP) return.",
+          "link": "/guidance/early-years-foundation-stage-profile",
+          "format": "detailed_guidance",
+          "public_timestamp": "2016-05-20T11:45:42.000+01:00",
+          "index": "detailed",
+          "es_score": null,
+          "_id": "/guidance/early-years-foundation-stage-profile",
+          "document_type": "edition"
+        },
+        {
+          "title": "Integrated review at age 2: implementation study",
+          "description": "Exploring the effect of integrating the early years foundation stage (EYFS) progress check with the healthy child programme (HCP) check.",
+          "link": "/government/publications/integrated-review-at-age-2-implementation-study",
+          "format": "publication",
+          "public_timestamp": "2014-11-21T09:30:04.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/integrated-review-at-age-2-implementation-study",
+          "document_type": "edition"
+        },
+        {
+          "title": "Supporting children’s learning through teaching and play",
+          "description": "Ofsted good practice example showing how a childminder supports children’s learning with skill and care.",
+          "link": "/government/publications/supporting-childrens-learning-through-teaching-and-play",
+          "format": "publication",
+          "public_timestamp": "2015-07-13T10:15:02.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/supporting-childrens-learning-through-teaching-and-play",
+          "document_type": "edition"
+        },
+        {
+          "title": "Learning together through play in the early years",
+          "description": "This good practice example shows how St John Vianney Primary School Childcare involves parents in their children's learning.",
+          "link": "/government/publications/learning-together-through-play-in-the-early-years",
+          "format": "publication",
+          "public_timestamp": "2015-07-13T10:15:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/learning-together-through-play-in-the-early-years",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP attainment by pupil characteristics: 2010 to 2011",
+          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2010 to 2011.",
+          "link": "/government/statistics/early-years-foundation-stage-profile-attainment-by-pupil-characteristics-academic-year-2010-to-2011",
+          "format": "publication",
+          "public_timestamp": "2011-12-01T00:01:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/early-years-foundation-stage-profile-attainment-by-pupil-characteristics-academic-year-2010-to-2011",
+          "document_type": "edition"
+        },
+        {
+          "title": "Improving boys’ literacy skills",
+          "description": "Ofsted good practice example showing how Greenfields Children’s Centre uses assessment to close gaps, especially in literacy.",
+          "link": "/government/publications/improving-boys-literacy-skills",
+          "format": "publication",
+          "public_timestamp": "2015-07-13T10:15:02.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/improving-boys-literacy-skills",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP attainment by pupil characteristics: 2013 to 2014",
+          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2013 to 2014.",
+          "link": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-2013-to-2014",
+          "format": "publication",
+          "public_timestamp": "2014-11-20T09:30:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-2013-to-2014",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFS learning and development requirements: exemptions for providers",
+          "description": "What early years providers and independent schools must do to be exempt from some aspects of the early years foundation stage (EYFS).",
+          "link": "/government/publications/the-early-years-foundation-stage-eyfs-learning-and-development-requirements-guidance-on-exemptions-for-early-years-providers",
+          "format": "publication",
+          "public_timestamp": "2012-10-01T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/the-early-years-foundation-stage-eyfs-learning-and-development-requirements-guidance-on-exemptions-for-early-years-providers",
+          "document_type": "edition"
+        },
+        {
+          "title": "Results of the early years foundation stage profile pilot",
+          "description": "This report describes the results of the pilot to support the introduction of the new profile.",
+          "link": "/government/publications/results-of-the-early-years-foundation-stage-profile-pilot",
+          "format": "publication",
+          "public_timestamp": "2013-03-27T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/results-of-the-early-years-foundation-stage-profile-pilot",
+          "document_type": "edition"
+        },
+        {
+          "title": "Nursery staff development: skills to help children learn",
+          "description": "Ofsted good practice example showing how Our Lady Star of the Sea Nursery ensures staff have the skills to model effective learning.",
+          "link": "/government/publications/we-are-all-learners-here-our-lady-star-of-the-sea-nursery",
+          "format": "publication",
+          "public_timestamp": "2014-07-03T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/we-are-all-learners-here-our-lady-star-of-the-sea-nursery",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early language and literacy: from training to teaching",
+          "description": "Ofsted survey report evaluating how well new early years and primary teachers are trained to teach language and literacy.",
+          "link": "/government/publications/early-language-and-literacy-from-training-to-teaching",
+          "format": "publication",
+          "public_timestamp": "2012-11-16T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/early-language-and-literacy-from-training-to-teaching",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years evidence pack",
+          "description": "Pack summarising evidence on achievement at the early years foundation stage",
+          "link": "/government/publications/early-years-evidence-pack",
+          "format": "publication",
+          "public_timestamp": "2011-07-01T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/early-years-evidence-pack",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile results: 2012 to 2013",
+          "description": "Early years foundation stage profile (EYFSP) results in England, for the 2012 to 2013 academic year, at national and local authority level.",
+          "link": "/government/statistics/early-years-foundation-stage-profile-results-2012-to-2013",
+          "format": "publication",
+          "public_timestamp": "2013-10-24T09:30:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/early-years-foundation-stage-profile-results-2012-to-2013",
+          "document_type": "edition"
+        },
+        {
+          "title": "Information and communication technology is not just computers",
+          "description": "Ofsted good practice example showing how a childminder prepares children for a world that is increasingly dependent on technology.",
+          "link": "/government/publications/information-and-communication-technology-is-not-just-computers",
+          "format": "publication",
+          "public_timestamp": "2012-03-23T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/information-and-communication-technology-is-not-just-computers",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile results: 2011 to 2012",
+          "description": "Results of the 2012 early years foundation stage profile (EYFSP) assessments at a national and local-authority level.",
+          "link": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2011-to-2012",
+          "format": "publication",
+          "public_timestamp": "2012-10-17T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2011-to-2012",
+          "document_type": "edition"
+        },
+        {
+          "title": "New early years framework published",
+          "description": "An announcement on the new EYFS framework to support children's learning and development. The early learning goals are reduced from 69 to 17. ",
+          "link": "/government/news/new-early-years-framework-published",
+          "format": "news_article",
+          "public_timestamp": "2012-03-27T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/new-early-years-framework-published",
+          "document_type": "edition"
+        },
+        {
+          "title": "Pre-school and early home learning: effects on A level outcomes",
+          "description": "Report looking at whether pre-school and early home learning helps students gain more A levels.",
+          "link": "/government/publications/pre-school-and-early-home-learning-effects-on-a-level-outcomes",
+          "format": "publication",
+          "public_timestamp": "2015-12-07T10:00:29.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/pre-school-and-early-home-learning-effects-on-a-level-outcomes",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage to be radically slimmed down",
+          "description": "Dame Clare Tickell recommends streamlining the EYFS to make it more focused on making sure children start school ready to learn.",
+          "link": "/government/news/early-years-foundation-stage-to-be-radically-slimmed-down",
+          "format": "news_article",
+          "public_timestamp": "2011-03-30T00:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/early-years-foundation-stage-to-be-radically-slimmed-down",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP attainment by pupil characteristics: 2012 to 2013",
+          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2012 to 2013.",
+          "link": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-2013",
+          "format": "publication",
+          "public_timestamp": "2013-11-21T09:53:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-2013",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile results: 2009 to 2010",
+          "description": "Results of the 2010 early years foundation stage profile (EYFSP) assessments at a national and local-authority level.",
+          "link": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2009-to-2010",
+          "format": "publication",
+          "public_timestamp": "2010-10-12T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2009-to-2010",
+          "document_type": "edition"
+        },
+        {
+          "title": "Assessment updates for schools",
+          "description": "Information about the Standards and Testing Agency's email newsletters for early years providers and key stage 1 and key stage 2 schools.",
+          "link": "/government/news/assessment-updates-for-schools",
+          "format": "news_article",
+          "public_timestamp": "2015-03-19T11:40:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/assessment-updates-for-schools",
+          "document_type": "edition"
+        },
+        {
+          "title": "Nicky Morgan and David Walliams launch literacy drive",
+          "description": "The Education Secretary and children’s author issue a call to publishers and schools to make English pupils Europe’s most literate.",
+          "link": "/government/news/nicky-morgan-and-david-walliams-launch-literacy-drive",
+          "format": "news_article",
+          "public_timestamp": "2015-09-24T09:59:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/nicky-morgan-and-david-walliams-launch-literacy-drive",
+          "document_type": "edition"
+        },
+        {
+          "title": "The impact of the Early Years Foundation Stage",
+          "description": "Ofsted survey report evaluating the impact that the introduction of the Early Years Foundation Stage has had on provision.",
+          "link": "/government/publications/the-impact-of-the-early-years-foundation-stage",
+          "format": "publication",
+          "public_timestamp": "2011-02-10T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/the-impact-of-the-early-years-foundation-stage",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile return: closed collections",
+          "description": "Documents for software suppliers and anyone else interested in past early years foundation stage profile (EYFSP) returns.",
+          "link": "/government/collections/early-years-foundation-stage-profile-return",
+          "format": "document_collection",
+          "public_timestamp": "2016-02-01T11:50:03.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/collections/early-years-foundation-stage-profile-return",
+          "document_type": "edition"
+        },
+        {
+          "title": "Practitioners' experiences of the early years foundation stage",
+          "description": "This research report describes the context, design, conduct and findings of an inquiry into practitioners' experiences of the early years foundation stage. ",
+          "link": "/government/publications/practitioners-experiences-of-the-early-years-foundation-stage",
+          "format": "publication",
+          "public_timestamp": "2010-08-26T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/practitioners-experiences-of-the-early-years-foundation-stage",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFS learning and development requirements: exemptions for children",
+          "description": "What early years settings need to do to disapply or modify some aspects of the early years foundation stage (EYFS) for an individual child.",
+          "link": "/government/publications/the-early-years-foundation-stage-eyfs-learning-and-development-requirements-guidance-on-exemptions-for-individual-children",
+          "format": "publication",
+          "public_timestamp": "2012-08-05T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/the-early-years-foundation-stage-eyfs-learning-and-development-requirements-guidance-on-exemptions-for-individual-children",
+          "document_type": "edition"
+        },
+        {
+          "title": "Investigating the role of language in children's early educational outcomes",
+          "description": "A report that looks at the early communication environment in a child's first 2 years of life, and its role in preparing them for school.",
+          "link": "/government/publications/investigating-the-role-of-language-in-childrens-early-educational-outcomes",
+          "format": "publication",
+          "public_timestamp": "2011-06-30T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/investigating-the-role-of-language-in-childrens-early-educational-outcomes",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile results: 2015 to 2016 - additional tables containing characteristic breakdowns ",
+          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2015 to 2016.",
+          "link": "/government/statistics/announcements/early-years-foundation-stage-profile-results-2015-to-2016-additional-tables-containing-characteristic-breakdowns",
+          "format": "statistics_announcement",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/announcements/early-years-foundation-stage-profile-results-2015-to-2016-additional-tables-containing-characteristic-breakdowns",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early learning for 2-year-olds: trials",
+          "description": "This report brings together learning from trials of 10 local authorities offering early learning to 2-year-olds.",
+          "link": "/government/publications/early-learning-for-two-year-olds-trials",
+          "format": "publication",
+          "public_timestamp": "2013-06-12T14:16:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/early-learning-for-two-year-olds-trials",
+          "document_type": "edition"
+        },
+        {
+          "title": "The early education pilot for 2-year-old children: age 5 follow up",
+          "description": "A follow-up evaluation of the early education pilot for 2-year-old children.",
+          "link": "/government/publications/the-early-education-pilot-for-two-year-old-children-age-five-follow-up",
+          "format": "publication",
+          "public_timestamp": "2013-03-07T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/the-early-education-pilot-for-two-year-old-children-age-five-follow-up",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP attainment by pupil characteristics: 2009 to 2010",
+          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2009 to 2010.",
+          "link": "/government/statistics/foundation-stage-profile-attainment-by-pupil-characteristics-england-academic-year-2009-to-2010",
+          "format": "publication",
+          "public_timestamp": "2010-12-16T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/foundation-stage-profile-attainment-by-pupil-characteristics-england-academic-year-2009-to-2010",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP attainment by pupil characteristics: 2011 to 2012",
+          "description": "Early years foundation stage profile (EYFSP) assessments, by pupil characteristics in England, for academic year 2011 to 2012.",
+          "link": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-in-england-academic-year-2011-to-2012",
+          "format": "publication",
+          "public_timestamp": "2012-11-21T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/eyfsp-attainment-by-pupil-characteristics-in-england-academic-year-2011-to-2012",
+          "document_type": "edition"
+        },
+        {
+          "title": "Achievement of children in the early years foundation stage profile",
+          "description": "Report on children's achievement by the end of the EYFS to find the proportion of children achieving a good level of development.",
+          "link": "/government/publications/achievement-of-children-in-the-early-years-foundation-stage-profile",
+          "format": "publication",
+          "public_timestamp": "2010-09-30T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/achievement-of-children-in-the-early-years-foundation-stage-profile",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile return 2015: guide",
+          "description": "Guide for local authorities and schools submitting early years foundation stage profile (EYFSP) data for 2015.",
+          "link": "/government/publications/early-years-foundation-stage-profile-return-2015-guide",
+          "format": "publication",
+          "public_timestamp": "2015-05-27T10:52:08.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/early-years-foundation-stage-profile-return-2015-guide",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP return 2014: guide",
+          "description": "A guide for schools and local authorities submitting early years foundation stage profile (EYFSP) returns for 2014.",
+          "link": "/government/publications/eyfsp-return-2014-guide",
+          "format": "publication",
+          "public_timestamp": "2014-06-23T14:48:42.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/eyfsp-return-2014-guide",
+          "document_type": "edition"
+        },
+        {
+          "title": "Children's experiences of the early years foundation stage",
+          "description": "This project gathered children's views on their experiences in a range of early years settings.",
+          "link": "/government/publications/childrens-experiences-of-the-early-years-foundation-stage",
+          "format": "publication",
+          "public_timestamp": "2010-12-23T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/childrens-experiences-of-the-early-years-foundation-stage",
+          "document_type": "edition"
+        },
+        {
+          "title": "Reception baseline research",
+          "description": "Research on how primary schools assess the progress of pupils from ages 4 to 11.",
+          "link": "/government/publications/reception-baseline-research",
+          "format": "publication",
+          "public_timestamp": "2015-07-16T10:05:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/reception-baseline-research",
+          "document_type": "edition"
+        },
+        {
+          "title": "I CAN's early talk programme: evaluation",
+          "description": "This evaluates the effect of the programme on the ability of staff to provide high quality communication support in children's centres.",
+          "link": "/government/publications/i-cans-early-talk-programme-independent-evaluation-of-the-impact-of-early-talk-on-addressing-speech-communication-and-language-needs-in-sure-start",
+          "format": "publication",
+          "public_timestamp": "2011-01-27T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/i-cans-early-talk-programme-independent-evaluation-of-the-impact-of-early-talk-on-addressing-speech-communication-and-language-needs-in-sure-start",
+          "document_type": "edition"
+        },
+        {
+          "title": "Early years foundation stage profile results: 2010 to 2011",
+          "description": "Results of the 2011 early years foundation stage profile (EYFSP) assessments at a national and local-authority level.",
+          "link": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2010-to-2011",
+          "format": "publication",
+          "public_timestamp": "2011-11-11T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/early-years-foundation-stage-profile-results-in-england-academic-year-2010-to-2011",
+          "document_type": "edition"
+        },
+        {
+          "title": "Developing a communication supporting classrooms observation tool",
+          "description": "This study aimed to develop a tool for Reception and key stage 1, pilot its feasibility in classrooms and examine its use by practitioners.",
+          "link": "/government/publications/developing-a-communication-supporting-classrooms-observation-tool",
+          "format": "publication",
+          "public_timestamp": "2012-12-27T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/developing-a-communication-supporting-classrooms-observation-tool",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP attainment by pupil characteristics: England - 2015",
+          "description": "National and LA information for early years (under 5s) foundation stage profile assessments in England in the academic year 2015.",
+          "link": "/government/statistics/announcements/eyfsp-attainment-by-pupil-characteristics-england-2015",
+          "format": "statistics_announcement",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/statistics/announcements/eyfsp-attainment-by-pupil-characteristics-england-2015",
+          "document_type": "edition"
+        },
+        {
+          "title": "Impact assessment opinion: Early Years Foundation Stage (Learning and Development Requirements) (Amendment) Order 2012",
+          "description": "Evaluation of the Department for Education impact assessment for the Early Years Foundation Stage (Learning and Development Requirements) (Amendment) Order 2012",
+          "link": "/government/publications/impact-assessment-opinion-early-years-foundation-stage-learning-and-development-requirements-amendment-order-2012",
+          "format": "publication",
+          "public_timestamp": "2014-12-30T09:30:55.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/impact-assessment-opinion-early-years-foundation-stage-learning-and-development-requirements-amendment-order-2012",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP 2013: technical specification",
+          "description": "This document defines the scope of, and business rationale for, the early years foundation stage profile (EYFSP) 2013 return.",
+          "link": "/government/publications/eyfs-profile-2013-technical-specification",
+          "format": "publication",
+          "public_timestamp": "2013-05-07T00:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/eyfs-profile-2013-technical-specification",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP 2013: guide",
+          "description": "Guide for local authorities to help them collect and return the 2013 early years foundation stage profile (EYFSP) return.",
+          "link": "/government/publications/early-years-foundation-stage-profile-2013-guide",
+          "format": "publication",
+          "public_timestamp": "2013-05-16T00:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/early-years-foundation-stage-profile-2013-guide",
+          "document_type": "edition"
+        },
+        {
+          "title": "Surveys of practitioners with early years professional status",
+          "description": "Findings from national surveys of practitioners who've achieved early years professional status.",
+          "link": "/government/publications/first-national-survey-of-practitioners-with-early-years-professional-status",
+          "format": "publication",
+          "public_timestamp": "2011-01-15T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/first-national-survey-of-practitioners-with-early-years-professional-status",
+          "document_type": "edition"
+        },
+        {
+          "title": "Dame Clare Tickell responds to inaccurate reports about her review of the EYFS",
+          "description": "Dame Clare Tickell writes to the Times Educational Supplement about her independent review of the early years foundation stage.",
+          "link": "/government/news/dame-clare-tickell-responds-to-inaccurate-reports-about-her-review-of-the-eyfs",
+          "format": "news_article",
+          "public_timestamp": "2011-04-01T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/dame-clare-tickell-responds-to-inaccurate-reports-about-her-review-of-the-eyfs",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP 2012: guide",
+          "description": "Information for local authorities to help them collect and return the 2012 early years foundation stage profile (EYFSP).",
+          "link": "/government/publications/early-years-foundation-stage-profile-2012-guide",
+          "format": "publication",
+          "public_timestamp": "2012-04-24T00:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/early-years-foundation-stage-profile-2012-guide",
+          "document_type": "edition"
+        },
+        {
+          "title": "Review of early years foundation stage",
+          "description": "Information on Sarah Teather's invitation to Clare Tickell to lead a review into the early years foundation stage. ",
+          "link": "/government/news/review-of-early-years-foundation-stage",
+          "format": "news_article",
+          "public_timestamp": "2010-07-06T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/review-of-early-years-foundation-stage",
+          "document_type": "edition"
+        },
+        {
+          "title": "Sarah Teather on reforming Early Years",
+          "description": "Children’s Minister Sarah Teather confirms plans for a reformed Early Years Foundation Stage.",
+          "link": "/government/speeches/sarah-teather-on-reforming-early-years",
+          "format": "speech",
+          "public_timestamp": "2011-12-20T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/sarah-teather-on-reforming-early-years",
+          "document_type": "edition"
+        },
+        {
+          "title": "Call for evidence for the review of the early years foundation stage",
+          "description": "Dame Clare Tickell launches a call for evidence to inform the independent review of the early years foundation stage. Includes a link to the online consultation.",
+          "link": "/government/news/call-for-evidence-for-the-review-of-the-early-years-foundation-stage",
+          "format": "news_article",
+          "public_timestamp": "2010-08-02T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/call-for-evidence-for-the-review-of-the-early-years-foundation-stage",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP 2014: technical specification",
+          "description": "This document defines the scope of, and business rationale for, the early years foundation stage profile (EYFSP) return 2014.",
+          "link": "/government/publications/eyfsp-2014-technical-specification",
+          "format": "publication",
+          "public_timestamp": "2014-04-09T10:21:50.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/eyfsp-2014-technical-specification",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP 2012: technical specification",
+          "description": "This document defines the scope of, and business rationale for, the early years foundation stage profile 2012 (EYFSP) return.",
+          "link": "/government/publications/eyfs-profile-2012-technical-specification",
+          "format": "publication",
+          "public_timestamp": "2011-12-01T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/eyfs-profile-2012-technical-specification",
+          "document_type": "edition"
+        },
+        {
+          "title": "Revised early years foundation stage: consultation closes 30 September",
+          "description": "Closing date of consultation on EYFS.",
+          "link": "/government/news/revised-early-years-foundation-stage-consultation-closes-30-september",
+          "format": "news_article",
+          "public_timestamp": "2011-10-27T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/revised-early-years-foundation-stage-consultation-closes-30-september",
+          "document_type": "edition"
+        },
+        {
+          "title": "Foundation learning national evaluation",
+          "description": "Evaluation to review the implementation of foundation learning and to assess its effects.",
+          "link": "/government/publications/foundation-learning-national-evaluation",
+          "format": "publication",
+          "public_timestamp": "2011-06-30T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/foundation-learning-national-evaluation",
+          "document_type": "edition"
+        },
+        {
+          "title": "Written ministerial statement by Sarah Teather on the early years foundation stage",
+          "description": "Sarah Teather MP on the new, simpler and clearer early years foundation stage framework.",
+          "link": "/government/speeches/written-ministerial-statement-by-sarah-teather-on-the-early-years-foundation-stage",
+          "format": "speech",
+          "public_timestamp": "2012-03-27T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/written-ministerial-statement-by-sarah-teather-on-the-early-years-foundation-stage",
+          "document_type": "edition"
+        },
+        {
+          "title": "Quality nurseries urged to make full use of flexibility",
+          "description": "Elizabeth Truss speaks about improving teaching practices in early years education and giving more flexibility to nurseries.",
+          "link": "/government/news/quality-nurseries-urged-to-make-full-use-of-flexibility",
+          "format": "news_article",
+          "public_timestamp": "2013-04-19T00:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/quality-nurseries-urged-to-make-full-use-of-flexibility",
+          "document_type": "edition"
+        },
+        {
+          "title": "EYFSP 2015: technical specification",
+          "description": "This document defines the scope of the early years foundation stage profile (EYFSP) return 2015.",
+          "link": "/government/publications/eyfsp-2015-technical-specification",
+          "format": "publication",
+          "public_timestamp": "2015-04-17T16:58:17.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/eyfsp-2015-technical-specification",
+          "document_type": "edition"
+        }
+      ],
+      "total": 78,
       "start": 0,
       "facets": {
       },
@@ -6133,6 +6260,27 @@
           "document_type": "edition"
         },
         {
+          "title": "Closed organisation: Sutherland Inquiry",
+          "description": "The inquiry was setup to review the circumstances surrounding the delay to the marking of National Curriculum tests in 2008.",
+          "link": "/government/organisations/sutherland-inquiry",
+          "format": "organisation",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/organisations/sutherland-inquiry",
+          "document_type": "edition"
+        },
+        {
+          "title": "Statement on national curriculum tests",
+          "description": "The Department welcomes the decision by the National Association of Head Teachers following a letter from Michael Gove to the General Secretary outlining plans for a review of national curriculum tests.",
+          "link": "/government/publications/statement-on-national-curriculum-tests",
+          "format": "publication",
+          "public_timestamp": "2010-09-27T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/statement-on-national-curriculum-tests",
+          "document_type": "edition"
+        },
+        {
           "title": "Education Minister Elizabeth Truss speaks at the North of England Education Conference",
           "description": "Elizabeth Truss focuses on the importance of maths education at the North of England Education Conference on 17 January 2013.",
           "link": "/government/speeches/education-minister-elizabeth-truss-speaks-at-the-north-of-england-education-conference",
@@ -6152,27 +6300,6 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/speeches/elizabeth-truss-on-increasing-the-number-of-pupils-studying-mandarin",
-          "document_type": "edition"
-        },
-        {
-          "title": "Statement on national curriculum tests",
-          "description": "The Department welcomes the decision by the National Association of Head Teachers following a letter from Michael Gove to the General Secretary outlining plans for a review of national curriculum tests.",
-          "link": "/government/publications/statement-on-national-curriculum-tests",
-          "format": "publication",
-          "public_timestamp": "2010-09-27T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/statement-on-national-curriculum-tests",
-          "document_type": "edition"
-        },
-        {
-          "title": "Closed organisation: Sutherland Inquiry",
-          "description": "The inquiry was setup to review the circumstances surrounding the delay to the marking of National Curriculum tests in 2008.",
-          "link": "/government/organisations/sutherland-inquiry",
-          "format": "organisation",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/organisations/sutherland-inquiry",
           "document_type": "edition"
         }
       ],
@@ -6814,17 +6941,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Phonics self-assessment form: Phonics International",
-          "description": "Information about the Phonics International programme and how it fulfils the department’s core criteria.",
-          "link": "/government/publications/phonics-self-assessment-form-phonics-international",
-          "format": "publication",
-          "public_timestamp": "2013-05-13T00:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/phonics-self-assessment-form-phonics-international",
-          "document_type": "edition"
-        },
-        {
           "title": "Phonics self-assessment form: Teach Your Monster to Read",
           "description": "Information about the Teach Your Monster to Read programme and how it fulfils the department’s core criteria.",
           "link": "/government/publications/phonics-self-assessment-form-teach-your-monster-to-read",
@@ -6836,14 +6952,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Focus on phonics vindicated by results",
-          "description": "Phonics check results show 120,000 more children on track to become excellent readers.",
-          "link": "/government/news/focus-on-phonics-vindicated-by-results",
-          "format": "news_article",
-          "public_timestamp": "2015-09-24T10:09:21.000+01:00",
+          "title": "Phonics self-assessment form: Phonics International",
+          "description": "Information about the Phonics International programme and how it fulfils the department’s core criteria.",
+          "link": "/government/publications/phonics-self-assessment-form-phonics-international",
+          "format": "publication",
+          "public_timestamp": "2013-05-13T00:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/focus-on-phonics-vindicated-by-results",
+          "_id": "/government/publications/phonics-self-assessment-form-phonics-international",
           "document_type": "edition"
         },
         {
@@ -6858,6 +6974,17 @@
           "document_type": "edition"
         },
         {
+          "title": "Focus on phonics vindicated by results",
+          "description": "Phonics check results show 120,000 more children on track to become excellent readers.",
+          "link": "/government/news/focus-on-phonics-vindicated-by-results",
+          "format": "news_article",
+          "public_timestamp": "2015-09-24T10:09:21.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/focus-on-phonics-vindicated-by-results",
+          "document_type": "edition"
+        },
+        {
           "title": "Phonics screening check data collection 2015: guide",
           "description": "How local authorities should complete and return the 2015 phonics screening check data collection.",
           "link": "/government/publications/phonics-screening-check-data-collection-2015-guide",
@@ -6866,6 +6993,28 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/phonics-screening-check-data-collection-2015-guide",
+          "document_type": "edition"
+        },
+        {
+          "title": "Phonics screening check data collection 2012: technical specification",
+          "description": "Technical specification for software suppliers defining the scope of the year 1 phonics screening check data collection 2012.",
+          "link": "/government/publications/phonics-screening-check-data-collection-2012-technical-specification",
+          "format": "publication",
+          "public_timestamp": "2013-12-17T16:08:46.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/phonics-screening-check-data-collection-2012-technical-specification",
+          "document_type": "edition"
+        },
+        {
+          "title": "Phonics screening check HDF deadline, Friday 27 June",
+          "description": "Information for headteachers about submitting the phonics headteacher's declaration form.",
+          "link": "/government/news/phonics-screening-check-week-begins-today",
+          "format": "news_article",
+          "public_timestamp": "2014-06-16T08:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/phonics-screening-check-week-begins-today",
           "document_type": "edition"
         },
         {
@@ -6891,36 +7040,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Phonics screening check HDF deadline, Friday 27 June",
-          "description": "Information for headteachers about submitting the phonics headteacher's declaration form.",
-          "link": "/government/news/phonics-screening-check-week-begins-today",
-          "format": "news_article",
-          "public_timestamp": "2014-06-16T08:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/phonics-screening-check-week-begins-today",
-          "document_type": "edition"
-        },
-        {
-          "title": "Phonics screening check data collection 2012: technical specification",
-          "description": "Technical specification for software suppliers defining the scope of the year 1 phonics screening check data collection 2012.",
-          "link": "/government/publications/phonics-screening-check-data-collection-2012-technical-specification",
+          "title": "Phonics screening check data collection 2013: technical specification",
+          "description": "Technical specification for software suppliers defining the scope of the phonics screening check data collection 2013.",
+          "link": "/government/publications/phonics-screening-check-data-collection-2013-technical-specification",
           "format": "publication",
-          "public_timestamp": "2013-12-17T16:08:46.000+00:00",
+          "public_timestamp": "2013-04-13T00:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/phonics-screening-check-data-collection-2012-technical-specification",
-          "document_type": "edition"
-        },
-        {
-          "title": "100,000 more pupils on track to succeed in reading via phonics",
-          "description": "Phonics check results show more pupils are now doing well.",
-          "link": "/government/news/100000-more-pupils-on-track-to-succeed-in-reading-via-phonics",
-          "format": "news_article",
-          "public_timestamp": "2014-09-25T10:43:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/100000-more-pupils-on-track-to-succeed-in-reading-via-phonics",
+          "_id": "/government/publications/phonics-screening-check-data-collection-2013-technical-specification",
           "document_type": "edition"
         },
         {
@@ -6957,25 +7084,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Phonics self-assessment form: Autopress Education",
-          "description": "Information about the Autopress Education programme and how it fulfils the department’s core criteria.",
-          "link": "/government/publications/phonics-self-assessment-form-autopress-education",
+          "title": "Phonics screening check: pilot 2011 technical report",
+          "description": "This report provides an analysis of the phonics screening check following a pilot in 2011.",
+          "link": "/government/publications/phonics-screening-check-pilot-2011-technical-report",
           "format": "publication",
-          "public_timestamp": "2013-05-13T00:00:00.000+01:00",
+          "public_timestamp": "2012-02-16T00:00:00.000+00:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/phonics-self-assessment-form-autopress-education",
-          "document_type": "edition"
-        },
-        {
-          "title": "Phonics self-assessment form: Project X Phonics",
-          "description": "Information about the Project X Phonics programme and how it fulfils the department’s core criteria.",
-          "link": "/government/publications/phonics-self-assessment-form-project-x-phonics",
-          "format": "publication",
-          "public_timestamp": "2013-05-13T00:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/phonics-self-assessment-form-project-x-phonics",
+          "_id": "/government/publications/phonics-screening-check-pilot-2011-technical-report",
           "document_type": "edition"
         },
         {
@@ -7001,25 +7117,36 @@
           "document_type": "edition"
         },
         {
-          "title": "Phonics screening check: pilot 2011 technical report",
-          "description": "This report provides an analysis of the phonics screening check following a pilot in 2011.",
-          "link": "/government/publications/phonics-screening-check-pilot-2011-technical-report",
+          "title": "Phonics self-assessment form: Project X Phonics",
+          "description": "Information about the Project X Phonics programme and how it fulfils the department’s core criteria.",
+          "link": "/government/publications/phonics-self-assessment-form-project-x-phonics",
           "format": "publication",
-          "public_timestamp": "2012-02-16T00:00:00.000+00:00",
+          "public_timestamp": "2013-05-13T00:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/phonics-screening-check-pilot-2011-technical-report",
+          "_id": "/government/publications/phonics-self-assessment-form-project-x-phonics",
           "document_type": "edition"
         },
         {
-          "title": "Phonics screening check data collection 2013: technical specification",
-          "description": "Technical specification for software suppliers defining the scope of the phonics screening check data collection 2013.",
-          "link": "/government/publications/phonics-screening-check-data-collection-2013-technical-specification",
+          "title": "Phonics self-assessment form: Autopress Education",
+          "description": "Information about the Autopress Education programme and how it fulfils the department’s core criteria.",
+          "link": "/government/publications/phonics-self-assessment-form-autopress-education",
           "format": "publication",
-          "public_timestamp": "2013-04-13T00:00:00.000+01:00",
+          "public_timestamp": "2013-05-13T00:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/phonics-screening-check-data-collection-2013-technical-specification",
+          "_id": "/government/publications/phonics-self-assessment-form-autopress-education",
+          "document_type": "edition"
+        },
+        {
+          "title": "100,000 more pupils on track to succeed in reading via phonics",
+          "description": "Phonics check results show more pupils are now doing well.",
+          "link": "/government/news/100000-more-pupils-on-track-to-succeed-in-reading-via-phonics",
+          "format": "news_article",
+          "public_timestamp": "2014-09-25T10:43:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/100000-more-pupils-on-track-to-succeed-in-reading-via-phonics",
           "document_type": "edition"
         }
       ],
@@ -7922,17 +8049,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Children’s centres in England evaluation: survey of families",
-          "description": "Research on children’s centres and the services they offered between 2012 and 2014.",
-          "link": "/government/publications/childrens-centres-in-england-evaluation-survey-of-families",
-          "format": "publication",
-          "public_timestamp": "2015-06-25T10:05:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/childrens-centres-in-england-evaluation-survey-of-families",
-          "document_type": "edition"
-        },
-        {
           "title": "'Nursery World' column from Sarah Teather on funding for Sure Start children's centres",
           "description": "Following speculation and media coverage about early education and funding for Sure Start, the Children's Minister outlines the Government's commitment to early years.",
           "link": "/government/speeches/nursery-world-column-from-sarah-teather-on-funding-for-sure-start-childrens-centres",
@@ -7941,6 +8057,17 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/speeches/nursery-world-column-from-sarah-teather-on-funding-for-sure-start-childrens-centres",
+          "document_type": "edition"
+        },
+        {
+          "title": "Children’s centres in England evaluation: survey of families",
+          "description": "Research on children’s centres and the services they offered between 2012 and 2014.",
+          "link": "/government/publications/childrens-centres-in-england-evaluation-survey-of-families",
+          "format": "publication",
+          "public_timestamp": "2015-06-25T10:05:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/childrens-centres-in-england-evaluation-survey-of-families",
           "document_type": "edition"
         },
         {
@@ -7955,17 +8082,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Sarah Teather responds to claims about LA funding for children's centres",
-          "description": "Children's Minister Sarah Teather responds to claims about local authority (LA) funding for children's centres. ",
-          "link": "/government/news/sarah-teather-responds-to-claims-about-la-funding-for-childrens-centres",
-          "format": "news_article",
-          "public_timestamp": "2010-11-18T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/sarah-teather-responds-to-claims-about-la-funding-for-childrens-centres",
-          "document_type": "edition"
-        },
-        {
           "title": "Payment by results in children’s centres evaluation",
           "description": "Research looking at a trial of payment by results for children’s centres services.",
           "link": "/government/publications/payment-by-results-in-childrens-centres-evaluation",
@@ -7974,6 +8090,17 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/payment-by-results-in-childrens-centres-evaluation",
+          "document_type": "edition"
+        },
+        {
+          "title": "Sarah Teather responds to claims about LA funding for children's centres",
+          "description": "Children's Minister Sarah Teather responds to claims about local authority (LA) funding for children's centres. ",
+          "link": "/government/news/sarah-teather-responds-to-claims-about-la-funding-for-childrens-centres",
+          "format": "news_article",
+          "public_timestamp": "2010-11-18T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/sarah-teather-responds-to-claims-about-la-funding-for-childrens-centres",
           "document_type": "edition"
         }
       ],
