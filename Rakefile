@@ -15,7 +15,7 @@ task :validate_taxons do
   missing_taxons = data['taxons_for_content'].select {|base_path, taxons| taxons.empty?}.keys
   unless missing_taxons.empty?
     puts "Pages with missing taxons:"
-    missing_taxons.each {|base_path| puts "\t#{base_path}"}
+    missing_taxons.each {|base_path| puts "\t#{base_path}\n\t\t = #{find_redirects(base_path)}\n"}
     puts ""
   end
 
@@ -35,8 +35,10 @@ task :generate_json do
   documents_in_taxon = {}
 
   get_files.each do |base_path|
+    true_base_path = find_redirects(base_path)
     puts "Processing #{base_path}"
-    links = content_store.content_item!("/#{base_path}")["links"]
+    puts "(Redirected to #{true_base_path})" if true_base_path != base_path
+    links = content_store.content_item!("/#{true_base_path}")["links"]
     taxons = links["taxons"] || links["alpha_taxons"]
     taxons_for_content[base_path] = []
     if taxons
@@ -69,11 +71,26 @@ task :generate_json do
 end
 
 def content_store
-  GdsApi::ContentStore.new('https://www.gov.uk/api')
+  GdsApi::ContentStore.new('https://www-origin.staging.publishing.service.gov.uk/api')
 end
 
 def rummager
-  GdsApi::Rummager.new('https://www.gov.uk/api')
+  GdsApi::Rummager.new('https://www-origin.staging.publishing.service.gov.uk/api')
+end
+
+# Some of our source data has been redirected - in this case,
+# we just follow the redirects when fetching link data from the API so
+# that our content still has tags. We can remove the old content later.
+def find_redirects(base_path)
+  http = Net::HTTP.new('www-origin.staging.publishing.service.gov.uk', 443)
+  http.use_ssl = true
+  response = http.request_head("/#{base_path}")
+
+  if response.is_a?(Net::HTTPRedirection)
+    find_redirects(response.fetch('Location').gsub(/^(https:\/\/.*\.gov\.uk)?\//, ""))
+  else
+    base_path
+  end
 end
 
 def get_documents_by_taxon(taxon_content_id)
