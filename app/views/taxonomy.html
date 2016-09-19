@@ -13,7 +13,79 @@
           <h1>{{ taxon.title }}</h1>
           <p>A short description of this topic to make it easier to understand</p>
 
+          <nav class="popular-list">
+            <h2>Most popular</h2>
+            <ol>
+               <li>
+                  <a href="/government/publications/school-inspection-handbook-from-september-2015">School inspection handbook</a>
+               </li>
+               <li>
+                  <a href="/government/publications/inspecting-safeguarding-in-early-years-education-and-skills-from-september-2015">Inspecting safeguarding in early years, education and skills</a>
+               </li>
+               <li>
+                  <a href="/find-ofsted-inspection-report">Find an Ofsted inspection report</a>
+               </li>
+               <li>
+                  <a href="/government/publications/common-inspection-framework-education-skills-and-early-years-from-september-2015">Common inspection framework: education, skills and early years from September 2015</a>
+               </li>
+               <li>
+                  <a href="/government/publications/early-years-inspection-handbook-from-september-2015">Early years inspection handbook from September 2015</a>
+               </li>
+               <li>
+                  <a href="/ofsted-inspection-childcare-provider">Being inspected as a childminder or childcare provider</a>
+               </li>
+            </ol>
+          </nav>
+
+          <nav class="updated-list">
+            <h2>Latest</h2>
+            <ol>
+               <li>
+                  <a href="/government/publications/school-inspection-handbook-from-september-2015">School inspection handbook</a>
+                  <span>2 hours ago</span>
+               </li>
+               <li>
+                  <a href="/government/publications/inspecting-safeguarding-in-early-years-education-and-skills-from-september-2015">Inspecting safeguarding in early years, education and skills</a>
+                  <span>2 hours ago</span>
+               </li>
+               <li>
+                  <a href="/find-ofsted-inspection-report">Find an Ofsted inspection report</a>
+                  <span>4 hours ago</span>
+               </li>
+               <li>
+                  <a href="/government/publications/common-inspection-framework-education-skills-and-early-years-from-september-2015">Common inspection framework: education, skills and early years from September 2015</a>
+                  <span>8 hours ago</span>
+               </li>
+            </ol>
+          </nav>
+
           <nav role="navigation" aria-labelledby="parent-other" class="full-list">
+            <h2>Child taxon</h2>
+            <p>A short description of this topic to make it easier to understand</p>
+            <ul>
+               <li>
+                  <a href="/government/publications/school-inspection-handbook-from-september-2015">School inspection handbook</a>
+               </li>
+               <li>
+                  <a href="/government/publications/inspecting-safeguarding-in-early-years-education-and-skills-from-september-2015">Inspecting safeguarding in early years, education and skills</a>
+               </li>
+               <li>
+                  <a href="/find-ofsted-inspection-report">Find an Ofsted inspection report</a>
+               </li>
+               <li>
+                  <a href="/government/publications/common-inspection-framework-education-skills-and-early-years-from-september-2015">Common inspection framework: education, skills and early years from September 2015</a>
+               </li>
+               <li>
+                  <a href="/government/publications/early-years-inspection-handbook-from-september-2015">Early years inspection handbook from September 2015</a>
+               </li>
+               <li>
+                  <a href="/ofsted-inspection-childcare-provider">Being inspected as a childminder or childcare provider</a>
+               </li>
+            </ul>
+          </nav>
+
+          <nav role="navigation" aria-labelledby="parent-other" class="full-list">
+            <h2>Everything in {{ taxon.title }}</h2>
             <ul>
               {% for contentItem in taxon.content %}
               <li>
@@ -22,6 +94,27 @@
               {% endfor %}
             </ul>
           </nav>
+          
+          
+          <nav class="publisher-list">
+            <h2>published by</h2>
+            <ul>
+               <li>
+                  <a href="https://www.gov.uk/government/organisations/department-for-education">Department for Education</a>
+               </li>
+               <li>
+                  <a href="https://www.gov.uk/government/organisations/education-funding-agency">Education Funding Agency</a>
+               </li>
+               <li>
+                  <a href="https://www.gov.uk/government/organisations/school-teachers-review-body">School Teachers' Review Body</a>
+               </li>
+               <li>
+                  <a href="https://www.gov.uk/government/organisations/student-loans-company">Student Loans Company</a>
+               </li>
+            </ul>
+          </nav>
+
+          
       {% endblock %}
       {% else %}
       <p>No taxon information available</p>

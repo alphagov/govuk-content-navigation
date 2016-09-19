@@ -357,19 +357,218 @@
          padding-bottom: 30px;
       }
    }
-   ul {
-      margin: 0;
-      margin-left: 50%;
-      width: 100%;
+   h2 {
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: bold;
    }
-   li {
+   .popular-list {
       position: relative;
-      font-size: 19px;
-      line-height: 25px;
-      a {
-         text-decoration: none;
-         &:hover {
-            text-decoration: underline;
+      width: 100%;
+      float: left;
+      margin-left: -100%;
+      left: 100%;
+      h2 {
+         font-size: 14px;
+         line-height: 20px;
+         font-weight: normal;
+         padding-bottom: 10px;
+      }
+      ol {
+         list-style: none;
+         width: 50%;
+         padding-left: 50%;
+      }
+      li {
+         padding-left: 30px;
+         padding-right: 30px;
+         box-sizing: border-box;
+         display: inline-block;
+         font-size: 19px;
+         line-height: 25px;
+         width: 100%;
+         &:nth-child(1) {
+            float: left;
+            margin-left: -100%;
+         }
+         &:nth-child(2) {
+            float: left;
+            clear: left;
+            margin-left: -100%;
+         }
+         &:nth-child(3) {
+            float: left;
+            clear: left;
+            margin-left: -100%;
+         }
+         &:nth-child(1)::before {
+            content: "1.";
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            margin-left: -30px;
+            float: left;
+         }
+         &:nth-child(2)::before {
+            content: "2.";
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            margin-left: -30px;
+            float: left;
+         }
+         &:nth-child(3)::before {
+            content: "3.";
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            margin-left: -30px;
+            float: left;
+         }
+         &:nth-child(4)::before {
+            content: "4.";
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            margin-left: -30px;
+            float: left;
+         }
+         &:nth-child(5)::before {
+            content: "5.";
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            margin-left: -30px;
+            float: left;
+         }
+         &:nth-child(6)::before {
+            content: "6.";
+            position: relative;
+            display: inline-block;
+            width: 30px;
+            margin-left: -30px;
+            float: left;
+         }
+         a {
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+   .updated-list {
+      position: relative;
+      width: 50%;
+      float: left;
+      margin-left: -100%;
+      left: 200%;
+      h2 {
+         font-size: 14px;
+         line-height: 20px;
+         font-weight: normal;
+         padding-bottom: 10px;
+      }
+      ol {
+         margin: 0;
+         width: 100%;
+         list-style: none;
+      }
+      li {
+         position: relative;
+         font-size: 19px;
+         line-height: 25px;
+         span {
+            display: block;
+            font-size: 14px;
+         }
+         a {
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+   .full-list {
+      clear: both;
+      padding-top: 60px;
+      h2 {
+         width: 50%;
+         float: left;
+         padding-bottom: 10px;
+      }
+      p {
+         width: 50%;
+         float: left;
+         clear: left;
+         margin: 0;
+      }
+      ul {
+         margin: 0;
+         margin-left: 50%;
+         width: 100%;
+         list-style: none;
+      }
+      li {
+         position: relative;
+         font-size: 19px;
+         line-height: 25px;
+         padding-left: 30px;
+         &:before {
+            content: "•";
+            position: relative;
+            display: inline-block;
+            width: 25px;
+            margin-left: -25px;
+         }
+         a {
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+               text-decoration: underline;
+            }
+         }
+      }
+   }
+   .publisher-list {
+      clear: both;
+      padding-top: 60px;
+      h2 {
+         width: 50%;
+         margin-left: 50%;
+         padding-bottom: 10px;
+         font-size: 14px;
+         line-height: 20px;
+         font-weight: normal;
+      }
+      ul {
+         margin: 0;
+         margin-left: 50%;
+         width: 100%;
+         list-style: none;
+      }
+      li {
+         position: relative;
+         font-size: 19px;
+         line-height: 25px;
+         padding-left: 30px;
+         &:before {
+            content: "•";
+            position: relative;
+            display: inline-block;
+            width: 25px;
+            margin-left: -25px;
+         }
+         a {
+            text-decoration: none;
+            font-weight: bold;
+            &:hover {
+               text-decoration: underline;
+            }
          }
       }
    }
