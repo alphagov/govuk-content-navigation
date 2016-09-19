@@ -2,6 +2,7 @@ var path = require('path'),
     express = require('express'),
     session = require('express-session'),
     nunjucks = require('express-nunjucks'),
+    dateFilter = require('nunjucks-date-filter'),
     routes = require(__dirname + '/app/routes.js'),
     favicon = require('serve-favicon'),
     app = express(),
@@ -48,6 +49,8 @@ nunjucks.ready(function(nj) {
   Object.keys(filters).forEach(function(filterName) {
     nj.addFilter(filterName, filters[filterName]);
   });
+
+  nj.addFilter('date', dateFilter);
 });
 
 // Middleware to serve static assets

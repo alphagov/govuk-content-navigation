@@ -12,50 +12,27 @@
       {% block taxonomy %}
           <h1>{{ taxon.title }}</h1>
           <p>A short description of this topic to make it easier to understand</p>
-
           <nav class="popular-list">
             <h2>Most popular</h2>
             <ol>
+            {% for document in taxon.popularContent(5) %}
                <li>
-                  <a href="/government/publications/school-inspection-handbook-from-september-2015">School inspection handbook</a>
+                 <a href="{{ document.base_path }}">{{ document.title }}</a>
                </li>
-               <li>
-                  <a href="/government/publications/inspecting-safeguarding-in-early-years-education-and-skills-from-september-2015">Inspecting safeguarding in early years, education and skills</a>
-               </li>
-               <li>
-                  <a href="/find-ofsted-inspection-report">Find an Ofsted inspection report</a>
-               </li>
-               <li>
-                  <a href="/government/publications/common-inspection-framework-education-skills-and-early-years-from-september-2015">Common inspection framework: education, skills and early years from September 2015</a>
-               </li>
-               <li>
-                  <a href="/government/publications/early-years-inspection-handbook-from-september-2015">Early years inspection handbook from September 2015</a>
-               </li>
-               <li>
-                  <a href="/ofsted-inspection-childcare-provider">Being inspected as a childminder or childcare provider</a>
-               </li>
+             {% endfor %}
+
             </ol>
           </nav>
 
           <nav class="updated-list">
             <h2>Latest</h2>
             <ol>
-               <li>
-                  <a href="/government/publications/school-inspection-handbook-from-september-2015">School inspection handbook</a>
-                  <span>2 hours ago</span>
-               </li>
-               <li>
-                  <a href="/government/publications/inspecting-safeguarding-in-early-years-education-and-skills-from-september-2015">Inspecting safeguarding in early years, education and skills</a>
-                  <span>2 hours ago</span>
-               </li>
-               <li>
-                  <a href="/find-ofsted-inspection-report">Find an Ofsted inspection report</a>
-                  <span>4 hours ago</span>
-               </li>
-               <li>
-                  <a href="/government/publications/common-inspection-framework-education-skills-and-early-years-from-september-2015">Common inspection framework: education, skills and early years from September 2015</a>
-                  <span>8 hours ago</span>
-               </li>
+              {% for document in taxon.recentContent(5) %}
+                 <li>
+                   <a href="{{ document.base_path }}">{{ document.title }}</a>
+                   <span>{{ document.publicTimestamp | date("fromNow") }}</span>
+                 </li>
+               {% endfor %}
             </ol>
           </nav>
 

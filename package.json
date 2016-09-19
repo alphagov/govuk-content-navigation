@@ -38,5 +38,8 @@
     "prompt": "^0.2.14",
     "readdir": "0.0.6",
     "serve-favicon": "2.3.0"
+  },
+  "devDependencies": {
+    "nunjucks-date-filter": "^0.1.1"
   }
 }
