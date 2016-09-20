@@ -13,7 +13,7 @@ var readFile = Promise.promisify(fs.readFile);
   var metadata = getMetadata();
 
   router.get('/', function (req, res) {
-    res.render('index');
+    res.render('index', {homepage_url: '/'});
   });
 
 
@@ -21,10 +21,10 @@ var readFile = Promise.promisify(fs.readFile);
     var taxon = req.url.substring(0, req.url.length-1);
     try {
       var taxons = Taxon.fromMetadata(taxon);
-      res.render('taxonomy', {taxon: taxons});
+      res.render('taxonomy', {taxon: taxons, homepage_url: '/'});
     }
     catch (e) {
-      res.render('taxonomy');
+      res.render('taxonomy', {homepage_url: '/'});
     }
   });
 
@@ -47,12 +47,15 @@ var readFile = Promise.promisify(fs.readFile);
         content = data.toString();
         var breadcrumb = getBreadcrumb(url);
         var taxons = getTaxons(url);
+
+        console.log("Breadcrumb", breadcrumb);
+        console.log("Taxons", taxons);
         var whitehall = filePath.match(/whitehall/);
 
-        res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall});
+        res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall, homepage_url: '/'});
       },
       function (e) {
-        res.render('content', {content: 'Page not found'});
+        res.render('content', {content: 'Page not found', homepage_url: '/'});
       });
     });
   });
@@ -69,6 +72,12 @@ var readFile = Promise.promisify(fs.readFile);
   function getBreadcrumb(page) {
     // Pick the first taxon to generate a breadcrumb from
     var taxonForPage = metadata.taxons_for_content[page];
+
+    if (taxonForPage === undefined) {
+      console.error("No metadata found for %s. The path should match a GOV.UK base path.", page)
+      return null;
+    }
+
     try {
 
       var firstTaxon = taxonForPage[0];

@@ -9,7 +9,7 @@ var path = require('path'),
     bodyParser = require('body-parser'),
     browserSync = require('browser-sync'),
     config = require(__dirname + '/app/config.js'),
-    utils = require(__dirname + '/lib/utils.js'),
+    utils = require(__dirname + '/lib/js/utils.js'),
     packageJson = require(__dirname + '/package.json'),
 
 // Grab environment variables specified in Procfile or as Heroku config vars
@@ -32,7 +32,7 @@ if (env === 'production' && useAuth === 'true'){
 
 // Application settings
 app.set('view engine', 'html');
-app.set('views', [__dirname + '/app/views', __dirname + '/lib/']);
+app.set('views', [__dirname + '/app/views', __dirname + '/lib/html/']);
 
 nunjucks.setup({
   autoescape: true,
@@ -43,7 +43,7 @@ nunjucks.setup({
 // require core and custom filters, merges to one object
 // and then add the methods to nunjucks env obj
 nunjucks.ready(function(nj) {
-  var coreFilters = require(__dirname + '/lib/core_filters.js')(nj),
+  var coreFilters = require(__dirname + '/lib/js/core_filters.js')(nj),
     customFilters = require(__dirname + '/app/filters.js')(nj),
     filters = Object.assign(coreFilters, customFilters);
   Object.keys(filters).forEach(function(filterName) {

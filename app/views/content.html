@@ -9,7 +9,9 @@
     {% endblock %}
     <div class="grid-row">
       {{ content | safe }}
+      {% if taxons %}
       {% include '_side_navigation.html' %}
+      {% endif %}
     </div>
   </div>
 {% endblock %}
