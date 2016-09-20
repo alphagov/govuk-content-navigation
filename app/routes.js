@@ -128,13 +128,25 @@ var readFile = Promise.promisify(fs.readFile);
       this.content.push(content);
     }
 
+    popularContent(maxDocuments) {
+      return this.content.slice(0, maxDocuments);
+    }
+
+    atozContent(maxDocuments) {
+      return this.content.sort(function(a, b) {a.title > b.title}).slice(0, maxDocuments);
+    }
+
+    recentContent(maxDocuments) {
+      return this.content.sort(function(a, b) {a.publicTimestamp > b.publicTimestamp}).slice(0, maxDocuments);
+    }
+
     static fromMetadata(basePath) {
       var taxonInformation = metadata.taxon_information[basePath];
       var taxon = new Taxon(taxonInformation.title, basePath);
       var contentItems = metadata.documents_in_taxon[basePath].results;
 
       contentItems.forEach(function(contentItem) {
-        taxon.addContent({title: contentItem.title, basePath: contentItem.link, format: contentItem.format});
+        taxon.addContent({title: contentItem.title, basePath: contentItem.link, format: contentItem.format, publicTimestamp: new Date(contentItem.public_timestamp)});
       });
 
       return taxon;
