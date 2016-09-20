@@ -29,6 +29,11 @@ var readFile = Promise.promisify(fs.readFile);
   });
 
 
+  router.get('/static-service/', function (req, res) {
+      res.render('service');
+  });
+
+
   router.get(/\/.+/, function (req, res) {
     var url = req.url;
     url = url.slice(1, url.length); // base path without leading slash
