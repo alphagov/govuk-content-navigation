@@ -13,21 +13,20 @@
           <h1>{{ taxon.title }}</h1>
           <p>A short description of this topic to make it easier to understand</p>
           <nav class="popular-list">
-            <h2>Most popular</h2>
+            <h2><span>Most popular</span></h2>
             <ol>
-            {% for document in taxon.popularContent(5) %}
+            {% for document in taxon.popularContent(6) %}
                <li>
                  <a href="{{ document.base_path }}">{{ document.title }}</a>
                </li>
              {% endfor %}
-
             </ol>
           </nav>
 
           <nav class="updated-list">
-            <h2>Latest</h2>
+            <h2><span>Latest</span></h2>
             <ol>
-              {% for document in taxon.recentContent(5) %}
+              {% for document in taxon.recentContent(3) %}
                  <li>
                    <a href="{{ document.base_path }}">{{ document.title }}</a>
                    <span>{{ document.publicTimestamp | date("fromNow") }}</span>
@@ -55,14 +54,12 @@
                <li>
                   <a href="/government/publications/early-years-inspection-handbook-from-september-2015">Early years inspection handbook from September 2015</a>
                </li>
-               <li>
-                  <a href="/ofsted-inspection-childcare-provider">Being inspected as a childminder or childcare provider</a>
-               </li>
             </ul>
+            <a class="reveal" href="{{taxon.basePath}}/">See everything in Child taxon</a>
           </nav>
 
           <nav role="navigation" aria-labelledby="parent-other" class="full-list">
-            <h2>Everything in {{ taxon.title }}</h2>
+            <h2>{{ taxon.title }}</h2>
             <ul>
               {% for contentItem in taxon.content %}
               <li>

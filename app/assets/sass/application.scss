@@ -507,9 +507,18 @@
          clear: left;
          margin: 0;
       }
-      ul {
-         margin: 0;
+      .reveal {
          margin-left: 50%;
+         padding: 30px;
+         font-size: 19px;
+         line-height: 25px;
+      }
+      ul {
+         position: relative;
+         float: left;
+         margin: 0;
+         margin-left: -100%;
+         left: 100%;
          width: 100%;
          list-style: none;
       }
@@ -521,7 +530,7 @@
          &:before {
             content: "•";
             position: relative;
-            display: inline-block;
+            float: left;
             width: 25px;
             margin-left: -25px;
          }
