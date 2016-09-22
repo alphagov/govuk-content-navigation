@@ -36,18 +36,20 @@
           </nav>
 
           {% if taxon.atozChildren().length > 0 %}
+          {% for child_taxon in taxon.atozChildren() %}
           <nav role="navigation" aria-labelledby="parent-other" class="full-list">
-            <h2>Child taxon</h2>
+            <h2>{{ child_taxon.title }}</h2>
             <p>A short description of this topic to make it easier to understand</p>
             <ul>
-              {% for child_taxon in taxon.atozChildren() %}
+              {% for document in child_taxon.popularContent(5) %}
               <li>
-                <a href="{{ child_taxon.basePath }}">{{ child_taxon.title }}</a>
+                <a href="{{ document.basePath }}">{{ document.title }}</a>
               </li>
-            {% endfor %}
+              {% endfor %}
             </ul>
-            <a class="reveal" href="{{taxon.basePath}}/">See everything in Child taxon</a>
+            <a class="reveal" href="{{ child_taxon.basePath }}">See everything in {{ child_taxon.title }}</a>
           </nav>
+          {% endfor %}
           {% endif %}
 
           <nav role="navigation" aria-labelledby="parent-other" class="full-list">
