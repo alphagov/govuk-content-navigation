@@ -3,7 +3,7 @@ var router = express.Router();
 var fs = require('fs');
 var path = require('path');
 var expressNunjucks = require('express-nunjucks');
-var Promise = require("bluebird");
+var Promise = require('bluebird');
 var glob = Promise.promisify(require('glob'));
 var readFile = Promise.promisify(fs.readFile);
 
@@ -18,14 +18,11 @@ var readFile = Promise.promisify(fs.readFile);
 
 
   router.get('/alpha-taxonomy/:taxons', function (req, res) {
-    var taxon = req.url.substring(0, req.url.length-1);
-    try {
-      var taxons = Taxon.fromMetadata(taxon);
-      res.render('taxonomy', {taxon: taxons, homepage_url: '/'});
-    }
-    catch (e) {
-      res.render('taxonomy', {homepage_url: '/'});
-    }
+    var taxonName = req.params.taxons;
+    console.log("Taxon page for: %s", taxonName);
+    var taxon = Taxon.fromMetadata("/alpha-taxonomy/" + taxonName);
+    console.log(taxon);
+    res.render('taxonomy', {taxon: taxon, homepage_url: '/'});
   });
 
 
@@ -138,10 +135,15 @@ var readFile = Promise.promisify(fs.readFile);
       this.title = title;
       this.basePath = basePath;
       this.content = [];
+      this.children = [];
     }
 
     addContent(content) {
       this.content.push(content);
+    }
+
+    addChild(taxon) {
+      this.children.push(taxon);
     }
 
     popularContent(maxDocuments) {
@@ -149,20 +151,44 @@ var readFile = Promise.promisify(fs.readFile);
     }
 
     atozContent(maxDocuments) {
-      return this.content.sort(function(a, b) {a.title > b.title}).slice(0, maxDocuments);
+      return this.content.sort(function(a, b) {
+        return a.title > b.title;
+      }).slice(0, maxDocuments);
     }
 
     recentContent(maxDocuments) {
-      return this.content.sort(function(a, b) {a.publicTimestamp > b.publicTimestamp}).slice(0, maxDocuments);
+      return this.content.sort(function(a, b) {
+        return a.publicTimestamp > b.publicTimestamp;
+      }).slice(0, maxDocuments);
+    }
+
+    atozChildren() {
+      return this.children.sort(function(a, b) {
+        return a.title > b.title;
+      });
     }
 
     static fromMetadata(basePath) {
       var taxonInformation = metadata.taxon_information[basePath];
+      console.log("basepath=%s, taxonInformation=%s", basePath, taxonInformation);
+      if (taxonInformation === undefined) {
+        console.log("Missing taxon information for %s", basePath);
+        return null;
+      }
+
       var taxon = new Taxon(taxonInformation.title, basePath);
       var contentItems = metadata.documents_in_taxon[basePath].results;
+      var childTaxons = metadata.children_of_taxon[basePath];
 
       contentItems.forEach(function(contentItem) {
         taxon.addContent({title: contentItem.title, basePath: contentItem.link, format: contentItem.format, publicTimestamp: new Date(contentItem.public_timestamp)});
+      });
+
+      childTaxons.forEach(function(childTaxonBasePath) {
+        var childTaxon = Taxon.fromMetadata(childTaxonBasePath);
+        if (childTaxon != null) {
+          taxon.addChild(childTaxon);
+        }
       });
 
       return taxon;
