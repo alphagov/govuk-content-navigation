@@ -2,6 +2,8 @@
 
 This app serves up prototype navigation flows for the work-in-progress GOV.UK navigation.
 
+The `master` branch is deployed to https://govuk-nav-prototype.herokuapp.com/.
+
 See also the previous prototype: [https://github.com/alphagov/govuk-navigation-prototype](govuk-navigation-prototype).
 
 ## Nomenclature
@@ -9,7 +11,7 @@ See also the previous prototype: [https://github.com/alphagov/govuk-navigation-p
 - **Taxon**: a single node within the taxonomy
 
 ## Technical documentation
-This is a node app built using the govuk_prototype_kit. 
+This is a node app built using the govuk_prototype_kit.
 
 The data for the prototype comes from a cached JSON file that is based on data from the content store and rummager.
 You can generate this with `bundle exec rake`.
