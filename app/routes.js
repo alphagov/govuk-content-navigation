@@ -21,7 +21,6 @@ var readFile = Promise.promisify(fs.readFile);
     var taxonName = req.params.taxons;
     console.log("Taxon page for: %s", taxonName);
     var taxon = Taxon.fromMetadata("/alpha-taxonomy/" + taxonName);
-    console.log(taxon);
     res.render('taxonomy', {taxon: taxon, homepage_url: '/'});
   });
 
@@ -51,7 +50,6 @@ var readFile = Promise.promisify(fs.readFile);
         var taxons = getTaxons(url);
 
         console.log("Breadcrumb", breadcrumb);
-        console.log("Taxons", taxons);
         var whitehall = filePath.match(/whitehall/);
 
         res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall, homepage_url: '/'});
@@ -158,7 +156,7 @@ var readFile = Promise.promisify(fs.readFile);
 
     recentContent(maxDocuments) {
       return this.content.sort(function(a, b) {
-        return a.publicTimestamp > b.publicTimestamp;
+        return b.publicTimestamp.getTime() - a.publicTimestamp.getTime();
       }).slice(0, maxDocuments);
     }
 
@@ -170,7 +168,6 @@ var readFile = Promise.promisify(fs.readFile);
 
     static fromMetadata(basePath) {
       var taxonInformation = metadata.taxon_information[basePath];
-      console.log("basepath=%s, taxonInformation=%s", basePath, taxonInformation);
       if (taxonInformation === undefined) {
         console.log("Missing taxon information for %s", basePath);
         return null;
@@ -181,7 +178,15 @@ var readFile = Promise.promisify(fs.readFile);
       var childTaxons = metadata.children_of_taxon[basePath];
 
       contentItems.forEach(function(contentItem) {
-        taxon.addContent({title: contentItem.title, basePath: contentItem.link, format: contentItem.format, publicTimestamp: new Date(contentItem.public_timestamp)});
+        var publicTimestamp = contentItem.public_timestamp;
+
+        // Manual sections are missing a public timestamp: make one up
+        if (publicTimestamp === undefined) {
+            console.log("Made up timestamp for %s %s", contentItem.format, contentItem.link);
+            publicTimestamp = '2016-01-01T00:00:00+00:00';
+        }
+
+        taxon.addContent({title: contentItem.title, basePath: contentItem.link, format: contentItem.format, publicTimestamp: new Date(publicTimestamp)});
       });
 
       childTaxons.forEach(function(childTaxonBasePath) {
