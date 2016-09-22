@@ -108,7 +108,9 @@ var readFile = Promise.promisify(fs.readFile);
         taxonParents = ancestor.links.parent;
       }
 
-      return taxonAncestors.reverse();
+      var breadcrumb = taxonAncestors.reverse();
+      breadcrumb.unshift({title: "Home", basePath: ""});
+      return breadcrumb;
     }
     catch (e) {
       console.log("Problem getting breadcrumb data for " + page );
