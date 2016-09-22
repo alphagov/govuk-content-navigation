@@ -1,0 +1,15 @@
+{
+  "name": "govuk-content-navigation",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
