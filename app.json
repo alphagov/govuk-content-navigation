@@ -3,6 +3,12 @@
   "scripts": {
   },
   "env": {
+    "USERNAME": {
+      "required": true
+    },
+    "PASSWORD": {
+      "required": true
+    }
   },
   "formation": {
   },
