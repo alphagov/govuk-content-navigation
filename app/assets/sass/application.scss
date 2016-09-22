@@ -160,14 +160,14 @@
     margin: 30px 0;
   }
 
-  
+
 
 }
 
 .statistics-announcement {
   .column-two-thirds {
     width: 100%;
-  }  
+  }
 }
 
 
@@ -177,7 +177,7 @@
    position: relative;
 }
 
-// fix breadcrumbs 
+// fix breadcrumbs
 
 .breadcrumbs {
    position: absolute;
@@ -188,7 +188,7 @@
       text-decoration: underline;
    }
 }
-#whitehall-wrapper {  
+#whitehall-wrapper {
    .breadcrumbs {
       a {
          color: black;
@@ -225,8 +225,8 @@
       }
    }
 }
-  
-#whitehall-wrapper {  
+
+#whitehall-wrapper {
   .headings-block {
      min-height: 45vh;
      .heading-with-extra {
@@ -246,7 +246,7 @@
    top: 5vh;
 }
 
-// align related nav to the content 
+// align related nav to the content
 
 .related-container {
    padding-top: 45vh;
@@ -280,9 +280,9 @@
 
 .related {
 /*
-   background: linear-gradient(to bottom, 
-      #ddd 0%, 
-      #ddd 19%, 
+   background: linear-gradient(to bottom,
+      #ddd 0%,
+      #ddd 19%,
       #fff 20%,
       #fff 100%);
    background-size: 100% 5px;
@@ -512,6 +512,8 @@
          padding: 30px;
          font-size: 19px;
          line-height: 25px;
+         float: left;
+         width: 100%;
       }
       ul {
          position: relative;
@@ -683,4 +685,3 @@
       }
    }
 }
-
