@@ -11,7 +11,9 @@
       {% if taxon %}
       {% block taxonomy %}
           <h1>{{ taxon.title }}</h1>
-          <p>A short description of this topic to make it easier to understand</p>
+          {% if taxon.description %}
+          <p>{{ taxon.description }}</p>
+          {% endif %}
           <nav class="popular-list">
             <h2><span>Most popular</span></h2>
             <ol>
@@ -39,7 +41,9 @@
           {% for child_taxon in taxon.atozChildren() %}
           <nav role="navigation" aria-labelledby="parent-other" class="full-list">
             <h2>{{ child_taxon.title }}</h2>
-            <p>A short description of this topic to make it easier to understand</p>
+            {% if child_taxon.description %}
+            <p>{{ child_taxon.description }}</p>
+            {% endif %}
             <ul>
               {% for document in child_taxon.popularContent(5) %}
               <li>

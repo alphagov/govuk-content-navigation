@@ -3,21 +3,23 @@
   <aside class="related" id="related">
     {% for taxon in taxons %}
     <div>
-      
+
       <header>
-         <h2 id="parent-other">{{taxon.title}}</h2>
-         <p>A short description of this topic to make it easier to understand</p>
+         <h2 id="parent-other">{{ taxon.title }}</h2>
+         {% if taxon.description %}
+         <p>{{ taxon.description }}</p>
+         {% endif %}
       </header>
 
       <nav role="navigation" aria-labelledby="parent-other">
         <ul>
           {% for contentItem in taxon.content %}
           <li>
-            <a href="{{contentItem.basePath}}">{{contentItem.title}}</a>
+            <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
           </li>
           {% endfor %}
         </ul>
-        <a class="reveal" href="{{taxon.basePath}}/">See everything in {{taxon.title}}</a>
+        <a class="reveal" href="{{ taxon.basePath }}/">See everything in {{ taxon.title }}</a>
       </nav>
     </div>
     {% endfor %}
