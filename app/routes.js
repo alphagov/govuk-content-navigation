@@ -129,9 +129,10 @@ var readFile = Promise.promisify(fs.readFile);
     (its child taxons and the documents tagged to it)
   */
   class Taxon {
-    constructor(title, basePath) {
+    constructor(title, basePath, description) {
       this.title = title;
       this.basePath = basePath;
+      this.description = description;
       this.content = [];
       this.children = [];
     }
@@ -173,7 +174,7 @@ var readFile = Promise.promisify(fs.readFile);
         return null;
       }
 
-      var taxon = new Taxon(taxonInformation.title, basePath);
+      var taxon = new Taxon(taxonInformation.title, basePath, taxonInformation.description);
       var contentItems = metadata.documents_in_taxon[basePath].results;
       var childTaxons = metadata.children_of_taxon[basePath];
 
