@@ -100,7 +100,7 @@ var readFile = Promise.promisify(fs.readFile);
           }
         );
 
-        taxonParents = ancestor.links.parent;
+        taxonParents = ancestor.links.parent_taxons;
       }
 
       var breadcrumb = taxonAncestors.reverse();
