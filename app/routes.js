@@ -60,7 +60,7 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
         res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall, homepage_url: '/'});
       },
       function (e) {
-        res.render('content', {content: 'Page not found', homepage_url: '/'});
+        res.status(404).render('404');
       });
     });
   });
