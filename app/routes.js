@@ -6,29 +6,34 @@ var expressNunjucks = require('express-nunjucks');
 var Promise = require('bluebird');
 var glob = Promise.promisify(require('glob'));
 var readFile = Promise.promisify(fs.readFile);
+var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 
 (function(){
   "use strict";
 
-  var metadata = getMetadata();
+  var metadata;
+  var breadcrumbMaker;
+  getMetadata().then(function(metadataResult) {
+    metadata = metadataResult;
+    breadcrumbMaker = new BreadcrumbMaker(metadata);
+  });
 
   router.get('/', function (req, res) {
     res.render('index', {homepage_url: '/'});
   });
 
-
   router.get('/alpha-taxonomy/:taxons', function (req, res) {
     var taxonName = req.params.taxons;
     console.log("Taxon page for: %s", taxonName);
-    var taxon = Taxon.fromMetadata("/alpha-taxonomy/" + taxonName);
-    res.render('taxonomy', {taxon: taxon, homepage_url: '/'});
+    var url = "/alpha-taxonomy/" + taxonName;
+    var taxon = Taxon.fromMetadata(url);
+    var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
+    res.render('taxonomy', {taxon: taxon, homepage_url: '/', breadcrumb: breadcrumb});
   });
-
 
   router.get('/static-service/', function (req, res) {
       res.render('service');
   });
-
 
   router.get(/\/.+/, function (req, res) {
     var url = req.url;
@@ -46,7 +51,7 @@ var readFile = Promise.promisify(fs.readFile);
     }).then(function(filePath) {
       readFile(filePath).then(function(data) {
         content = data.toString();
-        var breadcrumb = getBreadcrumb(url);
+        var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
         var taxons = getTaxons(url);
 
         console.log("Breadcrumb", breadcrumb);
@@ -61,55 +66,11 @@ var readFile = Promise.promisify(fs.readFile);
   });
 
   function getMetadata() {
-    fs.readFile('app/data/metadata_and_taxons.json', function(err, data){
-      if (err){
+    return readFile('app/data/metadata_and_taxons.json').catch(function(err){
         console.log('Failed to read metadata and taxons.');
-      }
-      metadata = JSON.parse(data);
+    }).then(function(data) {
+      return JSON.parse(data);
     });
-  }
-
-  function getBreadcrumb(page) {
-    // Pick the first taxon to generate a breadcrumb from
-    var taxonForPage = metadata.taxons_for_content[page];
-
-    if (taxonForPage === undefined) {
-      console.error("No metadata found for %s. The path should match a GOV.UK base path.", page)
-      return null;
-    }
-
-    try {
-
-      var firstTaxon = taxonForPage[0];
-      var taxonAncestors = [
-        {
-          title: metadata.taxon_information[firstTaxon].title,
-          basePath: firstTaxon,
-        }
-      ];
-      var taxonParents = metadata.ancestors_of_taxon[firstTaxon];
-
-      while (taxonParents && taxonParents.length > 0) {
-        // Pick the first parent to use in the breadcrumb
-        var ancestor = taxonParents[0];
-
-        taxonAncestors.push(
-          {
-            title: ancestor.title,
-            basePath: ancestor.base_path,
-          }
-        );
-
-        taxonParents = ancestor.links.parent_taxons;
-      }
-
-      var breadcrumb = taxonAncestors.reverse();
-      breadcrumb.unshift({title: "Home", basePath: ""});
-      return breadcrumb;
-    }
-    catch (e) {
-      console.log("Problem getting breadcrumb data for " + page );
-    }
   }
 
   function getTaxons(url) {
