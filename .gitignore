@@ -8,3 +8,4 @@ govuk_modules
 node_modules/*
 .tmuxp.*
 link-checker-crawled-pages.pstore
+npm-debug.log
