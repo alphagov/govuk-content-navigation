@@ -34,6 +34,11 @@ var readFile = Promise.promisify(fs.readFile);
   });
 
 
+  router.get('/become-childminder/', function (req, res) {
+      res.render('become-a-childminder');
+  });
+
+
   router.get(/\/.+/, function (req, res) {
     var url = req.url;
     url = url.slice(1, url.length); // base path without leading slash

@@ -279,6 +279,7 @@
 }
 
 .related {
+   position: relative;
 /*
    background: linear-gradient(to bottom, 
       #ddd 0%, 
@@ -289,6 +290,14 @@
 */
    border-top: 10px solid #005ea5;
    padding-top: 5px;
+   .hack-datestamp {
+      position: absolute;
+      left: -200%;
+      top: -45px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #666;
+   }
    div {
       padding-bottom: 9px;
    }
@@ -509,9 +518,12 @@
       }
       .reveal {
          margin-left: 50%;
-         padding: 30px;
-         font-size: 19px;
+         position: relative;
+         left: 30px;
+         float: left;
+         font-size: 16px;
          line-height: 25px;
+         padding-top: 5px;
       }
       ul {
          position: relative;
