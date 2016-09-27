@@ -4,12 +4,14 @@
 {% block content %}
 
   <div id="{% if whitehall %}whitehall-{% endif %}wrapper">
-    {% block breadcrumb %}
-      {% include '_breadcrumb.html' %}
-    {% endblock %}
+    {% if not html_publication %}
+      {% block breadcrumb %}
+        {% include '_breadcrumb.html' %}
+      {% endblock %}
+    {% endif %}
     <div class="grid-row">
       {{ content | safe }}
-      {% if taxons %}
+      {% if taxons and not html_publication %}
       {% include '_side_navigation.html' %}
       {% endif %}
     </div>

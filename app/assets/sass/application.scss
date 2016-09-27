@@ -160,14 +160,14 @@
     margin: 30px 0;
   }
 
-  
+
 
 }
 
 .statistics-announcement {
   .column-two-thirds {
     width: 100%;
-  }  
+  }
 }
 
 
@@ -177,7 +177,7 @@
    position: relative;
 }
 
-// fix breadcrumbs 
+// fix breadcrumbs
 
 .breadcrumbs {
    position: absolute;
@@ -188,7 +188,7 @@
       text-decoration: underline;
    }
 }
-#whitehall-wrapper {  
+#whitehall-wrapper {
    .breadcrumbs {
       a {
          color: black;
@@ -225,8 +225,8 @@
       }
    }
 }
-  
-#whitehall-wrapper {  
+
+#whitehall-wrapper {
   .headings-block {
      min-height: 45vh;
      .heading-with-extra {
@@ -246,7 +246,7 @@
    top: 5vh;
 }
 
-// align related nav to the content 
+// align related nav to the content
 
 .related-container {
    padding-top: 45vh;
@@ -281,9 +281,9 @@
 .related {
    position: relative;
 /*
-   background: linear-gradient(to bottom, 
-      #ddd 0%, 
-      #ddd 19%, 
+   background: linear-gradient(to bottom,
+      #ddd 0%,
+      #ddd 19%,
       #fff 20%,
       #fff 100%);
    background-size: 100% 5px;
@@ -340,12 +340,11 @@
       }
    }
    .reveal {
-/*       font-weight: bold; */
       margin-left: 20px;
       font-size: 16px;
       line-height: 20px;
       display: block;
-/*       text-decoration: underline!important; */
+      text-decoration: underline!important;
    }
 }
 
@@ -492,6 +491,8 @@
          span {
             display: block;
             font-size: 14px;
+            line-height: 20px;
+            padding-bottom: 5px;
          }
          a {
             text-decoration: none;
@@ -522,7 +523,7 @@
          left: 30px;
          float: left;
          font-size: 16px;
-         line-height: 25px;
+         line-height: 20px;
          padding-top: 5px;
       }
       ul {
@@ -695,4 +696,3 @@
       }
    }
 }
-

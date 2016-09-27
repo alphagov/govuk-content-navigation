@@ -3,41 +3,41 @@ var router = express.Router();
 var fs = require('fs');
 var path = require('path');
 var expressNunjucks = require('express-nunjucks');
-var Promise = require("bluebird");
+var Promise = require('bluebird');
 var glob = Promise.promisify(require('glob'));
 var readFile = Promise.promisify(fs.readFile);
+var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 
 (function(){
   "use strict";
 
-  var metadata = getMetadata();
+  var metadata;
+  var breadcrumbMaker;
+  getMetadata().then(function(metadataResult) {
+    metadata = metadataResult;
+    breadcrumbMaker = new BreadcrumbMaker(metadata);
+  });
 
   router.get('/', function (req, res) {
     res.render('index', {homepage_url: '/'});
   });
 
-
   router.get('/alpha-taxonomy/:taxons', function (req, res) {
-    var taxon = req.url.substring(0, req.url.length-1);
-    try {
-      var taxons = Taxon.fromMetadata(taxon);
-      res.render('taxonomy', {taxon: taxons, homepage_url: '/'});
-    }
-    catch (e) {
-      res.render('taxonomy', {homepage_url: '/'});
-    }
+    var taxonName = req.params.taxons;
+    console.log("Taxon page for: %s", taxonName);
+    var url = "/alpha-taxonomy/" + taxonName;
+    var taxon = Taxon.fromMetadata(url);
+    var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
+    res.render('taxonomy', {taxon: taxon, homepage_url: '/', breadcrumb: breadcrumb});
   });
-
 
   router.get('/static-service/', function (req, res) {
       res.render('service');
   });
 
-
   router.get('/become-childminder/', function (req, res) {
       res.render('become-a-childminder');
   });
-
 
   router.get(/\/.+/, function (req, res) {
     var url = req.url;
@@ -49,75 +49,35 @@ var readFile = Promise.promisify(fs.readFile);
 
     var globPage = glob(directory + "/**/" + basename + ".html");
 
-    globPage.then(function (file){
+    globPage.then(function (file) {
       var filePath = file[0];
       return filePath;
     }).then(function(filePath) {
       readFile(filePath).then(function(data) {
         content = data.toString();
-        var breadcrumb = getBreadcrumb(url);
-        var taxons = getTaxons(url);
-
-        console.log("Breadcrumb", breadcrumb);
-        console.log("Taxons", taxons);
         var whitehall = filePath.match(/whitehall/);
+        var html_publication = content.match(/html-publications-show/);
+
+        if (!html_publication) {
+          // Skip breadcrumbs and taxons for HTML publications since they have a unique format
+          var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
+          var taxons = getTaxons(url);
+        }
 
         res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall, homepage_url: '/'});
       },
       function (e) {
-        res.render('content', {content: 'Page not found', homepage_url: '/'});
+        res.status(404).render('404');
       });
     });
   });
 
   function getMetadata() {
-    fs.readFile('app/data/metadata_and_taxons.json', function(err, data){
-      if (err){
+    return readFile('app/data/metadata_and_taxons.json').catch(function(err){
         console.log('Failed to read metadata and taxons.');
-      }
-      metadata = JSON.parse(data);
+    }).then(function(data) {
+      return JSON.parse(data);
     });
-  }
-
-  function getBreadcrumb(page) {
-    // Pick the first taxon to generate a breadcrumb from
-    var taxonForPage = metadata.taxons_for_content[page];
-
-    if (taxonForPage === undefined) {
-      console.error("No metadata found for %s. The path should match a GOV.UK base path.", page)
-      return null;
-    }
-
-    try {
-
-      var firstTaxon = taxonForPage[0];
-      var taxonAncestors = [
-        {
-          title: metadata.taxon_information[firstTaxon].title,
-          basePath: firstTaxon,
-        }
-      ];
-      var taxonParents = metadata.ancestors_of_taxon[firstTaxon];
-
-      while (taxonParents && taxonParents.length > 0) {
-        // Pick the first parent to use in the breadcrumb
-        var ancestor = taxonParents[0];
-
-        taxonAncestors.push(
-          {
-            title: ancestor.title,
-            basePath: ancestor.base_path,
-          }
-        );
-
-        taxonParents = ancestor.links.parent;
-      }
-
-      return taxonAncestors.reverse();
-    }
-    catch (e) {
-      console.log("Problem getting breadcrumb data for " + page );
-    }
   }
 
   function getTaxons(url) {
@@ -137,14 +97,20 @@ var readFile = Promise.promisify(fs.readFile);
     (its child taxons and the documents tagged to it)
   */
   class Taxon {
-    constructor(title, basePath) {
+    constructor(title, basePath, description) {
       this.title = title;
       this.basePath = basePath;
+      this.description = description;
       this.content = [];
+      this.children = [];
     }
 
     addContent(content) {
       this.content.push(content);
+    }
+
+    addChild(taxon) {
+      this.children.push(taxon);
     }
 
     popularContent(maxDocuments) {
@@ -152,20 +118,51 @@ var readFile = Promise.promisify(fs.readFile);
     }
 
     atozContent(maxDocuments) {
-      return this.content.sort(function(a, b) {a.title > b.title}).slice(0, maxDocuments);
+      return this.content.sort(function(a, b) {
+        return a.title > b.title;
+      }).slice(0, maxDocuments);
     }
 
     recentContent(maxDocuments) {
-      return this.content.sort(function(a, b) {a.publicTimestamp > b.publicTimestamp}).slice(0, maxDocuments);
+      return this.content.sort(function(a, b) {
+        return b.publicTimestamp.getTime() - a.publicTimestamp.getTime();
+      }).slice(0, maxDocuments);
+    }
+
+    atozChildren() {
+      return this.children.sort(function(a, b) {
+        return a.title > b.title;
+      });
     }
 
     static fromMetadata(basePath) {
       var taxonInformation = metadata.taxon_information[basePath];
-      var taxon = new Taxon(taxonInformation.title, basePath);
+      if (taxonInformation === undefined) {
+        console.log("Missing taxon information for %s", basePath);
+        return null;
+      }
+
+      var taxon = new Taxon(taxonInformation.title, basePath, taxonInformation.description);
       var contentItems = metadata.documents_in_taxon[basePath].results;
+      var childTaxons = metadata.children_of_taxon[basePath];
 
       contentItems.forEach(function(contentItem) {
-        taxon.addContent({title: contentItem.title, basePath: contentItem.link, format: contentItem.format, publicTimestamp: new Date(contentItem.public_timestamp)});
+        var publicTimestamp = contentItem.public_timestamp;
+
+        // Manual sections are missing a public timestamp: make one up
+        if (publicTimestamp === undefined) {
+            console.log("Made up timestamp for %s %s", contentItem.format, contentItem.link);
+            publicTimestamp = '2016-01-01T00:00:00+00:00';
+        }
+
+        taxon.addContent({title: contentItem.title, basePath: contentItem.link, format: contentItem.format, publicTimestamp: new Date(publicTimestamp)});
+      });
+
+      childTaxons.forEach(function(childTaxonBasePath) {
+        var childTaxon = Taxon.fromMetadata(childTaxonBasePath);
+        if (childTaxon != null) {
+          taxon.addChild(childTaxon);
+        }
       });
 
       return taxon;

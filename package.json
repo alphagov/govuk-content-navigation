@@ -37,9 +37,10 @@
     "portscanner": "^1.0.0",
     "prompt": "^0.2.14",
     "readdir": "0.0.6",
-    "serve-favicon": "2.3.0"
+    "serve-favicon": "2.3.0",
+    "nunjucks-date-filter": "^0.1.1"
   },
   "devDependencies": {
-    "nunjucks-date-filter": "^0.1.1"
+    "jasmine": "^2.5.2"
   }
 }

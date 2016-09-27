@@ -5,19 +5,21 @@
 <main id="content" class="taxonomy" role="main">
     {% block breadcrumb %}
       {% include '_breadcrumb.html' %}
-    {% endblock %}  
+    {% endblock %}
     <div class="grid-row">
     <div class="column-two-thirds">
       {% if taxon %}
       {% block taxonomy %}
           <h1>{{ taxon.title }}</h1>
-          <p>A short description of this topic to make it easier to understand</p>
+          {% if taxon.description %}
+          <p>{{ taxon.description }}</p>
+          {% endif %}
           <nav class="popular-list">
             <h2><span>Most popular</span></h2>
             <ol>
             {% for document in taxon.popularContent(6) %}
                <li>
-                 <a href="{{ document.base_path }}">{{ document.title }}</a>
+                 <a href="{{ document.basePath }}">{{ document.title }}</a>
                </li>
              {% endfor %}
             </ol>
@@ -28,48 +30,44 @@
             <ol>
               {% for document in taxon.recentContent(3) %}
                  <li>
-                   <a href="{{ document.base_path }}">{{ document.title }}</a>
+                   <a href="{{ document.basePath }}">{{ document.title }}</a>
                    <span>{{ document.publicTimestamp | date("fromNow") }}</span>
                  </li>
                {% endfor %}
             </ol>
           </nav>
 
+          {% if taxon.atozChildren().length > 0 %}
+          {% for child_taxon in taxon.atozChildren() %}
           <nav role="navigation" aria-labelledby="parent-other" class="full-list">
-            <h2>Child taxon</h2>
-            <p>A short description of this topic to make it easier to understand</p>
+            <h2>{{ child_taxon.title }}</h2>
+            {% if child_taxon.description %}
+            <p>{{ child_taxon.description }}</p>
+            {% endif %}
             <ul>
-               <li>
-                  <a href="/government/publications/school-inspection-handbook-from-september-2015">School inspection handbook</a>
-               </li>
-               <li>
-                  <a href="/government/publications/inspecting-safeguarding-in-early-years-education-and-skills-from-september-2015">Inspecting safeguarding in early years, education and skills</a>
-               </li>
-               <li>
-                  <a href="/find-ofsted-inspection-report">Find an Ofsted inspection report</a>
-               </li>
-               <li>
-                  <a href="/government/publications/common-inspection-framework-education-skills-and-early-years-from-september-2015">Common inspection framework: education, skills and early years from September 2015</a>
-               </li>
-               <li>
-                  <a href="/government/publications/early-years-inspection-handbook-from-september-2015">Early years inspection handbook from September 2015</a>
-               </li>
+              {% for document in child_taxon.popularContent(5) %}
+              <li>
+                <a href="{{ document.basePath }}">{{ document.title }}</a>
+              </li>
+              {% endfor %}
             </ul>
-            <a class="reveal" href="{{taxon.basePath}}/">See everything in Child taxon</a>
+            <a class="reveal" href="{{ child_taxon.basePath }}">See everything in {{ child_taxon.title }}</a>
           </nav>
+          {% endfor %}
+          {% endif %}
 
           <nav role="navigation" aria-labelledby="parent-other" class="full-list">
             <h2>{{ taxon.title }}</h2>
             <ul>
               {% for contentItem in taxon.content %}
               <li>
-                <a href="{{contentItem.basePath}}">{{contentItem.title}}</a>
+                <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
               </li>
               {% endfor %}
             </ul>
           </nav>
-          
-          
+
+
           <nav class="publisher-list">
             <h2>published by</h2>
             <ul>
@@ -88,7 +86,7 @@
             </ul>
           </nav>
 
-          
+
       {% endblock %}
       {% else %}
       <p>No taxon information available</p>

@@ -1,0 +1,23 @@
+{
+  "name": "govuk-content-navigation",
+  "scripts": {
+  },
+  "env": {
+    "USERNAME": {
+      "required": true
+    },
+    "PASSWORD": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}

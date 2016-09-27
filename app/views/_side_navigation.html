@@ -3,21 +3,16 @@
     <p class="hack-datestamp">Published {{ this.publicTimestamp | date("fromNow") }}</p>
     {% for taxon in taxons %}
     <div>
-      
       <header>
-         <h2 id="parent-other">{{taxon.title}}</h2>
-         <p>A short description of this topic to make it easier to understand</p>
       </header>
 
       <nav role="navigation" aria-labelledby="parent-other">
         <ul>
           {% for contentItem in taxon.content %}
           <li>
-            <a href="{{contentItem.basePath}}">{{contentItem.title}}</a>
           </li>
           {% endfor %}
         </ul>
-        <a class="reveal" href="{{taxon.basePath}}/">See everything in {{taxon.title}}</a>
       </nav>
     </div>
     {% endfor %}
@@ -28,4 +23,3 @@
 <!--     </div> -->
   </aside>
 
-</div>
