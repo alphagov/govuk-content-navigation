@@ -1,18 +1,28 @@
 <div class="related-container">
   <aside class="related" id="related">
-    <p class="hack-datestamp">Published {{ this.publicTimestamp | date("fromNow") }}</p>
+    {% if publicTimestamp %}
+       <p class="hack-datestamp">Published {{ this.publicTimestamp | date("fromNow") }}</p>
+    {% else %}
+       <p class="hack-datestamp">Published three weeks ago</p>
+    {% endif %}
     {% for taxon in taxons %}
     <div>
       <header>
+         <h2 id="parent-other">{{ taxon.title }}</h2>
+         {% if taxon.description %}
+         <p>{{ taxon.description }}</p>
+         {% endif %}
       </header>
 
       <nav role="navigation" aria-labelledby="parent-other">
         <ul>
           {% for contentItem in taxon.content %}
           <li>
+            <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
           </li>
           {% endfor %}
         </ul>
+        <a class="reveal" href="{{ taxon.basePath }}/">See everything in {{ taxon.title }}</a>
       </nav>
     </div>
     {% endfor %}
@@ -23,3 +33,4 @@
 <!--     </div> -->
   </aside>
 
+</div>
