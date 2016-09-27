@@ -120,9 +120,23 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
     }
 
     atozContent(maxDocuments) {
-      return this.content.sort(function(a, b) {
-        return a.title > b.title;
-      }).slice(0, maxDocuments);
+      var sorted = this.content.sort(function(a, b) {
+        if (a.title > b.title) {
+          return 1;
+        }
+
+        if (a.title < b.title) {
+          return -1;
+        }
+
+        return 0;
+      });
+
+      if (maxDocuments !== undefined) {
+        return sorted.slice(0, maxDocuments);
+      } else {
+        return sorted;
+      }
     }
 
     recentContent(maxDocuments) {
