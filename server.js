@@ -101,11 +101,6 @@ app.use(function (req, res, next) {
   next();
 });
 
-app.get('/robots.txt', function (req, res) {
-  res.type('text/plain');
-  res.send("User-agent: *\nDisallow: /");
-});
-
 // routes (found in app/routes.js)
 if (typeof(routes) != "function"){
   console.log(routes.bind);
