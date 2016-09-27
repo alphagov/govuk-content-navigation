@@ -56,6 +56,7 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
       readFile(filePath).then(function(data) {
         content = data.toString();
         var whitehall = filePath.match(/whitehall/);
+        var html_manual = filePath.match(/manual/);
         var html_publication = content.match(/html-publications-show/);
         var breadcrumb;
         var taxons;
@@ -66,7 +67,16 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
           taxons = getTaxons(url);
         }
 
-        res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall, homepage_url: '/'});
+        var data = {
+          content: content,
+          breadcrumb: breadcrumb,
+          taxons: taxons,
+          whitehall: whitehall,
+          html_manual: html_manual,
+          homepage_url: '/'
+        };
+
+        res.render('content', data);
       },
       function (e) {
         res.status(404).render('404');

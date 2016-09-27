@@ -30,6 +30,7 @@
   #page {
     @extend %contain-floats;
     @include grid-column(2/3);
+    padding: 0;
   }
 
   .detailed-guides-show {
@@ -180,7 +181,7 @@
 // fix breadcrumbs
 
 .breadcrumbs {
-   position: absolute;
+   // position: absolute;
    max-width: 960px;
    z-index: 100;
    a {
@@ -201,7 +202,10 @@
 
 #wrapper {
    position: relative;
-   .govuk-title,
+   max-width: 960px;
+   margin: 0 auto;
+
+  .govuk-title,
    .page-header {
      min-height: 45vh;
      margin-bottom: 0;
@@ -238,12 +242,24 @@
   }
 }
 
+// manuals
+.hmrc-internal-manuals-frontend-content {
+  .outer-block {
+    padding: 0;
+  }
+
+  .inner-block {
+    padding: 0 15px;
+  }
+}
+
 #wrapper .page-header h1,
 #wrapper .statistics-announcement .context,
 #wrapper .statistics-announcement h1,
-#whitehall-wrapper .heading-with-extra {
+#whitehall-wrapper .heading-with-extra,
+#manuals-frontend article {
    position: relative;
-   top: 5vh;
+   // top: 5vh;
 }
 
 // align related nav to the content
@@ -251,6 +267,12 @@
 .related-container {
    padding-top: 45vh;
    margin-top: 18px;
+}
+
+.html-manual {
+  .related-container {
+    padding-top: $gutter;
+  }
 }
 
 .primary-metadata,
@@ -277,6 +299,8 @@
       left: 166.666%;
    }
 }
+
+
 
 .related {
    position: relative;
