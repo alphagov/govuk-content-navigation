@@ -4,6 +4,7 @@ require 'pp'
 require 'set'
 require_relative "lib/ruby/data_import"
 require_relative "lib/ruby/taxonomy_builder"
+require_relative "lib/ruby/taxon_document_fetcher"
 
 begin
   require 'rspec/core/rake_task'
@@ -19,8 +20,10 @@ task :import_links do
   taxons_for_content = {}
   all_taxons = Set.new
   documents_in_taxon = {}
+  all_documents_in_prototype = []
 
   get_files.each do |base_path|
+    all_documents_in_prototype << base_path
     links = DataImport.get_document(base_path)["links"]
     taxons = links["taxons"] || links["alpha_taxons"]
     taxons_for_content[base_path] = []
@@ -32,13 +35,15 @@ task :import_links do
     end
   end
 
+  puts "Working with #{all_documents_in_prototype.size} documents in prototype. Fetching taxons..."
+
   # Visiting descendents of each taxon
   builder = TaxonomyBuilder.new(all_taxons)
+  document_fetcher = TaxonDocumentFetcher.new(all_documents_in_prototype.map { |link| "/#{link}" })
 
-  # Maybe we should be skipping content that isn't in the prototype?
-  builder.taxon_information.keys.each do |taxon_base_path|
+  builder.all_taxons.each do |taxon_base_path|
     content_id = builder.taxon_information.dig(taxon_base_path, "content_id")
-    documents_in_taxon[taxon_base_path] = DataImport.get_documents_by_taxon(content_id)
+    documents_in_taxon[taxon_base_path] = document_fetcher.fetch_for_taxon(content_id)
   end
 
   File.write(

@@ -17,6 +17,10 @@ class TaxonomyBuilder
     end
   end
 
+  def all_taxons
+    taxon_information.keys
+  end
+
   def ancestors_for(base_path)
     ancestors_of_taxons[base_path]
   end
@@ -36,11 +40,11 @@ private
   def get_parent_taxons(document)
     @taxon_children[document["base_path"]] ||= Set.new
     taxon_information[document["base_path"]] =
-    {
-      "title" => document["title"],
-      "content_id" => document["content_id"],
-      "description" => document["description"]
-    }
+      {
+        "title" => document["title"],
+        "content_id" => document["content_id"],
+        "description" => document["description"]
+      }
     current_parents = document.to_h.dig("links", "parent_taxons")
     unless current_parents
       page = DataImport.get_document(document.to_h['base_path'])
