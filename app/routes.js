@@ -57,11 +57,13 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
         content = data.toString();
         var whitehall = filePath.match(/whitehall/);
         var html_publication = content.match(/html-publications-show/);
+        var breadcrumb;
+        var taxons;
 
         if (!html_publication) {
           // Skip breadcrumbs and taxons for HTML publications since they have a unique format
-          var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
-          var taxons = getTaxons(url);
+          breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
+          taxons = getTaxons(url);
         }
 
         res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall, homepage_url: '/'});
@@ -160,7 +162,7 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 
       childTaxons.forEach(function(childTaxonBasePath) {
         var childTaxon = Taxon.fromMetadata(childTaxonBasePath);
-        if (childTaxon != null) {
+        if (childTaxon !== null) {
           taxon.addChild(childTaxon);
         }
       });
