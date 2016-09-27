@@ -59,7 +59,7 @@
           <nav role="navigation" aria-labelledby="parent-other" class="full-list">
             <h2>{{ taxon.title }}</h2>
             <ul>
-              {% for contentItem in taxon.content %}
+              {% for contentItem in taxon.atozContent() %}
               <li>
                 <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
               </li>
