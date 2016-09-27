@@ -45,17 +45,20 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 
     var globPage = glob(directory + "/**/" + basename + ".html");
 
-    globPage.then(function (file){
+    globPage.then(function (file) {
       var filePath = file[0];
       return filePath;
     }).then(function(filePath) {
       readFile(filePath).then(function(data) {
         content = data.toString();
-        var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
-        var taxons = getTaxons(url);
-
-        console.log("Breadcrumb", breadcrumb);
         var whitehall = filePath.match(/whitehall/);
+        var html_publication = content.match(/html-publications-show/);
+
+        if (!html_publication) {
+          // Skip breadcrumbs and taxons for HTML publications since they have a unique format
+          var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
+          var taxons = getTaxons(url);
+        }
 
         res.render('content', { content: content, breadcrumb: breadcrumb, taxons: taxons, whitehall: whitehall, homepage_url: '/'});
       },
