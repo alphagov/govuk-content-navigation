@@ -21,16 +21,6 @@ module DataImport
     end
   end
 
-  def self.get_documents_by_taxon(taxon_content_id)
-    GdsApi.with_retries(maximum_number_of_attempts: 2) do
-      rummager.search(
-        filter_taxons: taxon_content_id,
-        fields: %w(title description link format public_timestamp),
-        count: 1000
-      ).to_h
-    end
-  end
-
   # Some of our source data has been redirected - in this case,
   # we just follow the redirects when fetching link data from the API so
   # that our content still has tags. We can remove the old content later.
