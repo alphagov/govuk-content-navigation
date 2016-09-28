@@ -15,6 +15,7 @@
     "bluebird": "^3.4.3",
     "body-parser": "^1.14.1",
     "browser-sync": "^2.11.1",
+    "cheerio": "^0.22.0",
     "consolidate": "0.x",
     "express": "4.13.3",
     "express-nunjucks": "^0.9.3",
@@ -33,12 +34,13 @@
     "grunt-sync": "^0.5.1",
     "hogan.js": "3.0.2",
     "minimist": "0.0.8",
+    "moment": "^2.15.1",
     "nunjucks": "^2.4.2",
+    "nunjucks-date-filter": "^0.1.1",
     "portscanner": "^1.0.0",
     "prompt": "^0.2.14",
     "readdir": "0.0.6",
-    "serve-favicon": "2.3.0",
-    "nunjucks-date-filter": "^0.1.1"
+    "serve-favicon": "2.3.0"
   },
   "devDependencies": {
     "jasmine": "^2.5.2"

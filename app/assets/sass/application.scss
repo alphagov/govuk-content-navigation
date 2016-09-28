@@ -300,7 +300,11 @@
    }
 }
 
-
+.hack-datestamp {
+   font-size: 14px;
+   line-height: 20px;
+   color: #666;
+}
 
 .related {
    position: relative;
@@ -314,14 +318,7 @@
 */
    border-top: 10px solid #005ea5;
    padding-top: 5px;
-   .hack-datestamp {
-      position: absolute;
-      left: -200%;
-      top: -45px;
-      font-size: 14px;
-      line-height: 20px;
-      color: #666;
-   }
+
    div {
       padding-bottom: 9px;
    }

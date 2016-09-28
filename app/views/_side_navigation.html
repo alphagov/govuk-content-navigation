@@ -1,10 +1,5 @@
 <div class="related-container">
   <aside class="related" id="related">
-    {% if publicTimestamp %}
-       <p class="hack-datestamp">Published {{ publicTimestamp | date("fromNow") }}</p>
-    {% else %}
-       <p class="hack-datestamp">Published three weeks ago</p>
-    {% endif %}
     {% for taxon in taxons %}
     <div>
       <header>
