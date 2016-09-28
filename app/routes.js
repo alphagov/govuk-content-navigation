@@ -69,6 +69,7 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 
         var data = {
           content: content,
+          publicTimestamp: metadata.document_metadata[url].public_updated_at,
           breadcrumb: breadcrumb,
           taxons: taxons,
           whitehall: whitehall,

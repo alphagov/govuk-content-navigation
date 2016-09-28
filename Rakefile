@@ -5,6 +5,7 @@ require 'set'
 require_relative "lib/ruby/data_import"
 require_relative "lib/ruby/taxonomy_builder"
 require_relative "lib/ruby/taxon_document_fetcher"
+require_relative "lib/ruby/content_item"
 
 begin
   require 'rspec/core/rake_task'
@@ -20,12 +21,14 @@ task :import_links do
   taxons_for_content = {}
   all_taxons = Set.new
   documents_in_taxon = {}
+  document_metadata = {}
   all_documents_in_prototype = []
 
   get_files.each do |base_path|
     all_documents_in_prototype << base_path
-    links = DataImport.get_document(base_path)["links"]
-    taxons = links["taxons"] || links["alpha_taxons"]
+    document = ContentItem.fetch(base_path)
+    document_metadata[base_path] = document.metadata
+    taxons = document.taxons
     taxons_for_content[base_path] = []
     if taxons
       taxons.each do |taxon|
@@ -53,7 +56,8 @@ task :import_links do
       "ancestors_of_taxon" => builder.ancestors_of_taxons,
       "children_of_taxon" => builder.taxon_children,
       "taxon_information" => builder.taxon_information,
-      "documents_in_taxon" => documents_in_taxon
+      "documents_in_taxon" => documents_in_taxon,
+      "document_metadata" => document_metadata
     )
   )
 
