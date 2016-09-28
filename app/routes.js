@@ -117,8 +117,24 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
       this.children = [];
     }
 
+    isOrganisation(basePath) {
+      return basePath.includes("/organisations/");
+    }
+
     addContent(content) {
-      this.content.push(content);
+      /*
+      Currently we're tagging organisation home pages and about pages
+      ("corporate information pages") to the taxonomy.
+
+      We're not sure if this is the right thing to do because these pages are
+      about the organisation themselves, not about the topic, even though
+      the organisation may be relevant to the topic. For now, just ignore these
+      tags, and don't mix these pages in with the rest of the content.
+      This is a workaround until we change how the content is tagged.
+      */
+      if (!this.isOrganisation(content.basePath)) {
+        this.content.push(content);
+      }
     }
 
     addChild(taxon) {
