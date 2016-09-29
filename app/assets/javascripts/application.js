@@ -2,8 +2,7 @@ function ShowHideContent() {
   var self = this;
 
   self.escapeElementName = function(str) {
-    result = str.replace('[', '\\[').replace(']', '\\]')
-    return(result);
+    return str.replace('[', '\\[').replace(']', '\\]');
   };
 
   self.showHideRadioToggledContent = function () {
@@ -70,7 +69,8 @@ function ShowHideContent() {
       }
 
     });
-  }
+  };
+
   self.showHideCheckboxToggledContent = function () {
 
     $(".block-label input[type='checkbox']").each(function() {
@@ -108,7 +108,7 @@ function ShowHideContent() {
       }
 
     });
-  }
+  };
 }
 
 $(document).ready(function() {

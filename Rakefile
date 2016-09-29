@@ -2,6 +2,9 @@ require 'json'
 require 'pathname'
 require 'pp'
 require 'set'
+require 'jshint'
+require 'jshint/reporters'
+require 'jshint/cli'
 require_relative "lib/ruby/data_import"
 require_relative "lib/ruby/taxonomy_builder"
 require_relative "lib/ruby/taxon_document_fetcher"
@@ -10,7 +13,6 @@ require_relative "lib/ruby/content_item"
 begin
   require 'rspec/core/rake_task'
   RSpec::Core::RakeTask.new(:spec)
-rescue LoadError
 end
 
 METADATA_FILENAME = 'app/data/metadata_and_taxons.json'.freeze
@@ -81,8 +83,13 @@ task :validate do
   end
 end
 
-task "lint" do
+task :lint do
+  # Run the ruby linter
   sh "bundle exec govuk-lint-ruby --format clang Rakefile lib/ruby"
+
+  # Run the JavaScript linter
+  Jshint::Cli::run(:Default, nil, nil)
+  fail if linter.errors.any? { |_, errors| errors.any? }
 end
 
 def get_files
