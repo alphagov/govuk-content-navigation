@@ -6,6 +6,8 @@ var expressNunjucks = require('express-nunjucks');
 var Promise = require('bluebird');
 var glob = Promise.promisify(require('glob'));
 var readFile = Promise.promisify(fs.readFile);
+var cheerio = require('cheerio');
+var moment = require('moment');
 var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 
 (function(){
@@ -55,11 +57,15 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
     }).then(function(filePath) {
       readFile(filePath).then(function(data) {
         content = data.toString();
+        var $ = cheerio.load(content);
         var whitehall = filePath.match(/whitehall/);
         var html_manual = filePath.match(/manual/);
         var html_publication = content.match(/html-publications-show/);
+        var public_timestamp = metadata.document_metadata[url].public_updated_at;
         var breadcrumb;
         var taxons;
+
+        $('h1').first().after('<p class="hack-datestamp">Last updated: ' + moment(public_timestamp).fromNow() + '</p>');
 
         if (!html_publication) {
           // Skip breadcrumbs and taxons for HTML publications since they have a unique format
@@ -68,7 +74,8 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
         }
 
         var data = {
-          content: content,
+          content: $.html(),
+          publicTimestamp: public_timestamp,
           breadcrumb: breadcrumb,
           taxons: taxons,
           whitehall: whitehall,
