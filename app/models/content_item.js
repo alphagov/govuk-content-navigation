@@ -2,15 +2,15 @@
   "use strict";
 
   class ContentItem {
-    constructor(title, basePath, format, publicTimestamp) {
+    constructor(title, basePath, documentType, publicTimestamp) {
       this.title = title;
       this.basePath = basePath;
-      this.format = format;
+      this.documentType = documentType;
       this.publicTimestamp = publicTimestamp;
     }
 
     getHeading() {
-      switch (this.format) {
+      switch (this.documentType) {
         case 'news_article':
         case 'speech':
           return {
@@ -18,7 +18,15 @@
             id: 'news-and-events'
           };
           break;
+        case 'statutory_guidance':
+          return {
+            display_name: 'Statutory guidance',
+            id: 'statutory-guidance'
+          };
+          break;
         case 'answer':
+        case 'guidance':
+        case 'promotional':
         case 'detailed_guidance':
         case 'manual':
           return {
@@ -28,15 +36,33 @@
           break;
         case 'corporate_information_page':
         case 'organisation':
+        case 'corporate_report':
           return {
             display_name: 'Corporate information',
             id: 'corporate-information'
           };
           break;
+        case 'foi_release':
+        case 'correspondence':
+        case 'policy_paper':
+          return {
+            display_name: 'Government policy and responses',
+            id: 'government-policy-and-responses'
+          };
+          break;
+        case 'national_statistics':
         case 'statistics_announcement':
+        case 'transparency':
           return {
             display_name: 'Data and statistics',
             id: 'data-and-statistics'
+          };
+          break;
+        case 'research':
+        case 'independent_report':
+          return {
+            display_name: 'Research and analysis',
+            id: 'research-and-analysis'
           };
           break;
         case 'consultation':

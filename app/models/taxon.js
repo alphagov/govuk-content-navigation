@@ -95,6 +95,7 @@ var ContentItem = require("./content_item.js");
       var childTaxons = metadata.children_of_taxon[basePath];
 
       contentItems.forEach(function(contentItem) {
+        var documentType = metadata.document_metadata[contentItem.link.substring(1)].document_type;
         var publicTimestamp = contentItem.public_timestamp;
 
         // Manual sections are missing a public timestamp: make one up
@@ -103,7 +104,7 @@ var ContentItem = require("./content_item.js");
             publicTimestamp = '2016-01-01T00:00:00+00:00';
         }
 
-        var contentItemModel = new ContentItem(contentItem.title, contentItem.link, contentItem.format, new Date(publicTimestamp));
+        var contentItemModel = new ContentItem(contentItem.title, contentItem.link, documentType, new Date(publicTimestamp));
         taxon.addContent(contentItemModel);
       });
 

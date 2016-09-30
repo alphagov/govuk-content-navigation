@@ -39,7 +39,7 @@
 
           {% if taxon.atozChildren().length > 0 %}
           {% for child_taxon in taxon.atozChildren() %}
-          <nav role="navigation" aria-labelledby="parent-other" class="full-list">
+          <nav role="navigation" aria-labelledby="parent-other" class="child-taxon-list">
             <h2>{{ child_taxon.title }}</h2>
             {% if child_taxon.description %}
             <p>{{ child_taxon.description }}</p>
@@ -56,15 +56,40 @@
           {% endfor %}
           {% endif %}
 
-          <nav role="navigation" aria-labelledby="parent-other" class="full-list">
+          <nav class="full-list">
             <h2>{{ taxon.title }}</h2>
-            <ul>
-              {% for contentItem in taxon.atozContent() %}
-              <li>
-                <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
-              </li>
-              {% endfor %}
-            </ul>
+            <div>
+              <nav role="navigation" aria-labelledby="parent-other">
+                <h3>Statutory guidance</h3>
+                <ul>
+                  {% for contentItem in taxon.filterByHeading('statutory-guidance').atozContent() %}
+                  <li>
+                    <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </nav>
+              <nav role="navigation" aria-labelledby="parent-other">
+                <h3>Other guidance</h3>
+                <ul>
+                  {% for contentItem in taxon.filterByHeading('other-guidance').atozContent() %}
+                  <li>
+                    <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </nav>
+              <nav role="navigation" aria-labelledby="parent-other">
+                <h3>Research and analysis</h3>
+                <ul>
+                  {% for contentItem in taxon.filterByHeading('research-and-analysis').atozContent() %}
+                  <li>
+                    <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </nav>
+            </div>
           </nav>
 
 
