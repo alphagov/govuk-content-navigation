@@ -10,3 +10,5 @@ node_modules/*
 link-checker-crawled-pages.pstore
 npm-debug.log
 venv
+/*.csv
+/*.txt
