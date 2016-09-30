@@ -1,3 +1,5 @@
+var ContentItem = require("./content_item.js");
+
 /*
   Object to describe the structure of a taxon
   (its child taxons and the documents tagged to it)
@@ -6,32 +8,39 @@
   "use strict";
 
   class Taxon {
-    constructor(title, basePath, description) {
+    constructor(title, basePath, description, options) {
       this.title = title;
       this.basePath = basePath;
       this.description = description;
-      this.content = [];
-      this.children = [];
+      if (options === undefined) {
+        options = {};
+      }
+      if (options.content === undefined) {
+        options.content = [];
+      }
+      if (options.children === undefined) {
+        options.children = [];
+      }
+      this.content = options.content;
+      this.children = options.children;
     }
 
-    isOrganisation(basePath) {
-      return basePath.includes("/organisations/");
+    filterByHeading(headingId) {
+      var filteredContent = this.content.filter(
+        function(child) {
+          var heading = child.getHeading();
+          return heading !== null && heading.id === headingId;
+        }
+      );
+      var filteredTaxon = new Taxon(
+        this.title, this.basePath, this.description,
+        {content: filteredContent, children: this.children}
+      );
+      return filteredTaxon;
     }
 
     addContent(content) {
-      /*
-      Currently we're tagging organisation home pages and about pages
-      ("corporate information pages") to the taxonomy.
-
-      We're not sure if this is the right thing to do because these pages are
-      about the organisation themselves, not about the topic, even though
-      the organisation may be relevant to the topic. For now, just ignore these
-      tags, and don't mix these pages in with the rest of the content.
-      This is a workaround until we change how the content is tagged.
-      */
-      if (!this.isOrganisation(content.basePath)) {
-        this.content.push(content);
-      }
+      this.content.push(content);
     }
 
     addChild(taxon) {
@@ -94,7 +103,8 @@
             publicTimestamp = '2016-01-01T00:00:00+00:00';
         }
 
-        taxon.addContent({title: contentItem.title, basePath: contentItem.link, format: contentItem.format, publicTimestamp: new Date(publicTimestamp)});
+        var contentItemModel = new ContentItem(contentItem.title, contentItem.link, contentItem.format, new Date(publicTimestamp));
+        taxon.addContent(contentItemModel);
       });
 
       childTaxons.forEach(function(childTaxonBasePath) {

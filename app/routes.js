@@ -31,6 +31,7 @@ var Taxon = require('./models/taxon.js');
     var taxon = Taxon.fromMetadata(url, metadata);
     var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
     console.log("Taxon page for: %s", taxonName);
+    taxon = taxon.filterByHeading("other-guidance");
     res.render('taxonomy', {taxon: taxon, homepage_url: '/', breadcrumb: breadcrumb});
   });
 
