@@ -22,7 +22,7 @@ var Taxon = require('./models/taxon.js');
   });
 
   router.get('/', function (req, res) {
-    res.render('index', {homepage_url: '/'});
+    res.render('index');
   });
 
   router.get('/alpha-taxonomy/:taxons', function (req, res) {
@@ -32,7 +32,7 @@ var Taxon = require('./models/taxon.js');
     var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
     console.log("Taxon page for: %s", taxonName);
     taxon = taxon.filterByHeading("other-guidance");
-    res.render('taxonomy', {taxon: taxon, homepage_url: '/', breadcrumb: breadcrumb});
+    res.render('taxonomy', {taxon: taxon, breadcrumb: breadcrumb});
   });
 
   router.get('/static-service/', function (req, res) {
@@ -81,8 +81,7 @@ var Taxon = require('./models/taxon.js');
           breadcrumb: breadcrumb,
           taxons: taxons,
           whitehall: whitehall,
-          html_manual: html_manual,
-          homepage_url: '/'
+          html_manual: html_manual
         };
 
         res.render('content', data);
