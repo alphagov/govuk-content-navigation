@@ -15,6 +15,7 @@ class ContentItem
 
   def metadata
     {
+      "document_type" => content_item["document_type"],
       "public_updated_at" => content_item["public_updated_at"],
       "organisations" => content_item.dig("links", "organisations")
     }
