@@ -59,6 +59,7 @@
           <nav class="full-list">
             <h2>{{ taxon.title }}</h2>
             <div>
+              {% if taxon.filterByHeading('guidance').content.length > 0 %}
               <nav role="navigation" aria-labelledby="parent-other">
                 <h3>Guidance</h3>
                 <ul>
@@ -69,6 +70,8 @@
                   {% endfor %}
                 </ul>
               </nav>
+              {% endif %}
+              {% if taxon.filterByHeading('research-and-analysis').content.length > 0 %}
               <nav role="navigation" aria-labelledby="parent-other">
                 <h3>Research and analysis</h3>
                 <ul>
@@ -79,6 +82,7 @@
                   {% endfor %}
                 </ul>
               </nav>
+              {% endif %}
             </div>
           </nav>
 
