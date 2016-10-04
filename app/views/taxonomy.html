@@ -60,19 +60,9 @@
             <h2>{{ taxon.title }}</h2>
             <div>
               <nav role="navigation" aria-labelledby="parent-other">
-                <h3>Statutory guidance</h3>
+                <h3>Guidance</h3>
                 <ul>
-                  {% for contentItem in taxon.filterByHeading('statutory-guidance').atozContent() %}
-                  <li>
-                    <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
-                  </li>
-                  {% endfor %}
-                </ul>
-              </nav>
-              <nav role="navigation" aria-labelledby="parent-other">
-                <h3>Other guidance</h3>
-                <ul>
-                  {% for contentItem in taxon.filterByHeading('other-guidance').atozContent() %}
+                  {% for contentItem in taxon.filterByHeading('guidance').atozContent() %}
                   <li>
                     <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
                   </li>
