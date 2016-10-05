@@ -19,19 +19,14 @@
           };
           break;
         case 'statutory_guidance':
-          return {
-            display_name: 'Statutory guidance',
-            id: 'statutory-guidance'
-          };
-          break;
         case 'answer':
         case 'guidance':
         case 'promotional':
         case 'detailed_guidance':
         case 'manual':
           return {
-            display_name: 'Other guidance',
-            id: 'other-guidance'
+            display_name: 'Guidance',
+            id: 'guidance'
           };
           break;
         case 'corporate_information_page':

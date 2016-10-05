@@ -30,8 +30,18 @@ var Taxon = require('./models/taxon.js');
     var url = "/alpha-taxonomy/" + taxonName;
     var taxon = Taxon.fromMetadata(url, metadata);
     var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
+
+    var taxon_content = {};
+
+    taxon_content.guidance = taxon.filterByHeading('guidance');
+    taxon_content.research_and_analysis = taxon.filterByHeading('research-and-analysis');
+
     console.log("Taxon page for: %s", taxonName);
-    res.render('taxonomy', {taxon: taxon, breadcrumb: breadcrumb});
+    res.render('taxonomy', {
+      taxon: taxon,
+      breadcrumb: breadcrumb,
+      taxon_content: taxon_content
+    });
   });
 
   router.get('/static-service/', function (req, res) {
