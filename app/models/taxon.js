@@ -100,7 +100,6 @@ var ContentItem = require("./content_item.js");
 
         // Manual sections are missing a public timestamp: make one up
         if (publicTimestamp === undefined) {
-            console.log("Made up timestamp for %s %s", contentItem.format, contentItem.link);
             publicTimestamp = '2016-01-01T00:00:00+00:00';
         }
 
