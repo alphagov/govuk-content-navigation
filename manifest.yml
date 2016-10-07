@@ -1,0 +1,6 @@
+---
+applications:
+- name: govuk-content-navigation
+  command: node start.js
+  memory: 256M
+  buildpack: nodejs_buildpack
