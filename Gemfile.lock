@@ -28,7 +28,10 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
+    mini_portile2 (2.1.0)
     netrc (0.11.0)
+    nokogiri (1.6.8.1)
+      mini_portile2 (~> 2.1.0)
     null_logger (0.0.1)
     oga (2.7)
       ast
@@ -92,6 +95,7 @@ PLATFORMS
 DEPENDENCIES
   gds-api-adapters (~> 36.0)
   govuk-lint
+  nokogiri
   oga (~> 2.7)
   pry-byebug
   rake (~> 11.2, >= 11.2.2)

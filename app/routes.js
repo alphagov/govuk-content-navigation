@@ -6,8 +6,6 @@ var expressNunjucks = require('express-nunjucks');
 var Promise = require('bluebird');
 var glob = Promise.promisify(require('glob'));
 var readFile = Promise.promisify(fs.readFile);
-var cheerio = require('cheerio');
-var moment = require('moment');
 var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 var Taxon = require('./models/taxon.js');
 
@@ -36,7 +34,6 @@ var Taxon = require('./models/taxon.js');
     taxon_content.guidance = taxon.filterByHeading('guidance');
     taxon_content.research_and_analysis = taxon.filterByHeading('research-and-analysis');
 
-    console.log("Taxon page for: %s", taxonName);
     res.render('taxonomy', {
       taxon: taxon,
       breadcrumb: breadcrumb,
@@ -68,7 +65,6 @@ var Taxon = require('./models/taxon.js');
     }).then(function(filePath) {
       readFile(filePath).then(function(data) {
         content = data.toString();
-        var $ = cheerio.load(content);
         var whitehall = filePath.match(/whitehall/);
         var html_manual = filePath.match(/manual/);
         var html_publication = content.match(/html-publications-show/);
@@ -76,24 +72,19 @@ var Taxon = require('./models/taxon.js');
         var breadcrumb;
         var taxons;
 
-        $('h1').first().after('<p class="hack-datestamp">Last updated: ' + moment(public_timestamp).fromNow() + '</p>');
-
         if (!html_publication) {
           // Skip breadcrumbs and taxons for HTML publications since they have a unique format
           breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
           taxons = getTaxons(url);
         }
 
-        var data = {
-          content: $.html(),
-          publicTimestamp: public_timestamp,
+        res.render('content', {
+          content: content,
           breadcrumb: breadcrumb,
           taxons: taxons,
           whitehall: whitehall,
           html_manual: html_manual
-        };
-
-        res.render('content', data);
+        });
       },
       function (e) {
         res.status(404).render('404');
