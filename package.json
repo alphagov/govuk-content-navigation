@@ -16,7 +16,6 @@
     "bluebird": "^3.4.3",
     "body-parser": "^1.14.1",
     "browser-sync": "^2.11.1",
-    "cheerio": "^0.22.0",
     "consolidate": "0.x",
     "express": "4.13.3",
     "express-nunjucks": "^0.9.3",
