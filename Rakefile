@@ -2,6 +2,7 @@ require 'json'
 require 'pathname'
 require 'pp'
 require 'set'
+require 'nokogiri'
 require_relative "lib/ruby/data_import"
 require_relative "lib/ruby/taxonomy_builder"
 require_relative "lib/ruby/taxon_document_fetcher"
