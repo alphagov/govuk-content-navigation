@@ -1,23 +1,14 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-var path = require('path');
-var expressNunjucks = require('express-nunjucks');
 var Promise = require('bluebird');
 var glob = Promise.promisify(require('glob'));
 var readFile = Promise.promisify(fs.readFile);
 var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 var Taxon = require('./models/taxon.js');
 
-(function() {
+(function () {
   "use strict";
-
-  var metadata;
-  var breadcrumbMaker;
-  getMetadata().then(function(metadataResult) {
-    metadata = metadataResult;
-    breadcrumbMaker = new BreadcrumbMaker(metadata);
-  });
 
   router.get('/', function (req, res) {
     res.render('index');
@@ -26,18 +17,19 @@ var Taxon = require('./models/taxon.js');
   router.get('/alpha-taxonomy/:taxons', function (req, res) {
     var taxonName = req.params.taxons;
     var url = "/alpha-taxonomy/" + taxonName;
-    var taxon = Taxon.fromMetadata(url, metadata);
-    var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
-
-    var taxon_content = {};
-
-    taxon_content.guidance = taxon.filterByHeading('guidance');
-    taxon_content.research_and_analysis = taxon.filterByHeading('research-and-analysis');
-
-    res.render('taxonomy', {
-      taxon: taxon,
-      breadcrumb: breadcrumb,
-      taxon_content: taxon_content
+    getMetadata().
+    then(function (metadata){
+      var taxon = Taxon.fromMetadata(url, metadata);
+      var breadcrumbMaker = new BreadcrumbMaker(metadata);
+      var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
+      var taxonContent = {};
+      taxonContent.guidance = taxon.filterByHeading('guidance');
+      taxonContent.research_and_analysis = taxon.filterByHeading('research-and-analysis');
+        res.render('taxonomy', {
+          taxon: taxon,
+          breadcrumb: breadcrumb,
+          taxonContent: taxonContent
+      });
     });
   });
 
@@ -54,60 +46,82 @@ var Taxon = require('./models/taxon.js');
     url = url.slice(1, url.length); // base path without leading slash
     var basename = url.replace(/\//g, '_');
 
-    var content;
     var directory = __dirname + '/content/';
 
     var globPage = glob(directory + "/**/" + basename + ".html");
 
-    globPage.then(function (file) {
+    globPage.
+    then(function (file) {
       var filePath = file[0];
+      
       return filePath;
-    }).then(function(filePath) {
-      readFile(filePath).then(function(data) {
-        content = data.toString();
+    }).
+    then(function (filePath) {
+      readFile(filePath).
+      then(function (data) {
+        var content = data.toString();
         var whitehall = filePath.match(/whitehall/);
-        var html_manual = filePath.match(/manual/);
-        var html_publication = content.match(/html-publications-show/);
-        var public_timestamp = metadata.document_metadata[url].public_updated_at;
-        var breadcrumb;
-        var taxons;
+        var htmlManual = filePath.match(/manual/);
+        var htmlPublication = content.match(/html-publications-show/);
 
-        if (!html_publication) {
+        if (!htmlPublication) {
           // Skip breadcrumbs and taxons for HTML publications since they have a unique format
-          breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
-          taxons = getTaxons(url);
-        }
+          var getBreadcrumbPromise = getMetadata().then(function (metadata){
+            var breadcrumbMaker = new BreadcrumbMaker(metadata);
+            var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
 
-        res.render('content', {
-          content: content,
-          breadcrumb: breadcrumb,
-          taxons: taxons,
-          whitehall: whitehall,
-          html_manual: html_manual
-        });
+            return breadcrumb;
+          });
+
+          var getTaxonPromise = getTaxons(url).
+          then(function (taxons){
+            return taxons;
+          });
+
+          Promise.all([getBreadcrumbPromise, getTaxonPromise]).
+          spread(function (getBreadcrumbPromise, getTaxonPromise){
+            var breadcrumb = getBreadcrumbPromise;
+            var taxons = getTaxonPromise;
+            res.render('content', {
+              content: content,
+              breadcrumb: breadcrumb,
+              taxons: taxons,
+              whitehall: whitehall,
+              htmlManual: htmlManual
+            });
+          }); 
+        }
+        else {
+          res.render('content', {
+            content: content,
+            whitehall: whitehall
+          });
+        }
       },
-      function (e) {
+      function (err) {
         res.status(404).render('404');
       });
     });
   });
 
-  function getMetadata() {
-    return readFile('app/data/metadata_and_taxons.json').catch(function(err){
+  function getMetadata () {
+    return readFile('app/data/metadata_and_taxons.json').
+    catch(function (err){
         console.log('Failed to read metadata and taxons.');
-    }).then(function(data) {
+    }).
+    then(function (data) {
       return JSON.parse(data);
     });
   }
 
-  function getTaxons(url) {
-    try {
-      return metadata.taxons_for_content[url].map(function(taxonBasePath) {
+  function getTaxons (url) {
+    return getMetadata().
+    then(function (metadata){
+      return metadata.taxons_for_content[url].
+      map(function (taxonBasePath) {
         return Taxon.fromMetadata(taxonBasePath, metadata);
       });
-    } catch(e) {
-      console.log("Problem getting taxons for sidebar");
-    }
+    });
   }
 
   module.exports = router;

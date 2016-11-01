@@ -3,15 +3,15 @@
 
 {% block content %}
 
-  <div id="{% if whitehall %}whitehall-{% endif %}wrapper"{% if html_manual %} class="html-manual"{% endif %}>
-    {% if not html_publication %}
+  <div id="{% if whitehall %}whitehall-{% endif %}wrapper"{% if htmlManual %} class="html-manual"{% endif %}>
+    {% if not htmlPublication %}
       {% block breadcrumb %}
         {% include '_breadcrumb.html' %}
       {% endblock %}
     {% endif %}
     <div class="grid-row">
       {{ content | safe }}
-      {% if taxons and not html_publication %}
+      {% if taxons and not htmlPublication %}
       {% include '_side_navigation.html' %}
       {% endif %}
     </div>
