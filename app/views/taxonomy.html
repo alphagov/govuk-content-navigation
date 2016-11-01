@@ -56,15 +56,15 @@
           {% endfor %}
           {% endif %}
 
-          {% if taxon_content.guidance.content.length + taxon_content.research_and_analysis.content.length > 0 %}
+          {% if taxonContent.guidance.content.length + taxonContent.research_and_analysis.content.length > 0 %}
           <nav class="full-list">
             <h2>{{ taxon.title }}</h2>
             <div>
-              {% if taxon_content.guidance.content.length > 0 %}
+              {% if taxonContent.guidance.content.length > 0 %}
               <nav role="navigation" aria-labelledby="parent-other">
                 <h3>Guidance</h3>
                 <ul>
-                  {% for contentItem in taxon_content.guidance.atozContent() %}
+                  {% for contentItem in taxonContent.guidance.atozContent() %}
                   <li>
                     <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
                   </li>
@@ -72,11 +72,11 @@
                 </ul>
               </nav>
               {% endif %}
-              {% if taxon_content.research_and_analysis.content.length > 0 %}
+              {% if taxonContent.research_and_analysis.content.length > 0 %}
               <nav role="navigation" aria-labelledby="parent-other">
                 <h3>Research and analysis</h3>
                 <ul>
-                  {% for contentItem in taxon_content.research_and_analysis.atozContent() %}
+                  {% for contentItem in taxonContent.research_and_analysis.atozContent() %}
                   <li>
                     <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
                   </li>
