@@ -1,7 +1,7 @@
 """
 This will traverse the govuk mirror for the files listed as links in
  Alex's CSV to be used in the prototype.  It will parse the html to
- to extract the content within the main tags and save this to the
+ to extract the content within the main html tags and save this to the
  target directory, which should be the content prototype.
 
 Usage:
