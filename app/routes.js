@@ -7,9 +7,6 @@ var readFile = Promise.promisify(fs.readFile);
 var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 var Taxon = require('./models/taxon.js');
 
-(function () {
-  "use strict";
-
   router.get('/', function (req, res) {
     res.render('index');
   });
@@ -125,5 +122,3 @@ var Taxon = require('./models/taxon.js');
   }
 
   module.exports = router;
-
-})();
