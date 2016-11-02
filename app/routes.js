@@ -60,6 +60,14 @@ var Taxon = require('./models/taxon.js');
       res.render('become-a-childminder');
   });
 
+  router.get('/parent-topic', function (req, res) {
+    res.render('parent-topic');
+  });
+
+  router.get('/child-topic', function (req, res) {
+    res.render('child-topic');
+  });
+
   router.get(/\/.+/, function (req, res) {
     var url = req.url;
     url = url.slice(1, url.length); // base path without leading slash
