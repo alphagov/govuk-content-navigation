@@ -26,6 +26,7 @@
               {% for document in child_taxon.popularContent(5) %}
               <li>
                 <a href="{{ document.basePath }}">{{ document.title }}</a>
+                <li>{{ document.description }}</li>
               </li>
               {% endfor %}
             </ul>
@@ -46,6 +47,7 @@
                   <li>
                     <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
                   </li>
+                  <li>{{ contentItem.description }}</li>
                   {% endfor %}
                 </ul>
               </nav>
@@ -58,6 +60,7 @@
                   <li>
                     <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
                   </li>
+                  <li>{{ contentItem.description }}</li>
                   {% endfor %}
                 </ul>
               </nav>

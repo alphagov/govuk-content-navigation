@@ -2,11 +2,12 @@
   "use strict";
 
   class ContentItem {
-    constructor(title, basePath, documentType, publicTimestamp) {
+    constructor(title, basePath, documentType, publicTimestamp, description) {
       this.title = title;
       this.basePath = basePath;
       this.documentType = documentType;
       this.publicTimestamp = publicTimestamp;
+      this.description = description;
     }
 
     getHeading() {
