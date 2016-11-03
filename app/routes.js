@@ -30,6 +30,10 @@ var Taxon = require('./models/taxon.js');
     });
   });
 
+  /* The two routes below, 'static-service' and 'become-childminder' are rough
+   examples of services.  Services are currenly outside of the scope of the 
+   prototype but may be looked at in the future.*/
+
   router.get('/static-service/', function (req, res) {
       res.render('service');
   });
