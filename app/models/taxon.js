@@ -103,7 +103,13 @@ var ContentItem = require("./content_item.js");
             publicTimestamp = '2016-01-01T00:00:00+00:00';
         }
 
-        var contentItemModel = new ContentItem(contentItem.title, contentItem.link, documentType, new Date(publicTimestamp));
+        var contentItemModel = new ContentItem(
+          contentItem.title,
+          contentItem.link,
+          documentType,
+          new Date(publicTimestamp),
+          contentItem.description
+        );
         taxon.addContent(contentItemModel);
       });
 

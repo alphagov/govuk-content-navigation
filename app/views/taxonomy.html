@@ -14,32 +14,10 @@
           {% if taxon.description %}
           <p>{{ taxon.description }}</p>
           {% endif %}
-          <nav class="popular-list">
-            <h2><span>Most popular</span></h2>
-            <ol>
-            {% for document in taxon.popularContent(6) %}
-               <li>
-                 <a href="{{ document.basePath }}">{{ document.title }}</a>
-               </li>
-             {% endfor %}
-            </ol>
-          </nav>
-
-          <nav class="updated-list">
-            <h2><span>Latest</span></h2>
-            <ol>
-              {% for document in taxon.recentContent(3) %}
-                 <li>
-                   <a href="{{ document.basePath }}">{{ document.title }}</a>
-                   <span>{{ document.publicTimestamp | date("fromNow") }}</span>
-                 </li>
-               {% endfor %}
-            </ol>
-          </nav>
 
           {% if taxon.atozChildren().length > 0 %}
           {% for child_taxon in taxon.atozChildren() %}
-          <nav role="navigation" aria-labelledby="parent-other" class="child-taxon-list">
+          <nav role="navigation" class="child-taxon-list">
             <h2>{{ child_taxon.title }}</h2>
             {% if child_taxon.description %}
             <p>{{ child_taxon.description }}</p>
@@ -48,6 +26,7 @@
               {% for document in child_taxon.popularContent(5) %}
               <li>
                 <a href="{{ document.basePath }}">{{ document.title }}</a>
+                <li>{{ document.description }}</li>
               </li>
               {% endfor %}
             </ul>
@@ -61,13 +40,14 @@
             <h2>{{ taxon.title }}</h2>
             <div>
               {% if taxonContent.guidance.content.length > 0 %}
-              <nav role="navigation" aria-labelledby="parent-other">
+              <nav role="navigation">
                 <h3>Guidance</h3>
                 <ul>
                   {% for contentItem in taxonContent.guidance.atozContent() %}
                   <li>
                     <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
                   </li>
+                  <li>{{ contentItem.description }}</li>
                   {% endfor %}
                 </ul>
               </nav>
@@ -80,6 +60,7 @@
                   <li>
                     <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
                   </li>
+                  <li>{{ contentItem.description }}</li>
                   {% endfor %}
                 </ul>
               </nav>
