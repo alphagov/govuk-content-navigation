@@ -28,7 +28,7 @@
 
       <div class="grid-row">
         <div class="full-width-column">
-          <nav role="navigation" aria-labelledby="parent-other" class="child-topics-list">
+          <nav role="navigation" class="child-topics-list">
             <h2>Child topics</h2>
             <ul>
               {% for childTaxon in taxon.atozChildren() %}
@@ -49,10 +49,13 @@
                 <h2>{{ taxon.title }} guidance</h2>
 
                 <ul>
-                  {% for document in taxonContent.guidance.popularContent(5) %}
-                    <li>
-                      <a href="{{ document.basePath }}">{{ document.title }}</a>
-                    </li>
+                  {% for document in taxonContent.guidance.atozContent() %}
+                    {% if loop.index < 11 %}
+                      <li>
+                        <a href="{{ document.basePath }}">{{ document.title }}</a>
+                        <p>{{ document.description }}</p>
+                      </li>
+                    {% endif %}
                   {% endfor %}
                 </ul>
 
@@ -74,12 +77,14 @@
               <h2>{{taxon.title}} guidance</h2>
 
               <ul>
-                {% for document in taxonContent.guidance.popularContent(5) %}
-                  <li>
-                    <h3><a href="{{document.basePath}}">{{document.title}}</a></h3>
+                {% for document in taxonContent.guidance.atozContent() %}
+                  {% if loop.index < 11 %}
+                    <li>
+                      <h3><a href="{{document.basePath}}">{{document.title}}</a></h3>
 
-                    <p>{{document.description}}</p>
-                  </li>
+                      <p>{{document.description}}</p>
+                    </li>
+                  {% endif %}
                 {% endfor %}
                 <p><a href="#">View all {{taxon.title}} guidance</a></p>
               </ul>
