@@ -33,7 +33,7 @@ var Taxon = require('./models/taxon.js');
     var taxonName = req.params.taxons;
     var url = "/alpha-taxonomy/" + taxonName;
     getMetadata().
-    then(function (metadata){
+    then(function (metadata) {
       var taxon = Taxon.fromMetadata(url, metadata);
       var breadcrumbMaker = new BreadcrumbMaker(metadata);
       var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
@@ -68,7 +68,7 @@ var Taxon = require('./models/taxon.js');
     globPage.
     then(function (file) {
       var filePath = file[0];
-      
+
       return filePath;
     }).
     then(function (filePath) {
@@ -104,7 +104,7 @@ var Taxon = require('./models/taxon.js');
               whitehall: whitehall,
               htmlManual: htmlManual
             });
-          }); 
+          });
         }
         else {
           res.render('content', {
@@ -121,7 +121,7 @@ var Taxon = require('./models/taxon.js');
 
   function getMetadata () {
     return readFile('app/data/metadata_and_taxons.json').
-    catch(function (err){
+    catch(function (err) {
         console.log('Failed to read metadata and taxons.');
     }).
     then(function (data) {
@@ -131,7 +131,7 @@ var Taxon = require('./models/taxon.js');
 
   function getTaxons (url) {
     return getMetadata().
-    then(function (metadata){
+    then(function (metadata) {
       return metadata.taxons_for_content[url].
       map(function (taxonBasePath) {
         return Taxon.fromMetadata(taxonBasePath, metadata);
