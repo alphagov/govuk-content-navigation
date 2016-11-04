@@ -10,7 +10,23 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 var Taxon = require('./models/taxon.js');
 
   router.get('/', function (req, res) {
-    res.render('index');
+    var documentTypeExamples = {};
+    getMetadata()
+      .then(function (metadata) {
+        var documentMetadata = metadata["document_metadata"];
+
+        _.each(documentMetadata, function (metadata, basePath) {
+          if(documentTypeExamples[metadata["document_type"]] == undefined) {
+            documentTypeExamples[metadata["document_type"]] = basePath;
+          }
+        });
+        documentTypeExamples = _.map(documentTypeExamples, function (basePath, documentType) {
+          return {documentType: documentType, basePath: basePath };
+        });
+        documentTypeExamples = _.sortBy(documentTypeExamples, "documentType");
+
+        res.render('index', { documentTypeExamples: documentTypeExamples });
+      })
   });
 
   router.get('/alpha-taxonomy/:taxons', function (req, res) {
