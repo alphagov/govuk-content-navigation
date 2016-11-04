@@ -32,20 +32,22 @@ var Taxon = require('./models/taxon.js');
   router.get('/alpha-taxonomy/:taxon', function (req, res) {
     var taxonName = req.params.taxon;
     var url = "/alpha-taxonomy/" + taxonName;
-    getMetadata().
-    then(function (metadata) {
-      var taxon = Taxon.fromMetadata(url, metadata);
-      var breadcrumbMaker = new BreadcrumbMaker(metadata);
-      var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
-      var taxonContent = {};
-      taxonContent.guidance = taxon.filterByHeading('guidance');
-      taxonContent.research_and_analysis = taxon.filterByHeading('research-and-analysis');
+    getMetadata()
+      .then(function (metadata) {
+        var breadcrumbMaker = new BreadcrumbMaker(metadata);
+        var taxonContent = {};
+
+        var taxon = Taxon.fromMetadata(url, metadata);
+        var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
+        taxonContent.guidance = taxon.filterByHeading('guidance');
+
         res.render('taxon', {
           taxon: taxon,
+          parentTaxon: breadcrumb[breadcrumb.length - 1],
           breadcrumb: breadcrumb,
           taxonContent: taxonContent
+        });
       });
-    });
   });
 
   /* The two routes below, 'static-service' and 'become-childminder' are rough
