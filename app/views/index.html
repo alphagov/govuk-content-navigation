@@ -22,19 +22,9 @@
       <p>Examples of different content by format</p>
 
       <ul class="list list-bullet">
-        <li><a href="/government/collections/phonics">Collection</a></li>
-        <li><a href="/government/consultations/new-national-curriculum-primary-assessment-and-accountability">Consultation</a></li>
-        <li><a href="/government/organisations/department-for-education/about">Corporate Information Page</a></li>
-        <li><a href="/guidance/key-stage-1-assessments">Detailed guidance</a></li>
-        <li><a href="/government/publications/national-curriculum-in-england-computing-programmes-of-study/national-curriculum-in-england-computing-programmes-of-study">HTML publication</a></li>
-        <li><a href="/guidance/2016-key-stage-1-assessment-and-reporting-arrangements-ara">Manual</a></li>
-        <li><a href="/government/news/a-third-of-children-reach-expected-level-in-pilot-of-phonics-check">News article</a></li>
-        <li><a href="/government/organisations/qualifications-and-curriculum-authority">Organisation</a></li>
-        <li><a href="/government/publications/2016-national-curriculum-tests-for-key-stages-1-and-2-information-for-parents">Publication (promotional material)</a></li>
-        <li><a href="/government/publications/statement-on-national-curriculum-tests">Publication (correspondance)</a></li>
-        <li><a href="/government/statistics/eyfsp-attainment-by-pupil-characteristics-2013">Publication (official statistics)</a></li>
-        <li><a href="/government/speeches/assessment-after-levels">Speech</a></li>
-        <li><a href="/government/statistics/announcements/eyfsp-attainment-by-pupil-characteristics-england-2015">Statistics anouncement</a></li>
+        {% for example in documentTypeExamples %}
+        <li><a href="{{example.basePath}}">{{example.documentType}}</a></li>
+        {% endfor %}
       </ul>
     </div>
   </div>
