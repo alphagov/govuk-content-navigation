@@ -11,45 +11,52 @@ var Taxon = require('./models/taxon.js');
 
   router.get('/', function (req, res) {
     var documentTypeExamples = {};
-    getMetadata()
-      .then(function (metadata) {
-        var documentMetadata = metadata["document_metadata"];
+    getMetadata().
+    then(function (metadata) {
+        var documentMetadata = metadata.document_metadata;
 
         _.each(documentMetadata, function (metadata, basePath) {
-          if(documentTypeExamples[metadata["document_type"]] == undefined) {
-            documentTypeExamples[metadata["document_type"]] = basePath;
+          if(!documentTypeExamples[metadata.document_type]) {
+            documentTypeExamples[metadata.document_type] = basePath;
           }
         });
         documentTypeExamples = _.map(documentTypeExamples, function (basePath, documentType) {
-          return {documentType: documentType, basePath: basePath };
+          return {
+            documentType: documentType,
+            basePath: basePath
+          };
         });
         documentTypeExamples = _.sortBy(documentTypeExamples, "documentType");
 
-        res.render('index', { documentTypeExamples: documentTypeExamples });
-      })
+        res.render('index', {
+         documentTypeExamples: documentTypeExamples 
+       });
+      });
   });
 
-  router.get('/alpha-taxonomy/:taxons', function (req, res) {
-    var taxonName = req.params.taxons;
+  router.get('/alpha-taxonomy/:taxon', function (req, res) {
+    var taxonName = req.params.taxon;
     var url = "/alpha-taxonomy/" + taxonName;
     getMetadata().
     then(function (metadata) {
-      var taxon = Taxon.fromMetadata(url, metadata);
-      var breadcrumbMaker = new BreadcrumbMaker(metadata);
-      var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
-      var taxonContent = {};
-      taxonContent.guidance = taxon.filterByHeading('guidance');
-      taxonContent.research_and_analysis = taxon.filterByHeading('research-and-analysis');
-        res.render('taxonomy', {
+        var breadcrumbMaker = new BreadcrumbMaker(metadata);
+        var taxonContent = {};
+
+        var taxon = Taxon.fromMetadata(url, metadata);
+        var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
+        taxonContent.guidance = taxon.filterByHeading('guidance');
+
+        res.render('taxon', {
           taxon: taxon,
+          parentTaxon: breadcrumb[breadcrumb.length - 1],
           breadcrumb: breadcrumb,
           taxonContent: taxonContent
+        });
       });
-    });
   });
 
   /* The two routes below, 'static-service' and 'become-childminder' are rough
-   examples of services.  Services are currenly outside of the scope of the 
+   examples of services.  Services are currenly outside of the scope of the
    prototype but may be looked at in the future.*/
 
   router.get('/static-service/', function (req, res) {
@@ -58,6 +65,18 @@ var Taxon = require('./models/taxon.js');
 
   router.get('/become-childminder/', function (req, res) {
       res.render('become-a-childminder');
+  });
+
+  router.get('/parent-topic', function (req, res) {
+    res.render('parent-topic');
+  });
+
+  router.get('/child-topic', function (req, res) {
+    res.render('child-topic');
+  });
+
+  router.get('/view-all', function (req, res) {
+    res.render('view-all');
   });
 
   router.get(/\/.+/, function (req, res) {
