@@ -436,6 +436,8 @@
   }
 
   .parent-topic-contents {
+    @include grid-column(2/3);
+    
     .topic-content {
       padding-bottom: $gutter;
 

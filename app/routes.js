@@ -75,6 +75,10 @@ var Taxon = require('./models/taxon.js');
     res.render('child-topic');
   });
 
+  router.get('/view-all', function (req, res) {
+    res.render('view-all');
+  });
+  
   router.get(/\/.+/, function (req, res) {
     var url = req.url;
     url = url.slice(1, url.length); // base path without leading slash

@@ -52,14 +52,14 @@
                   {% for document in taxonContent.guidance.atozContent() %}
                     {% if loop.index < 11 %}
                       <li>
-                        <a href="{{ document.basePath }}">{{ document.title }}</a>
+                        <h3><a href="{{ document.basePath }}">{{ document.title }}</a></h3>
                         <p>{{ document.description }}</p>
                       </li>
                     {% endif %}
                   {% endfor %}
                 </ul>
 
-                <p><a href="#">See all {{ taxon.title }} guidance</a></p>
+                <p><a href="{{ taxon.basePath }}">See all {{ taxon.title }} guidance</a></p>
               </div>
             {% endif %}
           </div>
@@ -81,7 +81,6 @@
                   {% if loop.index < 11 %}
                     <li>
                       <h3><a href="{{document.basePath}}">{{document.title}}</a></h3>
-
                       <p>{{document.description}}</p>
                     </li>
                   {% endif %}
