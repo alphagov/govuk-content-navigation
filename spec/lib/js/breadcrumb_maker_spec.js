@@ -27,11 +27,11 @@ describe('#getBreadcrumbForTaxon', function() {
       },
       {
         "basePath": "/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
-        "title": "School education (5 to 18 years)",
+        "title": "School education from 5 to 18 years",
       },
       {
         "basePath": "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
-        "title": "School curriculum, assessment and performance",
+        "title": "School curriculum, assessments and performance",
       }
     ]);
   });
