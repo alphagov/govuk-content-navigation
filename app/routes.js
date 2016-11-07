@@ -11,29 +11,34 @@ var Taxon = require('./models/taxon.js');
 
   router.get('/', function (req, res) {
     var documentTypeExamples = {};
-    getMetadata()
-      .then(function (metadata) {
-        var documentMetadata = metadata["document_metadata"];
+    getMetadata().
+    then(function (metadata) {
+        var documentMetadata = metadata.document_metadata;
 
         _.each(documentMetadata, function (metadata, basePath) {
-          if(documentTypeExamples[metadata["document_type"]] == undefined) {
-            documentTypeExamples[metadata["document_type"]] = basePath;
+          if(!documentTypeExamples[metadata.document_type]) {
+            documentTypeExamples[metadata.document_type] = basePath;
           }
         });
         documentTypeExamples = _.map(documentTypeExamples, function (basePath, documentType) {
-          return {documentType: documentType, basePath: basePath };
+          return {
+            documentType: documentType,
+            basePath: basePath
+          };
         });
         documentTypeExamples = _.sortBy(documentTypeExamples, "documentType");
 
-        res.render('index', { documentTypeExamples: documentTypeExamples });
-      })
+        res.render('index', {
+         documentTypeExamples: documentTypeExamples 
+       });
+      });
   });
 
   router.get('/alpha-taxonomy/:taxon', function (req, res) {
     var taxonName = req.params.taxon;
     var url = "/alpha-taxonomy/" + taxonName;
-    getMetadata()
-      .then(function (metadata) {
+    getMetadata().
+    then(function (metadata) {
         var breadcrumbMaker = new BreadcrumbMaker(metadata);
         var taxonContent = {};
 
