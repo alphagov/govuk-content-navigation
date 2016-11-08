@@ -45,7 +45,7 @@
           {% endif %}
 
           {% for childTaxon in taxon.atozChildren() %}
-            <h3>{{childTaxon.title}}</h3>
+            <h2>{{childTaxon.title}}</h2>
             <ul>
               {% for content in childTaxon.content.slice(0,5) %}
                 <li>
