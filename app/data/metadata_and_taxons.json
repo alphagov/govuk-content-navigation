@@ -2609,10 +2609,10 @@
         "api_path": "/api/content/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "base_path": "/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "content_id": "931dc3bb-827b-4490-8013-111689b25142",
-        "description": "",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 2, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:10Z",
+        "public_updated_at": "2016-11-08T15:09:32Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 2",
         "details": {
@@ -2765,10 +2765,10 @@
         "api_path": "/api/content/alpha-taxonomy/ffe4b8dc-9cea-4104-9187-6240578e3112-funding-and-finance-for-education-providers",
         "base_path": "/alpha-taxonomy/ffe4b8dc-9cea-4104-9187-6240578e3112-funding-and-finance-for-education-providers",
         "content_id": "72e1cef1-32f5-4e1f-b29e-905950f6b803",
-        "description": "",
+        "description": "Need allocations, funding review, benchmarking tables. ",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-10-12T15:31:11Z",
+        "public_updated_at": "2016-11-08T15:05:55Z",
         "schema_name": "taxon",
         "title": "Funding and finance for education providers",
         "details": {
@@ -2833,10 +2833,10 @@
         "api_path": "/api/content/alpha-taxonomy/246787b2-70ea-4a1b-a044-489cd6f835bb-governing-and-managing-schools",
         "base_path": "/alpha-taxonomy/246787b2-70ea-4a1b-a044-489cd6f835bb-governing-and-managing-schools",
         "content_id": "42e6e5c3-3a06-4a6f-abd4-a4b85d9c6b16",
-        "description": "",
+        "description": "Being a governor, standards and governance, financial management.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-10-12T11:43:26Z",
+        "public_updated_at": "2016-11-08T15:07:20Z",
         "schema_name": "taxon",
         "title": "Governing and managing schools",
         "details": {
@@ -2897,10 +2897,10 @@
         "api_path": "/api/content/alpha-taxonomy/3ed20861-abb4-4ab1-a857-380a14d6f196-teachers-and-school-staff",
         "base_path": "/alpha-taxonomy/3ed20861-abb4-4ab1-a857-380a14d6f196-teachers-and-school-staff",
         "content_id": "ff00b8b2-dcdb-4659-93c2-291c9be354f3",
-        "description": "",
+        "description": "Teachers from overseas, newly qualified, pay and conditions, appraisals.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-10-12T12:45:32Z",
+        "public_updated_at": "2016-11-08T15:07:50Z",
         "schema_name": "taxon",
         "title": "Teachers and school staff",
         "details": {
@@ -3117,10 +3117,10 @@
         "api_path": "/api/content/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "base_path": "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
-        "description": "Teaching and assessing the primary curriculum, primary school performance data.",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 1, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:29Z",
+        "public_updated_at": "2016-11-08T15:09:10Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 1",
         "details": {
@@ -3205,10 +3205,10 @@
         "api_path": "/api/content/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "base_path": "/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "content_id": "931dc3bb-827b-4490-8013-111689b25142",
-        "description": "",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 2, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:10Z",
+        "public_updated_at": "2016-11-08T15:09:32Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 2",
         "details": {
@@ -3293,10 +3293,10 @@
         "api_path": "/api/content/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "base_path": "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
-        "description": "Teaching and assessing the primary curriculum, primary school performance data.",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 1, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:29Z",
+        "public_updated_at": "2016-11-08T15:09:10Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 1",
         "details": {
@@ -3465,10 +3465,10 @@
         "api_path": "/api/content/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "base_path": "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
-        "description": "Teaching and assessing the primary curriculum, primary school performance data.",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 1, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:29Z",
+        "public_updated_at": "2016-11-08T15:09:10Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 1",
         "details": {
@@ -3553,10 +3553,10 @@
         "api_path": "/api/content/alpha-taxonomy/abf31e97-defc-43d9-9f08-5b66289addef-funding-and-finance-for-schools",
         "base_path": "/alpha-taxonomy/abf31e97-defc-43d9-9f08-5b66289addef-funding-and-finance-for-schools",
         "content_id": "90e8a226-8d40-4c1f-91e4-36a712b34e57",
-        "description": "",
+        "description": "Premiums, grants, capital funding, building programmes.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-10-12T15:33:22Z",
+        "public_updated_at": "2016-11-08T15:06:56Z",
         "schema_name": "taxon",
         "title": "Funding and finance for schools",
         "details": {
@@ -3570,10 +3570,10 @@
               "api_path": "/api/content/alpha-taxonomy/ffe4b8dc-9cea-4104-9187-6240578e3112-funding-and-finance-for-education-providers",
               "base_path": "/alpha-taxonomy/ffe4b8dc-9cea-4104-9187-6240578e3112-funding-and-finance-for-education-providers",
               "content_id": "72e1cef1-32f5-4e1f-b29e-905950f6b803",
-              "description": "",
+              "description": "Need allocations, funding review, benchmarking tables. ",
               "document_type": "taxon",
               "locale": "en",
-              "public_updated_at": "2016-10-12T15:31:11Z",
+              "public_updated_at": "2016-11-08T15:05:55Z",
               "schema_name": "taxon",
               "title": "Funding and finance for education providers",
               "details": {
@@ -3619,10 +3619,10 @@
         "api_path": "/api/content/alpha-taxonomy/246787b2-70ea-4a1b-a044-489cd6f835bb-governing-and-managing-schools",
         "base_path": "/alpha-taxonomy/246787b2-70ea-4a1b-a044-489cd6f835bb-governing-and-managing-schools",
         "content_id": "42e6e5c3-3a06-4a6f-abd4-a4b85d9c6b16",
-        "description": "",
+        "description": "Being a governor, standards and governance, financial management.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-10-12T11:43:26Z",
+        "public_updated_at": "2016-11-08T15:07:20Z",
         "schema_name": "taxon",
         "title": "Governing and managing schools",
         "details": {
@@ -3686,10 +3686,10 @@
         "api_path": "/api/content/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "base_path": "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
-        "description": "Teaching and assessing the primary curriculum, primary school performance data.",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 1, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:29Z",
+        "public_updated_at": "2016-11-08T15:09:10Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 1",
         "details": {
@@ -3774,10 +3774,10 @@
         "api_path": "/api/content/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "base_path": "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
-        "description": "Teaching and assessing the primary curriculum, primary school performance data.",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 1, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:29Z",
+        "public_updated_at": "2016-11-08T15:09:10Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 1",
         "details": {
@@ -3862,10 +3862,10 @@
         "api_path": "/api/content/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "base_path": "/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "content_id": "931dc3bb-827b-4490-8013-111689b25142",
-        "description": "",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 2, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:10Z",
+        "public_updated_at": "2016-11-08T15:09:32Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 2",
         "details": {
@@ -3950,10 +3950,10 @@
         "api_path": "/api/content/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "base_path": "/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "content_id": "931dc3bb-827b-4490-8013-111689b25142",
-        "description": "",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 2, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:10Z",
+        "public_updated_at": "2016-11-08T15:09:32Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 2",
         "details": {
@@ -4038,10 +4038,10 @@
         "api_path": "/api/content/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "base_path": "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
-        "description": "Teaching and assessing the primary curriculum, primary school performance data.",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 1, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:29Z",
+        "public_updated_at": "2016-11-08T15:09:10Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 1",
         "details": {
@@ -4126,10 +4126,10 @@
         "api_path": "/api/content/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "base_path": "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
         "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
-        "description": "Teaching and assessing the primary curriculum, primary school performance data.",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 1, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:29Z",
+        "public_updated_at": "2016-11-08T15:09:10Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 1",
         "details": {
@@ -4214,10 +4214,10 @@
         "api_path": "/api/content/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "base_path": "/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2",
         "content_id": "931dc3bb-827b-4490-8013-111689b25142",
-        "description": "",
+        "description": "Teaching and assessing the primary curriculum at Key Stage 2, primary school performance data.",
         "document_type": "taxon",
         "locale": "en",
-        "public_updated_at": "2016-11-07T16:01:10Z",
+        "public_updated_at": "2016-11-08T15:09:32Z",
         "schema_name": "taxon",
         "title": "Primary curriculum, key stage 2",
         "details": {
@@ -4443,7 +4443,7 @@
     "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2": {
       "title": "Primary curriculum, key stage 1",
       "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
-      "description": "Teaching and assessing the primary curriculum, primary school performance data."
+      "description": "Teaching and assessing the primary curriculum at Key Stage 1, primary school performance data."
     },
     "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance": {
       "title": "School curriculum, assessments and performance",
@@ -4463,7 +4463,7 @@
     "/alpha-taxonomy/ebd61f65-10ab-4590-93e0-2ad2c1f533c8-primary-curriculum-key-stage-2": {
       "title": "Primary curriculum, key stage 2",
       "content_id": "931dc3bb-827b-4490-8013-111689b25142",
-      "description": ""
+      "description": "Teaching and assessing the primary curriculum at Key Stage 2, primary school performance data."
     },
     "/alpha-taxonomy/childminders": {
       "title": "Childminders",
@@ -4478,12 +4478,12 @@
     "/alpha-taxonomy/abf31e97-defc-43d9-9f08-5b66289addef-funding-and-finance-for-schools": {
       "title": "Funding and finance for schools",
       "content_id": "90e8a226-8d40-4c1f-91e4-36a712b34e57",
-      "description": ""
+      "description": "Premiums, grants, capital funding, building programmes."
     },
     "/alpha-taxonomy/ffe4b8dc-9cea-4104-9187-6240578e3112-funding-and-finance-for-education-providers": {
       "title": "Funding and finance for education providers",
       "content_id": "72e1cef1-32f5-4e1f-b29e-905950f6b803",
-      "description": ""
+      "description": "Need allocations, funding review, benchmarking tables. "
     },
     "/alpha-taxonomy/schools-and-pre-schools": {
       "title": "Schools and pre schools",
@@ -4503,12 +4503,12 @@
     "/alpha-taxonomy/246787b2-70ea-4a1b-a044-489cd6f835bb-governing-and-managing-schools": {
       "title": "Governing and managing schools",
       "content_id": "42e6e5c3-3a06-4a6f-abd4-a4b85d9c6b16",
-      "description": ""
+      "description": "Being a governor, standards and governance, financial management."
     },
     "/alpha-taxonomy/3ed20861-abb4-4ab1-a857-380a14d6f196-teachers-and-school-staff": {
       "title": "Teachers and school staff",
       "content_id": "ff00b8b2-dcdb-4659-93c2-291c9be354f3",
-      "description": ""
+      "description": "Teachers from overseas, newly qualified, pay and conditions, appraisals."
     },
     "/alpha-taxonomy/a09ce12c-b7c0-4be0-81a3-ee091a7d66d9-managing-school-data": {
       "title": "Managing school data",
@@ -4837,17 +4837,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Michael Gove at the National College annual conference",
-          "description": "The Education Secretary speaks about the department's new policies aimed at recruiting and training the next generation of teachers.",
-          "link": "/government/speeches/michael-gove-at-the-national-college-annual-conference",
-          "format": "speech",
-          "public_timestamp": "2012-06-14T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/michael-gove-at-the-national-college-annual-conference",
-          "document_type": "edition"
-        },
-        {
           "title": "Nick Clegg’s speech  on education and outstanding leaders",
           "description": "The Deputy Prime Minister’s speech on education and a new programme to get outstanding leaders into the schools that need them the most.",
           "link": "/government/speeches/nick-cleggs-speech-on-education-and-outstanding-leaders",
@@ -4867,6 +4856,17 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/speeches/nick-gibb-to-the-association-of-teachers-and-lecturers-2011-conference",
+          "document_type": "edition"
+        },
+        {
+          "title": "Michael Gove at the National College annual conference",
+          "description": "The Education Secretary speaks about the department's new policies aimed at recruiting and training the next generation of teachers.",
+          "link": "/government/speeches/michael-gove-at-the-national-college-annual-conference",
+          "format": "speech",
+          "public_timestamp": "2012-06-14T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/michael-gove-at-the-national-college-annual-conference",
           "document_type": "edition"
         },
         {
@@ -5699,17 +5699,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Revised early years foundation stage: consultation closes 30 September",
-          "description": "Closing date of consultation on EYFS.",
-          "link": "/government/news/revised-early-years-foundation-stage-consultation-closes-30-september",
-          "format": "news_article",
-          "public_timestamp": "2011-10-27T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/revised-early-years-foundation-stage-consultation-closes-30-september",
-          "document_type": "edition"
-        },
-        {
           "title": "Dame Clare Tickell responds to inaccurate reports about her review of the EYFS",
           "description": "Dame Clare Tickell writes to the Times Educational Supplement about her independent review of the early years foundation stage.",
           "link": "/government/news/dame-clare-tickell-responds-to-inaccurate-reports-about-her-review-of-the-eyfs",
@@ -5721,14 +5710,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Written ministerial statement by Sarah Teather on the early years foundation stage",
-          "description": "Sarah Teather MP on the new, simpler and clearer early years foundation stage framework.",
-          "link": "/government/speeches/written-ministerial-statement-by-sarah-teather-on-the-early-years-foundation-stage",
-          "format": "speech",
-          "public_timestamp": "2012-03-27T01:00:00.000+01:00",
+          "title": "Revised early years foundation stage: consultation closes 30 September",
+          "description": "Closing date of consultation on EYFS.",
+          "link": "/government/news/revised-early-years-foundation-stage-consultation-closes-30-september",
+          "format": "news_article",
+          "public_timestamp": "2011-10-27T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/speeches/written-ministerial-statement-by-sarah-teather-on-the-early-years-foundation-stage",
+          "_id": "/government/news/revised-early-years-foundation-stage-consultation-closes-30-september",
           "document_type": "edition"
         },
         {
@@ -5740,6 +5729,17 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/early-years-foundation-stage-profile-return-2015-guide",
+          "document_type": "edition"
+        },
+        {
+          "title": "Written ministerial statement by Sarah Teather on the early years foundation stage",
+          "description": "Sarah Teather MP on the new, simpler and clearer early years foundation stage framework.",
+          "link": "/government/speeches/written-ministerial-statement-by-sarah-teather-on-the-early-years-foundation-stage",
+          "format": "speech",
+          "public_timestamp": "2012-03-27T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/written-ministerial-statement-by-sarah-teather-on-the-early-years-foundation-stage",
           "document_type": "edition"
         },
         {
@@ -10029,17 +10029,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Watford school officially reopens following massive renovation",
-          "description": "Students and teachers benefit from £5 million rebuild as part of the government’s Priority School Building Programme.",
-          "link": "/government/news/watford-school-officially-reopens-following-massive-renovation",
-          "format": "news_article",
-          "public_timestamp": "2014-09-24T17:08:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/watford-school-officially-reopens-following-massive-renovation",
-          "document_type": "edition"
-        },
-        {
           "title": "Free school capital funding confirmed for 7 schools",
           "description": "The Department for Education has today published details of the capital funding for 7 free schools, opened in September 2011, where the cost of building works has been finalised and contracts signed.",
           "link": "/government/news/free-school-capital-funding-confirmed-for-7-schools",
@@ -10062,6 +10051,28 @@
           "document_type": "edition"
         },
         {
+          "title": "Watford school officially reopens following massive renovation",
+          "description": "Students and teachers benefit from £5 million rebuild as part of the government’s Priority School Building Programme.",
+          "link": "/government/news/watford-school-officially-reopens-following-massive-renovation",
+          "format": "news_article",
+          "public_timestamp": "2014-09-24T17:08:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/watford-school-officially-reopens-following-massive-renovation",
+          "document_type": "edition"
+        },
+        {
+          "title": "David Laws written ministerial statement on school funding reforms",
+          "description": "David Laws, the Minister of State for Schools, laid this written ministerial statement on school funding reforms before Parliament.",
+          "link": "/government/speeches/david-laws-written-ministerial-statement-on-school-funding-reforms",
+          "format": "speech",
+          "public_timestamp": "2013-06-04T12:17:23.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/david-laws-written-ministerial-statement-on-school-funding-reforms",
+          "document_type": "edition"
+        },
+        {
           "title": "Major £5.4 million school rebuild gets underway in east Yorkshire",
           "description": "Eastfield Primary School in Hull hosted an official turf cutting ceremony on 13 February to mark the start of the construction work. ",
           "link": "/government/news/major-54-million-school-rebuild-gets-underway-in-east-yorkshire",
@@ -10081,17 +10092,6 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/news/most-run-down-school-in-country-gets-7-million-facelift",
-          "document_type": "edition"
-        },
-        {
-          "title": "David Laws written ministerial statement on school funding reforms",
-          "description": "David Laws, the Minister of State for Schools, laid this written ministerial statement on school funding reforms before Parliament.",
-          "link": "/government/speeches/david-laws-written-ministerial-statement-on-school-funding-reforms",
-          "format": "speech",
-          "public_timestamp": "2013-06-04T12:17:23.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/david-laws-written-ministerial-statement-on-school-funding-reforms",
           "document_type": "edition"
         }
       ],
@@ -12208,14 +12208,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Phonics screening check HDF deadline, Friday 27 June",
-          "description": "Information for headteachers about submitting the phonics headteacher's declaration form.",
-          "link": "/government/news/phonics-screening-check-week-begins-today",
-          "format": "news_article",
-          "public_timestamp": "2014-06-16T08:00:00.000+01:00",
+          "title": "Phonics screening check: technical reports",
+          "description": "Reports providing analysis of the phonics screening check following administration in 2011, 2012 and 2013.",
+          "link": "/government/collections/phonics-screening-check-technical-reports",
+          "format": "document_collection",
+          "public_timestamp": "2016-05-09T16:13:07.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/phonics-screening-check-week-begins-today",
+          "_id": "/government/collections/phonics-screening-check-technical-reports",
           "document_type": "edition"
         },
         {
@@ -12227,6 +12227,17 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/phonics-self-assessment-form-dandelion-books",
+          "document_type": "edition"
+        },
+        {
+          "title": "Phonics screening check HDF deadline, Friday 27 June",
+          "description": "Information for headteachers about submitting the phonics headteacher's declaration form.",
+          "link": "/government/news/phonics-screening-check-week-begins-today",
+          "format": "news_article",
+          "public_timestamp": "2014-06-16T08:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/phonics-screening-check-week-begins-today",
           "document_type": "edition"
         },
         {
@@ -12249,17 +12260,6 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/phonics-screening-check-data-collection-2015-guide",
-          "document_type": "edition"
-        },
-        {
-          "title": "Phonics screening check: technical reports",
-          "description": "Reports providing analysis of the phonics screening check following administration in 2011, 2012 and 2013.",
-          "link": "/government/collections/phonics-screening-check-technical-reports",
-          "format": "document_collection",
-          "public_timestamp": "2016-05-09T16:13:07.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/collections/phonics-screening-check-technical-reports",
           "document_type": "edition"
         },
         {
