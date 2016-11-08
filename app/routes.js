@@ -4,6 +4,7 @@ var fs = require('fs');
 var Promise = require('bluebird');
 var glob = Promise.promisify(require('glob'));
 var readFile = Promise.promisify(fs.readFile);
+var urlHelper = require('url');
 var _ = require('lodash');
 
 var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
@@ -29,29 +30,67 @@ var Taxon = require('./models/taxon.js');
         documentTypeExamples = _.sortBy(documentTypeExamples, "documentType");
 
         res.render('index', {
-         documentTypeExamples: documentTypeExamples 
+         documentTypeExamples: documentTypeExamples
        });
       });
   });
 
   router.get('/alpha-taxonomy/:taxon', function (req, res) {
     var taxonName = req.params.taxon;
+    var viewAllParam = req.query.viewAll;
     var url = "/alpha-taxonomy/" + taxonName;
+
     getMetadata().
-    then(function (metadata) {
+      then(function (metadata) {
         var breadcrumbMaker = new BreadcrumbMaker(metadata);
         var taxonContent = {};
-
         var taxon = Taxon.fromMetadata(url, metadata);
         var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
         taxonContent.guidance = taxon.filterByHeading('guidance');
-
-        res.render('taxon', {
-          taxon: taxon,
-          parentTaxon: breadcrumb[breadcrumb.length - 1],
-          breadcrumb: breadcrumb,
-          taxonContent: taxonContent
+        var childTaxons = taxon.atozChildren();
+        var grandchild = _.find(childTaxons, function (childTaxon) {
+          return childTaxon.children.length > 0;
         });
+        var parentTaxon = breadcrumb[breadcrumb.length - 1];
+
+        var isPenultimate = grandchild == undefined;
+        var viewAll = viewAllParam != undefined;
+
+        if(viewAll) {
+          var backTo;
+
+          // The 'back to' link behaviour differs depending on whether we are
+          // showing a leaf node taxon or a taxon higher up in the taxonomy.
+          if (childTaxons.length > 0) {
+            backTo = urlHelper.parse(req.url).pathname;
+          } else {
+            backTo = parentTaxon.basePath;
+          }
+
+          res.render('taxonomy/view-all', {
+            taxon: taxon,
+            childTaxons: childTaxons,
+            parentTaxon: parentTaxon,
+            breadcrumb: breadcrumb,
+            taxonContent: taxonContent,
+            backTo: backTo,
+          });
+        } else if(isPenultimate) {
+          res.render('taxonomy/penultimate-taxon', {
+            taxon: taxon,
+            childTaxons: childTaxons,
+            parentTaxon: parentTaxon,
+            breadcrumb: breadcrumb,
+            taxonContent: taxonContent,
+          });
+        } else {
+          res.render('taxonomy/taxon', {
+            taxon: taxon,
+            parentTaxon: breadcrumb[breadcrumb.length - 1],
+            breadcrumb: breadcrumb,
+            taxonContent: taxonContent,
+          });
+        }
       });
   });
 

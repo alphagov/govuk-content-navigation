@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK Content Navigation prototype
+{% endblock %}
+
+{% block content %}
+
+  <main id="content" class="taxonomy" role="main">
+    {% block breadcrumb %}
+      {% include '_breadcrumb.html' %}
+    {% endblock %}
+
+    <div class="grid-row">
+      <div class="page-header">
+        <a href="{{ backTo }}" class="link-back">Back to all guidance</a>
+
+        <h1> {{ taxon.title }} </h1>
+      </div>
+    </div>
+
+  <div class="grid-row child-topic-contents">
+    <div class="column-two-thirds">
+      <div class="topic-content">
+        <ul>
+          {% for document in taxonContent.guidance.atozContent() %}
+              <li>
+                <h3><a href="{{ document.basePath }}">{{ document.title }}</a></h3>
+                <p>{{ document.description }}</p>
+              </li>
+          {% endfor %}
+        </ul>
+    </div>
+
+  </div>
+</main>
+
+{% endblock %}
