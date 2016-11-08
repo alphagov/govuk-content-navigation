@@ -35,30 +35,25 @@
     padding: 0;
   }
 
-  .detailed-guides-show {
-    .block-2 {
+  .detailed-guide {
+    @include grid-column(2/3);
+
+    .govuk-breadcrumbs {
+      display: none;
+    }
+
+    .column-two-thirds {
       width: 100%;
     }
 
-    .block-3 {
-      width: 100%;
+    .sidebar-with-body {
+      .column-third {
+        display: none;
+      }
     }
 
-    .document-footer-meta {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    .aside-more-like-this {
-      h1 {
-        margin-left: 15px;
-        margin-right: 15px;
-      }
-
-      section .inner {
-        margin-left: 15px;
-        margin-right: 15px;
-      }
+    .sticky-element {
+      display: none;
     }
   }
 
