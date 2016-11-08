@@ -37,9 +37,11 @@
               {% endfor %}
             </ul>
 
-            <p>
-              <a href="{{childTaxon.basePath}}?viewAll">View all {{ taxon.title }} content</a>
-            </p>
+            {% if taxonContent.guidance.content.length > 5 %}
+              <p>
+                <a href="{{taxon.basePath}}?viewAll">More about {{ taxon.title }} content</a>
+              </p>
+            {% endif %}
           {% endif %}
 
           {% for childTaxon in taxon.atozChildren() %}
@@ -53,11 +55,12 @@
               {% endfor %}
             </ul>
 
-            <p>
-              <a href="{{childTaxon.basePath}}?viewAll">View all {{ childTaxon.title }} content</a>
-            </p>
+            {% if childTaxon.content.length > 5 %}
+              <p>
+                <a href="{{childTaxon.basePath}}?viewAll">More about {{ childTaxon.title }} content</a>
+              </p>
+            {% endif %}
           {% endfor %}
-
         </div>
       </div>
     </div>
