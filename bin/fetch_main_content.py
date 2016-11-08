@@ -19,7 +19,6 @@ import requests
 def main():
     whitehall_formats = ['collection',
                          'consultation',
-                         'detailed_guidance',
                          'document_collection',
                          'news_article',
                          'organisation',
