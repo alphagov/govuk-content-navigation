@@ -13,7 +13,7 @@ var Taxon = require('./models/taxon.js');
   router.get('/', function (req, res) {
     var documentTypeExamples = {};
     getMetadata().
-    then(function (metadata) {
+      then(function (metadata) {
         var documentMetadata = metadata.document_metadata;
 
         _.each(documentMetadata, function (metadata, basePath) {
@@ -31,7 +31,7 @@ var Taxon = require('./models/taxon.js');
 
         res.render('index', {
          documentTypeExamples: documentTypeExamples
-       });
+        });
       });
   });
 
@@ -124,67 +124,73 @@ var Taxon = require('./models/taxon.js');
     var basename = url.replace(/\//g, '_');
 
     var directory = __dirname + '/content/';
-
     var globPage = glob(directory + "/**/" + basename + ".html");
 
     globPage.
-    then(function (file) {
-      var filePath = file[0];
+      then(function (file) {
+        var filePath = file[0];
 
-      return filePath;
-    }).
-    then(function (filePath) {
-      readFile(filePath).
-      then(function (data) {
-        var content = data.toString();
-        var whitehall = filePath.match(/whitehall/);
-        var htmlManual = filePath.match(/manual/);
-        var htmlPublication = content.match(/html-publications-show/);
+        return filePath;
+      }).
+      then(function (filePath) {
+        readFile(filePath).
+        then(function (data) {
+          var content = data.toString();
+          var whitehall = filePath.match(/whitehall/);
+          var htmlManual = filePath.match(/manual/);
+          var htmlPublication = content.match(/html-publications-show/);
 
-        if (!htmlPublication) {
-          // Skip breadcrumbs and taxons for HTML publications since they have a unique format
-          var getBreadcrumbPromise = getMetadata().then(function (metadata){
-            var breadcrumbMaker = new BreadcrumbMaker(metadata);
-            var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
+          if (!htmlPublication) {
+            // Skip breadcrumbs and taxons for HTML publications since they have a unique format
+            var getBreadcrumbPromise = getMetadata().
+              then( function (metadata) {
+                var breadcrumbMaker = new BreadcrumbMaker(metadata);
+                var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
+                return breadcrumb;
+              });
 
-            return breadcrumb;
-          });
+            var getTaxonPromise = getTaxons(url).
+              then(function (taxons){
+                return taxons;
+              });
 
-          var getTaxonPromise = getTaxons(url).
-          then(function (taxons){
-            return taxons;
-          });
+            var getRelatedContentPromise = getRelatedContent("/" + url).
+              then(function (relatedContent) {
+                return relatedContent;
+              });
 
-          Promise.all([getBreadcrumbPromise, getTaxonPromise]).
-          spread(function (getBreadcrumbPromise, getTaxonPromise){
-            var breadcrumb = getBreadcrumbPromise;
-            var taxons = getTaxonPromise;
+            Promise.all([getBreadcrumbPromise, getTaxonPromise, getRelatedContentPromise]).
+              spread(function (breadcrumbResult, taxonResult, relatedContentResult){
+                var breadcrumb = breadcrumbResult;
+                var taxons = taxonResult;
+                var relatedContent = relatedContentResult;
+                res.render('content', {
+                  content: content,
+                  breadcrumb: breadcrumb,
+                  taxons: taxons,
+                  whitehall: whitehall,
+                  htmlManual: htmlManual,
+                  relatedContent: relatedContent,
+                });
+              });
+          }
+          else {
             res.render('content', {
               content: content,
-              breadcrumb: breadcrumb,
-              taxons: taxons,
-              whitehall: whitehall,
-              htmlManual: htmlManual
+              whitehall: whitehall
             });
-          });
-        }
-        else {
-          res.render('content', {
-            content: content,
-            whitehall: whitehall
-          });
-        }
-      },
-      function (err) {
-        res.status(404).render('404');
+          }
+        },
+        function (err) {
+          res.status(404).render('404');
+        });
       });
-    });
   });
 
   function getMetadata () {
     return readFile('app/data/metadata_and_taxons.json').
     catch(function (err) {
-        console.log('Failed to read metadata and taxons.');
+      console.log('Failed to read metadata and taxons.');
     }).
     then(function (data) {
       return JSON.parse(data);
@@ -199,6 +205,15 @@ var Taxon = require('./models/taxon.js');
         return Taxon.fromMetadata(taxonBasePath, metadata);
       });
     });
+  }
+
+  function getRelatedContent(contentBasePath) {
+    var readSourceData = readFile('app/data/hardcoded_related_content.json');
+    return readSourceData
+      .then(function (data) {
+        var lookup = JSON.parse(data);
+        return lookup[contentBasePath];
+      });
   }
 
   module.exports = router;

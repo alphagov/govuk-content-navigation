@@ -11,13 +11,22 @@
 
       <nav role="navigation" aria-labelledby="parent-other">
         <ul>
-          {% for contentItem in taxon.content %}
-          <li>
-            <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
-          </li>
-          {% endfor %}
+          {% if relatedContent %}
+            {% for contentItem in relatedContent %}
+              <li>
+                <a href="{{ contentItem.link }}">{{ contentItem.title }}</a>
+              </li>
+            {% endfor %}
+          {% else %}
+            {% for contentItem in taxon.content.slice(5) %}
+              <li>
+                <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
+              </li>
+            {% endfor %}
+          {% endif %}
         </ul>
-        <a class="reveal" href="{{ taxon.basePath }}/">See everything in {{ taxon.title }}</a>
+
+        <a class="reveal" href="{{ taxon.basePath }}?viewAll">More about {{ taxon.title }}</a>
       </nav>
     </div>
     {% endfor %}

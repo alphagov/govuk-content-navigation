@@ -12,7 +12,7 @@
     <div class="grid-row">
       {{ content | safe }}
       {% if taxons and not htmlPublication and not htmlManual %}
-      {% include '_side_navigation.html' %}
+        {% include '_side_navigation.html' %}
       {% endif %}
     </div>
   </div>
