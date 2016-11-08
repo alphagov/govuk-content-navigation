@@ -27,9 +27,11 @@
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 #whitehall-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+
   #page {
-    @extend %contain-floats;
-    @include grid-column(2/3);
     padding: 0;
   }
 
@@ -144,8 +146,7 @@
   }
 
   .inner-block {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0!important;
   }
 
   .metadata-list {
@@ -169,13 +170,6 @@
   .column-two-thirds {
     width: 100%;
   }
-}
-
-
-#whitehall-wrapper {
-   max-width: 960px;
-   margin: 0 auto;
-   position: relative;
 }
 
 // fix breadcrumbs
@@ -288,15 +282,10 @@
 #whitehall-wrapper {
    .whitehall-content {
       float: left;
-      margin-left: -100%;
-      left: 100%;
+      @include grid-column(2/3);
    }
    .related-container {
-      position: relative;
-      float: left;
-      width: 33.33333%;
-      margin-left: -100%;
-      left: 166.666%;
+     @include grid-column(1/3);
    }
 }
 
