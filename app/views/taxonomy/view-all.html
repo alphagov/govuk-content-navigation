@@ -13,15 +13,20 @@
 
     <div class="grid-row">
       <div class="page-header">
-        <a href="{{ backTo }}" class="link-back">Back to all guidance</a>
+        <h1>
+          <span class="sub-heading"><a href="{{ backTo }}">{{ parentTaxon.title }}</a></span>
+          {{ taxon.title }}
+        </h1>
 
-        <h1> {{ taxon.title }} </h1>
+        <p>{{ taxon.description }}</p>
       </div>
     </div>
 
   <div class="grid-row child-topic-contents">
     <div class="column-two-thirds">
       <div class="topic-content">
+        <h2>{{ taxon.title}} guidance</h2>
+        
         <ul>
           {% for document in taxonContent.guidance.atozContent() %}
               <li>
