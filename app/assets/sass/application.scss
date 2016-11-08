@@ -292,14 +292,6 @@
 
 .related {
    position: relative;
-/*
-   background: linear-gradient(to bottom,
-      #ddd 0%,
-      #ddd 19%,
-      #fff 20%,
-      #fff 100%);
-   background-size: 100% 5px;
-*/
    border-top: 10px solid #005ea5;
    padding-top: 5px;
 
@@ -421,7 +413,7 @@
 
   .parent-topic-contents {
     @include grid-column(2/3);
-    
+
     .topic-content {
       padding-bottom: $gutter;
 
