@@ -25,7 +25,7 @@
     <div class="grid-row">
       <div class="full-width-column">
         <nav role="navigation" class="child-topics-list">
-          <h2>Child topics</h2>
+          <h2>In this section</h2>
           <ul>
             {% for childTaxon in taxon.atozChildren() %}
               <li>
@@ -38,6 +38,7 @@
             {% endfor %}
           </ul>
         </nav>
+      </div>
 
         <div class="parent-topic-contents">
           {% if taxonContent.guidance.content.length > 0 %}
