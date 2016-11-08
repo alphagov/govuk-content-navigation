@@ -53,7 +53,12 @@
                 {% endfor %}
               </ul>
 
-              <p><a href="{{taxon.basePath}}?viewAll">See all {{ taxon.title }} guidance</a></p>
+              {% if taxonContent.guidance.content.length > 5 %}
+                <p>
+                  <a href="{{childTaxon.basePath}}?viewAll">More about {{ childTaxon.title }} content</a>
+                </p>
+              {% endif %}
+
             </div>
           {% endif %}
         </div>
