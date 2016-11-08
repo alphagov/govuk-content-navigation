@@ -24,7 +24,9 @@
         case 'guidance':
         case 'promotional':
         case 'detailed_guidance':
+        case 'detailed_guide':
         case 'manual':
+        case 'manual_section':
           return {
             display_name: 'Guidance',
             id: 'guidance'

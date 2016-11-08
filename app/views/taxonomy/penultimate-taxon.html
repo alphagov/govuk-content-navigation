@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  GOV.UK Content Navigation prototype
+{% endblock %}
+
+{% block content %}
+
+  <main id="content" class="taxonomy" role="main">
+    {% block breadcrumb %}
+      {% include '_breadcrumb.html' %}
+    {% endblock %}
+
+    <div class="grid-row">
+      <div class="page-header">
+        <h1>
+          <span class="sub-heading"><a href="{{ parentTaxon.basePath }}">{{ parentTaxon.title }}</a></span>
+          {{ taxon.title }}
+        </h1>
+
+        <p>{{ taxon.description }}</p>
+      </div>
+    </div>
+
+    <div class="grid-row child-topic-contents">
+      <div class="column-two-thirds">
+        <div class="topic-content">
+          {% if taxonContent.guidance.content.length > 0 %}
+            <h2>{{ taxon.title}} guidance</h2>
+
+            <ul>
+              {% for document in taxonContent.guidance.atozContent(5) %}
+                <li>
+                  <h3><a href="{{ document.basePath }}">{{ document.title }}</a></h3>
+                  <p>{{ document.description }}</p>
+                </li>
+              {% endfor %}
+            </ul>
+
+            <p>
+              <a href="{{childTaxon.basePath}}?viewAll">View all {{ taxon.title }} content</a>
+            </p>
+          {% endif %}
+
+          {% for childTaxon in taxon.atozChildren() %}
+            <h3>{{childTaxon.title}}</h3>
+            <ul>
+              {% for content in childTaxon.content.slice(0,5) %}
+                <li>
+                  <h3><a href="{{ content.basePath }}">{{ content.title }}</a></h3>
+                  <p>{{ content.description }}</p>
+                </li>
+              {% endfor %}
+            </ul>
+
+            <p>
+              <a href="{{childTaxon.basePath}}?viewAll">View all {{ childTaxon.title }} content</a>
+            </p>
+          {% endfor %}
+
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}
