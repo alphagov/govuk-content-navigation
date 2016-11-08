@@ -27,36 +27,33 @@
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
 #whitehall-wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  position: relative;
+
   #page {
-    @extend %contain-floats;
-    @include grid-column(2/3);
     padding: 0;
   }
 
-  .detailed-guides-show {
-    .block-2 {
+  .detailed-guide {
+    @include grid-column(2/3);
+
+    .govuk-breadcrumbs {
+      display: none;
+    }
+
+    .column-two-thirds {
       width: 100%;
     }
 
-    .block-3 {
-      width: 100%;
+    .sidebar-with-body {
+      .column-third {
+        display: none;
+      }
     }
 
-    .document-footer-meta {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
-
-    .aside-more-like-this {
-      h1 {
-        margin-left: 15px;
-        margin-right: 15px;
-      }
-
-      section .inner {
-        margin-left: 15px;
-        margin-right: 15px;
-      }
+    .sticky-element {
+      display: none;
     }
   }
 
@@ -144,8 +141,7 @@
   }
 
   .inner-block {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 0!important;
   }
 
   .metadata-list {
@@ -169,13 +165,6 @@
   .column-two-thirds {
     width: 100%;
   }
-}
-
-
-#whitehall-wrapper {
-   max-width: 960px;
-   margin: 0 auto;
-   position: relative;
 }
 
 // fix breadcrumbs
@@ -288,15 +277,10 @@
 #whitehall-wrapper {
    .whitehall-content {
       float: left;
-      margin-left: -100%;
-      left: 100%;
+      @include grid-column(2/3);
    }
    .related-container {
-      position: relative;
-      float: left;
-      width: 33.33333%;
-      margin-left: -100%;
-      left: 166.666%;
+     @include grid-column(1/3);
    }
 }
 
@@ -308,14 +292,6 @@
 
 .related {
    position: relative;
-/*
-   background: linear-gradient(to bottom,
-      #ddd 0%,
-      #ddd 19%,
-      #fff 20%,
-      #fff 100%);
-   background-size: 100% 5px;
-*/
    border-top: 10px solid #005ea5;
    padding-top: 5px;
 
@@ -437,7 +413,7 @@
 
   .parent-topic-contents {
     @include grid-column(2/3);
-    
+
     .topic-content {
       padding-bottom: $gutter;
 
