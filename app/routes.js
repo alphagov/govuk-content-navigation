@@ -9,28 +9,14 @@ var _ = require('lodash');
 
 var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 var Taxon = require('./models/taxon.js');
+var DocumentType = require ('./models/document_type.js');
 
   router.get('/', function (req, res) {
-    var documentTypeExamples = {};
-    getMetadata().
-      then(function (metadata) {
-        var documentMetadata = metadata.document_metadata;
-
-        _.each(documentMetadata, function (metadata, basePath) {
-          if(!documentTypeExamples[metadata.document_type]) {
-            documentTypeExamples[metadata.document_type] = basePath;
-          }
-        });
-        documentTypeExamples = _.map(documentTypeExamples, function (basePath, documentType) {
-          return {
-            documentType: documentType,
-            basePath: basePath
-          };
-        });
-        documentTypeExamples = _.sortBy(documentTypeExamples, "documentType");
-
+    getTaxonomyData()
+      .then(function (taxonomyData) {
+        var documentTypeExamples = DocumentType.getExamples(taxonomyData.document_metadata);
         res.render('index', {
-         documentTypeExamples: documentTypeExamples
+          documentTypeExamples: documentTypeExamples
         });
       });
   });
@@ -40,7 +26,7 @@ var Taxon = require('./models/taxon.js');
     var viewAllParam = req.query.viewAll;
     var url = "/alpha-taxonomy/" + taxonName;
 
-    getMetadata().
+    getTaxonomyData().
       then(function (metadata) {
         var breadcrumbMaker = new BreadcrumbMaker(metadata);
         var taxonContent = {};
@@ -142,7 +128,7 @@ var Taxon = require('./models/taxon.js');
 
           if (!htmlPublication) {
             // Skip breadcrumbs and taxons for HTML publications since they have a unique format
-            var getBreadcrumbPromise = getMetadata().
+            var getBreadcrumbPromise = getTaxonomyData().
               then(function (metadata) {
                 var breadcrumbMaker = new BreadcrumbMaker(metadata);
                 var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
@@ -188,8 +174,8 @@ var Taxon = require('./models/taxon.js');
       });
   });
 
-  function getMetadata() {
-    return readFile('app/data/taxonomy_data.json').then(function(data) {
+  function getTaxonomyData() {
+    return readFile('app/data/taxonomy_data.json').then(function (data) {
       return JSON.parse(data);
     })
     .catch(function (err) {
@@ -198,7 +184,7 @@ var Taxon = require('./models/taxon.js');
   }
 
   function getTaxons (url) {
-    return getMetadata().
+    return getTaxonomyData().
     then(function (metadata) {
       return metadata.taxons_for_content[url].
       map(function (taxonBasePath) {
