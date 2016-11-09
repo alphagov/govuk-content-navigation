@@ -39,7 +39,7 @@
 
             {% if taxonContent.guidance.content.length > 5 %}
               <p>
-                <a href="{{taxon.basePath}}?viewAll">More about {{ taxon.title }} content</a>
+                <a href="{{taxon.basePath}}?viewAll">More about {{ taxon.title }}</a>
               </p>
             {% endif %}
           {% endif %}
@@ -57,7 +57,7 @@
 
             {% if childTaxon.content.length > 5 %}
               <p>
-                <a href="{{childTaxon.basePath}}?viewAll">More about {{ childTaxon.title }} content</a>
+                <a href="{{childTaxon.basePath}}?viewAll">More about {{ childTaxon.title }}</a>
               </p>
             {% endif %}
           {% endfor %}
