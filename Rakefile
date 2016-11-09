@@ -14,7 +14,7 @@ begin
 rescue LoadError
 end
 
-METADATA_FILENAME = 'app/data/metadata_and_taxons.json'.freeze
+METADATA_FILENAME = 'app/data/taxonomy_data.json'.freeze
 
 task default: [:import_links]
 

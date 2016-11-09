@@ -188,14 +188,13 @@ var Taxon = require('./models/taxon.js');
       });
   });
 
-  function getMetadata () {
-    return readFile('app/data/metadata_and_taxons.json').
-    catch(function (err) {
-      console.log('Failed to read metadata and taxons.');
-    }).
-    then(function (data) {
+  function getMetadata() {
+    return readFile('app/data/taxonomy_data.json').then(function(data) {
       return JSON.parse(data);
-    });
+    })
+    .catch(function (err) {
+      console.log('Failed to read metadata and taxons.');
+    })
   }
 
   function getTaxons (url) {

@@ -31,7 +31,7 @@ def main():
 
 
 def get_timestamp(url):
-    with open("app/data/metadata_and_taxons.json") as json_metadata:
+    with open("app/data/taxonomy_data.json") as json_metadata:
         metadata = json.load(json_metadata)
         time = metadata["document_metadata"][url]["public_updated_at"]
         timestamp = arrow.get(time).humanize()

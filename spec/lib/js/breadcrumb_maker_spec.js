@@ -1,5 +1,5 @@
 var BreadcrumbMaker = require('../../../lib/js/breadcrumb_maker.js');
-var json_data = require('../../../app/data/metadata_and_taxons.json');
+var json_data = require('../../../app/data/taxonomy_data.json');
 
 describe('#getBreadcrumbForTaxon', function() {
   var maker = new BreadcrumbMaker(json_data);
