@@ -5,7 +5,7 @@ This will traverse the govuk mirror for the files listed as links in
  target directory, which should be the content prototype.
 
 Usage:
-    get_html_files_from_mirror.py
+    fetch_main_content.py
 """
 
 from docopt import docopt
@@ -17,15 +17,7 @@ import re
 import requests
 
 def main():
-    whitehall_formats = ['collection',
-                         'consultation',
-                         'document_collection',
-                         'news_article',
-                         'organisation',
-                         'speech',
-                         'statistical_data_set',
-                         'publication']
-
+    excluded_format = 'manual_section'
     links_and_formats = get_links_and_formats()
     failed = []
 
@@ -34,7 +26,7 @@ def main():
     print("Links and formats", links_and_formats)
 
     base = 'https://www-origin.staging.publishing.service.gov.uk/'
-    target_directory = 'app/content/'
+    target_directory = '../app/content/'
     for base_path, format in links_and_formats:
         url = '{}{}'.format(base, base_path)
         filePath = '{}.html'.format(re.sub('/', '_', base_path))
@@ -46,7 +38,8 @@ def main():
 
         soup = BeautifulSoup(res.text, 'html.parser')
         main_html = soup.main
-        save_file(filePath, format, main_html, target_directory)
+        if format != excluded_format:
+            save_file(filePath, format, main_html, target_directory)
 
     with open("failed_pages.txt", "w") as f:
         f.writelines(failed)
