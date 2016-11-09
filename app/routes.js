@@ -143,9 +143,10 @@ var Taxon = require('./models/taxon.js');
           if (!htmlPublication) {
             // Skip breadcrumbs and taxons for HTML publications since they have a unique format
             var getBreadcrumbPromise = getMetadata().
-              then( function (metadata) {
+              then(function (metadata) {
                 var breadcrumbMaker = new BreadcrumbMaker(metadata);
                 var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
+
                 return breadcrumb;
               });
 
@@ -207,11 +208,13 @@ var Taxon = require('./models/taxon.js');
     });
   }
 
-  function getRelatedContent(contentBasePath) {
+  function getRelatedContent (contentBasePath) {
     var readSourceData = readFile('app/data/hardcoded_related_content.json');
-    return readSourceData
-      .then(function (data) {
+
+    return readSourceData.
+    then(function (data) {
         var lookup = JSON.parse(data);
+
         return lookup[contentBasePath];
       });
   }
