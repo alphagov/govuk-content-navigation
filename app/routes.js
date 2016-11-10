@@ -23,16 +23,18 @@ var DocumentType = require ('./models/document_type.js');
 
   router.get('/alpha-taxonomy/:taxon', function (req, res) {
     var taxonName = req.params.taxon;
+    var taxonBasePath = "/alpha-taxonomy/" + taxonName;
     var viewAllParam = req.query.viewAll;
-    var url = "/alpha-taxonomy/" + taxonName;
 
     getTaxonomyData().
-      then(function (metadata) {
-        var breadcrumbMaker = new BreadcrumbMaker(metadata);
+      then(function (taxonomyData) {
+        var breadcrumbMaker = new BreadcrumbMaker(taxonomyData);
+        var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([taxonBasePath]);
+
+        var taxon = Taxon.fromMetadata(taxonBasePath, taxonomyData);
         var taxonContent = {};
-        var taxon = Taxon.fromMetadata(url, metadata);
-        var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
         taxonContent.guidance = taxon.filterByHeading('guidance');
+
         var childTaxons = taxon.atozChildren();
         var grandchild = _.find(childTaxons, function (childTaxon) {
           return childTaxon.children.length > 0;
