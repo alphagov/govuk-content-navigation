@@ -9,11 +9,11 @@ var _ = require('lodash');
 
 var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 var Taxon = require('./models/taxon.js');
-var DocumentType = require ('./models/document_type.js');
+var DocumentType = require('./models/document_type.js');
 
   router.get('/', function (req, res) {
-    getTaxonomyData()
-      .then(function (taxonomyData) {
+    getTaxonomyData().
+      then(function (taxonomyData) {
         var documentTypeExamples = DocumentType.getExamples(taxonomyData.document_metadata);
         res.render('index', {
           documentTypeExamples: documentTypeExamples
@@ -45,7 +45,7 @@ var DocumentType = require ('./models/document_type.js');
         var viewAll = viewAllParam != undefined;
 
         if(viewAll) {
-          var backTo;
+          var backTo = null;
 
           // The 'back to' link behaviour differs depending on whether we are
           // showing a leaf node taxon or a taxon higher up in the taxonomy.
@@ -176,30 +176,31 @@ var DocumentType = require ('./models/document_type.js');
       });
   });
 
-  function getTaxonomyData() {
-    return readFile('app/data/taxonomy_data.json').then(function (data) {
-      return JSON.parse(data);
-    })
-    .catch(function (err) {
-      console.log('Failed to read metadata and taxons.');
-    })
+  function getTaxonomyData () {
+    return readFile('app/data/taxonomy_data.json').
+      then(function (data) {
+        return JSON.parse(data);
+      }).
+      catch(function (err) {
+        console.log('Failed to read metadata and taxons.');
+      })
   }
 
   function getTaxons (url) {
     return getTaxonomyData().
-    then(function (metadata) {
-      return metadata.taxons_for_content[url].
-      map(function (taxonBasePath) {
-        return Taxon.fromMetadata(taxonBasePath, metadata);
+      then(function (metadata) {
+        return metadata.taxons_for_content[url].map(function (taxonBasePath) {
+          return Taxon.fromMetadata(taxonBasePath, metadata);
+        });
+
       });
-    });
   }
 
   function getRelatedContent (contentBasePath) {
     var readSourceData = readFile('app/data/hardcoded_related_content.json');
 
     return readSourceData.
-    then(function (data) {
+      then(function (data) {
         var lookup = JSON.parse(data);
 
         return lookup[contentBasePath];
