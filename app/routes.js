@@ -9,44 +9,32 @@ var _ = require('lodash');
 
 var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 var Taxon = require('./models/taxon.js');
+var DocumentType = require('./models/document_type.js');
 
   router.get('/', function (req, res) {
-    var documentTypeExamples = {};
-    getMetadata().
-      then(function (metadata) {
-        var documentMetadata = metadata.document_metadata;
-
-        _.each(documentMetadata, function (metadata, basePath) {
-          if(!documentTypeExamples[metadata.document_type]) {
-            documentTypeExamples[metadata.document_type] = basePath;
-          }
-        });
-        documentTypeExamples = _.map(documentTypeExamples, function (basePath, documentType) {
-          return {
-            documentType: documentType,
-            basePath: basePath
-          };
-        });
-        documentTypeExamples = _.sortBy(documentTypeExamples, "documentType");
-
+    getTaxonomyData().
+      then(function (taxonomyData) {
+        var documentTypeExamples = DocumentType.getExamples(taxonomyData.document_metadata);
         res.render('index', {
-         documentTypeExamples: documentTypeExamples
+          documentTypeExamples: documentTypeExamples
         });
       });
   });
 
   router.get('/alpha-taxonomy/:taxon', function (req, res) {
     var taxonName = req.params.taxon;
+    var taxonBasePath = "/alpha-taxonomy/" + taxonName;
     var viewAllParam = req.query.viewAll;
-    var url = "/alpha-taxonomy/" + taxonName;
 
-    getMetadata().
-      then(function (metadata) {
-        var breadcrumbMaker = new BreadcrumbMaker(metadata);
+    getTaxonomyData().
+      then(function (taxonomyData) {
+        var breadcrumbMaker = new BreadcrumbMaker(taxonomyData);
+        var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([taxonBasePath]);
+
+        var taxon = Taxon.fromMetadata(taxonBasePath, taxonomyData);
         var taxonContent = {};
-        var taxon = Taxon.fromMetadata(url, metadata);
-        var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([url]);
         taxonContent.guidance = taxon.filterByHeading('guidance');
+
         var childTaxons = taxon.atozChildren();
         var grandchild = _.find(childTaxons, function (childTaxon) {
           return childTaxon.children.length > 0;
@@ -57,7 +45,7 @@ var Taxon = require('./models/taxon.js');
         var viewAll = viewAllParam != undefined;
 
         if(viewAll) {
-          var backTo;
+          var backTo = null;
 
           // The 'back to' link behaviour differs depending on whether we are
           // showing a leaf node taxon or a taxon higher up in the taxonomy.
@@ -142,7 +130,7 @@ var Taxon = require('./models/taxon.js');
 
           if (!htmlPublication) {
             // Skip breadcrumbs and taxons for HTML publications since they have a unique format
-            var getBreadcrumbPromise = getMetadata().
+            var getBreadcrumbPromise = getTaxonomyData().
               then(function (metadata) {
                 var breadcrumbMaker = new BreadcrumbMaker(metadata);
                 var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
@@ -188,31 +176,31 @@ var Taxon = require('./models/taxon.js');
       });
   });
 
-  function getMetadata () {
-    return readFile('app/data/metadata_and_taxons.json').
-    catch(function (err) {
-      console.log('Failed to read metadata and taxons.');
-    }).
-    then(function (data) {
-      return JSON.parse(data);
-    });
+  function getTaxonomyData () {
+    return readFile('app/data/taxonomy_data.json').
+      then(function (data) {
+        return JSON.parse(data);
+      }).
+      catch(function (err) {
+        console.log('Failed to read metadata and taxons.');
+      })
   }
 
   function getTaxons (url) {
-    return getMetadata().
-    then(function (metadata) {
-      return metadata.taxons_for_content[url].
-      map(function (taxonBasePath) {
-        return Taxon.fromMetadata(taxonBasePath, metadata);
+    return getTaxonomyData().
+      then(function (metadata) {
+        return metadata.taxons_for_content[url].map(function (taxonBasePath) {
+          return Taxon.fromMetadata(taxonBasePath, metadata);
+        });
+
       });
-    });
   }
 
   function getRelatedContent (contentBasePath) {
     var readSourceData = readFile('app/data/hardcoded_related_content.json');
 
     return readSourceData.
-    then(function (data) {
+      then(function (data) {
         var lookup = JSON.parse(data);
 
         return lookup[contentBasePath];
