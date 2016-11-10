@@ -1,3 +1,5 @@
+"use strict";
+
 var ContentItem = require("./content_item.js");
 
 class Taxon {
