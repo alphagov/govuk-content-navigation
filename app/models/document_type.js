@@ -17,7 +17,7 @@ var DocumentType = {
       };
     });
 
-    collectedExamples = _.sortBy(collectedExamples, "documentType");
+    return _.sortBy(collectedExamples, "documentType");
   }
 }
 
