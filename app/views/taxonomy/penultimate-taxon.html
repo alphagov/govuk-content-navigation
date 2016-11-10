@@ -11,38 +11,13 @@
       {% include '_breadcrumb.html' %}
     {% endblock %}
 
-    <div class="grid-row">
-      <div class="page-header">
-        <h1>
-          <span class="sub-heading"><a href="{{ parentTaxon.basePath }}">{{ parentTaxon.title }}</a></span>
-          {{ taxon.title }}
-        </h1>
-
-        <p>{{ taxon.description }}</p>
-      </div>
-    </div>
+    {% include 'taxonomy/_taxon-heading.html' %}
 
     <div class="grid-row child-topic-contents">
       <div class="column-two-thirds">
         <div class="topic-content">
-          {% if taxonContent.guidance.content.length > 0 %}
-            <h2>{{ taxon.title}} guidance</h2>
 
-            <ul>
-              {% for document in taxonContent.guidance.atozContent(5) %}
-                <li>
-                  <h3><a href="{{ document.basePath }}">{{ document.title }}</a></h3>
-                  <p>{{ document.description }}</p>
-                </li>
-              {% endfor %}
-            </ul>
-
-            {% if taxonContent.guidance.content.length > 5 %}
-              <p>
-                <a href="{{taxon.basePath}}?viewAll">More about {{ taxon.title }}</a>
-              </p>
-            {% endif %}
-          {% endif %}
+          {% include 'taxonomy/_truncated-content-list.html' %}
 
           {% for childTaxon in taxon.atozChildren() %}
             <h2>{{childTaxon.title}}</h2>
