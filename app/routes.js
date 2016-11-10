@@ -36,6 +36,9 @@ var DocumentType = require('./models/document_type.js');
         taxonContent.guidance = taxon.filterByHeading('guidance');
 
         var childTaxons = taxon.atozChildren();
+        for (var i = 0; i < childTaxons.length; i++) {
+          childTaxons[i].guidance = childTaxons[i].filterByHeading('guidance');
+        }
         var grandchild = _.find(childTaxons, function (childTaxon) {
           return childTaxon.children.length > 0;
         });

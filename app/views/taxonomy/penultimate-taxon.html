@@ -47,7 +47,7 @@
           {% for childTaxon in taxon.atozChildren() %}
             <h2>{{childTaxon.title}}</h2>
             <ul>
-              {% for content in childTaxon.content.slice(0,5) %}
+              {% for content in childTaxon.guidance.atozContent(5) %}
                 <li>
                   <h3><a href="{{ content.basePath }}">{{ content.title }}</a></h3>
                   <p>{{ content.description }}</p>
@@ -55,7 +55,7 @@
               {% endfor %}
             </ul>
 
-            {% if childTaxon.content.length > 5 %}
+            {% if childTaxon.guidance.content.length > 5 %}
               <p>
                 <a href="{{childTaxon.basePath}}?viewAll">More about {{ childTaxon.title }}</a>
               </p>
