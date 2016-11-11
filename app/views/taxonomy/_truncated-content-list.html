@@ -1,8 +1,8 @@
-{% if taxonContent.guidance.content.length > 0 %}
-  <h2>{{ taxon.title }} guidance</h2>
+{% if presentedTaxon.content.guidance.content.length > 0 %}
+  <h2>{{ presentedTaxon.title }} guidance</h2>
 
   <ul>
-    {% for document in taxonContent.guidance.atozContent(5) %}
+    {% for document in presentedTaxon.content.guidance.atozContent(5) %}
       <li>
         <h3><a href="{{ document.basePath }}">{{ document.title }}</a></h3>
         <p>{{ document.description }}</p>
@@ -10,7 +10,7 @@
     {% endfor %}
   </ul>
 
-  {% if taxonContent.guidance.content.length > 5 %}
+  {% if presentedTaxon.content.guidance.content.length > 5 %}
     <p>
       <a href="{{taxon.basePath}}?viewAll">More about {{ taxon.title }}</a>
     </p>

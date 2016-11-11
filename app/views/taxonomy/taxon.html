@@ -18,7 +18,7 @@
         <nav role="navigation" class="child-topics-list">
           <h2>In this section</h2>
           <ul>
-            {% for childTaxon in taxon.atozChildren() %}
+            {% for childTaxon in presentedTaxon.children %}
               <li>
                 <h3><a href="{{ childTaxon.basePath }}">{{ childTaxon.title }}</a></h3>
                 <p>{{ childTaxon.description }}</p>

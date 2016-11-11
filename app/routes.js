@@ -4,12 +4,11 @@ var fs = require('fs');
 var Promise = require('bluebird');
 var glob = Promise.promisify(require('glob'));
 var readFile = Promise.promisify(fs.readFile);
-var urlHelper = require('url');
-var _ = require('lodash');
 
 var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 var Taxon = require('./models/taxon.js');
 var DocumentType = require('./models/document_type.js');
+var TaxonPresenter = require('./models/taxon_presenter.js');
 
   router.get('/', function (req, res) {
     getTaxonomyData().
@@ -22,66 +21,36 @@ var DocumentType = require('./models/document_type.js');
   });
 
   router.get('/alpha-taxonomy/:taxon', function (req, res) {
-    var taxonName = req.params.taxon;
-    var taxonBasePath = "/alpha-taxonomy/" + taxonName;
-    var viewAllParam = req.query.viewAll;
+    var taxonParam = req.params.taxon;
+    var viewAll = !(typeof(req.query.viewAll) === "undefined");
 
     getTaxonomyData().
       then(function (taxonomyData) {
-        var breadcrumbMaker = new BreadcrumbMaker(taxonomyData);
-        var breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([taxonBasePath]);
-
-        var taxon = Taxon.fromMetadata(taxonBasePath, taxonomyData);
-        var taxonContent = {};
-        taxonContent.guidance = taxon.filterByHeading('guidance');
-
-        var childTaxons = taxon.atozChildren();
-        for (var i = 0; i < childTaxons.length; i++) {
-          childTaxons[i].guidance = childTaxons[i].filterByHeading('guidance');
-        }
-        var grandchild = _.find(childTaxons, function (childTaxon) {
-          return childTaxon.children.length > 0;
-        });
-        var parentTaxon = breadcrumb[breadcrumb.length - 1];
-
-        var isPenultimate = grandchild == undefined;
-        var viewAll = viewAllParam != undefined;
+        var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
+        var breadcrumb = presentedTaxon.breadcrumb;
 
         if(viewAll) {
-          var backTo = null;
-
-          // The 'back to' link behaviour differs depending on whether we are
-          // showing a leaf node taxon or a taxon higher up in the taxonomy.
-          if (childTaxons.length > 0) {
-            backTo = urlHelper.parse(req.url).pathname;
-          } else {
-            backTo = parentTaxon.basePath;
-          }
-
+          var backTo = presentedTaxon.determineBackToLink(req.url);
           res.render('taxonomy/view-all', {
-            taxon: taxon,
-            childTaxons: childTaxons,
-            parentTaxon: parentTaxon,
-            breadcrumb: breadcrumb,
-            taxonContent: taxonContent,
+            presentedTaxon: presentedTaxon,
+            breadcrumb: presentedTaxon.breadcrumb,
             backTo: backTo,
           });
-        } else if(isPenultimate) {
+
+          return
+        } else if(presentedTaxon.isPenultimate) {
           res.render('taxonomy/penultimate-taxon', {
-            taxon: taxon,
-            childTaxons: childTaxons,
-            parentTaxon: parentTaxon,
+            presentedTaxon: presentedTaxon,
             breadcrumb: breadcrumb,
-            taxonContent: taxonContent,
           });
-        } else {
-          res.render('taxonomy/taxon', {
-            taxon: taxon,
-            parentTaxon: breadcrumb[breadcrumb.length - 1],
-            breadcrumb: breadcrumb,
-            taxonContent: taxonContent,
-          });
+
+          return
         }
+
+        res.render('taxonomy/taxon', {
+          presentedTaxon: presentedTaxon,
+          breadcrumb: breadcrumb,
+        });
       });
   });
 
