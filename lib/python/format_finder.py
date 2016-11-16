@@ -7,12 +7,10 @@ import csv
 import requests
 from os import environ
 from requests.auth import HTTPBasicAuth
+from helpers.path_helpers import lib_directory
 
-INTEGRATION_USER = environ['USERNAME']
-INTEGRATION_PASSWORD = environ['PASSWORD']
 
 session = requests.Session()
-
 
 def get_base_path(link):
     """
@@ -22,8 +20,8 @@ def get_base_path(link):
     return response.url.replace('https://www.gov.uk', '')
 
 
-with open('content.csv') as content_file:
-    with open('link_formats.csv', 'wb') as format_file:
+with open(lib_directory("python/data/content.csv")) as content_file:
+    with open(lib_directory("python/data/link_formats.csv"), 'wb') as format_file:
         reader = csv.DictReader(content_file)
         writer = csv.DictWriter(format_file, fieldnames=['Link', 'Format'])
 

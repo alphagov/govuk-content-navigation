@@ -3,20 +3,19 @@ This will add dates to the files in content.
 
 Usage:
     add_dates.py
-
 """
 
 from docopt import docopt
 from bs4 import BeautifulSoup
+from helpers.path_helpers import *
 import arrow
 import json
 import fnmatch
 import os
 
-
 def main():
     matches = []
-    for root, dirnames, filenames in os.walk('app/content/'):
+    for root, dirnames, filenames in os.walk(app_directory("content")):
         for filename in fnmatch.filter(filenames, '*.html'):
             matches.append(os.path.join(root, filename))
     for match in matches:
@@ -29,9 +28,8 @@ def main():
         else:
             print('-----not matching {}'.format(match))
 
-
 def get_timestamp(url):
-    with open("app/data/taxonomy_data.json") as json_metadata:
+    with open(app_directory("data/taxonomy_data.json")) as json_metadata:
         metadata = json.load(json_metadata)
         time = metadata["document_metadata"][url]["public_updated_at"]
         timestamp = arrow.get(time).humanize()
