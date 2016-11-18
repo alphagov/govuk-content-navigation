@@ -366,7 +366,8 @@
     line-height: 30px;
     font-weight: bold;
 
-    padding-bottom: $gutter;
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter;
   }
 
   h3 {
