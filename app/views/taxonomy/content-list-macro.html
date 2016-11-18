@@ -3,6 +3,8 @@
 {% if taxonContent.length > 0 %}
   <h2>{{ taxon.title }} guidance</h2>
 
+  {% if taxon.description %}<p>{{ taxon.description }}</p>{% endif %}
+
   <ul>
     {% for document in taxonContent %}
       {% if truncate == false or loop.index0 < count %}
