@@ -39,7 +39,11 @@ module.exports = function(env) {
 
   ------------------------------------------------------------------ */
 
-
+filters.pad = function(x, width, char) {
+  char = char || '0';
+  x = x + '';
+  return x.length >= width ? x : new Array(width - x.length + 1).join(char) + x;
+}
 
   /* ------------------------------------------------------------------
     keep the following line to return your filters to the app
