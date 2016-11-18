@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
 {% import "taxonomy/content-list-macro.html" as content_list_macro %}
-{% import "breadcrumb-macro.html" as breadcrumb_macro %}
 
 {% block page_title %}
   GOV.UK Content Navigation prototype
@@ -9,14 +8,16 @@
 {% block content %}
 
   <main id="content" class="taxonomy" role="main">
-    {{ breadcrumb_macro.render_breadcrumb(presentedTaxon.breadcrumb) }}
+    {% block breadcrumb %}
+      {% include '_breadcrumb.html' %}
+    {% endblock %}
 
     {% include 'taxonomy/_taxon-heading.html' %}
 
     <h3>In this section</h3>
 
     <ul class="topic-navigation">
-      <li><a href="#topic-01">{{ presentedTaxon.title }}</a></li>
+      <li><a href="#topic-01">{{ taxon.title }}</a></li>
       {% for childTaxon in presentedTaxon.children %}
         <li class="child-topic"><a href="#topic-{{ (loop.index + 1) | pad(2, '0') }}">{{ childTaxon.title }}</a></li>
       {% endfor %}
@@ -25,6 +26,7 @@
     <div class="grid-row child-topic-contents">
       <div class="column-two-thirds">
         <div class="topic-content">
+
           <a name="topic-01"></a>
           {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent(), true) }}
 
