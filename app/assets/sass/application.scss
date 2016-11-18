@@ -427,11 +427,22 @@
     }
   }
 
+  .topic-navigation {
+    li {
+      padding-bottom: 5px;
+      // padding-left: 20px;
+      &.child-topic:before {
+        content: "» ";
+        color: $secondary-text-colour;
+      }
+    }
+  }
+
   .child-topic-contents {
     .topic-content {
       ul {
         li {
-          padding-bottom: $gutter-one-third;
+          margin-bottom: $gutter-one-third;
 
           h3 {
             padding-bottom: 0;
