@@ -389,6 +389,17 @@
       a {
         color: $secondary-text-colour;
         text-decoration: none;
+
+        &:before {
+          content: " ";
+          background-image: url("/public/images/back.svg");
+          background-repeat: no-repeat;
+          background-size: auto 18px;
+          background-position: left bottom;
+          display: inline-block;
+          width: 20px;
+          height: 1em;
+        }
       }
     }
   }
