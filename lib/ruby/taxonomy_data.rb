@@ -41,7 +41,7 @@ class TaxonomyData
 
     builder.all_taxons.each do |taxon_base_path|
       content_id = builder.taxon_information.dig(taxon_base_path, "content_id")
-      documents_in_taxon[taxon_base_path] = document_fetcher.fetch_for_taxon(content_id)
+      documents_in_taxon[taxon_base_path] = document_fetcher.fetch_for_taxon(content_id, taxon_base_path)
     end
 
     taxonomy_data = {

@@ -1,17 +1,17 @@
 require_relative "data_import"
 
 class TaxonomyBuilder
-  attr_reader :list_of_base_paths
+  attr_reader :taxon_base_paths
   attr_reader :taxon_information
   attr_reader :ancestors_of_taxons
 
-  def initialize(list_of_base_paths)
-    @list_of_base_paths = list_of_base_paths
+  def initialize(taxon_base_paths)
+    @taxon_base_paths = taxon_base_paths
     @taxon_information = {}
     @taxon_children = {}
     @ancestors_of_taxons = {}
 
-    list_of_base_paths.each do |base_path|
+    taxon_base_paths.each do |base_path|
       document = DataImport.get_document(base_path)
       get_parent_taxons(document)
     end

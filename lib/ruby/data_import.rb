@@ -13,11 +13,14 @@ module DataImport
   end
 
   def self.get_document(base_path)
+    unless base_path =~ %r{^\/}
+      base_path = "/" + base_path
+    end
     GdsApi.with_retries(maximum_number_of_attempts: 2) do
       true_base_path = find_redirects(base_path)
-      puts "Processing #{base_path}"
+      puts "Fetching #{base_path} from content store"
       puts "(Redirected to #{true_base_path})" if true_base_path != base_path
-      content_store.content_item!("/#{true_base_path}")
+      content_store.content_item!(true_base_path)
     end
   end
 
@@ -27,10 +30,10 @@ module DataImport
   def self.find_redirects(base_path)
     http = Net::HTTP.new('www-origin.staging.publishing.service.gov.uk', 443)
     http.use_ssl = true
-    response = http.request_head("/#{base_path}")
+    response = http.request_head(base_path)
 
     if response.is_a?(Net::HTTPRedirection)
-      find_redirects(response.fetch('Location').gsub(/^(https:\/\/.*\.gov\.uk)?\//, ""))
+      find_redirects(response.fetch('Location').gsub(/^(https:\/\/.*\.gov\.uk)?/, ""))
     else
       base_path
     end
