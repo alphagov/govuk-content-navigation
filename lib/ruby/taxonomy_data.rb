@@ -53,7 +53,7 @@ class TaxonomyData
 
     taxonomy_data = {
       "taxons_for_content" => taxons_for_content,
-      "ancestors_of_taxon" => builder.ancestors_of_taxons,
+      "ancestors_of_taxon" => builder.ancestors_of_taxon,
       "children_of_taxon"  => builder.taxon_children,
       "taxon_information"  => builder.taxon_information,
       "documents_in_taxon" => documents_in_taxon,
