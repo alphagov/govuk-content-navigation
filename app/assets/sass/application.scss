@@ -2,9 +2,7 @@
 // Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
 @import 'govuk-elements';
 
-// Take a look at in app/assets/sass/patterns/ to see which files are imported.
-@import 'patterns/check-your-answers';
-// @import 'patterns/unbranded';
+@import 'modules/subsections';
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
@@ -345,7 +343,7 @@
 
 /* taxon layout */
 
-#content.taxonomy {
+.taxonomy {
   h1 {
     box-sizing: border-box;
     display: block;
@@ -368,6 +366,10 @@
 
     margin-top: $gutter * 1.5;
     margin-bottom: $gutter;
+
+    &.subsection__title {
+      margin: 0;
+    }
   }
 
   h3 {
@@ -461,6 +463,12 @@
           }
         }
       }
+    }
+  }
+
+  .subsection__list-item {
+    a {
+      font-weight: bold;
     }
   }
 

@@ -124,4 +124,6 @@ $(document).ready(function() {
   toggleContent.showHideRadioToggledContent();
   toggleContent.showHideCheckboxToggledContent();
 
+  GOVUK.modules.start();
+
 });
