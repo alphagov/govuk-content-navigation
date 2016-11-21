@@ -19,7 +19,7 @@
 
           {% include 'taxonomy/_truncated-content-list.html' %}
 
-          {% for childTaxon in taxon.atozChildren() %}
+          {% for childTaxon in presentedTaxon.children %}
             <h2>{{childTaxon.title}}</h2>
             <ul>
               {% for content in childTaxon.guidance.atozContent(5) %}

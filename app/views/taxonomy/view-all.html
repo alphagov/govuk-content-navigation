@@ -14,29 +14,28 @@
     <div class="grid-row">
       <div class="page-header">
         <h1>
-          <span class="sub-heading"><a href="{{ backTo }}">{{ parentTaxon.title }}</a></span>
-          {{ taxon.title }}
+          <span class="sub-heading"><a href="{{ backTo }}">{{ presentedTaxon.parent.title }}</a></span>
+          {{ presentedTaxon.title }}
         </h1>
 
-        <p>{{ taxon.description }}</p>
+        <p>{{ presentedTaxon.description }}</p>
       </div>
     </div>
 
   <div class="grid-row child-topic-contents">
     <div class="column-two-thirds">
       <div class="topic-content">
-        <h2>{{ taxon.title}} guidance</h2>
-        
+        <h2>{{ presentedTaxon.taxon.title}} guidance</h2>
+
         <ul>
-          {% for document in taxonContent.guidance.atozContent() %}
-              <li>
-                <h3><a href="{{ document.basePath }}">{{ document.title }}</a></h3>
-                <p>{{ document.description }}</p>
-              </li>
+          {% for document in presentedTaxon.content.guidance.atozContent() %}
+            <li>
+              <h3><a href="{{ document.basePath }}">{{ document.title }}</a></h3>
+              <p>{{ document.description }}</p>
+            </li>
           {% endfor %}
         </ul>
     </div>
-
   </div>
 </main>
 

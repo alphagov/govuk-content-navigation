@@ -1,10 +1,12 @@
 <div class="grid-row">
   <div class="page-header">
     <h1>
-      <span class="sub-heading"><a href="{{ parentTaxon.basePath }}">{{ parentTaxon.title }}</a></span>
-      {{ taxon.title }}
+      <span class="sub-heading">
+        <a href="{{ presentedTaxon.parent.basePath }}">{{ presentedTaxon.parent.title }}</a>
+      </span>
+      {{ presentedTaxon.title }}
     </h1>
 
-    <p>{{ taxon.description }}</p>
+    <p>{{ presentedTaxon.description }}</p>
   </div>
 </div>
