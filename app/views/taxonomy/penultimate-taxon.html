@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% import "taxonomy/_macros.html" as macros %}
+{% import "taxonomy/content-list-macro.html" as content_list_macro %}
 
 {% block page_title %}
   GOV.UK Content Navigation prototype
@@ -18,10 +18,10 @@
       <div class="column-two-thirds">
         <div class="topic-content">
 
-          {{ macros.content_list(taxon, taxonContent.guidance.atozContent(), true) }}
+          {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent(), true) }}
 
-          {% for childTaxon in presentedTaxon.children() %}
-            {{ macros.content_list(childTaxon, childTaxon.guidance.atozContent(), true) }}
+          {% for childTaxon in presentedTaxon.children %}
+            {{ content_list_macro.content_list(childTaxon, childTaxon.guidance.atozContent(), true) }}
           {% endfor %}
         </div>
       </div>
