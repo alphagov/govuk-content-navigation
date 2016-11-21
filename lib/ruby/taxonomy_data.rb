@@ -35,6 +35,13 @@ class TaxonomyData
 
     puts "Working with #{all_documents_in_prototype.size} documents in prototype. Fetching taxons..."
 
+    # Ensure the set of taxons includes all taxons we want present in the
+    # prototype, not just the ones that have documents tagged to them.
+    CSV.read("lib/ruby/data/taxons.csv", headers: true).each do |row|
+      next unless row["Link"]
+      all_taxons.add(row["Link"])
+    end
+
     # Visiting descendents of each taxon
     builder = TaxonomyBuilder.new(all_taxons)
     document_fetcher = TaxonDocumentFetcher.new(all_documents_in_prototype.map { |link| "/#{link}" })
