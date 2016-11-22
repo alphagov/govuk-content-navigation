@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% import "taxonomy/content-list-macro.html" as content_list_macro %}
 
 {% block page_title %}
   GOV.UK Content Navigation prototype
@@ -33,7 +34,7 @@
 
       <div class="parent-topic-contents">
         <div class="topic-content">
-          {% include 'taxonomy/_truncated-content-list.html' %}
+          {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent(), true) }}
         </div>
       </div>
     </div>
