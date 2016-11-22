@@ -14,14 +14,23 @@
 
     {% include 'taxonomy/_taxon-heading.html' %}
 
-    <h3>In this section</h3>
-
-    <ul class="topic-navigation">
-      <li><a href="#topic-01">{{ presentedTaxon.title }}</a></li>
-      {% for childTaxon in presentedTaxon.children %}
-        <li class="child-topic"><a href="#topic-{{ (loop.index + 1) | pad(2, '0') }}">{{ childTaxon.title }}</a></li>
-      {% endfor %}
-    </ul>
+    {% if presentedTaxon.children.length %}
+    <div class="grid-row">
+      <div class="full-width-column">
+        <nav role="navigation" class="child-topics-list">
+          <h2>In this section</h2>
+          <ul>
+            {% for childTaxon in presentedTaxon.children %}
+              <li>
+                <h3><a href="{{ childTaxon.basePath }}">{{ childTaxon.title }}</a></h3>
+                <p>{{ childTaxon.description }}</p>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+    </div>
+    {% endif %}
 
     <div class="grid-row child-topic-contents">
       <div class="column-two-thirds">
