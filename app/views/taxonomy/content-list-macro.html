@@ -1,0 +1,24 @@
+{% macro content_list(taxon, taxonContent, truncate=false, count=5) %}
+
+{% if taxonContent.length > 0 %}
+  <h2>{{ taxon.title }} guidance</h2>
+
+  <ul>
+    {% for document in taxonContent %}
+      {% if truncate == false or loop.index0 < count %}
+      <li>
+        <h3><a href="{{ document.basePath }}">{{ document.title }}</a></h3>
+        <p>{{ document.description }}</p>
+      </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  {% if truncate == true and taxonContent.length > count %}
+    <p>
+      <a href="{{taxon.basePath}}?viewAll">More about {{ taxon.title }}</a>
+    </p>
+  {% endif %}
+{% endif %}
+
+{% endmacro %}
