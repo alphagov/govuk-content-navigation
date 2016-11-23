@@ -25,7 +25,7 @@
                   <p class="subsection__description">{{ presentedTaxon.description }}</p>
                 </div>
 
-                <div class="subsection__content" id="subsection_content_{{ (loop.index+1) | pad(2, '0') }}">
+                <div class="subsection__content">
                   <ul class="subsection__list">
 
                     {% for document in presentedTaxon.content.guidance.atozContent() %}
