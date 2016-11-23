@@ -10,6 +10,8 @@ Usage:
 
 from docopt import docopt
 from bs4 import BeautifulSoup
+from helpers.path_helpers import *
+
 import fnmatch
 import os
 import csv
@@ -26,7 +28,7 @@ def main():
     print("Links and formats", links_and_formats)
 
     base = 'https://www-origin.staging.publishing.service.gov.uk/'
-    target_directory = '../app/content/'
+    target_directory = app_directory("content")
     for base_path, format in links_and_formats:
         url = '{}{}'.format(base, base_path)
         filePath = '{}.html'.format(re.sub('/', '_', base_path))
@@ -41,7 +43,7 @@ def main():
         if format != excluded_format:
             save_file(filePath, format, main_html, target_directory)
 
-    with open("failed_pages.txt", "w") as f:
+    with open(lib_directory("python/data/failed_pages.txt", "w")) as f:
         f.writelines(failed)
 
 
@@ -96,7 +98,7 @@ def list_difference(matches, no_matches):
 
 def get_links_and_formats():
     files_and_folders = []
-    with open('link_formats.csv') as csvfile:
+    with open(lib_directory("python/data/link_formats.csv")) as csvfile:
         reader = csv.DictReader(csvfile)
         for row in reader:
             print('row', row)
