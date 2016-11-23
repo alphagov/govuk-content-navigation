@@ -37,14 +37,14 @@ var TaxonPresenter = require('./models/taxon_presenter.js');
             backTo: backTo,
           });
 
-          return
+          return;
         } else if(presentedTaxon.isPenultimate) {
           res.render('taxonomy/penultimate-taxon', {
             presentedTaxon: presentedTaxon,
             breadcrumb: breadcrumb,
           });
 
-          return
+          return;
         }
 
         res.render('taxonomy/taxon', {
@@ -155,7 +155,7 @@ var TaxonPresenter = require('./models/taxon_presenter.js');
       }).
       catch(function (err) {
         console.log('Failed to read metadata and taxons.');
-      })
+      });
   }
 
   function getTaxons (url) {

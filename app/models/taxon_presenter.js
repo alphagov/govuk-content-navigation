@@ -1,5 +1,3 @@
-"use strict";
-
 var urlHelper = require('url');
 
 var Taxon = require('./taxon.js');
@@ -42,11 +40,11 @@ class TaxonPresenter {
       child.guidance = child.filterByHeading('guidance');
 
       return child;
-    })
+    });
   }
 
   buildContent () {
-    this.content = {}
+    this.content = {};
     this.content.guidance = this.taxon.filterByHeading('guidance');
   }
 
@@ -65,7 +63,7 @@ class TaxonPresenter {
       backTo = this.parent.basePath;
     }
 
-    return backTo
+    return backTo;
   }
 }
 
