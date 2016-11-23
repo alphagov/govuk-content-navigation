@@ -1,17 +1,17 @@
 require_relative "data_import"
 
 class TaxonomyBuilder
-  attr_reader :list_of_base_paths
+  attr_reader :taxon_base_paths
   attr_reader :taxon_information
-  attr_reader :ancestors_of_taxons
+  attr_reader :ancestors_of_taxon
 
-  def initialize(list_of_base_paths)
-    @list_of_base_paths = list_of_base_paths
+  def initialize(taxon_base_paths)
+    @taxon_base_paths = taxon_base_paths
     @taxon_information = {}
     @taxon_children = {}
-    @ancestors_of_taxons = {}
+    @ancestors_of_taxon = {}
 
-    list_of_base_paths.each do |base_path|
+    taxon_base_paths.each do |base_path|
       document = DataImport.get_document(base_path)
       get_parent_taxons(document)
     end
@@ -22,7 +22,7 @@ class TaxonomyBuilder
   end
 
   def ancestors_for(base_path)
-    ancestors_of_taxons[base_path]
+    ancestors_of_taxon[base_path]
   end
 
   def children_for(base_path)
@@ -50,7 +50,7 @@ private
       page = DataImport.get_document(document.to_h['base_path'])
       current_parents = page.to_h.dig("links", "parent_taxons")
     end
-    ancestors_of_taxons[document["base_path"]] = current_parents
+    ancestors_of_taxon[document["base_path"]] = current_parents
 
     unless current_parents.nil?
       current_parents.each do |parent|
