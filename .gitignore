@@ -11,3 +11,4 @@ link-checker-crawled-pages.pstore
 npm-debug.log
 .venv
 /*.txt
+.pyc
