@@ -19,6 +19,23 @@ This is a node app built using the govuk_prototype_kit.
 All the data for the prototype comes from a pre-built JSON file and scraped
 HTML data from GOV.UK.
 
+### Installation
+
+We use `nvm` to manage node.js versions. Follow the steps below to install and
+use it:
+
+- Install `nvm` (`brew install nvm`)
+- follow the post-install instructions for `nvm`
+- go into the project directory
+- run `nvm install`
+- run `nvm use` to verify everything is working.
+
+You can now install the dependencies with:
+
+```
+npm install
+```
+
 ### Importing new content
 
 The content in the prototype comes from inventories of education pages on
