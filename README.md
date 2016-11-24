@@ -46,27 +46,22 @@ There are several steps to importing new content into the prototype:
 0. Tag all the content to taxons using [content
    tagger](https://github.com/alphagov/content-tagger).
 0. Create a list of content base paths in CSV format, with a single column
-   heading `Link`. Save this as `content.csv` in the `bin` folder.
-0. From within `bin`, run `format_finder.py` to fetch format information from
-   the search API.  This will save a file called `link_formats.csv`.
-0. Run `fetch_main_content.py` to scrape the `main` html and store it in
-   `app/content`. This uses the data from the previous step to organise the
-   pages by format (the format directory is ignored by the prototype when
-   rendering pages but this makes it easier to work with). See
+   heading `Link`. Save this as `content.csv` in the `lib/python/data` folder.
+   The `taxonomy:export_base_paths` rake task in `content-tagger` can be used
+   to derive a list of paths from an entire taxonomy.
+0. Run `python lib/python/format_finder.py` to fetch format information from
+   the search API.  This will save a file called
+   `lib/python/data/link_formats.csv`.
+0. Run `python lib/python/fetch_main_content.py` to scrape the `main` html and
+   store it in `app/content`. This uses the data from the previous step to
+   organise the pages by format (the format directory is ignored by the
+   prototype when rendering pages but this makes it easier to work with). See
    `failed_pages.txt` for a list of pages that encountered redirects and 404s.
 0. Run `bundle exec rake` to fetch taxon and content page metadata (e.g. which
    pages link to which taxons). This will be saved in
    `app/data/metadata_and_taxons.json`.
-0. Run `add_dates.py` to add date information to the fetched content, based on
-   values in `metadata_and_taxons.json`.
-
-#### Fetching Taxon Data
-
-We fetch only the taxons we need to render the breadcrumbs of pages we have
-html for, even if there are other sibling/child taxons available.
-
-This means we don't ever render an "empty" topic page with no content
-associated with it.
+0. Run `python lib/python/add_dates.py` to add date information to the fetched
+   content, based on values in `app/data/metadata_and_taxons.json`.
 
 #### Fetching content lists for topic pages
 

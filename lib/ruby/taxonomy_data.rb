@@ -2,12 +2,12 @@ require_relative "./data_import"
 require_relative "./taxonomy_builder"
 require_relative "./taxon_document_fetcher"
 require_relative "./content_item"
-require_relative "./missing_taxons"
 
 require 'json'
 require 'pathname'
 require 'pp'
 require 'set'
+require 'csv'
 
 class TaxonomyData
   FILENAME = 'app/data/taxonomy_data.json'.freeze
