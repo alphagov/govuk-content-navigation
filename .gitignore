@@ -9,5 +9,5 @@ node_modules/*
 .tmuxp.*
 link-checker-crawled-pages.pstore
 npm-debug.log
-venv
+.venv
 /*.txt
