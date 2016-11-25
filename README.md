@@ -45,13 +45,16 @@ There are several steps to importing new content into the prototype:
 
 0. Tag all the content to taxons using [content
    tagger](https://github.com/alphagov/content-tagger).
+0. Run `bundle install` and `pip install -r requirements.txt`. This step
+   assumes you have working installs of Ruby 2 and Python 2.
 0. Create a list of content base paths in CSV format, with a single column
    heading `Link`. Save this as `content.csv` in the `lib/python/data` folder.
    The `taxonomy:export_base_paths` rake task in `content-tagger` can be used
    to derive a list of paths from an entire taxonomy.
-0. Run `python lib/python/format_finder.py` to fetch format information from
-   the search API.  This will save a file called
-   `lib/python/data/link_formats.csv`.
+0. Run `HTTP_AUTH_USER=? HTTP_AUTH_PASS=? python lib/python/format_finder.py`,
+   with the user and password for Staging's HTTP auth set appropriately. This
+   will fetch format information from the search API, saving the output in a
+   file called `lib/python/data/link_formats.csv`.
 0. Run `python lib/python/fetch_main_content.py` to scrape the `main` html and
    store it in `app/content`. This uses the data from the previous step to
    organise the pages by format (the format directory is ignored by the
