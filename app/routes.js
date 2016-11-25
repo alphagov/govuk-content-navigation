@@ -9,9 +9,11 @@ var BreadcrumbMaker = require('../lib/js/breadcrumb_maker.js');
 var Taxon = require('./models/taxon.js');
 var DocumentType = require('./models/document_type.js');
 var TaxonPresenter = require('./models/taxon_presenter.js');
+var TaxonomyData = require('./models/taxonomy_data.js');
+var RelatedContent = require('./models/related_content.js');
 
   router.get('/', function (req, res) {
-    getTaxonomyData().
+    TaxonomyData.get().
       then(function (taxonomyData) {
         var documentTypeExamples = DocumentType.getExamples(taxonomyData.document_metadata);
         res.render('index', {
@@ -24,7 +26,7 @@ var TaxonPresenter = require('./models/taxon_presenter.js');
     var taxonParam = req.params.taxon;
     var viewAll = !(typeof(req.query.viewAll) === "undefined");
 
-    getTaxonomyData().
+    TaxonomyData.get().
       then(function (taxonomyData) {
         var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
         var breadcrumb = presentedTaxon.breadcrumb;
@@ -88,7 +90,7 @@ var TaxonPresenter = require('./models/taxon_presenter.js');
 
           if (!htmlPublication) {
             // Skip breadcrumbs and taxons for HTML publications since they have a unique format
-            var getBreadcrumbPromise = getTaxonomyData().
+            var getBreadcrumbPromise = TaxonomyData.get().
               then(function (metadata) {
                 var breadcrumbMaker = new BreadcrumbMaker(metadata);
                 var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(url);
@@ -101,7 +103,7 @@ var TaxonPresenter = require('./models/taxon_presenter.js');
                 return taxons;
               });
 
-            var getRelatedContentPromise = getRelatedContent("/" + url).
+            var getRelatedContentPromise = RelatedContent.get("/" + url).
               then(function (relatedContent) {
                 return relatedContent;
               });
@@ -134,34 +136,13 @@ var TaxonPresenter = require('./models/taxon_presenter.js');
       });
   });
 
-  function getTaxonomyData () {
-    return readFile('app/data/taxonomy_data.json').
-      then(function (data) {
-        return JSON.parse(data);
-      }).
-      catch(function (err) {
-        console.log('Failed to read metadata and taxons.');
-      });
-  }
-
   function getTaxons (url) {
-    return getTaxonomyData().
+    return TaxonomyData.get().
       then(function (metadata) {
         return metadata.taxons_for_content[url].map(function (taxonBasePath) {
           return Taxon.fromMetadata(taxonBasePath, metadata);
         });
 
-      });
-  }
-
-  function getRelatedContent (contentBasePath) {
-    var readSourceData = readFile('app/data/hardcoded_related_content.json');
-
-    return readSourceData.
-      then(function (data) {
-        var lookup = JSON.parse(data);
-
-        return lookup[contentBasePath];
       });
   }
 
