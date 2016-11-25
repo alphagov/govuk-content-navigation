@@ -12,8 +12,6 @@ task :taxonomy_data do
   TaxonomyData.new.build
 end
 
-end
-
 task :validate do
   TaxonomyData.new.validate
 end
