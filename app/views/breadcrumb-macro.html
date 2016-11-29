@@ -1,0 +1,11 @@
+{% macro render_breadcrumb(pages) %}
+  {% block breadcrumb %}
+    <div class="breadcrumbs">
+      <ol>
+        {% for page in pages %}
+          <li><a href="{{ page.basePath }}/"> {{ page.title }} </a></li>
+        {% endfor %}
+      </ol>
+    </div>
+  {% endblock %}
+{% endmacro %}
