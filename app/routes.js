@@ -23,30 +23,26 @@ var ContentPresenter = require('./models/content_presenter.js');
     TaxonomyData.get().
       then(function (taxonomyData) {
         var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
-        var breadcrumb = presentedTaxon.breadcrumb;
 
-        if(viewAll) {
+        if (viewAll) {
           var backTo = presentedTaxon.determineBackToLink(req.url);
           res.render('taxonomy/view-all', {
             presentedTaxon: presentedTaxon,
-            breadcrumb: presentedTaxon.breadcrumb,
             backTo: backTo,
-          });
-
-          return;
-        } else if(presentedTaxon.isPenultimate) {
-          res.render('taxonomy/penultimate-taxon', {
-            presentedTaxon: presentedTaxon,
-            breadcrumb: breadcrumb,
           });
 
           return;
         }
 
-        res.render('taxonomy/taxon', {
-          presentedTaxon: presentedTaxon,
-          breadcrumb: breadcrumb,
-        });
+        if (presentedTaxon.isPenultimate) {
+          res.render('taxonomy/penultimate-taxon', {
+            presentedTaxon: presentedTaxon,
+          });
+        } else {
+          res.render('taxonomy/taxon', {
+            presentedTaxon: presentedTaxon,
+          });
+        }
       });
   });
 

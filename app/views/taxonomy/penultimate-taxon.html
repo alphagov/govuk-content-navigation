@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% import "taxonomy/content-list-macro.html" as content_list_macro %}
+{% import "breadcrumb-macro.html" as breadcrumb_macro %}
 
 {% block page_title %}
   GOV.UK Content Navigation prototype
@@ -8,9 +9,7 @@
 {% block content %}
 
   <main id="content" class="taxonomy" role="main">
-    {% block breadcrumb %}
-      {% include '_breadcrumb.html' %}
-    {% endblock %}
+    {{ breadcrumb_macro.render_breadcrumb(presentedTaxon.breadcrumb) }}
 
     {% include 'taxonomy/_taxon-heading.html' %}
 

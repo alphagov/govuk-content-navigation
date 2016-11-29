@@ -1,10 +1,10 @@
 {% extends "layout.html" %}
+{% import "breadcrumb-macro.html" as breadcrumb_macro %}
 
 {% block content %}
   <div id="{% if presentedContent.isWhitehall %}whitehall-{% endif %}wrapper"{% if presentedContent.isHtmlManual %} class="html-manual"{% endif %}>
-    {% block breadcrumb %}
-      {% include '_breadcrumb.html' %}
-    {% endblock %}
+    {{ breadcrumb_macro.render_breadcrumb(presentedContent.breadcrumb) }}
+
     <div class="grid-row">
       {{ presentedContent.content | safe }}
       {% if presentedContent.taxons and not presentedContent.isHtmlPublication and not presentedContent.isHtmlManual %}

@@ -1,6 +1,6 @@
 <div class="breadcrumbs">
   <ol>
-    {% for page in breadcrumb %}
+    {% for page in presentedContent.breadcrumb %}
       <li><a href="{{ page.basePath }}/"> {{ page.title }} </a></li>
     {% endfor %}
   </ol>
