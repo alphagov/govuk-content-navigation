@@ -7,7 +7,7 @@
 
     <div class="grid-row">
       {{ presentedContent.content | safe }}
-      {% if presentedContent.taxons and not presentedContent.isHtmlPublication and not presentedContent.isHtmlManual %}
+      {% if presentedContent.taxons and not presentedContent.isHtmlManual %}
         {% include '_side-navigation.html' %}
       {% endif %}
     </div>

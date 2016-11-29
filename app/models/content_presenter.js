@@ -34,36 +34,25 @@ class ContentPresenter {
         const content = fileInfo.fileData.toString();
         const filePath = fileInfo.filePath;
 
-        var isHtmlPublication = content.match(/html-publications-show/);
         var isWhitehall = filePath.match(/whitehall/);
         var isHtmlManual = filePath.match(/manual/);
 
-        if (!isHtmlPublication) {
-          const presented = Promise.all([
-            that.getBreadcrumbPromise(),
-            that.getTaxonsPromise(),
-            that.getRelatedContentPromise(),
-          ]).spread(function (breadcrumb, taxons, relatedContent) {
-            return {
-              content: content,
-              breadcrumb: breadcrumb,
-              taxons: taxons,
-              relatedContent: relatedContent,
-              isWhitehall: isWhitehall,
-              isHtmlManual: isHtmlManual,
-              isHtmlPublication: isHtmlPublication,
-            }
-          })
+        const presented = Promise.all([
+          that.getBreadcrumbPromise(),
+          that.getTaxonsPromise(),
+          that.getRelatedContentPromise(),
+        ]).spread(function (breadcrumb, taxons, relatedContent) {
+          return {
+            content: content,
+            breadcrumb: breadcrumb,
+            taxons: taxons,
+            relatedContent: relatedContent,
+            isWhitehall: isWhitehall,
+            isHtmlManual: isHtmlManual,
+          }
+        })
 
-          return presented;
-        }
-
-        // Skip breadcrumbs and taxons for HTML publications since they have a
-        // unique format
-        return {
-          content: content,
-          isWhitehall: isWhitehall
-        }
+        return presented;
       });
   }
 
