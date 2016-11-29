@@ -73,7 +73,11 @@ class Taxon {
 
   atozChildren () {
     return this.children.sort(function (a, b) {
-      return a.title > b.title;
+      if (a.title >= b.title) {
+        return 1;
+      }
+
+      return -1;
     });
   }
 
