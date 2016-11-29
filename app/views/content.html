@@ -1,17 +1,13 @@
 {% extends "layout.html" %}
 
-
 {% block content %}
-
-  <div id="{% if whitehall %}whitehall-{% endif %}wrapper"{% if htmlManual %} class="html-manual"{% endif %}>
-    {% if not htmlPublication %}
-      {% block breadcrumb %}
-        {% include '_breadcrumb.html' %}
-      {% endblock %}
-    {% endif %}
+  <div id="{% if presentedContent.isWhitehall %}whitehall-{% endif %}wrapper"{% if presentedContent.isHtmlManual %} class="html-manual"{% endif %}>
+    {% block breadcrumb %}
+      {% include '_breadcrumb.html' %}
+    {% endblock %}
     <div class="grid-row">
-      {{ content | safe }}
-      {% if taxons and not htmlPublication and not htmlManual %}
+      {{ presentedContent.content | safe }}
+      {% if presentedContent.taxons and not presentedContent.isHtmlPublication and not presentedContent.isHtmlManual %}
         {% include '_side-navigation.html' %}
       {% endif %}
     </div>
