@@ -4,12 +4,17 @@ require 'gds_api/rummager'
 require_relative 'gds_api'
 
 module DataImport
+  ENDPOINTS = {
+    "staging" => 'https://www-origin.staging.publishing.service.gov.uk/api',
+    "production" => 'https://www.gov.uk/api',
+  }
+
   def self.content_store
-    GdsApi::ContentStore.new('https://www-origin.staging.publishing.service.gov.uk/api')
+    GdsApi::ContentStore.new(ENDPOINTS.fetch ENV.fetch("DATA_ENVIRONMENT"))
   end
 
   def self.rummager
-    GdsApi::Rummager.new('https://www-origin.staging.publishing.service.gov.uk/api')
+    GdsApi::Rummager.new(ENDPOINTS.fetch ENV.fetch("DATA_ENVIRONMENT"))
   end
 
   def self.get_document(base_path)
