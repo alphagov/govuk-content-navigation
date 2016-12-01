@@ -6,6 +6,10 @@
 $(function () {
 
   GOVUK.modules.start();
+  var $section = $('.subsection__header');
+  if ($section.length === 1) {
+      $section.trigger('click');
+  }
 
 });
 })(window);
