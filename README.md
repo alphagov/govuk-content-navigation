@@ -41,30 +41,45 @@ npm install
 The content in the prototype comes from inventories of education pages on
 GOV.UK.
 
+#### Prerequisites
+
+  - Working installs of Python 2 and Ruby 2.
+  - A Python virtual env set up for this project. See
+    https://virtualenvwrapper.readthedocs.io/en/latest/
+
+
+#### Instructions
+
 There are several steps to importing new content into the prototype:
 
 0. Tag all the content to taxons using [content
    tagger](https://github.com/alphagov/content-tagger).
-0. Run `bundle install` and `pip install -r requirements.txt`. This step
-   assumes you have working installs of Ruby 2 and Python 2.
 0. Create a list of content base paths in CSV format, with a single column
    heading `Link`. Save this as `content.csv` in the `lib/python/data` folder.
    The `taxonomy:export_base_paths` rake task in `content-tagger` can be used
    to derive a list of paths from an entire taxonomy.
-0. Run `HTTP_AUTH_USER=? HTTP_AUTH_PASS=? python lib/python/format_finder.py`,
-   with the user and password for Staging's HTTP auth set appropriately. This
-   will fetch format information from the search API, saving the output in a
-   file called `lib/python/data/link_formats.csv`.
-0. Run `python lib/python/fetch_main_content.py` to scrape the `main` html and
-   store it in `app/content`. This uses the data from the previous step to
-   organise the pages by format (the format directory is ignored by the
-   prototype when rendering pages but this makes it easier to work with). See
-   `failed_pages.txt` for a list of pages that encountered redirects and 404s.
-0. Run `bundle exec rake` to fetch taxon and content page metadata (e.g. which
-   pages link to which taxons). This will be saved in
-   `app/data/metadata_and_taxons.json`.
-0. Run `python lib/python/add_dates.py` to add date information to the fetched
-   content, based on values in `app/data/metadata_and_taxons.json`.
+0. Run `lib/data_import.sh <environment>`, where `<environment>` is either
+   staging or production. This will determine where taxonomy data is retrieved
+   from.
+0. Enter http auth credentials when requested.
+
+The script executes the following:
+
+* format_finder.py
+    * This will fetch format information from the search API, saving the output
+      in a file called `lib/python/data/link_formats.csv`.
+* fetch_main_content.py
+    * Scrapes the `main` tag html of each page from the GOV.UK mirror and store
+      it in `app/content`.  This uses the data from the previous step to organise
+      the pages by format (the format directory is ignored by the prototype when
+      rendering pages but this makes it easier to work with). See
+      `failed_pages.txt` for a list of pages that encountered redirects and 404s.
+* Rakefile default task
+    * Fetches taxon and content page metadata (e.g. which pages link to which
+      taxons). This will be saved in `app/data/metadata_and_taxons.json`.
+* add_dates.py
+    * Adds date information to the fetched content, based on values in
+      `app/data/metadata_and_taxons.json`.
 
 #### Fetching content lists for topic pages
 

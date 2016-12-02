@@ -28,7 +28,7 @@ def main():
     print("Links and formats", links_and_formats)
 
     base = 'https://www-origin.staging.publishing.service.gov.uk/'
-    target_directory = app_directory("content")
+    target_directory = app_directory("content/")
     for base_path, format in links_and_formats:
         url = '{}{}'.format(base, base_path)
         filePath = '{}.html'.format(re.sub('/', '_', base_path))
@@ -43,7 +43,7 @@ def main():
         if format != excluded_format:
             save_file(filePath, format, main_html, target_directory)
 
-    with open(lib_directory("python/data/failed_pages.txt", "w")) as f:
+    with open(lib_directory("python/data/failed_pages.txt"), "w") as f:
         f.writelines(failed)
 
 

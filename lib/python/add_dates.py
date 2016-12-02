@@ -15,7 +15,7 @@ import os
 
 def main():
     matches = []
-    for root, dirnames, filenames in os.walk(app_directory("content")):
+    for root, dirnames, filenames in os.walk(app_directory("content/")):
         for filename in fnmatch.filter(filenames, '*.html'):
             matches.append(os.path.join(root, filename))
     for match in matches:
