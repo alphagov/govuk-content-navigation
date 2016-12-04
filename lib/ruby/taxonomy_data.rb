@@ -51,11 +51,23 @@ class TaxonomyData
       documents_in_taxon[taxon_base_path] = document_fetcher.fetch_for_taxon(content_id, taxon_base_path)
     end
 
+    taxon_information = {}
+    all_taxons.each do |taxon_base_path|
+      document = DataImport.get_document(taxon_base_path)
+
+      taxon_information[taxon_base_path] =
+        {
+          "title" => document["title"],
+          "content_id" => document["content_id"],
+          "description" => document["description"]
+        }
+    end
+
     taxonomy_data = {
       "taxons_for_content" => taxons_for_content,
       "ancestors_of_taxon" => builder.ancestors_of_taxon,
       "children_of_taxon"  => builder.taxon_children,
-      "taxon_information"  => builder.taxon_information,
+      "taxon_information"  => taxon_information,
       "documents_in_taxon" => documents_in_taxon,
       "document_metadata"  => document_metadata
     }

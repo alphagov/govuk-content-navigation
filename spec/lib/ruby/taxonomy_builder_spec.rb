@@ -15,7 +15,7 @@ describe TaxonomyBuilder do
     end
 
     it "fetches all the taxon information" do
-      expect(@builder.taxon_information.keys).to eq(
+      expect(@builder.all_taxons).to eq(
         [
           "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2",
           "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
