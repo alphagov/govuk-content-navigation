@@ -7,6 +7,6 @@
       {{ presentedTaxon.title }}
     </h1>
 
-    <p>{{ presentedTaxon.description }}</p>
+    {% if presentedTaxon.description %}<p>{{ presentedTaxon.description }}</p>{% endif %}
   </div>
 </div>
