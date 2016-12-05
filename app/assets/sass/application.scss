@@ -285,9 +285,7 @@
 }
 
 .hack-datestamp {
-   font-size: 14px;
-   line-height: 20px;
-   color: #666;
+  display: none;
 }
 
 .related {
@@ -406,7 +404,7 @@
       li {
         @include grid-column(1/3);
         padding-bottom: $gutter;
-        min-height: 260px;
+        min-height: 290px;
       }
     }
   }

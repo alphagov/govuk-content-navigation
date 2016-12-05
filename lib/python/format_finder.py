@@ -4,6 +4,7 @@ Use the integration search API to figure out formats for a list of pages
 Usage: USERNAME=??? PASSWORD=??? python format_finder.py
 """
 import csv
+import time
 import requests
 from os import environ
 from requests.auth import HTTPBasicAuth
@@ -14,13 +15,6 @@ HTTP_AUTH_PASS = environ['HTTP_AUTH_PASS']
 
 session = requests.Session()
 
-def get_base_path(link):
-    """
-    Some links are redirects, so make a HEAD request to get the real base path.
-    """
-    response = session.head(link, allow_redirects=True)
-    return response.url.replace('https://www.gov.uk', '')
-
 
 with open(lib_directory("python/data/content.csv")) as content_file:
     with open(lib_directory("python/data/link_formats.csv"), 'wb') as format_file:
@@ -29,15 +23,25 @@ with open(lib_directory("python/data/content.csv")) as content_file:
 
         writer.writeheader()
         for row in reader:
-            link = row['Link']
-            base_path = get_base_path(link)
+            base_path = row['Link']
+
+            if environ['DATA_ENVIRONMENT'] == 'production':
+                host = 'https://www.gov.uk'
+            else:
+                host = 'https://www-origin.staging.publishing.service.gov.uk'
+
+            link = '{}{}'.format(host, base_path)
             print base_path
 
-            url = 'http://www-origin.integration.publishing.service.gov.uk/api/search.json?filter_link={}&fields[]=format&debug=include_withdrawn'.format(base_path)
+            if environ['DATA_ENVIRONMENT'] == 'production':
+                url = 'https://www.gov.uk/api/search.json?filter_link={}&fields[]=format&debug=include_withdrawn'.format(base_path)
+            else:
+                url = 'https://www-origin.staging.publishing.service.gov.uk/api/search.json?filter_link={}&fields[]=format&debug=include_withdrawn'.format(base_path)
             response = session.get(
                 url,
                 auth=HTTPBasicAuth(HTTP_AUTH_USER, HTTP_AUTH_PASS)
             )
+            time.sleep(0.05)
 
             results = response.json()['results']
             if results:

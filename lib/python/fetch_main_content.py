@@ -27,7 +27,11 @@ def main():
 
     print("Links and formats", links_and_formats)
 
-    base = 'https://www-origin.staging.publishing.service.gov.uk/'
+    if os.environ['DATA_ENVIRONMENT'] == 'production':
+        base = 'https://www.gov.uk/'
+    else:
+        base = 'https://www-origin.staging.publishing.service.gov.uk/'
+
     target_directory = app_directory("content/")
     for base_path, format in links_and_formats:
         url = '{}{}'.format(base, base_path)
@@ -104,7 +108,10 @@ def get_links_and_formats():
             print('row', row)
             format_of_file = row['Format']
             print('format', format_of_file)
-            link = row['Link'][19:]
+            if os.environ['DATA_ENVIRONMENT'] == 'production':
+                link = row['Link'][19:]
+            else:
+                link = row['Link'][53:]
             print('link', link)
             files_and_folders.append([link, format_of_file])
     csvfile.close()
