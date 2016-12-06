@@ -13,13 +13,27 @@
 
     {% include 'taxonomy/_taxon-heading.html' %}
 
+    {% if presentedTaxon.children.length > 0 %}
+    <h3>In this section</h3>
+
+    <ul class="topic-navigation">
+      <li><a href="#topic-01">{{ presentedTaxon.title }}</a></li>
+      {% for childTaxon in presentedTaxon.children %}
+        {% if childTaxon.guidance.atozContent().length > 0 %}
+        <li class="child-topic"><a href="#topic-{{ (loop.index + 1) | pad(2, '0') }}">{{ childTaxon.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+    {% endif %}
+
     <div class="grid-row child-topic-contents">
       <div class="column-two-thirds">
         <div class="topic-content">
-
+          <a name="topic-01"></a>
           {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent(), true) }}
 
           {% for childTaxon in presentedTaxon.children %}
+            <a name="topic-{{ (loop.index + 1) | pad(2, '0') }}"></a>
             {{ content_list_macro.content_list(childTaxon, childTaxon.guidance.atozContent(), true) }}
           {% endfor %}
         </div>
