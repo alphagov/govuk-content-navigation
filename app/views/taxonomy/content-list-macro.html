@@ -17,7 +17,7 @@
   </ul>
 
   {% if truncate == true and taxonContent.length > count %}
-    <p>
+    <p class="more">
       <a href="{{taxon.basePath}}?viewAll">More about {{ taxon.title }}</a>
     </p>
   {% endif %}

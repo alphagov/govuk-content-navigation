@@ -478,6 +478,18 @@
     }
   }
 
+  p.more {
+    a {
+      text-decoration: none;
+      border: 1px solid $govuk-blue;
+      border-width: 0 0 5px 0;
+
+      &:after {
+        content: " ►";
+      }
+    }
+  }
+
 
   p.done {
     font-size: 24px;
