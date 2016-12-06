@@ -2,9 +2,7 @@
 // Take a look in /govuk-modules/_govuk-elements.scss to see which files are imported.
 @import 'govuk-elements';
 
-// Take a look at in app/assets/sass/patterns/ to see which files are imported.
-@import 'patterns/check-your-answers';
-// @import 'patterns/unbranded';
+@import 'modules/subsections';
 
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
@@ -345,7 +343,7 @@
 
 /* taxon layout */
 
-#content.taxonomy {
+.taxonomy {
   h1 {
     box-sizing: border-box;
     display: block;
@@ -366,7 +364,12 @@
     line-height: 30px;
     font-weight: bold;
 
-    padding-bottom: $gutter;
+    margin-top: $gutter * 1.5;
+    margin-bottom: $gutter;
+
+    &.subsection__title {
+      margin: 0;
+    }
   }
 
   h3 {
@@ -388,6 +391,17 @@
       a {
         color: $secondary-text-colour;
         text-decoration: none;
+
+        &:before {
+          content: " ";
+          background-image: url("/public/images/back.svg");
+          background-repeat: no-repeat;
+          background-size: auto 18px;
+          background-position: left bottom;
+          display: inline-block;
+          width: 20px;
+          height: 1em;
+        }
       }
     }
   }
@@ -427,17 +441,34 @@
     }
   }
 
+  .topic-navigation {
+    li {
+      padding-bottom: 5px;
+      // padding-left: 20px;
+      &.child-topic:before {
+        content: "» ";
+        color: $secondary-text-colour;
+      }
+    }
+  }
+
   .child-topic-contents {
     .topic-content {
       ul {
         li {
-          padding-bottom: $gutter-one-third;
+          margin-bottom: $gutter-one-third;
 
           h3 {
             padding-bottom: 0;
           }
         }
       }
+    }
+  }
+
+  .subsection__list-item {
+    a {
+      font-weight: bold;
     }
   }
 
