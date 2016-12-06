@@ -454,6 +454,16 @@
     }
   }
 
+  .dash-list {
+    .current-topic {
+      margin: 0;
+
+      &:before {
+        content: "";
+      }
+    }
+  }
+
   .child-topic-contents {
     .topic-content {
       ul {
