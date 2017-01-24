@@ -19,25 +19,6 @@
 
           <div data-module="accordion-with-descriptions">
             <div class="subsection-wrapper">
-              <div class="subsection">
-                <div class="subsection__header">
-                  <h2 class="subsection__title">{{ presentedTaxon.title }}</h2>
-                  <p class="subsection__description">{{ presentedTaxon.description }}</p>
-                </div>
-
-                <div class="subsection__content">
-                  <ul class="subsection__list">
-
-                    {% for document in presentedTaxon.content.guidance.atozContent() %}
-                      <li class="subsection__list-item">
-                        <a href="{{ document.basePath }}">{{ document.title }}</a>
-
-                        <p>{{ document.description }}</p>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </div>
-              </div>
               {% for childTaxon in presentedTaxon.children %}
                 <div class="subsection">
                   <div class="subsection__header">
@@ -61,6 +42,11 @@
             </div>
 
         </div>
+
+        <div class="topic-content">
+          {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent(), true) }}
+        </div>
+
       </div>
     </div>
   </main>
