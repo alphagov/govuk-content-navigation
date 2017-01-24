@@ -17,6 +17,7 @@
       <div class="column-two-thirds">
         <div class="topic-content">
 
+          {% if presentedTaxon.children.length %}
           <div data-module="accordion-with-descriptions">
             <div class="subsection-wrapper">
               {% for childTaxon in presentedTaxon.children %}
@@ -40,13 +41,10 @@
                 </div>
               {% endfor %}
             </div>
-
-        </div>
-
-        <div class="topic-content">
+          </div>
+          {% endif %}
           {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent(), true) }}
         </div>
-
       </div>
     </div>
   </main>
