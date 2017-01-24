@@ -360,9 +360,7 @@
   }
 
   h2 {
-    font-size: 24px;
-    line-height: 30px;
-    font-weight: bold;
+    @include bold-19($line-height: 30px);
 
     margin-top: $gutter * 1.5;
     margin-bottom: $gutter;
@@ -384,23 +382,23 @@
 
     .sub-heading {
       font-weight: normal;
-      font-size: 24px;
+      @include core-24;
 
       display: block;
 
       a {
-        color: $secondary-text-colour;
-        text-decoration: none;
+        color: $text-colour;
+        text-decoration: underline;
 
         &:before {
           content: " ";
-          background-image: url("/public/images/back.svg");
-          background-repeat: no-repeat;
-          background-size: auto 18px;
-          background-position: left bottom;
           display: inline-block;
-          width: 20px;
-          height: 1em;
+          height: 0;
+          width: 0;
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-right: 10px solid $black;
+          margin-right: 10px;
         }
       }
     }
