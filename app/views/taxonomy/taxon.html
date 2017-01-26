@@ -9,7 +9,7 @@
 {% block content %}
 
   <main id="content" class="taxonomy" role="main">
-    {{ breadcrumb_macro.render_breadcrumb(presentedTaxon.breadcrumb) }}
+    {{ breadcrumb_macro.render_breadcrumb(presentedTaxon.breadcrumb, presentedTaxon.title) }}
 
     {% include 'taxonomy/_taxon-heading.html' %}
 

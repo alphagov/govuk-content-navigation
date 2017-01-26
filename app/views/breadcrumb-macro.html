@@ -1,4 +1,4 @@
-{% macro render_breadcrumb(pages) %}
+{% macro render_breadcrumb(pages, title) %}
   {% set max_breadcrumb = 4 %}
   {% block breadcrumb %}
     <div class="breadcrumbs">
@@ -7,6 +7,7 @@
           <li{% if pages.length > max_breadcrumb and (loop.index0 > 1) and (loop.index0 < pages.length - 2) %} class="js-hidden"{% endif %}><a href="{{ page.basePath }}/"> {{ page.title }}</a></li>
           {% if pages.length > max_breadcrumb and loop.index0 == 2 %}<li class="js-show"><a href="" class="js-toggle-breadcrumb" title="Show breadcrumbs">…</a></li>{% endif %}
         {% endfor %}
+        <li class="current">{{ title }}</li>
       </ol>
     </div>
   {% endblock %}

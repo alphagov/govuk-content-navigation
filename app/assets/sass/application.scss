@@ -205,6 +205,9 @@
       color: black;
       text-decoration: underline;
    }
+   li.current {
+     color: $secondary-text-colour;
+   }
 }
 #whitehall-wrapper {
    .breadcrumbs {
