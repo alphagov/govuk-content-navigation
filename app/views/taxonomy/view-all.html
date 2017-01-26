@@ -11,23 +11,14 @@
   <main id="content" class="taxonomy" role="main">
     {{ breadcrumb_macro.render_breadcrumb(presentedTaxon.breadcrumb) }}
 
-    <div class="grid-row">
-      <div class="page-header">
-        <h1>
-          <span class="sub-heading"><a href="{{ backTo }}">{{ presentedTaxon.parent.title }}</a></span>
-          {{ presentedTaxon.title }}
-        </h1>
+    {% include 'taxonomy/_taxon-heading.html' %}
 
-        <p>{{ presentedTaxon.description }}</p>
+    <div class="grid-row child-topic-contents">
+      <div class="column-two-thirds">
+        <div class="topic-content">
+          {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent()) }}
       </div>
     </div>
-
-  <div class="grid-row child-topic-contents">
-    <div class="column-two-thirds">
-      <div class="topic-content">
-        {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent()) }}
-    </div>
-  </div>
-</main>
+  </main>
 
 {% endblock %}
