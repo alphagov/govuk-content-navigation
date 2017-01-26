@@ -47,10 +47,16 @@
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
 
+#content {
+  margin: 0;
+
+  @include media(tablet) {
+    margin: 0;
+  }
+}
+
 #whitehall-wrapper {
-  max-width: 960px;
-  margin: 0 auto;
-  position: relative;
+  @extend %site-width-container;
 
   #page {
     padding: 0;
@@ -358,6 +364,10 @@
 }
 
 /* taxon layout */
+
+#content.taxonomy {
+  @extend %site-width-container;
+}
 
 .taxonomy {
   h1 {
