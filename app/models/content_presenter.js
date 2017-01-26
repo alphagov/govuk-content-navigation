@@ -39,7 +39,7 @@ class ContentPresenter {
         var isHtmlManual = filePath.match(/manual/);
 
         var content_dom = cheerio.load(content);
-        var title = content_dom('.govuk-title h1').text();
+        var title = content_dom('h1').first().text();
 
         const presented = Promise.all([
           that.getBreadcrumbPromise(),
