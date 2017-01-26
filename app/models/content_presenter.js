@@ -7,6 +7,7 @@ var RelatedContent = require('./related_content.js');
 var BreadcrumbMaker = require('../../lib/js/breadcrumb_maker.js');
 var TaxonomyData = require('./taxonomy_data.js');
 var Taxon = require('./taxon.js');
+var cheerio = require('cheerio');
 
 class ContentPresenter {
   constructor (basePath) {
@@ -37,12 +38,16 @@ class ContentPresenter {
         var isWhitehall = filePath.match(/whitehall/);
         var isHtmlManual = filePath.match(/manual/);
 
+        var content_dom = cheerio.load(content);
+        var title = content_dom('.govuk-title h1').text();
+
         const presented = Promise.all([
           that.getBreadcrumbPromise(),
           that.getTaxonsPromise(),
           that.getRelatedContentPromise(),
         ]).spread(function (breadcrumb, taxons, relatedContent) {
           return {
+            title: title,
             content: content,
             breadcrumb: breadcrumb,
             taxons: taxons,
