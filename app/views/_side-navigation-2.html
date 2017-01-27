@@ -1,0 +1,18 @@
+<div class="related-container">
+  <aside class="related" id="related">
+    <div>
+      <header>
+        <h2>More about</h2>
+      </header>
+
+      {% for taxon in presentedContent.taxons %}
+      <nav role="navigation" aria-labelledby="parent-other">
+        <h3><a href="{{ taxon.basePath }}">{{ taxon.title }}</a></h3>
+         {% if taxon.description %}
+         <p>{{ taxon.description }}</p>
+         {% endif %}
+      </nav>
+      {% endfor %}
+    </div>
+  </aside>
+</div>
