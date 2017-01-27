@@ -342,6 +342,33 @@
    }
 }
 
+.topic-hierarchy {
+  li {
+    margin-bottom: 0.25em;
+
+    &:first-child {
+      font-weight: bold;
+      a {
+        background: none;
+        padding-left: 0;
+      }
+    }
+
+    a {
+      background-image: url('/public/images/arrow.svg');
+      background-position: 0;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      padding-left: 25px;
+
+      &:hover {
+        background-position: 0;
+      }
+    }
+
+  }
+}
+
 /* taxon layout */
 
 #content.taxonomy {

@@ -10,23 +10,11 @@
       </header>
 
       <nav role="navigation" aria-labelledby="parent-other">
-        <ul>
-          {% if relatedContent %}
-            {% for contentItem in relatedContent %}
-              <li>
-                <a href="{{ contentItem.link }}">{{ contentItem.title }}</a>
-              </li>
-            {% endfor %}
-          {% else %}
-            {% for contentItem in taxon.content.slice(0,5) %}
-              <li>
-                <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
-              </li>
-            {% endfor %}
-          {% endif %}
+        <ul class="topic-hierarchy">
+          {% for topic in presentedContent.breadcrumb.slice(1)|reverse %}
+          <li><a href="{{ topic.basePath }}">{{ topic.title }}</a></li>
+          {% endfor %}
         </ul>
-
-        <p><a class="reveal" href="{{ taxon.basePath }}?viewAll">See everything in {{ taxon.title }}</a></p>
       </nav>
     </div>
     {% endfor %}
