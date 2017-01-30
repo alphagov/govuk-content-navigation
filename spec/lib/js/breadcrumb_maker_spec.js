@@ -5,7 +5,7 @@ describe('#getBreadcrumbForTaxon', function() {
   var maker = new BreadcrumbMaker(json_data);
 
   it('should return "Home" for a top-level taxon', function() {
-    var taxon = "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills";
+    var taxon = "/education";
     expect(maker.getBreadcrumbForTaxon(taxon)).toEqual([
       {
         "basePath": "https://www.gov.uk",
@@ -15,29 +15,25 @@ describe('#getBreadcrumbForTaxon', function() {
   });
 
   it('should return a full breadcrumb trail for a bottom-level taxon', function() {
-    var taxon = "/alpha-taxonomy/6f6f5609-9075-4762-9d98-3d649a26348b-primary-curriculum-key-stage-1-and-key-stage-2";
+    var taxon = "/education/apprenticeships-traineeships-and-internships";
     expect(maker.getBreadcrumbForTaxon(taxon)).toEqual([
       {
         "basePath": "https://www.gov.uk",
         "title": "Home",
       },
       {
-        "basePath": "/alpha-taxonomy/2b5d0d82-a099-41fc-b40b-a71f2404dcde-education-training-and-skills",
+        "basePath": "/education",
         "title": "Education, training and skills",
       },
       {
-        "basePath": "/alpha-taxonomy/ca860c58-665d-491d-88ed-26bf2e76fe19-school-education-5-to-18",
-        "title": "School education from 5 to 18 years",
-      },
-      {
-        "basePath": "/alpha-taxonomy/b33a69cf-ff92-47d1-b995-44d89acda8db-curriculum-qualifications-and-school-performance",
-        "title": "School curriculum, assessments and performance",
+        "title": 'Further and higher education, skills and vocational training',
+        "basePath": '/education/further-and-higher-education-skills-and-vocational-training'
       }
     ]);
   });
 
   it('should return a full breadcrumb trail using the first parent for a multi-parent bottom-level taxon', function() {
-    var taxon = "/alpha-taxonomy/phonics";
+    var taxon = "/education/phonics";
     var breadcrumb = maker.getBreadcrumbForTaxon(taxon);
     expect(breadcrumb.length).toBeGreaterThan(1);
     expect(breadcrumb[0]).toEqual(
