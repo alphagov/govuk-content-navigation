@@ -6,7 +6,7 @@ var BreadcrumbMaker = require('../../lib/js/breadcrumb_maker.js');
 class TaxonPresenter {
   constructor (taxonParam, taxonomyData) {
     this.taxonomyData = taxonomyData;
-    this.basePath = "/alpha-taxonomy/" + taxonParam;
+    this.basePath = taxonParam;
 
     this.build();
   }

@@ -16,8 +16,15 @@ var ContentPresenter = require('./models/content_presenter.js');
       });
   });
 
-  router.get('/alpha-taxonomy/:taxon', function (req, res) {
+  router.get('/education/:taxon?', function (req, res) {
     var taxonParam = req.params.taxon;
+
+    if(taxonParam == undefined) {
+      taxonParam = "/education";
+    }
+    else {
+      taxonParam = "/education/" + taxonParam;
+    }
     var viewAll = !(typeof(req.query.viewAll) === "undefined");
 
     TaxonomyData.get().
