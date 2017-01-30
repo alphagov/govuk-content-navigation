@@ -6,7 +6,7 @@
         {% for page in pages %}
           <li><a href="{{ page.basePath }}/"> {{ page.title }}</a></li>
         {% endfor %}
-        <li class="current">{{ title }}</li>
+        <li class="current"><a href="#content">{{ title }}</a></li>
       </ol>
     </div>
   {% endblock %}

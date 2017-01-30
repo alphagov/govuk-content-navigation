@@ -206,7 +206,10 @@
       text-decoration: underline;
    }
    li.current {
-     color: $secondary-text-colour;
+     a {
+       color: $secondary-text-colour;
+       text-decoration: none;
+     }
    }
 }
 #whitehall-wrapper {
@@ -214,6 +217,13 @@
       a {
          color: black;
          text-decoration: underline;
+      }
+
+      .current {
+        a {
+          color: $secondary-text-colour;
+          text-decoration: none;
+        }
       }
    }
 }
