@@ -16,7 +16,6 @@ class ContentItem {
       case 'detailed_guidance':
       case 'detailed_guide':
       case 'form':
-      case 'generic_with_external_related_links':
       case 'guidance':
       case 'guide':
       case 'licence':
