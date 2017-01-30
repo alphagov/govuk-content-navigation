@@ -322,44 +322,23 @@
 }
 
 .related {
-   position: relative;
    border-top: 10px solid #005ea5;
    padding-top: 5px;
 
    div {
       padding-bottom: 9px;
    }
+
    h2 {
-      padding-top: 19px;
-      font-size: 24px;
-      line-height: 30px;
-      padding-bottom: 7px;
-      margin-bottom: 0;
-      margin-top: 0;
-      font-weight: bold;
+      @include bold-24;
    }
-   p {
-      font-size: 16px;
-      line-height: 20px;
-      margin: 0;
+
+   h3 {
+     @include bold-19
    }
-   ul {
-      padding: 10px 0 5px 20px;
-   }
+
    li {
-      font-size: 16px;
-      line-height: 20px;
-      font-weight: bold;
-      margin: 0;
-      list-style: disc;
-      display: none;
-      &:nth-child(1),
-      &:nth-child(2),
-      &:nth-child(3),
-      &:nth-child(4),
-      &:nth-child(5) {
-         display: list-item;
-      }
+      margin-left: 0;
       a {
          text-decoration: none;
          &:hover, &:focus {
@@ -368,12 +347,36 @@
       }
    }
    .reveal {
-      margin-left: 20px;
-      font-size: 16px;
-      line-height: 20px;
       display: block;
       text-decoration: underline!important;
    }
+}
+
+.topic-hierarchy {
+  li {
+    margin-bottom: 0.25em;
+
+    &:first-child {
+      font-weight: bold;
+      a {
+        background: none;
+        padding-left: 0;
+      }
+    }
+
+    a {
+      background-image: url('/public/images/arrow.svg');
+      background-position: 0;
+      background-repeat: no-repeat;
+      background-size: 15px;
+      padding-left: 25px;
+
+      &:hover {
+        background-position: 0;
+      }
+    }
+
+  }
 }
 
 /* taxon layout */

@@ -3,30 +3,18 @@
     {% for taxon in presentedContent.taxons %}
     <div>
       <header>
-         <h2 id="parent-other">{{ taxon.title }}</h2>
+         <h2>More about {{ taxon.title }}</h2>
          {% if taxon.description %}
          <p>{{ taxon.description }}</p>
          {% endif %}
       </header>
 
       <nav role="navigation" aria-labelledby="parent-other">
-        <ul>
-          {% if relatedContent %}
-            {% for contentItem in relatedContent %}
-              <li>
-                <a href="{{ contentItem.link }}">{{ contentItem.title }}</a>
-              </li>
-            {% endfor %}
-          {% else %}
-            {% for contentItem in taxon.content.slice(5) %}
-              <li>
-                <a href="{{ contentItem.basePath }}">{{ contentItem.title }}</a>
-              </li>
-            {% endfor %}
-          {% endif %}
+        <ul class="topic-hierarchy">
+          {% for topic in presentedContent.breadcrumb.slice(1)|reverse %}
+          <li><a href="{{ topic.basePath }}">{{ topic.title }}</a></li>
+          {% endfor %}
         </ul>
-
-        <a class="reveal" href="{{ taxon.basePath }}?viewAll">More about {{ taxon.title }}</a>
       </nav>
     </div>
     {% endfor %}
