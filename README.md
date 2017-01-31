@@ -50,6 +50,11 @@ GOV.UK.
 
 #### Instructions
 
+Before you import new content, delete the old content from `app/content`.
+Furthermore, check if the taxonomy has changed. If there are new taxons, of base
+paths have changed, fetch the new taxonomy from `content-tagger` and replace
+`/lib/ruby/data.taxons.csv` with it.
+
 There are several steps to importing new content into the prototype:
 
 0. Tag all the content to taxons using [content
