@@ -1,18 +1,18 @@
 <div class="related-container">
   <aside class="related" id="related">
-    {% if relatedContent %}
-      {% for taxon in presentedContent.taxons %}
-      <div>
-        <header>
-           <h2>More about {{ taxon.title }}</h2>
-           {% if taxon.description %}
-           <p>{{ taxon.description }}</p>
-           {% endif %}
-        </header>
+    {% for taxon in presentedContent.relatedContent %}
+    <div>
+      <header>
+         <h2>More about {{ taxon.title }}</h2>
+         {% if taxon.description %}
+         <p>{{ taxon.description }}</p>
+         {% endif %}
+      </header>
 
+      {% if taxon.results %}
         <nav role="navigation" aria-labelledby="parent-other">
           <ul>
-            {% for contentItem in relatedContent %}
+            {% for contentItem in taxon.results %}
               <li>
                 <a href="{{ contentItem.link }}">{{ contentItem.title }}</a>
               </li>
@@ -21,21 +21,8 @@
 
           <p><a class="reveal" href="{{ taxon.basePath }}?viewAll">See everything in {{ taxon.title }}</a></p>
         </nav>
-      </div>
-      {% endfor %}
-    {% else %}
-      <header>
-        <h2>More about</h2>
-      </header>
-
-      {% for taxon in presentedContent.taxons %}
-      <nav role="navigation" aria-labelledby="parent-other">
-        <h3><a href="{{ taxon.basePath }}">{{ taxon.title }}</a></h3>
-         {% if taxon.description %}
-         <p>{{ taxon.description }}</p>
-         {% endif %}
-      </nav>
-      {% endfor %}
-    {% endif %}
+      {% endif %}
+    </div>
+    {% endfor %}
   </aside>
 </div>
