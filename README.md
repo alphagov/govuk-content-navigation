@@ -82,9 +82,6 @@ The script executes the following:
 * Rakefile default task
     * Fetches taxon and content page metadata (e.g. which pages link to which
       taxons). This will be saved in `app/data/metadata_and_taxons.json`.
-* add_dates.py
-    * Adds date information to the fetched content, based on values in
-      `app/data/metadata_and_taxons.json`.
 
 #### Fetching content lists for topic pages
 

@@ -18,5 +18,3 @@ export DATA_ENVIRONMENT=$environment
 python lib/python/format_finder.py
 python lib/python/fetch_main_content.py
 bundle exec rake
-python lib/python/add_dates.py
-
