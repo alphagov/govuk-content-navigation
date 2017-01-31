@@ -1,9 +1,11 @@
 {% macro content_list(taxon, taxonContent, truncate=false, count=5) %}
 
 {% if taxonContent.length > 0 %}
+  {% if taxon.children.length > 0 %}
   <h2>{{ taxon.title }} guidance</h2>
 
   {% if taxon.description %}<p>{{ taxon.description }}</p>{% endif %}
+  {% endif %}
 
   <ul>
     {% for document in taxonContent %}
