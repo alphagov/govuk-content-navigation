@@ -9798,7 +9798,7 @@
     "/education/inspection-of-local-authority-support-for-schools": {
       "title": "Inspection of local authority support for schools",
       "content_id": "3cec0ac5-8a19-42b9-9468-fe5e384b3662",
-      "description": "TBC"
+      "description": "How Ofsted inspects local authority support for improving schools. Details of councils needing to improve."
     },
     "/education/inspection-of-maintained-schools-and-academies": {
       "title": "Inspection of maintained schools and academies",
@@ -10510,18 +10510,6 @@
     "/education/inspection-of-local-authority-support-for-schools": {
       "results": [
         {
-          "title": "Inspecting local authority arrangements for supporting school improvement: guidance for providers",
-          "description": "Ofsted inspects local authority arrangements for supporting improvement in schools. ",
-          "link": "/guidance/inspecting-local-authority-arrangements-for-supporting-school-improvement-guidance-for-providers",
-          "format": "detailed_guidance",
-          "public_timestamp": "2015-09-22T09:30:16.000+01:00",
-          "index": "detailed",
-          "es_score": null,
-          "_id": "/guidance/inspecting-local-authority-arrangements-for-supporting-school-improvement-guidance-for-providers",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Local authorities failing children who are missing education",
           "description": "Too many children are either missing out on full-time education or not getting the part-time education they are entitled to.",
           "link": "/government/news/local-authorities-failing-children-who-are-missing-education",
@@ -10546,14 +10534,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Re-inspection of East Sussex school improvement support",
-          "description": "This inspection took place to find out if education standards have improved since the previous inspection in July 2014. ",
-          "link": "/government/news/re-inspection-of-east-sussex-school-improvement-support",
-          "format": "news_article",
-          "public_timestamp": "2016-01-11T09:30:15.000+00:00",
-          "index": "government",
+          "title": "Inspecting local authority arrangements for supporting school improvement: guidance for providers",
+          "description": "Ofsted inspects local authority arrangements for supporting improvement in schools. ",
+          "link": "/guidance/inspecting-local-authority-arrangements-for-supporting-school-improvement-guidance-for-providers",
+          "format": "detailed_guidance",
+          "public_timestamp": "2015-09-22T09:30:16.000+01:00",
+          "index": "detailed",
           "es_score": null,
-          "_id": "/government/news/re-inspection-of-east-sussex-school-improvement-support",
+          "_id": "/guidance/inspecting-local-authority-arrangements-for-supporting-school-improvement-guidance-for-providers",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -10570,6 +10558,18 @@
           "document_type": "edition"
         },
         {
+          "title": "Re-inspection of East Sussex school improvement support",
+          "description": "This inspection took place to find out if education standards have improved since the previous inspection in July 2014. ",
+          "link": "/government/news/re-inspection-of-east-sussex-school-improvement-support",
+          "format": "news_article",
+          "public_timestamp": "2016-01-11T09:30:15.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/re-inspection-of-east-sussex-school-improvement-support",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
           "title": "Inspection of Kingston upon Hull school improvement support",
           "description": "Ofsted has today (1 February 2016) published the outcome letter of its inspection of Kingston upon Hull City Council’s support for school improvement. ",
           "link": "/government/news/inspection-of-kingston-upon-hull-school-improvement-support",
@@ -10582,18 +10582,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Middlesbrough's support for school improvement is 'ineffective'",
-          "description": "A third of pupils overall, and over half of secondary-aged children, attend a school in Middlesbrough that is less than good, says Ofsted.",
-          "link": "/government/news/middlesbroughs-support-for-school-improvement-is-ineffective",
-          "format": "news_article",
-          "public_timestamp": "2014-03-12T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/middlesbroughs-support-for-school-improvement-is-ineffective",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Wakefield council's school improvement arrangements 'ineffective'",
           "description": "Ofsted has published the outcome letter of its inspection of Wakefield council’s support for school improvement and finds it ineffective.",
           "link": "/government/news/wakefield-councils-school-improvement-arrangements-ineffective",
@@ -10602,18 +10590,6 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/news/wakefield-councils-school-improvement-arrangements-ineffective",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Inspection of Doncaster local authority school improvement support",
-          "description": "Ofsted has published the outcome letter about its inspection of Doncaster Council's school improvement support.",
-          "link": "/government/news/focused-inspection-of-doncaster-local-authority-school-improvement-support",
-          "format": "news_article",
-          "public_timestamp": "2015-07-01T09:30:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/focused-inspection-of-doncaster-local-authority-school-improvement-support",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -10642,6 +10618,30 @@
           "document_type": "edition"
         },
         {
+          "title": "Middlesbrough's support for school improvement is 'ineffective'",
+          "description": "A third of pupils overall, and over half of secondary-aged children, attend a school in Middlesbrough that is less than good, says Ofsted.",
+          "link": "/government/news/middlesbroughs-support-for-school-improvement-is-ineffective",
+          "format": "news_article",
+          "public_timestamp": "2014-03-12T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/middlesbroughs-support-for-school-improvement-is-ineffective",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Inspection of Doncaster local authority school improvement support",
+          "description": "Ofsted has published the outcome letter about its inspection of Doncaster Council's school improvement support.",
+          "link": "/government/news/focused-inspection-of-doncaster-local-authority-school-improvement-support",
+          "format": "news_article",
+          "public_timestamp": "2015-07-01T09:30:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/focused-inspection-of-doncaster-local-authority-school-improvement-support",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
           "title": "Commissioning young people’s services: evaluation of approaches",
           "description": "Ofsted survey report looking into approaches to commissioning services for young people in local authority areas.",
           "link": "/government/publications/commissioning-young-peoples-services-evaluation-of-approaches",
@@ -10650,18 +10650,6 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/commissioning-young-peoples-services-evaluation-of-approaches",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Local authorities are failing in their duties to children who are missing education",
-          "description": "Too many children are not getting the education they are entitled to, according to an Ofsted report.",
-          "link": "/government/news/local-authorities-are-failing-in-their-duties-to-children-who-are-missing-education",
-          "format": "news_article",
-          "public_timestamp": "2013-11-20T15:01:04.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/local-authorities-are-failing-in-their-duties-to-children-who-are-missing-education",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -10686,6 +10674,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/news/school-improvement-arrangements-in-norfolk-and-isle-of-wight-unfit-for-purpose",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Local authorities are failing in their duties to children who are missing education",
+          "description": "Too many children are not getting the education they are entitled to, according to an Ofsted report.",
+          "link": "/government/news/local-authorities-are-failing-in-their-duties-to-children-who-are-missing-education",
+          "format": "news_article",
+          "public_timestamp": "2013-11-20T15:01:04.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/local-authorities-are-failing-in-their-duties-to-children-who-are-missing-education",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -10893,18 +10893,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Secondary school accountability consultation",
-          "description": "A public consultation on changes to the way secondary school performance is measured.",
-          "link": "/government/consultations/secondary-school-accountability-consultation",
-          "format": "consultation",
-          "public_timestamp": "2014-02-13T10:06:31.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/consultations/secondary-school-accountability-consultation",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Ofsted Annual Report 2013/14",
           "description": "Consists of an overarching commentary, reports on schools and the further education and skills sector and eight regional reports.",
           "link": "/government/collections/ofsted-annual-report-201314",
@@ -10937,6 +10925,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/speeches/speech-at-the-future-of-education-inspection-launch",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Secondary school accountability consultation",
+          "description": "A public consultation on changes to the way secondary school performance is measured.",
+          "link": "/government/consultations/secondary-school-accountability-consultation",
+          "format": "consultation",
+          "public_timestamp": "2014-02-13T10:06:31.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/consultations/secondary-school-accountability-consultation",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -11301,18 +11301,6 @@
           "document_type": "edition"
         },
         {
-          "title": "HM Chief Inspector of Education, Children's Services and Skills annual report 2006 to 2007",
-          "description": "The Annual Report contains evidence from more than 36,000 inspections and regulatory visits in 2006/07",
-          "link": "/government/publications/hm-chief-inspector-of-education-childrens-services-and-skills-annual-report-2006-to-2007",
-          "format": "publication",
-          "public_timestamp": "2007-10-17T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/hm-chief-inspector-of-education-childrens-services-and-skills-annual-report-2006-to-2007",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Families of schools 2011: Greater Manchester primary schools",
           "description": "This 4th edition of Greater Manchester primary schools aims to help those schools see how others with similar intakes serve their pupils.",
           "link": "/government/publications/families-of-schools-2011-greater-manchester-primary-schools",
@@ -11325,50 +11313,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Families of schools 2011: London primary schools",
-          "description": "This 4th edition for London primary schools aims to help those schools see how others with similar intakes serve their pupils.",
-          "link": "/government/publications/families-of-schools-2011-london-primary-schools",
+          "title": "HM Chief Inspector of Education, Children's Services and Skills annual report 2006 to 2007",
+          "description": "The Annual Report contains evidence from more than 36,000 inspections and regulatory visits in 2006/07",
+          "link": "/government/publications/hm-chief-inspector-of-education-childrens-services-and-skills-annual-report-2006-to-2007",
           "format": "publication",
-          "public_timestamp": "2011-07-08T01:00:00.000+01:00",
+          "public_timestamp": "2007-10-17T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/families-of-schools-2011-london-primary-schools",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Chief Inspector calls for education to be central to Manchester and Liverpool’s strategies for growth",
-          "description": "Sir Michael raised concerns about declining secondary school performance and pupil attainment in Liverpool, Manchester and surrounding areas",
-          "link": "/government/news/chief-inspector-calls-for-education-to-be-central-to-manchester-and-liverpools-strategies-for-growth",
-          "format": "news_article",
-          "public_timestamp": "2016-02-23T09:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/chief-inspector-calls-for-education-to-be-central-to-manchester-and-liverpools-strategies-for-growth",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Improving schools through Parent View",
-          "description": "Ofsted has produced a toolkit for schools to help them promote Parent View, its online questionnaire for parents to give their views on their children’s schools.",
-          "link": "/government/news/improving-schools-through-parent-view",
-          "format": "news_article",
-          "public_timestamp": "2013-03-06T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/improving-schools-through-parent-view",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Sir Michael Wilshaw's speech to ASCL conference",
-          "description": "Her Majesty's Chief Inspector sets out plans for more heads to get involved in school inspection.",
-          "link": "/government/news/sir-michael-wilshaws-speech-to-ascl-conference",
-          "format": "news_article",
-          "public_timestamp": "2012-03-23T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/sir-michael-wilshaws-speech-to-ascl-conference",
+          "_id": "/government/publications/hm-chief-inspector-of-education-childrens-services-and-skills-annual-report-2006-to-2007",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -11385,14 +11337,50 @@
           "document_type": "edition"
         },
         {
-          "title": "Families of schools 2011: Greater Manchester secondary schools",
-          "description": "This 4th edition for Greater Manchester secondary schools aims to help those schools see how others with similar intakes serve their pupils.",
-          "link": "/government/publications/families-of-schools-2011-greater-manchester-secondary-schools",
+          "title": "Chief Inspector calls for education to be central to Manchester and Liverpool’s strategies for growth",
+          "description": "Sir Michael raised concerns about declining secondary school performance and pupil attainment in Liverpool, Manchester and surrounding areas",
+          "link": "/government/news/chief-inspector-calls-for-education-to-be-central-to-manchester-and-liverpools-strategies-for-growth",
+          "format": "news_article",
+          "public_timestamp": "2016-02-23T09:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/chief-inspector-calls-for-education-to-be-central-to-manchester-and-liverpools-strategies-for-growth",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Families of schools 2011: London primary schools",
+          "description": "This 4th edition for London primary schools aims to help those schools see how others with similar intakes serve their pupils.",
+          "link": "/government/publications/families-of-schools-2011-london-primary-schools",
           "format": "publication",
           "public_timestamp": "2011-07-08T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/publications/families-of-schools-2011-greater-manchester-secondary-schools",
+          "_id": "/government/publications/families-of-schools-2011-london-primary-schools",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Sir Michael Wilshaw's speech to ASCL conference",
+          "description": "Her Majesty's Chief Inspector sets out plans for more heads to get involved in school inspection.",
+          "link": "/government/news/sir-michael-wilshaws-speech-to-ascl-conference",
+          "format": "news_article",
+          "public_timestamp": "2012-03-23T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/sir-michael-wilshaws-speech-to-ascl-conference",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Improving schools through Parent View",
+          "description": "Ofsted has produced a toolkit for schools to help them promote Parent View, its online questionnaire for parents to give their views on their children’s schools.",
+          "link": "/government/news/improving-schools-through-parent-view",
+          "format": "news_article",
+          "public_timestamp": "2013-03-06T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/improving-schools-through-parent-view",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -11405,6 +11393,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/speeches/lord-hill-to-the-national-governors-association-school-improvement-conference",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Families of schools 2011: Greater Manchester secondary schools",
+          "description": "This 4th edition for Greater Manchester secondary schools aims to help those schools see how others with similar intakes serve their pupils.",
+          "link": "/government/publications/families-of-schools-2011-greater-manchester-secondary-schools",
+          "format": "publication",
+          "public_timestamp": "2011-07-08T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/families-of-schools-2011-greater-manchester-secondary-schools",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -11923,18 +11923,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Publication of statistics on maintained schools and academies: inspections and outcomes",
-          "description": "Consultation on Ofsted’s proposals for revisions to how it published inspection outcome statistics for maintained schools and academies. ",
-          "link": "/government/consultations/publication-of-statistics-on-maintained-schools-and-academies-inspections-and-outcomes",
-          "format": "consultation",
-          "public_timestamp": "2015-08-28T09:30:38.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/consultations/publication-of-statistics-on-maintained-schools-and-academies-inspections-and-outcomes",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Focused inspection of The Education Fellowship",
           "description": "Ofsted today (Tuesday 13 October) publishes the outcome letter of the focused inspection of The Education Fellowship.  ",
           "link": "/government/news/focused-inspection-of-the-education-fellowship",
@@ -12027,6 +12015,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/news/too-many-stoke-primary-school-children-falling-behind-in-reading",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Publication of statistics on maintained schools and academies: inspections and outcomes",
+          "description": "Consultation on Ofsted’s proposals for revisions to how it published inspection outcome statistics for maintained schools and academies. ",
+          "link": "/government/consultations/publication-of-statistics-on-maintained-schools-and-academies-inspections-and-outcomes",
+          "format": "consultation",
+          "public_timestamp": "2015-08-28T09:30:38.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/consultations/publication-of-statistics-on-maintained-schools-and-academies-inspections-and-outcomes",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -12307,26 +12307,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Ofsted report to Bristol council following focused inspections",
-          "description": "Following the inspections of 15 schools in Bristol in June 2013, Ofsted has written to Bristol City Council to advise it of the findings.",
-          "link": "/government/news/ofsted-report-to-bristol-council-following-focused-inspections",
+          "title": "Ofsted reports back to Norfolk County Council",
+          "description": "Following inspections of 28 Norfolk schools in March 2013, Ofsted has written to Norfolk County Council to advise it of the findings.",
+          "link": "/government/news/ofsted-reports-back-to-norfolk-county-council",
           "format": "news_article",
-          "public_timestamp": "2013-09-05T09:30:00.000+01:00",
+          "public_timestamp": "2013-05-14T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/ofsted-report-to-bristol-council-following-focused-inspections",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Coventry City Council report following focused inspections",
-          "description": "Following inspections of 11 schools in Coventry in March 2013, Ofsted has written to Coventry City Council to advise it of the findings.",
-          "link": "/government/news/coventry-city-council-report-following-focused-inspections",
-          "format": "news_article",
-          "public_timestamp": "2013-04-10T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/coventry-city-council-report-following-focused-inspections",
+          "_id": "/government/news/ofsted-reports-back-to-norfolk-county-council",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -12367,62 +12355,26 @@
           "document_type": "edition"
         },
         {
-          "title": "Ofsted to carry out focused school inspections in Norfolk",
-          "description": "Inspections have started in Norfolk to find out why the county has a disproportionate number of under-performing schools.",
-          "link": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-norfolk",
+          "title": "Ofsted report to Bristol council following focused inspections",
+          "description": "Following the inspections of 15 schools in Bristol in June 2013, Ofsted has written to Bristol City Council to advise it of the findings.",
+          "link": "/government/news/ofsted-report-to-bristol-council-following-focused-inspections",
           "format": "news_article",
-          "public_timestamp": "2013-03-12T00:00:00.000+00:00",
+          "public_timestamp": "2013-09-05T09:30:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-norfolk",
+          "_id": "/government/news/ofsted-report-to-bristol-council-following-focused-inspections",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
         {
-          "title": "Ofsted to carry out focused school inspections in Coventry",
-          "description": "Inspections to find out why the city has a disproportionate number of under-performing primary schools and whether the picture is improving.",
-          "link": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-coventry",
+          "title": "Coventry City Council report following focused inspections",
+          "description": "Following inspections of 11 schools in Coventry in March 2013, Ofsted has written to Coventry City Council to advise it of the findings.",
+          "link": "/government/news/coventry-city-council-report-following-focused-inspections",
           "format": "news_article",
-          "public_timestamp": "2013-03-12T00:00:00.000+00:00",
+          "public_timestamp": "2013-04-10T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-coventry",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Updated action plan published following Stanbridge Earls case",
-          "description": "Ofsted publishes findings of the review of the inspection history of Stanbridge Earls School with an updated action plan.",
-          "link": "/government/news/updated-action-plan-published-following-stanbridge-earls-case",
-          "format": "news_article",
-          "public_timestamp": "2014-06-26T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/updated-action-plan-published-following-stanbridge-earls-case",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Review of alleged inspection irregularities at three Norfolk academies: DAC Beachcroft LLP",
-          "description": "Julian Gizzi's report on inspection irregularities at three Norfolk academies to Her Majesty’s Chief Inspector.",
-          "link": "/government/publications/review-of-alleged-inspection-irregularities-at-three-norfolk-academies-dac-beachcroft-llp",
-          "format": "publication",
-          "public_timestamp": "2015-01-27T10:30:05.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/review-of-alleged-inspection-irregularities-at-three-norfolk-academies-dac-beachcroft-llp",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Ofsted reports back to Norfolk County Council",
-          "description": "Following inspections of 28 Norfolk schools in March 2013, Ofsted has written to Norfolk County Council to advise it of the findings.",
-          "link": "/government/news/ofsted-reports-back-to-norfolk-county-council",
-          "format": "news_article",
-          "public_timestamp": "2013-05-14T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/ofsted-reports-back-to-norfolk-county-council",
+          "_id": "/government/news/coventry-city-council-report-following-focused-inspections",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -12471,6 +12423,54 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/investigation-into-allegations-of-inspection-irregularities-in-three-norfolk-schools",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Review of alleged inspection irregularities at three Norfolk academies: DAC Beachcroft LLP",
+          "description": "Julian Gizzi's report on inspection irregularities at three Norfolk academies to Her Majesty’s Chief Inspector.",
+          "link": "/government/publications/review-of-alleged-inspection-irregularities-at-three-norfolk-academies-dac-beachcroft-llp",
+          "format": "publication",
+          "public_timestamp": "2015-01-27T10:30:05.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/review-of-alleged-inspection-irregularities-at-three-norfolk-academies-dac-beachcroft-llp",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Ofsted to carry out focused school inspections in Norfolk",
+          "description": "Inspections have started in Norfolk to find out why the county has a disproportionate number of under-performing schools.",
+          "link": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-norfolk",
+          "format": "news_article",
+          "public_timestamp": "2013-03-12T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-norfolk",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Ofsted to carry out focused school inspections in Coventry",
+          "description": "Inspections to find out why the city has a disproportionate number of under-performing primary schools and whether the picture is improving.",
+          "link": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-coventry",
+          "format": "news_article",
+          "public_timestamp": "2013-03-12T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-coventry",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Updated action plan published following Stanbridge Earls case",
+          "description": "Ofsted publishes findings of the review of the inspection history of Stanbridge Earls School with an updated action plan.",
+          "link": "/government/news/updated-action-plan-published-following-stanbridge-earls-case",
+          "format": "news_article",
+          "public_timestamp": "2014-06-26T01:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/updated-action-plan-published-following-stanbridge-earls-case",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         }
@@ -12678,6 +12678,18 @@
           "document_type": "edition"
         },
         {
+          "title": "Special educational needs and disability data descriptors",
+          "description": "We are seeking views on how to produce consistent SEND data descriptors for the schools census and individualised learner record.",
+          "link": "/government/consultations/special-educational-needs-and-disability-data-descriptors",
+          "format": "consultation",
+          "public_timestamp": "2015-03-17T12:43:57.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/consultations/special-educational-needs-and-disability-data-descriptors",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
           "title": "Education strategy regarding HF autism, Asperger syndrome / ASCs",
           "description": "A request and disclosure for information relating to the Building Schools for the Future programme and the coalition government's strategy for the education of those with HF autism and Asperger syndrome.",
           "link": "/government/publications/education-strategy-regarding-hf-autism-asperger-syndrome-ascs",
@@ -12698,18 +12710,6 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/the-better-communication-research-programme-improving-provision-for-children-and-young-people-with-speech-language-and-communication-needs",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Special educational needs and disability data descriptors",
-          "description": "We are seeking views on how to produce consistent SEND data descriptors for the schools census and individualised learner record.",
-          "link": "/government/consultations/special-educational-needs-and-disability-data-descriptors",
-          "format": "consultation",
-          "public_timestamp": "2015-03-17T12:43:57.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/consultations/special-educational-needs-and-disability-data-descriptors",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -13194,42 +13194,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Inspecting residential holiday schemes for disabled children: guidance for inspectors",
-          "description": "Ofsted's guidance for inspectors and Annexes A and B as stand alone forms.",
-          "link": "/government/publications/inspecting-residential-holiday-schemes-for-disabled-children-guidance-for-inspectors",
-          "format": "publication",
-          "public_timestamp": "2016-06-10T09:30:05.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/inspecting-residential-holiday-schemes-for-disabled-children-guidance-for-inspectors",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Special educational needs trial extended",
-          "description": "Information on an extension to trials helping children and young adults with special educational needs.",
-          "link": "/government/news/special-educational-needs-trial-extended",
-          "format": "news_article",
-          "public_timestamp": "2012-11-20T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/special-educational-needs-trial-extended",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "The SEND pathfinder programme evaluation: readiness for reform",
-          "description": "An assessment of local areas’ readiness to implement the special educational needs and disability (SEND) reforms.",
-          "link": "/government/publications/the-send-pathfinder-programme-evaluation-pathfinder-champions",
-          "format": "publication",
-          "public_timestamp": "2014-03-31T09:30:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/the-send-pathfinder-programme-evaluation-pathfinder-champions",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Children’s Minister responds to 'Telegraph' claims that green paper sparked by rising number of SEN pupils",
           "description": "Children's Minister Sarah Teather writes to the 'Daily Telegraph' to refute claims that the forthcoming green paper has been sparked by recent statistics.",
           "link": "/government/news/childrens-minister-responds-to-telegraph-claims-that-green-paper-sparked-by-rising-number-of-sen-pupils",
@@ -13262,6 +13226,42 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/special-educational-needs-reforms-letter-from-edward-timpson-to-directors-of-childrens-services",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "The SEND pathfinder programme evaluation: readiness for reform",
+          "description": "An assessment of local areas’ readiness to implement the special educational needs and disability (SEND) reforms.",
+          "link": "/government/publications/the-send-pathfinder-programme-evaluation-pathfinder-champions",
+          "format": "publication",
+          "public_timestamp": "2014-03-31T09:30:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/the-send-pathfinder-programme-evaluation-pathfinder-champions",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Inspecting residential holiday schemes for disabled children: guidance for inspectors",
+          "description": "Ofsted's guidance for inspectors and Annexes A and B as stand alone forms.",
+          "link": "/government/publications/inspecting-residential-holiday-schemes-for-disabled-children-guidance-for-inspectors",
+          "format": "publication",
+          "public_timestamp": "2016-06-10T09:30:05.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/inspecting-residential-holiday-schemes-for-disabled-children-guidance-for-inspectors",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Special educational needs trial extended",
+          "description": "Information on an extension to trials helping children and young adults with special educational needs.",
+          "link": "/government/news/special-educational-needs-trial-extended",
+          "format": "news_article",
+          "public_timestamp": "2012-11-20T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/special-educational-needs-trial-extended",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -13373,18 +13373,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Emergency planning and response",
-          "description": "How schools and other educational settings should plan for and deal with emergencies, including severe weather and floods.",
-          "link": "/guidance/emergencies-and-severe-weather-schools-and-early-years-settings",
-          "format": "detailed_guidance",
-          "public_timestamp": "2015-12-23T14:59:43.000+00:00",
-          "index": "detailed",
-          "es_score": null,
-          "_id": "/guidance/emergencies-and-severe-weather-schools-and-early-years-settings",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Counselling in schools",
           "description": "Guidance for schools about setting up and improving counselling services for pupils.",
           "link": "/government/publications/counselling-in-schools",
@@ -13405,6 +13393,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/first-aid-in-schools",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Emergency planning and response",
+          "description": "How schools and other educational settings should plan for and deal with emergencies, including severe weather and floods.",
+          "link": "/guidance/emergencies-and-severe-weather-schools-and-early-years-settings",
+          "format": "detailed_guidance",
+          "public_timestamp": "2015-12-23T14:59:43.000+00:00",
+          "index": "detailed",
+          "es_score": null,
+          "_id": "/guidance/emergencies-and-severe-weather-schools-and-early-years-settings",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -13814,18 +13814,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Searching, screening and confiscation at school",
-          "description": "Guidance explaining the powers schools have to screen and search pupils, and to confiscate items they find.",
-          "link": "/government/publications/searching-screening-and-confiscation",
-          "format": "publication",
-          "public_timestamp": "2016-09-23T10:51:12.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/searching-screening-and-confiscation",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "School discipline and exclusions",
           "description": "Schools can punish (discipline) pupils or exclude them - find out what schools are allowed to do, like search pupils for knives or drugs",
           "link": "/school-discipline-exclusions",
@@ -13834,6 +13822,18 @@
           "index": "mainstream",
           "es_score": null,
           "_id": "/school-discipline-exclusions",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Searching, screening and confiscation at school",
+          "description": "Guidance explaining the powers schools have to screen and search pupils, and to confiscate items they find.",
+          "link": "/government/publications/searching-screening-and-confiscation",
+          "format": "publication",
+          "public_timestamp": "2016-09-23T10:51:12.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/searching-screening-and-confiscation",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -14626,18 +14626,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Equality Act 2010: advice for schools",
-          "description": "Guidance to help schools understand how the Equality Act affects them and how to fulfil their duties under the act.",
-          "link": "/government/publications/equality-act-2010-advice-for-schools",
-          "format": "publication",
-          "public_timestamp": "2014-06-17T12:10:24.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/equality-act-2010-advice-for-schools",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Become a school or college governor",
           "description": "Register your application to be a school or college governor - you can help decide how a local school or college is run",
           "link": "/become-school-college-governor",
@@ -14646,6 +14634,18 @@
           "index": "mainstream",
           "es_score": null,
           "_id": "/become-school-college-governor",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Equality Act 2010: advice for schools",
+          "description": "Guidance to help schools understand how the Equality Act affects them and how to fulfil their duties under the act.",
+          "link": "/government/publications/equality-act-2010-advice-for-schools",
+          "format": "publication",
+          "public_timestamp": "2014-06-17T12:10:24.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/equality-act-2010-advice-for-schools",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -14746,14 +14746,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Changes to the system of school organisation",
-          "description": "DfE proposals to amend the existing legislative and policy requirements for making significant changes to schools and academies.",
-          "link": "/government/consultations/changes-to-the-system-of-school-organisation",
+          "title": "Maintained school governing body constitution: regulation changes",
+          "description": "We are consulting on proposed amendments to the constitution of maintained school governing bodies.",
+          "link": "/government/consultations/maintained-school-governing-body-constitution-regulation-changes",
           "format": "consultation",
-          "public_timestamp": "2013-12-18T16:10:44.000+00:00",
+          "public_timestamp": "2014-05-15T09:37:52.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/consultations/changes-to-the-system-of-school-organisation",
+          "_id": "/government/consultations/maintained-school-governing-body-constitution-regulation-changes",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -14770,14 +14770,14 @@
           "document_type": "edition"
         },
         {
-          "title": "Maintained school governing body constitution: regulation changes",
-          "description": "We are consulting on proposed amendments to the constitution of maintained school governing bodies.",
-          "link": "/government/consultations/maintained-school-governing-body-constitution-regulation-changes",
+          "title": "Changes to the system of school organisation",
+          "description": "DfE proposals to amend the existing legislative and policy requirements for making significant changes to schools and academies.",
+          "link": "/government/consultations/changes-to-the-system-of-school-organisation",
           "format": "consultation",
-          "public_timestamp": "2014-05-15T09:37:52.000+01:00",
+          "public_timestamp": "2013-12-18T16:10:44.000+00:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/consultations/maintained-school-governing-body-constitution-regulation-changes",
+          "_id": "/government/consultations/changes-to-the-system-of-school-organisation",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -14902,7 +14902,7 @@
           "document_type": "edition"
         }
       ],
-      "total": 28,
+      "total": 29,
       "start": 0,
       "facets": {
       },
@@ -14949,18 +14949,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Funding for children and young people with SEND",
-          "description": "Call for evidence on distributing special educational needs and disability (SEND) funding more fairly in future.",
-          "link": "/government/consultations/funding-for-children-and-young-people-with-send",
-          "format": "consultation",
-          "public_timestamp": "2015-07-21T10:15:37.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/consultations/funding-for-children-and-young-people-with-send",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "£80 million to boost support for special educational needs",
           "description": "Minister Edward Timpson announces £80 million to extend opportunities to children with special educational needs and disabilities.",
           "link": "/government/news/80-million-to-boost-support-for-special-educational-needs",
@@ -14969,6 +14957,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/news/80-million-to-boost-support-for-special-educational-needs",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Funding for children and young people with SEND",
+          "description": "Call for evidence on distributing special educational needs and disability (SEND) funding more fairly in future.",
+          "link": "/government/consultations/funding-for-children-and-young-people-with-send",
+          "format": "consultation",
+          "public_timestamp": "2015-07-21T10:15:37.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/consultations/funding-for-children-and-young-people-with-send",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -15189,18 +15189,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Fairer school funding",
-          "description": "Schools Minister David Laws' written ministerial statement on additional funding for the least fairly funded local areas in England.",
-          "link": "/government/speeches/fairer-school-funding",
-          "format": "speech",
-          "public_timestamp": "2014-07-17T10:59:57.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/fairer-school-funding",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Written ministerial statement by Michael Gove on schools financial settlement - education spending",
           "description": "Education Secretary Michael Gove's written ministerial statement on the schools financial settlement with regard to education spending.",
           "link": "/government/speeches/written-ministerial-statement-by-michael-gove-on-schools-financial-settlement-education-spending--2",
@@ -15209,6 +15197,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/speeches/written-ministerial-statement-by-michael-gove-on-schools-financial-settlement-education-spending--2",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Fairer school funding",
+          "description": "Schools Minister David Laws' written ministerial statement on additional funding for the least fairly funded local areas in England.",
+          "link": "/government/speeches/fairer-school-funding",
+          "format": "speech",
+          "public_timestamp": "2014-07-17T10:59:57.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/fairer-school-funding",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -15712,18 +15712,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Revision of the 'SEND code of practice: 0 to 25 years'",
-          "description": "We're seeking views on specific amendments to the 'Special educational needs and disability (SEND) code of practice: 0 to 25 years'.\r\n",
-          "link": "/government/consultations/revision-of-the-send-code-of-practice-0-to-25-years",
-          "format": "consultation",
-          "public_timestamp": "2014-04-16T09:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/consultations/revision-of-the-send-code-of-practice-0-to-25-years",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "SEND: supporting local and national accountability",
           "description": "Plans to support long-term local and national accountability for special educational needs and disability (SEND).",
           "link": "/government/publications/send-supporting-local-and-national-accountability",
@@ -15744,6 +15732,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/residential-holiday-schemes-for-disabled-children",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Revision of the 'SEND code of practice: 0 to 25 years'",
+          "description": "We're seeking views on specific amendments to the 'Special educational needs and disability (SEND) code of practice: 0 to 25 years'.\r\n",
+          "link": "/government/consultations/revision-of-the-send-code-of-practice-0-to-25-years",
+          "format": "consultation",
+          "public_timestamp": "2014-04-16T09:00:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/consultations/revision-of-the-send-code-of-practice-0-to-25-years",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -16140,18 +16140,6 @@
     "/education/inspection-of-residential-provision-in-further-education-colleges": {
       "results": [
         {
-          "title": "Inspecting residential provision in further education colleges: guidance for providers",
-          "description": "Ofsted inspects to ensure colleges meet national minimum standards, and to evaluate how effective the college’s residential provision is.",
-          "link": "/guidance/inspecting-residential-provision-in-colleges-guidance-for-providers",
-          "format": "detailed_guidance",
-          "public_timestamp": "2014-12-04T10:08:00.000+00:00",
-          "index": "detailed",
-          "es_score": null,
-          "_id": "/guidance/inspecting-residential-provision-in-colleges-guidance-for-providers",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Inspecting residential provision in further education colleges: evidence form",
           "description": "National minimum standards checklist and evidence form for inspection of residential provision for learners under 18 at FE colleges.",
           "link": "/government/publications/national-minimum-standards-check-sheet-and-evidence-form",
@@ -16172,6 +16160,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/collections/ofsted-inspection-of-residential-provision-in-further-education-colleges",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Inspecting residential provision in further education colleges: guidance for providers",
+          "description": "Ofsted inspects to ensure colleges meet national minimum standards, and to evaluate how effective the college’s residential provision is.",
+          "link": "/guidance/inspecting-residential-provision-in-colleges-guidance-for-providers",
+          "format": "detailed_guidance",
+          "public_timestamp": "2014-12-04T10:08:00.000+00:00",
+          "index": "detailed",
+          "es_score": null,
+          "_id": "/guidance/inspecting-residential-provision-in-colleges-guidance-for-providers",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -16542,18 +16542,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Schools financial efficiency: benefits of workforce planning",
-          "description": "Information about the benefits of workforce planning in schools.",
-          "link": "/guidance/schools-financial-efficiency-benefits-of-workforce-planning",
-          "format": "detailed_guidance",
-          "public_timestamp": "2016-01-12T09:30:00.000+00:00",
-          "index": "detailed",
-          "es_score": null,
-          "_id": "/guidance/schools-financial-efficiency-benefits-of-workforce-planning",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Schools financial efficiency: collaborative procurement",
           "description": "Information for schools about collaborative procurement to achieve greater efficiency and value for money.",
           "link": "/guidance/schools-financial-efficiency-collaborative-procurement",
@@ -16562,6 +16550,18 @@
           "index": "detailed",
           "es_score": null,
           "_id": "/guidance/schools-financial-efficiency-collaborative-procurement",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Schools financial efficiency: benefits of workforce planning",
+          "description": "Information about the benefits of workforce planning in schools.",
+          "link": "/guidance/schools-financial-efficiency-benefits-of-workforce-planning",
+          "format": "detailed_guidance",
+          "public_timestamp": "2016-01-12T09:30:00.000+00:00",
+          "index": "detailed",
+          "es_score": null,
+          "_id": "/guidance/schools-financial-efficiency-benefits-of-workforce-planning",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
