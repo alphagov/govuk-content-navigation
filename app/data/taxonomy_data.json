@@ -1191,6 +1191,9 @@
     "government/publications/leadership-that-promotes-the-achievement-of-students-with-special-educational-needs-and-disabilities-send": [
       "/education/special-educational-needs-and-disability-send-support-in-education"
     ],
+    "government/publications/leading-governors-the-role-of-the-chair-of-governors": [
+      "/education/school-governance"
+    ],
     "government/publications/learner-voice-improving-teaching-learning-and-assessment": [
       "/education/running-a-further-or-higher-education-institution"
     ],
@@ -10582,30 +10585,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Suffolk Council's support for school improvement is ineffective",
-          "description": "Life chances for young Suffolk people are being damaged by council failure to challenge and support schools, according to an Ofsted letter.",
-          "link": "/government/news/suffolk-councils-support-for-school-improvement-is-ineffective",
-          "format": "news_article",
-          "public_timestamp": "2014-03-04T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/suffolk-councils-support-for-school-improvement-is-ineffective",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Wakefield council's school improvement arrangements 'ineffective'",
-          "description": "Ofsted has published the outcome letter of its inspection of Wakefield council’s support for school improvement and finds it ineffective.",
-          "link": "/government/news/wakefield-councils-school-improvement-arrangements-ineffective",
-          "format": "news_article",
-          "public_timestamp": "2014-01-06T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/wakefield-councils-school-improvement-arrangements-ineffective",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Inspection of Doncaster local authority school improvement support",
           "description": "Ofsted has published the outcome letter about its inspection of Doncaster Council's school improvement support.",
           "link": "/government/news/focused-inspection-of-doncaster-local-authority-school-improvement-support",
@@ -10614,6 +10593,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/news/focused-inspection-of-doncaster-local-authority-school-improvement-support",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Suffolk Council's support for school improvement is ineffective",
+          "description": "Life chances for young Suffolk people are being damaged by council failure to challenge and support schools, according to an Ofsted letter.",
+          "link": "/government/news/suffolk-councils-support-for-school-improvement-is-ineffective",
+          "format": "news_article",
+          "public_timestamp": "2014-03-04T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/suffolk-councils-support-for-school-improvement-is-ineffective",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -10638,6 +10629,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/news/middlesbroughs-support-for-school-improvement-is-ineffective",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Wakefield council's school improvement arrangements 'ineffective'",
+          "description": "Ofsted has published the outcome letter of its inspection of Wakefield council’s support for school improvement and finds it ineffective.",
+          "link": "/government/news/wakefield-councils-school-improvement-arrangements-ineffective",
+          "format": "news_article",
+          "public_timestamp": "2014-01-06T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/wakefield-councils-school-improvement-arrangements-ineffective",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -11313,18 +11316,6 @@
           "document_type": "edition"
         },
         {
-          "title": "HMCI launches Ofsted's Annual Report 2013/14",
-          "description": "Her Majesty's Chief Inspector Sir Michael Wilshaw's speech to launch Ofsted's 2013/14 annual reports for schools and FE and skills.",
-          "link": "/government/speeches/hmci-launches-ofsteds-annual-report-201314",
-          "format": "speech",
-          "public_timestamp": "2014-12-10T11:12:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/speeches/hmci-launches-ofsteds-annual-report-201314",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Sir Michael Wilshaw's speech to ASCL conference",
           "description": "Her Majesty's Chief Inspector sets out plans for more heads to get involved in school inspection.",
           "link": "/government/news/sir-michael-wilshaws-speech-to-ascl-conference",
@@ -11333,6 +11324,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/news/sir-michael-wilshaws-speech-to-ascl-conference",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "HMCI launches Ofsted's Annual Report 2013/14",
+          "description": "Her Majesty's Chief Inspector Sir Michael Wilshaw's speech to launch Ofsted's 2013/14 annual reports for schools and FE and skills.",
+          "link": "/government/speeches/hmci-launches-ofsteds-annual-report-201314",
+          "format": "speech",
+          "public_timestamp": "2014-12-10T11:12:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/speeches/hmci-launches-ofsteds-annual-report-201314",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -12031,18 +12034,6 @@
           "document_type": "edition"
         },
         {
-          "title": "Schools should ensure that all pupils achieve their best",
-          "description": "Ofsted produces 3 reports to help schools improve to be at least ‘good’ and ensure that all pupils achieve to the best of their ability.",
-          "link": "/government/news/schools-should-ensure-that-all-pupils-achieve-their-best",
-          "format": "news_article",
-          "public_timestamp": "2012-09-20T01:00:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/schools-should-ensure-that-all-pupils-achieve-their-best",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
           "title": "Concerns over North East Lincolnshire school improvement support",
           "description": "Schools in North East Lincolnshire need more effective support from their local authority, Ofsted said today.",
           "link": "/government/news/concerns-over-north-east-lincolnshire-school-improvement-support",
@@ -12067,26 +12058,38 @@
           "document_type": "edition"
         },
         {
-          "title": "Advice note on academies and maintained schools in Birmingham",
-          "description": "Note provided on academies and maintained schools in Birmingham to the Secretary of State for Education, Rt Hon Michael Gove MP.",
-          "link": "/government/news/advice-note-on-academies-and-maintained-schools-in-birmingham",
+          "title": "Ofsted to carry out focused school inspections in Portsmouth",
+          "description": "Teams of Ofsted inspectors have today begun a week of co-ordinated inspections in Portsmouth.",
+          "link": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-portsmouth",
           "format": "news_article",
-          "public_timestamp": "2014-06-09T01:00:00.000+01:00",
+          "public_timestamp": "2013-02-26T00:00:00.000+00:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/advice-note-on-academies-and-maintained-schools-in-birmingham",
+          "_id": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-portsmouth",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
         {
-          "title": "32% of schools are less than good in Bristol",
-          "description": "Ofsted inspectors begin a week of inspections in Bristol to find out why the city has so many under-performing schools.",
-          "link": "/government/news/32-of-schools-are-less-than-good-in-bristol",
+          "title": "Schools should ensure that all pupils achieve their best",
+          "description": "Ofsted produces 3 reports to help schools improve to be at least ‘good’ and ensure that all pupils achieve to the best of their ability.",
+          "link": "/government/news/schools-should-ensure-that-all-pupils-achieve-their-best",
           "format": "news_article",
-          "public_timestamp": "2013-06-04T01:00:00.000+01:00",
+          "public_timestamp": "2012-09-20T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/32-of-schools-are-less-than-good-in-bristol",
+          "_id": "/government/news/schools-should-ensure-that-all-pupils-achieve-their-best",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Ofsted to inspect Thurrock schools over performance concerns",
+          "description": "Inspectors are going in to support school improvement in Thurrock, South Essex, Ofsted announced today.",
+          "link": "/government/news/ofsted-to-inspect-thurrock-schools-over-performance-concerns",
+          "format": "news_article",
+          "public_timestamp": "2014-02-25T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/ofsted-to-inspect-thurrock-schools-over-performance-concerns",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -12127,26 +12130,26 @@
           "document_type": "edition"
         },
         {
-          "title": "Ofsted to carry out focused school inspections in Portsmouth",
-          "description": "Teams of Ofsted inspectors have today begun a week of co-ordinated inspections in Portsmouth.",
-          "link": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-portsmouth",
+          "title": "Advice note on academies and maintained schools in Birmingham",
+          "description": "Note provided on academies and maintained schools in Birmingham to the Secretary of State for Education, Rt Hon Michael Gove MP.",
+          "link": "/government/news/advice-note-on-academies-and-maintained-schools-in-birmingham",
           "format": "news_article",
-          "public_timestamp": "2013-02-26T00:00:00.000+00:00",
+          "public_timestamp": "2014-06-09T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/ofsted-to-carry-out-focused-school-inspections-in-portsmouth",
+          "_id": "/government/news/advice-note-on-academies-and-maintained-schools-in-birmingham",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
         {
-          "title": "Ofsted to inspect Thurrock schools over performance concerns",
-          "description": "Inspectors are going in to support school improvement in Thurrock, South Essex, Ofsted announced today.",
-          "link": "/government/news/ofsted-to-inspect-thurrock-schools-over-performance-concerns",
+          "title": "32% of schools are less than good in Bristol",
+          "description": "Ofsted inspectors begin a week of inspections in Bristol to find out why the city has so many under-performing schools.",
+          "link": "/government/news/32-of-schools-are-less-than-good-in-bristol",
           "format": "news_article",
-          "public_timestamp": "2014-02-25T00:00:00.000+00:00",
+          "public_timestamp": "2013-06-04T01:00:00.000+01:00",
           "index": "government",
           "es_score": null,
-          "_id": "/government/news/ofsted-to-inspect-thurrock-schools-over-performance-concerns",
+          "_id": "/government/news/32-of-schools-are-less-than-good-in-bristol",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -13218,6 +13221,30 @@
           "document_type": "edition"
         },
         {
+          "title": "Special educational needs trial extended",
+          "description": "Information on an extension to trials helping children and young adults with special educational needs.",
+          "link": "/government/news/special-educational-needs-trial-extended",
+          "format": "news_article",
+          "public_timestamp": "2012-11-20T00:00:00.000+00:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/news/special-educational-needs-trial-extended",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "The SEND pathfinder programme evaluation: readiness for reform",
+          "description": "An assessment of local areas’ readiness to implement the special educational needs and disability (SEND) reforms.",
+          "link": "/government/publications/the-send-pathfinder-programme-evaluation-pathfinder-champions",
+          "format": "publication",
+          "public_timestamp": "2014-03-31T09:30:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/the-send-pathfinder-programme-evaluation-pathfinder-champions",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
           "title": "Children’s Minister responds to 'Telegraph' claims that green paper sparked by rising number of SEN pupils",
           "description": "Children's Minister Sarah Teather writes to the 'Daily Telegraph' to refute claims that the forthcoming green paper has been sparked by recent statistics.",
           "link": "/government/news/childrens-minister-responds-to-telegraph-claims-that-green-paper-sparked-by-rising-number-of-sen-pupils",
@@ -13250,30 +13277,6 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/special-educational-needs-reforms-letter-from-edward-timpson-to-directors-of-childrens-services",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "The SEND pathfinder programme evaluation: readiness for reform",
-          "description": "An assessment of local areas’ readiness to implement the special educational needs and disability (SEND) reforms.",
-          "link": "/government/publications/the-send-pathfinder-programme-evaluation-pathfinder-champions",
-          "format": "publication",
-          "public_timestamp": "2014-03-31T09:30:00.000+01:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/publications/the-send-pathfinder-programme-evaluation-pathfinder-champions",
-          "elasticsearch_type": "edition",
-          "document_type": "edition"
-        },
-        {
-          "title": "Special educational needs trial extended",
-          "description": "Information on an extension to trials helping children and young adults with special educational needs.",
-          "link": "/government/news/special-educational-needs-trial-extended",
-          "format": "news_article",
-          "public_timestamp": "2012-11-20T00:00:00.000+00:00",
-          "index": "government",
-          "es_score": null,
-          "_id": "/government/news/special-educational-needs-trial-extended",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -14706,6 +14709,18 @@
           "index": "government",
           "es_score": null,
           "_id": "/government/publications/school-governance-federation-regulations-2007",
+          "elasticsearch_type": "edition",
+          "document_type": "edition"
+        },
+        {
+          "title": "Leading governors: The role of the chair of governors",
+          "description": "A resource to help promote, develop and sustain effective governance in your school.",
+          "link": "/government/publications/leading-governors-the-role-of-the-chair-of-governors",
+          "format": "publication",
+          "public_timestamp": "2014-06-25T14:59:00.000+01:00",
+          "index": "government",
+          "es_score": null,
+          "_id": "/government/publications/leading-governors-the-role-of-the-chair-of-governors",
           "elasticsearch_type": "edition",
           "document_type": "edition"
         },
@@ -31102,6 +31117,36 @@
     "government/publications/leadership-that-promotes-the-achievement-of-students-with-special-educational-needs-and-disabilities-send": {
       "document_type": "research",
       "public_updated_at": "2011-12-01T00:00:00.000+00:00",
+      "organisations": [
+        {
+          "analytics_identifier": "EA541",
+          "api_path": "/api/content/government/organisations/national-college-for-teaching-and-leadership",
+          "base_path": "/government/organisations/national-college-for-teaching-and-leadership",
+          "content_id": "e1cbab66-b0d3-4186-917c-afd4f3fb6967",
+          "description": null,
+          "document_type": "placeholder_organisation",
+          "locale": "en",
+          "public_updated_at": "2015-05-20T08:20:51Z",
+          "schema_name": "placeholder_organisation",
+          "title": "National College for Teaching and Leadership",
+          "withdrawn": false,
+          "details": {
+            "brand": "department-for-education",
+            "logo": {
+              "formatted_title": "National College for <br/>Teaching &amp; Leadership",
+              "crest": "single-identity"
+            }
+          },
+          "links": {
+          },
+          "api_url": "https://www.gov.uk/api/content/government/organisations/national-college-for-teaching-and-leadership",
+          "web_url": "https://www.gov.uk/government/organisations/national-college-for-teaching-and-leadership"
+        }
+      ]
+    },
+    "government/publications/leading-governors-the-role-of-the-chair-of-governors": {
+      "document_type": "guidance",
+      "public_updated_at": "2014-06-25T13:59:00.000+00:00",
       "organisations": [
         {
           "analytics_identifier": "EA541",
