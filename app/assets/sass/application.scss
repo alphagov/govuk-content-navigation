@@ -394,7 +394,7 @@
   }
 
   h2 {
-    @include bold-19($line-height: 30px);
+    @include bold-24();
 
     margin-top: $gutter * 1.5;
     margin-bottom: $gutter;
