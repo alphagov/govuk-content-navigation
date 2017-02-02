@@ -23,7 +23,6 @@ class ContentItem {
       case 'manual':
       case 'manual_section':
       case 'map':
-      case 'notice':
       case 'place':
       case 'programme':
       case 'promotional':
