@@ -21,7 +21,12 @@ class TaxonomyData
 
     get_files.each do |base_path|
       all_documents_in_prototype << base_path
-      document = ContentItem.fetch(base_path)
+      begin
+        document = ContentItem.fetch(base_path)
+      rescue GdsApi::HTTPGone
+        puts "#{base_path} is GONE. Skipping."
+        next
+      end
       document_metadata[base_path] = document.metadata
       taxons = document.taxons
       taxons_for_content[base_path] = []

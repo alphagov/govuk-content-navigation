@@ -53,15 +53,16 @@ GOV.UK.
 Before you import new content, delete the old content from `app/content`.
 Furthermore, check if the taxonomy has changed. If there are new taxons, of base
 paths have changed, fetch the new taxonomy from `content-tagger` and replace
-`/lib/ruby/data.taxons.csv` with it.
+`/lib/ruby/data/taxons.csv` with it.
 
 There are several steps to importing new content into the prototype:
 
 0. Tag all the content to taxons using [content
    tagger](https://github.com/alphagov/content-tagger).
 0. Create a list of content base paths in CSV format, with a single column
-   heading `Link`. Save this as `content.csv` in the `lib/python/data` folder.
-   The `taxonomy:export_base_paths` rake task in `content-tagger` can be used
+   heading `Link`. This can be done with the `taxonomy:export` rake task in
+   `content-tagger` Save this as `content.csv` in the `lib/python/data` folder.
+   The `taxonomy:export_tagged_content` rake task in `content-tagger` can be used
    to derive a list of paths from an entire taxonomy.
 0. Run `lib/data_import.sh <environment>`, where `<environment>` is either
    staging or production. This will determine where taxonomy data is retrieved
@@ -118,7 +119,7 @@ generic information.
 
 Run `npm start`
 
-Open the app at http://localhost:3000/
+Open the app at [http://localhost:3000/](http://localhost:3000/)
 
 ## Licence
 
