@@ -19,7 +19,7 @@
 
   &__description {
     @include core-19;
-    margin-bottom: $gutter-one-quarter;
+    margin-bottom: $gutter;
 
     @include media(tablet) {
       margin-bottom: $gutter-half;
