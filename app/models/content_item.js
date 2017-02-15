@@ -1,5 +1,7 @@
 "use strict";
 
+var GuidanceContent = require('./guidance_content');
+
 class ContentItem {
   constructor(title, basePath, documentType, publicTimestamp, description) {
     this.title = title;
@@ -10,35 +12,14 @@ class ContentItem {
   }
 
   getHeading () {
-    switch (this.documentType) {
-      case 'answer':
-      case 'contact':
-      case 'detailed_guidance':
-      case 'detailed_guide':
-      case 'form':
-      case 'guidance':
-      case 'guide':
-      case 'licence':
-      case 'local_transaction':
-      case 'manual':
-      case 'manual_section':
-      case 'map':
-      case 'place':
-      case 'programme':
-      case 'promotional':
-      case 'regulation':
-      case 'simple_smart_answer':
-      case 'smartanswer':
-      case 'statutory_guidance':
-      case 'transaction':
-      case 'travel-advice':
-        return {
-          display_name: 'Guidance',
-          id: 'guidance'
-        };
-      default:
-        return null;
+    if (GuidanceContent.isGuidanceContent(this.documentType)) {
+      return {
+        display_name: 'Guidance',
+        id: 'guidance'
+      };
     }
+
+    return null;
   }
 }
 
