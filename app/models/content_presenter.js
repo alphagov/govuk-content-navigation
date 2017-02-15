@@ -3,6 +3,7 @@ var Promise = require('bluebird');
 var readFile = Promise.promisify(fs.readFile);
 var glob = Promise.promisify(require('glob'));
 
+var RelatedContent = require('./related_content.js');
 var BreadcrumbMaker = require('../../lib/js/breadcrumb_maker.js');
 var TaxonomyData = require('./taxonomy_data.js');
 var Taxon = require('./taxon.js');
@@ -43,7 +44,8 @@ class ContentPresenter {
         const presented = Promise.all([
           that.getBreadcrumbPromise(),
           that.getTaxonsPromise(),
-        ]).spread(function (breadcrumb, taxons) {
+          that.getRelatedContentPromise(),
+        ]).spread(function (breadcrumb, taxons, relatedContent) {
           return {
             title: title,
             content: content,
@@ -51,10 +53,18 @@ class ContentPresenter {
             taxons: taxons,
             isWhitehall: isWhitehall,
             isHtmlManual: isHtmlManual,
+            relatedContent: relatedContent,
           }
         })
 
         return presented;
+      });
+  }
+
+  getRelatedContentPromise () {
+    return RelatedContent.get("/" + this.basePath).
+      then(function (relatedContent) {
+        return relatedContent;
       });
   }
 

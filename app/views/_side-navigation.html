@@ -1,16 +1,26 @@
 <div class="related-container">
   <aside class="related" id="related">
-    <header>
-      <h2>More about</h2>
-    </header>
+    {% for taxon in presentedContent.relatedContent %}
+      <div>
+        <header>
+           <h2>More about {{ taxon.title }}</h2>
+           <p>{{ taxon.description }}</p>
+        </header>
 
-    {% for taxon in presentedContent.taxons %}
-    <nav role="navigation" aria-labelledby="parent-other">
-      <h3><a href="{{ taxon.basePath }}">{{ taxon.title }}</a></h3>
-       {% if taxon.description %}
-       <p>{{ taxon.description }}</p>
-       {% endif %}
-    </nav>
+        {% if taxon.results.length > 0 %}
+          <nav role="navigation" aria-labelledby="parent-other">
+            <ul>
+              {% for contentItem in taxon.results %}
+                <li>
+                  <a href="{{ contentItem.link }}">{{ contentItem.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+
+            <p><a class="reveal" href="{{ taxon.basePath }}?viewAll">See everything in {{ taxon.title }}</a></p>
+          </nav>
+        {% endif %}
+      </div>
     {% endfor %}
   </aside>
 </div>
