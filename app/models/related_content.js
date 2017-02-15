@@ -1,11 +1,11 @@
 var fs = require('fs');
-var process = require('process');
 var https = require('https');
 var querystring = require('querystring');
 var Promise = require('bluebird');
 var TaxonomyData = require('./taxonomy_data.js');
 var readFile = Promise.promisify(fs.readFile);
 var Taxon = require('./taxon.js');
+var GuidanceContent = require('./guidance_content');
 
 class RelatedContent {
   static esRelatedLinks (contentBasePath, parentTaxon) {
@@ -14,6 +14,7 @@ class RelatedContent {
       start: 0,
       count: 5,
       filter_taxons: [parentTaxon],
+      filter_content_store_document_type: GuidanceContent.guidanceDocumentTypes(),
       fields: 'title,description,link'
     }
     var queryString = querystring.stringify(queryParams);
