@@ -73,6 +73,23 @@
         top: 50%;
         margin-top: -6px;
       }
+
+      @include media(tablet) {
+        margin-left: 0.6em;
+        padding-left: 0.9em;
+
+        background-image: file-url("separator.png");
+
+        @include device-pixel-ratio() {
+          background-image: file-url("separator-2x.png");
+          background-size: 6px 11px;
+        }
+
+        &:before {
+          content: '';
+          display: none;
+        }
+      }
     }
   }
 
