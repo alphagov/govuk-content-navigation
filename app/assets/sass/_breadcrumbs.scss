@@ -19,6 +19,8 @@
   }
 
   li {
+    display: none;
+
     @include core-16;
     float: left;
 
@@ -38,12 +40,40 @@
     margin-bottom: 0.4em;
     padding-left: 0.9em;
 
+    @include media(tablet) {
+      display: block;
+    }
+
     &:first-child {
       background-image: none;
       margin-left: 0;
       padding-left: 0;
     }
 
+    &:nth-last-child(2) {
+      position: relative;
+      display: block;
+      background-image: none;
+      margin-left: 0;
+      padding-left: 14px;
+
+      // Back arrow - left pointing black arrow
+      &:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+
+        border-top: 5px solid transparent;
+        border-right: 6px solid $text-colour;
+        border-bottom: 5px solid transparent;
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -6px;
+      }
+    }
   }
 
   a {
