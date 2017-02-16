@@ -1,7 +1,7 @@
-{% if whitehall %}
+{% if presentedContent.isWhitehall %}
 <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/frontend/application-704a08450e1cb44cc56c3de0a7ff428210953c963a37eadd223c48fc04230ca9.css">
 <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/government/assets/frontend/base-c6b8b520d24a2faa79a3ce3212c74cebdc70f6bcabde4fa303fc419f488a972d.css">
-{% elif htmlManual %}
+{% elif presentedContent.isHtmlManual %}
 <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/static/header-footer-only-3c36a9943463b65abca953dc81d765effe465b992832a915cbb9b430c6617dba.css">
 <link rel="stylesheet" media="screen" href="https://assets.publishing.service.gov.uk/manuals-frontend/application-b95863706b9b7e03d79fb89774b5b8dc.css">
 {% else %}
