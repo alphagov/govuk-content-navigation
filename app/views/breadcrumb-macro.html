@@ -4,7 +4,7 @@
     <div class="breadcrumbs">
       <ol>
         {% for page in pages %}
-          <li><a href="{{ page.basePath }}/"> {{ page.title }}</a></li>
+          <li{% if loop.last %} class="parent"{% endif %}><a href="{{ page.basePath }}/"> {{ page.title }}</a></li>
         {% endfor %}
         <li class="current"><a href="#content">{{ title }}</a></li>
       </ol>

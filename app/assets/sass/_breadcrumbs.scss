@@ -50,7 +50,7 @@
       padding-left: 0;
     }
 
-    &:nth-last-child(2) {
+    &.parent {
       position: relative;
       display: block;
       background-image: none;
@@ -83,6 +83,12 @@
         @include device-pixel-ratio() {
           background-image: file-url("separator-2x.png");
           background-size: 6px 11px;
+        }
+
+        &:first-child {
+          background-image: none;
+          margin-left: 0;
+          padding-left: 0;
         }
 
         &:before {
