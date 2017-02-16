@@ -109,12 +109,7 @@
 
     &__description {
       margin-bottom: 0;
-      margin-right: $gutter-half;
-
-      @include media(tablet) {
-        margin-bottom: 0;
-        margin-right: $gutter;
-      }
+      margin-right: $gutter;
     }
 
     &__icon {

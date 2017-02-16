@@ -255,6 +255,7 @@
   .headings-block {
     .heading-with-extra {
       margin-top: $gutter-half;
+      padding-top: 0;
 
       @include media(tablet) {
         margin-top: $gutter * 1.5;
@@ -327,7 +328,6 @@
 
 #whitehall-wrapper {
   .whitehall-content {
-    float: left;
     @include grid-column(2/3);
   }
 }
