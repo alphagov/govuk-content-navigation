@@ -1,0 +1,106 @@
+@import "colours";
+@import "typography";
+@import "shims";
+@import "url-helpers";
+
+// Breadcrumbs usage:
+//
+// .breadcrumbs {
+//    @include breadcrumbs;
+// }
+
+@mixin breadcrumbs {
+
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+
+  ol {
+    @extend %contain-floats;
+  }
+
+  li {
+    display: none;
+
+    @include core-16;
+    float: left;
+
+    background-image: file-url("separator.png");
+
+    @include device-pixel-ratio() {
+      background-image: file-url("separator-2x.png");
+      background-size: 6px 11px;
+    }
+
+    background-position: 0% 50%;
+    background-repeat: no-repeat;
+
+    list-style: none;
+
+    margin-left: 0.6em;
+    margin-bottom: 0.4em;
+    padding-left: 0.9em;
+
+    @include media(tablet) {
+      display: block;
+    }
+
+    &:first-child {
+      background-image: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    &.parent {
+      position: relative;
+      display: block;
+      background-image: none;
+      margin-left: 0;
+      padding-left: 14px;
+
+      // Back arrow - left pointing black arrow
+      &:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+
+        border-top: 5px solid transparent;
+        border-right: 6px solid $text-colour;
+        border-bottom: 5px solid transparent;
+
+        position: absolute;
+        left: 0;
+        top: 50%;
+        margin-top: -6px;
+      }
+
+      @include media(tablet) {
+        margin-left: 0.6em;
+        padding-left: 0.9em;
+
+        background-image: file-url("separator.png");
+
+        @include device-pixel-ratio() {
+          background-image: file-url("separator-2x.png");
+          background-size: 6px 11px;
+        }
+
+        &:first-child {
+          background-image: none;
+          margin-left: 0;
+          padding-left: 0;
+        }
+
+        &:before {
+          content: '';
+          display: none;
+        }
+      }
+    }
+  }
+
+  a {
+    color: $text-colour;
+  }
+
+}
