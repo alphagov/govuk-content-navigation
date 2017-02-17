@@ -416,6 +416,7 @@
 
   .govuk-title {
     .context {
+
       a {
         color: $text-colour;
         text-decoration: underline;
@@ -429,6 +430,7 @@
           border-bottom: 10px solid transparent;
           border-right: 10px solid $black;
           margin-right: 10px;
+
         }
       }
     }
@@ -473,9 +475,19 @@
         padding-bottom: $gutter-one-third;
 
         li {
+            margin-bottom: $gutter;  
+
           h3 {
             padding-bottom: 0;
           }
+        }
+      }
+
+      h2 {
+        margin-bottom: $gutter-half;
+
+        + p {
+          margin-bottom: $gutter;
         }
       }
     }
@@ -496,7 +508,7 @@
     .topic-content {
       ul {
         li {
-          margin-bottom: $gutter-one-third;
+          margin-bottom: $gutter;
 
           h3 {
             padding-bottom: 0;
