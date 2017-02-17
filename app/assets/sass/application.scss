@@ -418,7 +418,7 @@ a {
 
   .govuk-title {
     .context {
-
+      
       a {
         color: $text-colour;
         text-decoration: underline;
@@ -468,6 +468,7 @@ a {
   }
 
   .parent-topic-contents {
+    
     @include grid-column(2/3);
 
     .topic-content {
@@ -524,32 +525,19 @@ a {
   .top-task-list {
     
     @extend %contain-floats;
-    padding: $gutter/1.5;
-    background-color: $grey-3;
-    // padding-bottom: $gutter;
-    // border-top: 10px solid $govuk-blue;
-    // border-bottom: 10px solid $govuk-blue;
-
-    @include media(mobile) {
-      margin-left: -$gutter;
-      margin-right: -$gutter;
-      padding: $gutter/1.5 $gutter;
-    }
 
     h2 {
       margin: 0 0 $gutter-one-third 0;
-      // padding: 0 $gutter-half $gutter-one-third $gutter-half;
-      // border-bottom: 1px solid $border-colour;
     }
 
     ul {
 
       li {
         @include grid-column(1/2);
-        padding: $gutter-half 0 0 0;
+        padding: $gutter-one-third 0 0 0;
 
         a {
-          // text-decoration: none;
+          font-size: 16px;
           &:hover {
             color: #d5e8f3;
             text-decoration: underline;
@@ -559,13 +547,21 @@ a {
       }
     }
 
-    &.blue {
+    &.lines {
+        padding: $gutter/1.5 0;
+        border-top: 10px solid $govuk-blue;
+        border-bottom: 10px solid $govuk-blue;
+    }
+
+    &.block {
+      padding: $gutter/1.5;
       background-color: $govuk-blue;
       color: white;
 
-      h2 {
-        // border-bottom: 1px solid white;
-        // border-bottom: 1px solid rgba(255,255,255, 0.25);
+      @include media(mobile) {
+        margin-left: -$gutter;
+        margin-right: -$gutter;
+        padding: $gutter/1.5 $gutter;
       }
 
       a {
