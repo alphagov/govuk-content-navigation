@@ -5,11 +5,15 @@ var DocumentType = require('./models/document_type.js');
 var TaxonPresenter = require('./models/taxon_presenter.js');
 var TaxonomyData = require('./models/taxonomy_data.js');
 var ContentPresenter = require('./models/content_presenter.js');
+var GuidanceContent = require('./models/guidance_content.js');
 
   router.get('/', function (req, res) {
     TaxonomyData.get().
       then(function (taxonomyData) {
-        var documentTypeExamples = DocumentType.getExamples(taxonomyData.document_metadata);
+        var documentTypeExamples = DocumentType.getExamples(taxonomyData.document_metadata)
+          .filter(function(documentTypeExample) {
+            return GuidanceContent.isGuidanceContent(documentTypeExample.documentType);
+          });
         res.render('index', {
           documentTypeExamples: documentTypeExamples
         });
