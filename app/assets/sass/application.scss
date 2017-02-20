@@ -215,7 +215,7 @@ a {
 #whitehall-wrapper {
    .breadcrumbs {
       @include breadcrumbs;
-      
+
       .current {
         a {
           color: $secondary-text-colour;
@@ -418,7 +418,6 @@ a {
 
   .govuk-title {
     .context {
-      
       a {
         color: $text-colour;
         text-decoration: underline;
@@ -468,7 +467,6 @@ a {
   }
 
   .parent-topic-contents {
-    
     @include grid-column(2/3);
 
     .topic-content {
@@ -478,7 +476,7 @@ a {
         padding-bottom: $gutter-one-third;
 
         li {
-            margin-bottom: $gutter;  
+            margin-bottom: $gutter;
 
           h3 {
             padding-bottom: 0;
@@ -522,52 +520,59 @@ a {
     }
   }
 
-  .top-task-list {
-    
-    @extend %contain-floats;
+  .top-task-container {
 
-    h2 {
-      margin: 0 0 $gutter-one-third 0;
-    }
+    .top-task-list {
 
-    ul {
+      h2 {
+        margin: 0 0 $gutter-one-third 0;
+      }
 
-      li {
-        @include grid-column(1/2);
-        padding: $gutter-one-third 0 0 0;
+      ul {
+        @extend %contain-floats;
 
-        a {
-          font-size: 16px;
+        li {
+          @include grid-column(1/2);
+          padding: $gutter-one-third 0 0 0;
+
+          a {
+            @include core-16;
+          }
         }
-        
       }
     }
 
     &.lines {
-        padding: $gutter/1.5 0;
+      .top-task-list {
+        padding: $gutter-two-thirds 0;
         border-top: 10px solid $govuk-blue;
         border-bottom: 10px solid $govuk-blue;
+      }
     }
 
     &.block {
-      padding: $gutter/1.5;
-      background-color: $govuk-blue;
-      color: white;
-
       @include media(mobile) {
-        margin-left: -$gutter;
-        margin-right: -$gutter;
-        padding: $gutter/1.5 $gutter;
+        margin-left: -$gutter-half;
+        margin-right: -$gutter-half;
       }
 
-      a {
+      .top-task-list {
+        padding: $gutter-two-thirds;
+        background-color: $govuk-blue;
         color: white;
 
-        &:hover {
-          color: #d5e8f3;
-          text-decoration: underline;
+        @include media(mobile) {
+          padding: $gutter-two-thirds $gutter-half;
         }
-        
+
+        a {
+          color: white;
+
+          &:hover {
+            color: #d5e8f3;
+            text-decoration: underline;
+          }
+        }
       }
     }
   }
