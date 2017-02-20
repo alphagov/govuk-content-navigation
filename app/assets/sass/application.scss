@@ -418,6 +418,7 @@ a {
 
   .govuk-title {
     .context {
+      
       a {
         color: $text-colour;
         text-decoration: underline;
@@ -467,6 +468,7 @@ a {
   }
 
   .parent-topic-contents {
+    
     @include grid-column(2/3);
 
     .topic-content {
