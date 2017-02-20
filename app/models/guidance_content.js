@@ -7,6 +7,7 @@ class GuidanceContent {
       'contact',
       'detailed_guidance',
       'detailed_guide',
+      'document_collection',
       'form',
       'guidance',
       'guide',
