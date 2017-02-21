@@ -3,12 +3,19 @@
 var GuidanceContent = require('./guidance_content');
 
 class ContentItem {
-  constructor(title, basePath, documentType, publicTimestamp, description) {
+  constructor(title, basePath, documentType, publicTimestamp, description, documentCollections) {
     this.title = title;
     this.basePath = basePath;
     this.documentType = documentType;
     this.publicTimestamp = publicTimestamp;
     this.description = description;
+    this.documentCollections = documentCollections;
+  }
+
+  belongsToDocumentCollection () {
+    return (
+      this.documentCollections != undefined && this.documentCollections.length > 0
+    )
   }
 
   getHeading () {

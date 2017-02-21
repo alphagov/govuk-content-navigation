@@ -107,9 +107,13 @@ class Taxon {
         contentItem.link,
         documentType,
         new Date(publicTimestamp),
-        contentItem.description
+        contentItem.description,
+        contentItem.document_collections
       );
-      taxon.addContent(contentItemModel);
+
+      if (contentItemModel.belongsToDocumentCollection() == false) {
+        taxon.addContent(contentItemModel);
+      }
     });
 
     childTaxons.forEach(function (childTaxonBasePath) {
