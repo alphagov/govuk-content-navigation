@@ -210,7 +210,7 @@
 #whitehall-wrapper {
    .breadcrumbs {
       @include breadcrumbs;
-      
+
       .current {
         a {
           color: $secondary-text-colour;
@@ -334,37 +334,47 @@
 }
 
 .related {
-   border-top: 10px solid #005ea5;
-   padding-top: 5px;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
 
-   div {
-      padding-bottom: 9px;
-   }
+  div {
+    padding-bottom: 9px;
+  }
 
-   h2 {
-      @include bold-24;
-   }
-   p {
-      @include core-19;
-   }
+  h2 {
+    @include bold-19;
+    a, a:visited {
+      color: $text-colour;
+    }
+  }
+  p {
+    @include core-16;
+  }
 
-   h3 {
-     @include bold-19
-   }
+  h3 {
+    @include bold-19
+  }
 
-   li {
-      margin-left: 0;
-      a {
-         text-decoration: none;
-         &:hover, &:focus {
-            text-decoration: underline;
-         }
+  ul {
+    margin-bottom: $gutter-half;
+  }
+
+  li {
+    margin-left: 0;
+    margin-bottom: $gutter-one-third;
+    list-style: none;
+    a {
+      text-decoration: none;
+      &:hover, &:focus {
+        text-decoration: underline;
       }
-   }
-   .reveal {
-      display: block;
-      text-decoration: underline!important;
-   }
+    }
+  }
+  .reveal {
+    display: block;
+    font-weight: bold;
+    text-decoration: underline!important;
+  }
 }
 
 /* taxon layout */
@@ -467,7 +477,7 @@
         padding-bottom: $gutter-one-third;
 
         li {
-            margin-bottom: $gutter;  
+            margin-bottom: $gutter;
 
           h3 {
             padding-bottom: 0;
