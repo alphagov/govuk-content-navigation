@@ -9,7 +9,7 @@ class TaxonDocumentFetcher
     response = GdsApi.with_retries(maximum_number_of_attempts: 2) do
       DataImport.rummager.search(
         filter_taxons: taxon_content_id,
-        fields: %w(title description link format public_timestamp),
+        fields: %w(title description link format public_timestamp document_collections),
         count: 1000
       ).to_h
     end
