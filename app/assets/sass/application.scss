@@ -469,6 +469,8 @@
     }
 
     a {
+      color: $govuk-blue;
+      @include bold-19;
       text-decoration: none;
       //padding-left: 28px;
       height: 16px;
