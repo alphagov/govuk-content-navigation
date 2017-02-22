@@ -433,6 +433,8 @@
   }
 
   .child-topics-list {
+
+
     ul {
       list-style-type: none;
       @extend %grid-row;
@@ -454,6 +456,11 @@
       li:nth-child(3n+1) {
         clear: left;
       }
+    }
+
+    .subscriptions li {
+      min-height: 0 ;
+      padding-bottom: 0;
     }
   }
 
