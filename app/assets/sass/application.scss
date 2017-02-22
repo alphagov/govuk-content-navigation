@@ -685,6 +685,10 @@
       background-repeat: no-repeat;
       margin-left: $gutter-half;
     }
+
+    a:hover {
+     $link-hover-colour;
+    }
     .feed {
       background-image: url("/public/images/feed-icon-black.png");
       background-position: 0 20%;
