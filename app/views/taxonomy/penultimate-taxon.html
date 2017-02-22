@@ -31,8 +31,13 @@
                     <p class="subsection__description">{{ childTaxon.description }}</p>
                   </div>
 
+
                   <div class="subsection__content" id="subsection_content_{{ (loop.index+1) | pad(2, '0') }}">
                     <ul class="subsection__list">
+                      <ul class="subscriptions-accordion">
+                        <li class="email-alerts"><a>Get email alerts</a></li>
+                        <li class="feed"><a>Subscribe to feed</a></li>
+                      </ul>
                       {% for document in childTaxon.guidance.atozContent() %}
                         <li class="subsection__list-item">
                           <a href="{{ document.basePath }}">{{ document.title }}</a>
