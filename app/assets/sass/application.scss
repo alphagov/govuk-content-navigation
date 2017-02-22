@@ -477,6 +477,9 @@
       background-repeat: no-repeat;
       margin-left: $gutter-half;
     }
+    a:hover {
+      color: $link-hover-colour;
+    }
    }
     .feed {
       background-image: url("/public/images/feed-icon-black.png");
@@ -687,7 +690,7 @@
     }
 
     a:hover {
-     $link-hover-colour;
+     color: $link-hover-colour;
     }
     .feed {
       background-image: url("/public/images/feed-icon-black.png");
