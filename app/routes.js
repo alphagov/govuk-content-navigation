@@ -67,6 +67,14 @@ var GuidanceContent = require('./models/guidance_content.js');
       res.render('become-a-childminder');
   });
 
+  router.get('/email-sign-up-page-v1/', function (req, res) {
+      res.render('emails/email-sign-up-page-v1');
+  });
+
+    router.get('/gov-delivery-enter/', function (req, res) {
+      res.render('emails/gov-delivery-enter');
+  });
+
   router.get(/\/.+/, function (req, res) {
     var basePath = req.url;
     const contentPresenter = new ContentPresenter(basePath)
