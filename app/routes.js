@@ -20,6 +20,25 @@ var GuidanceContent = require('./models/guidance_content.js');
       });
   });
 
+  router.get('/education/:taxon?/email-sign-up-generic/', function (req, res){
+    var taxonParam = req.params.taxon;
+    console.log('taxon', taxonParam)
+    if(taxonParam === undefined) {
+      taxonParam = "/education";
+    }
+    else {
+      taxonParam = "/education/" + taxonParam;
+    }
+
+    TaxonomyData.get().
+      then(function (taxonomyData) {
+        var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
+        console.log('title', presentedTaxon.title);
+        console.log('description', presentedTaxon.description);
+        res.render('emails/email-sign-up-generic', {presentedTaxon: presentedTaxon});
+    });
+  });
+
   router.get('/education/:taxon?', function (req, res) {
     var taxonParam = req.params.taxon;
 
@@ -34,7 +53,6 @@ var GuidanceContent = require('./models/guidance_content.js');
     TaxonomyData.get().
       then(function (taxonomyData) {
         var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
-
         if (viewAll) {
           var backTo = presentedTaxon.determineBackToLink(req.url);
           res.render('taxonomy/view-all', {
@@ -65,6 +83,24 @@ var GuidanceContent = require('./models/guidance_content.js');
   });
   router.get('/become-childminder/', function (req, res) {
       res.render('become-a-childminder');
+  });
+
+  router.get('/education/:taxon/email-sign-up-generic/', function (req, res){
+    var taxonParam = req.params.taxon;
+    if(taxonParam == undefined) {
+      taxonParam = "/education";
+    }
+    else {
+      taxonParam = "/education/" + taxonParam;
+    }
+
+    TaxonomyData.get().
+      then(function (taxonomyData) {
+        var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
+        console.log('title', presentedTaxon.title);
+        console.log('description', presentedTaxon.description);
+        res.render('emails/email-sign-up-generic', {presentedTaxon: presentedTaxon});
+    });
   });
 
   router.get('/email-sign-up-page-v1/', function (req, res) {
