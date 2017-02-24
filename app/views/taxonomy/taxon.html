@@ -21,7 +21,7 @@
         <div class="top-task-list">
 
           {% if presentedTaxon.mainstreamContent.length > 10 %}
-            {% set column_height = presentedTaxon.mainstreamContent.length/2 | round(0, "ceil") %}
+            {% set column_height = (presentedTaxon.mainstreamContent.length/2) | round(0, "ceil") %}
           {% else %}
             {% set column_height = 5 %}
           {% endif %}
