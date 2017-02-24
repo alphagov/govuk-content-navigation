@@ -10,8 +10,8 @@ var GuidanceContent = require('./models/guidance_content.js');
   router.get('/', function (req, res) {
     TaxonomyData.get().
       then(function (taxonomyData) {
-        var documentTypeExamples = DocumentType.getExamples(taxonomyData.document_metadata)
-          .filter(function(documentTypeExample) {
+        var documentTypeExamples = DocumentType.getExamples(taxonomyData.document_metadata).
+          filter(function (documentTypeExample) {
             return GuidanceContent.isGuidanceContent(documentTypeExample.documentType);
           });
         res.render('index', {
@@ -22,7 +22,6 @@ var GuidanceContent = require('./models/guidance_content.js');
 
   router.get('/education/:taxon?/email-sign-up-generic/', function (req, res){
     var taxonParam = req.params.taxon;
-    console.log('taxon', taxonParam)
     if(taxonParam === undefined) {
       taxonParam = "/education";
     }
@@ -33,8 +32,6 @@ var GuidanceContent = require('./models/guidance_content.js');
     TaxonomyData.get().
       then(function (taxonomyData) {
         var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
-        console.log('title', presentedTaxon.title);
-        console.log('description', presentedTaxon.description);
         res.render('emails/email-sign-up-generic', {presentedTaxon: presentedTaxon});
     });
   });
@@ -107,17 +104,17 @@ var GuidanceContent = require('./models/guidance_content.js');
 
   router.get(/\/.+/, function (req, res) {
     var basePath = req.url;
-    const contentPresenter = new ContentPresenter(basePath)
+    const contentPresenter = new ContentPresenter(basePath);
 
     contentPresenter.present().
       then(function (presentedContent) {
         res.render('content', {
           presentedContent: presentedContent,
-        })
+        });
       }).
       catch(function () {
         res.status(404).render('404');
-      })
+      });
   });
 
 
