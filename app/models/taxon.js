@@ -3,9 +3,10 @@
 var ContentItem = require("./content_item.js");
 
 class Taxon {
-  constructor(title, basePath, description, options) {
+  constructor(title, basePath, contentId, description, options) {
     this.title = title;
     this.basePath = basePath;
+    this.contentId = contentId;
     this.description = description;
     if (typeof(options) === "undefined") {
       options = {};
@@ -23,7 +24,7 @@ class Taxon {
       }
     );
     var filteredTaxon = new Taxon(
-      this.title, this.basePath, this.description,
+      this.title, this.basePath, this.contentId, this.description,
       {
         content: filteredContent,
         children: this.children
@@ -89,7 +90,7 @@ class Taxon {
       return null;
     }
 
-    var taxon = new Taxon(taxonInformation.title, basePath, taxonInformation.description);
+    var taxon = new Taxon(taxonInformation.title, basePath, taxonInformation.content_id, taxonInformation.description);
     var contentItems = metadata.documents_in_taxon[basePath].results;
     var childTaxons = metadata.children_of_taxon[basePath];
 

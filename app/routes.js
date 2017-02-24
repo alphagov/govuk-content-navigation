@@ -31,30 +31,30 @@ var GuidanceContent = require('./models/guidance_content.js');
     }
     var viewAll = !(typeof(req.query.viewAll) === "undefined");
 
-    TaxonomyData.get().
-      then(function (taxonomyData) {
-        var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
+    var taxonPresenter = new TaxonPresenter(taxonParam);
+    taxonPresenter.build().then(presentTaxon);
 
-        if (viewAll) {
-          var backTo = presentedTaxon.determineBackToLink(req.url);
-          res.render('taxonomy/view-all', {
-            presentedTaxon: presentedTaxon,
-            backTo: backTo,
-          });
+    function presentTaxon(presentedTaxon) {
+      if (viewAll) {
+        var backTo = presentedTaxon.determineBackToLink(req.url);
+        res.render('taxonomy/view-all', {
+          presentedTaxon: presentedTaxon,
+          backTo: backTo,
+        });
 
-          return;
-        }
+        return;
+      }
 
-        if (presentedTaxon.isPenultimate) {
-          res.render('taxonomy/penultimate-taxon', {
-            presentedTaxon: presentedTaxon,
-          });
-        } else {
-          res.render('taxonomy/taxon', {
-            presentedTaxon: presentedTaxon,
-          });
-        }
-      });
+      if (presentedTaxon.isPenultimate) {
+        res.render('taxonomy/penultimate-taxon', {
+          presentedTaxon: presentedTaxon,
+        });
+      } else {
+        res.render('taxonomy/taxon', {
+          presentedTaxon: presentedTaxon,
+        });
+      }
+    }
   });
 
   /* The two routes below, 'static-service' and 'become-childminder' are rough

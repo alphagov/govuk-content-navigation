@@ -15,27 +15,22 @@
 
     <div class="grid-row">
 
+    {% if presentedTaxon.mainstreamContent.length %}
       <div class="full-width-column top-task-container block">
 
         <div class="top-task-list">
 
           <h2>Top tasks in {{presentedTaxon.title}}</h2>
             <ul>
-              <li><a href="#">16 to 19 Bursary Fund</a></li>
-              <li><a href="#">Check if an awarding body is recognised</a></li>
-              <li><a href="#">Find a regulated qualification</a></li>
-              <li><a href="#">Report teacher misconduct</a></li>
-              <li><a href="#">What qualification levels mean</a></li>
-              <li><a href="#">16 to 19 Bursary Fund</a></li>
-              <li><a href="#">Check if an awarding body is recognised</a></li>
-              <li><a href="#">Find a regulated qualification</a></li>
-              <li><a href="#">Report teacher misconduct</a></li>
-              <li><a href="#">What qualification levels mean</a></li>
+              {% for mainstreamItem in presentedTaxon.mainstreamContent %}
+                <li><a href="{{ mainstreamItem.base_path }}">{{ mainstreamItem.title }}</a></li>
+              {% endfor %}
             </ul>
 
         </div>
 
       </div>
+    {% endif %}
 
       <div class="full-width-column">
         <nav role="navigation" class="child-topics-list">

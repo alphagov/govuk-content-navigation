@@ -2,22 +2,42 @@ var urlHelper = require('url');
 
 var Taxon = require('./taxon.js');
 var BreadcrumbMaker = require('../../lib/js/breadcrumb_maker.js');
+var TaxonomyData = require('./taxonomy_data.js');
+var MainstreamContent = require('./mainstream_content');
 
 class TaxonPresenter {
-  constructor (taxonParam, taxonomyData) {
-    this.taxonomyData = taxonomyData;
+  constructor (taxonParam) {
     this.basePath = taxonParam;
-
-    this.build();
   }
 
   build () {
-    this.buildTaxon();
-    this.buildBreadcrumb();
-    this.buildParent();
-    this.buildChildren();
-    this.buildContent();
-    this.checkIfPenultimate();
+    return Promise.resolve(this)
+      .then(function(presentedTaxon) {
+        return TaxonomyData.get().then(
+          function(taxonomyData) {
+            presentedTaxon.taxonomyData = taxonomyData;
+            presentedTaxon.buildTaxon();
+            presentedTaxon.buildBreadcrumb();
+            presentedTaxon.buildParent();
+            presentedTaxon.buildChildren();
+            presentedTaxon.buildContent();
+            presentedTaxon.checkIfPenultimate();
+
+            return presentedTaxon;
+          }
+        );
+      })
+      .then(function(presentedTaxon) {
+        if (presentedTaxon.isRootTaxon()) {
+          return Promise.resolve(presentedTaxon);
+        } else {
+          return MainstreamContent.forTaxonAndDescendants(presentedTaxon.taxon.contentId)
+            .then(function (mainstreamContent) {
+              presentedTaxon.mainstreamContent = mainstreamContent;
+              return presentedTaxon;
+            });
+        }
+      });
   }
 
   buildTaxon () {
@@ -64,6 +84,10 @@ class TaxonPresenter {
     }
 
     return backTo;
+  }
+
+  isRootTaxon() {
+    return this.parent.title === 'Home';
   }
 }
 
