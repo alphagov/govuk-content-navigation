@@ -85,24 +85,6 @@ var GuidanceContent = require('./models/guidance_content.js');
       res.render('become-a-childminder');
   });
 
-  router.get('/education/:taxon/email-sign-up-generic/', function (req, res){
-    var taxonParam = req.params.taxon;
-    if(taxonParam == undefined) {
-      taxonParam = "/education";
-    }
-    else {
-      taxonParam = "/education/" + taxonParam;
-    }
-
-    TaxonomyData.get().
-      then(function (taxonomyData) {
-        var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
-        console.log('title', presentedTaxon.title);
-        console.log('description', presentedTaxon.description);
-        res.render('emails/email-sign-up-generic', {presentedTaxon: presentedTaxon});
-    });
-  });
-
   router.get('/email-sign-up-page-v1/', function (req, res) {
       res.render('emails/email-sign-up-page-v1');
   });
