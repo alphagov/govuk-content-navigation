@@ -377,6 +377,16 @@
   }
 }
 
+#whitehall-wrapper {
+  .related {
+    h2 {
+      a {
+        color: $text-colour;
+      }
+    }
+  }
+}
+
 /* taxon layout */
 
 #content.taxonomy {
