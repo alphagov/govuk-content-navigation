@@ -29,13 +29,13 @@
           <h2>Top tasks in {{presentedTaxon.title}}</h2>
             <ul>
               {% for mainstreamItem in presentedTaxon.mainstreamContent.slice(0, column_height) %}
-                <li><a href="{{ mainstreamItem.base_path }}">{{ mainstreamItem.title }}</a></li>
+                <li><a href="{{ mainstreamItem.link }}">{{ mainstreamItem.title }}</a></li>
               {% endfor %}
             </ul>
             {% if presentedTaxon.mainstreamContent.length > 5 %}
             <ul>
               {% for mainstreamItem in presentedTaxon.mainstreamContent.slice(column_height) %}
-                <li><a href="{{ mainstreamItem.base_path }}">{{ mainstreamItem.title }}</a></li>
+                <li><a href="{{ mainstreamItem.link }}">{{ mainstreamItem.title }}</a></li>
               {% endfor %}
             </ul>
             {% endif %}
