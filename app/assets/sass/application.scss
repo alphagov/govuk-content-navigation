@@ -5,6 +5,11 @@
 @import 'modules/subsections';
 @import 'breadcrumbs';
 
+// Nicer underlines in iOS / OSX Safari
+a {
+  text-decoration-skip: ink;
+}
+
 // Related items
 // (These styles will be moved to GOV.UK elements, duplicating here for now.)
 .govuk-related-items {
@@ -210,7 +215,7 @@
 #whitehall-wrapper {
    .breadcrumbs {
       @include breadcrumbs;
-      
+
       .current {
         a {
           color: $secondary-text-colour;
@@ -387,6 +392,11 @@
     margin-top: $gutter * 1.5;
     margin-bottom: $gutter;
 
+    @include media(mobile) {
+      margin-top: $gutter;
+      margin-bottom: $gutter;
+    }
+
     &.subsection__title {
       margin: 0;
     }
@@ -408,7 +418,7 @@
 
   .govuk-title {
     .context {
-
+      
       a {
         color: $text-colour;
         text-decoration: underline;
@@ -458,6 +468,7 @@
   }
 
   .parent-topic-contents {
+    
     @include grid-column(2/3);
 
     .topic-content {
@@ -467,7 +478,7 @@
         padding-bottom: $gutter-one-third;
 
         li {
-            margin-bottom: $gutter;  
+            margin-bottom: $gutter;
 
           h3 {
             padding-bottom: 0;
@@ -504,6 +515,64 @@
 
           h3 {
             padding-bottom: 0;
+          }
+        }
+      }
+
+    }
+  }
+
+  .top-task-container {
+
+    .top-task-list {
+
+      h2 {
+        margin: 0 0 $gutter-one-third 0;
+      }
+
+      ul {
+        @extend %contain-floats;
+
+        li {
+          @include grid-column(1/2);
+          padding: $gutter-one-third 0 0 0;
+
+          a {
+            @include core-16;
+          }
+        }
+      }
+    }
+
+    &.lines {
+      .top-task-list {
+        padding: $gutter-two-thirds 0;
+        border-top: 10px solid $govuk-blue;
+        border-bottom: 10px solid $govuk-blue;
+      }
+    }
+
+    &.block {
+      @include media(mobile) {
+        margin-left: -$gutter-half;
+        margin-right: -$gutter-half;
+      }
+
+      .top-task-list {
+        padding: $gutter-two-thirds;
+        background-color: $govuk-blue;
+        color: white;
+
+        @include media(mobile) {
+          padding: $gutter-two-thirds $gutter-half;
+        }
+
+        a {
+          color: white;
+
+          &:hover {
+            color: #d5e8f3;
+            text-decoration: underline;
           }
         }
       }
