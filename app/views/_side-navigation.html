@@ -14,7 +14,7 @@
            <p>{{ taxon.description }}</p>
         </header>
 
-        {% if taxon.results.length > 0 %}
+        {% if loop.index0 == 0 and taxon.results.length > 0 %}
           <ul>
             {% for contentItem in taxon.results.slice(0,3) %}
               <li>
@@ -23,8 +23,6 @@
             {% endfor %}
           </ul>
         {% endif %}
-
-        <p><a{% if taxon.results.length > 0 %} class="reveal"{% endif %} href="{{ topic_link }}">See everything in {{ taxon.title }}</a></p>
       </div>
     {% endfor %}
   </aside>
