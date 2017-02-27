@@ -343,9 +343,7 @@
 
   h2 {
     @include bold-19;
-    a, a:visited {
-      color: $text-colour;
-    }
+    margin-bottom: $gutter-half;
   }
   p {
     @include core-16;
@@ -379,10 +377,8 @@
 
 #whitehall-wrapper {
   .related {
-    h2 {
-      a {
-        color: $text-colour;
-      }
+    a {
+      text-decoration: underline;
     }
   }
 }
