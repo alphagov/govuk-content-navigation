@@ -29,7 +29,7 @@ class GuidanceContent {
   }
 
   static isGuidanceContent (documentType) {
-    return (this.guidanceDocumentTypes().indexOf(documentType) > 0);
+    return (this.guidanceDocumentTypes().indexOf(documentType) >= 0);
   }
 }
 
