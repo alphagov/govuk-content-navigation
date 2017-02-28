@@ -68,7 +68,7 @@ a {
     padding: 0;
   }
 
-  .detailed-guide, .document-collection {
+  .detailed-guide, .document-collection, .publication {
     @include grid-column(2/3);
 
     .govuk-breadcrumbs {
@@ -298,6 +298,9 @@ a {
   }
 }
 
+.govuk-metadata,
+.related-information,
+.history-information,
 .primary-metadata,
 #whitehall-wrapper .metadata-list,
 .status-block,
