@@ -14,7 +14,7 @@
     "basic-auth": "^1.0.3",
     "basic-auth-connect": "^1.0.0",
     "bluebird": "^3.4.3",
-    "body-parser": "^1.14.1",
+    "body-parser": "^1.16.1",
     "browser-sync": "^2.11.1",
     "cheerio": "^0.22.0",
     "consolidate": "0.x",

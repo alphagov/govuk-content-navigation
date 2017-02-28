@@ -442,22 +442,58 @@
       text-decoration: none;
   }
 
-  .button_panel a{
+  .button_panel input {
+    background: #eee;
+    background: #eee -moz-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e8e8e8));
     background: #eee -webkit-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    background: #eee -o-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    background: #eee -ms-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    background: #eee linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
     border: 1px solid #aaa;
     border-top: 1px solid #ccc;
     border-left: 1px solid #ccc;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
     border-radius: 3px;
     color: #444;
     display: inline;
     font-weight: bold;
     text-decoration: none;
     text-shadow: 0 1px rgba(255,255,255,0.75);
+    cursor: pointer;
+    margin: 0 10px 20 0;
     line-height: normal;
     padding: 8px 10px;
     font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 1.2em;
-  }
+    font-size: 1.2em
+}
+
+.button_panel input:hover {
+    color: #222;
+    background: #ddd;
+    background: #ddd -moz-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.3) 100%);
+    background: #ddd -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.3)), color-stop(100%, rgba(0,0,0,0.3)));
+    background: #ddd -webkit-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.3) 100%);
+    background: #ddd -o-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.3) 100%);
+    background: #ddd -ms-linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.3) 100%);
+    background: #ddd linear-gradient(top, rgba(255,255,255,0.3) 0%, rgba(0,0,0,0.3) 100%);
+    border: 1px solid #888;
+    border-top: 1px solid #aaa;
+    border-left: 1px solid #aaa
+}
+
+.button_panel input:active {
+    border: 1px solid #666;
+    background: #ccc;
+    background: #ccc -moz-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%);
+    background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.35)), color-stop(100%, rgba(10,10,10,0.4)));
+    background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%);
+    background: #ccc -o-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%);
+    background: #ccc -ms-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%);
+    background: #ccc linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%)
+}
+
 
   #page_margins {
     width: 700px;

@@ -1,5 +1,12 @@
 var express = require('express');
 var router = express.Router();
+var bodyParser = require('body-parser');
+router.use(bodyParser.json());       // to support JSON-encoded bodies
+router.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
+//router.use(express.json());       // to support JSON-encoded bodies
+//router.use(express.urlencoded());
 
 var DocumentType = require('./models/document_type.js');
 var TaxonPresenter = require('./models/taxon_presenter.js');
@@ -94,8 +101,13 @@ var GuidanceContent = require('./models/guidance_content.js');
       res.render('emails/gov-delivery/email-signup');
   });
 
-    router.get('/gov-delivery/subscriber', function (req, res) {
+  router.get('/gov-delivery/subscriber', function (req, res) {
       res.render('emails/gov-delivery/subscriber');
+  });
+
+  router.post('/gov-delivery/email-signup', function (req, res) {
+    var email = req.body.email;
+    res.render('emails/gov-delivery/subscriber', {email: email});
   });
 
     router.get('/email-sign-up-page-wellbeing/', function (req, res) {
