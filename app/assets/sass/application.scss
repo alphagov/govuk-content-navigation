@@ -68,7 +68,7 @@ a {
     padding: 0;
   }
 
-  .detailed-guide, .document-collection {
+  .detailed-guide, .document-collection, .publication {
     @include grid-column(2/3);
 
     .govuk-breadcrumbs {
