@@ -60,6 +60,9 @@
               </div>
             </div>
           </div>
+          {% else %}
+            {{ content_list_macro.content_list(presentedTaxon,
+            presentedTaxon.content.guidance.atozContent()) }}
           {% endif %}
         </div>
       </div>
