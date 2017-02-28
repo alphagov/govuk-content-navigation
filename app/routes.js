@@ -45,10 +45,6 @@ var GuidanceContent = require('./models/guidance_content.js');
         return;
       }
 
-      if (req.path.indexOf("/further-and-higher-education-skills-and-vocational-training") > -1) {
-        var curatedMainstreamContent = require('./data/curated_mainstream_data.json');
-      }
-
       if (presentedTaxon.isPenultimate) {
         res.render('taxonomy/penultimate-taxon', {
           presentedTaxon: presentedTaxon,
@@ -56,7 +52,6 @@ var GuidanceContent = require('./models/guidance_content.js');
       } else {
         res.render('taxonomy/taxon', {
           presentedTaxon: presentedTaxon,
-          curatedMainstreamContent: curatedMainstreamContent
         });
       }
     }
