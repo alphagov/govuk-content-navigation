@@ -1,24 +1,27 @@
 <div class="related-container">
   <aside class="related" id="related">
     {% for taxon in presentedContent.relatedContent %}
-      <div>
+
+      {% if presentedContent.breadcrumb.length > 3 %}
+        {% set topic_link = presentedContent.breadcrumb[3].basePath + "#" + taxon.basePath %}
+      {% else %}
+        {% set topic_link = taxon.basePath %}
+      {% endif %}
+
+      <div class="related-topic-links">
         <header>
-           <h2>More about {{ taxon.title }}</h2>
+           <h2><a href="{{ topic_link }}">{{ taxon.title }}</a></h2>
            <p>{{ taxon.description }}</p>
         </header>
 
-        {% if taxon.results.length > 0 %}
-          <nav role="navigation" aria-labelledby="parent-other">
-            <ul>
-              {% for contentItem in taxon.results %}
-                <li>
-                  <a href="{{ contentItem.link }}">{{ contentItem.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
-
-            <p><a class="reveal" href="{{ taxon.basePath }}?viewAll">See everything in {{ taxon.title }}</a></p>
-          </nav>
+        {% if loop.index0 == 0 and taxon.results.length > 0 %}
+          <ul>
+            {% for contentItem in taxon.results.slice(0,3) %}
+              <li>
+                <a href="{{ contentItem.link }}">{{ contentItem.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
         {% endif %}
       </div>
     {% endfor %}
