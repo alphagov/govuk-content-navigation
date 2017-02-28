@@ -57,15 +57,9 @@ var GuidanceContent = require('./models/guidance_content.js');
     }
   });
 
-  /* The two routes below, 'static-service' and 'become-childminder' are rough
-   examples of services.  Services are currenly outside of the scope of the
-   prototype but may be looked at in the future.*/
-  router.get('/static-service/', function (req, res) {
-      res.render('service');
-  });
-  router.get('/become-childminder/', function (req, res) {
-      res.render('become-a-childminder');
-  });
+  router.get('/home/?', function(req, res) {
+    res.render('home');
+  })
 
   router.get(/\/.+/, function (req, res) {
     var basePath = req.url;
@@ -82,5 +76,14 @@ var GuidanceContent = require('./models/guidance_content.js');
       })
   });
 
+  /* The two routes below, 'static-service' and 'become-childminder' are rough
+   examples of services.  Services are currenly outside of the scope of the
+   prototype but may be looked at in the future.*/
+  router.get('/static-service/', function (req, res) {
+      res.render('service');
+  });
+  router.get('/become-childminder/', function (req, res) {
+      res.render('become-a-childminder');
+  });
 
   module.exports = router;
