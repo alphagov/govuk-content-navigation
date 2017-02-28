@@ -40,10 +40,27 @@
                   </div>
                 </div>
               {% endfor %}
+              <div class="subsection">
+                <div class="subsection__header">
+                  <h2 class="subsection__title">{{ presentedTaxon.title }}</h2>
+                  <p class="subsection__description">{{ presentedTaxon.description }}</p>
+                </div>
+
+                <div class="subsection__content" id="subsection_content_99">
+                  <ul class="subsection__list">
+                    {% for document in presentedTaxon.content.guidance.atozContent() %}
+                      <li class="subsection__list-item">
+                        <a href="{{ document.basePath }}">{{ document.title }}</a>
+
+                        <p>{{ document.description }}</p>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           {% endif %}
-          {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent()) }}
         </div>
       </div>
     </div>
