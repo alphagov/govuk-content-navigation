@@ -1,26 +1,47 @@
 <div class="related-container">
   <aside class="related" id="related">
-    {% for taxon in presentedContent.relatedContent %}
-      <div>
-        <header>
-           <h2>More about {{ taxon.title }}</h2>
-           <p>{{ taxon.description }}</p>
-        </header>
+    {% set taxon = presentedContent.relatedContent[0] %}
 
-        {% if taxon.results.length > 0 %}
-          <nav role="navigation" aria-labelledby="parent-other">
-            <ul>
-              {% for contentItem in taxon.results %}
-                <li>
-                  <a href="{{ contentItem.link }}">{{ contentItem.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
+    {% if presentedContent.breadcrumb.length > 3 %}
+      {% set topic_link = presentedContent.breadcrumb[3].basePath + "#" + taxon.basePath %}
+    {% else %}
+      {% set topic_link = taxon.basePath %}
+    {% endif %}
 
-            <p><a class="reveal" href="{{ taxon.basePath }}?viewAll">See everything in {{ taxon.title }}</a></p>
-          </nav>
-        {% endif %}
-      </div>
-    {% endfor %}
+    <div class="related-topic-links">
+      <header>
+         <h2><a href="{{ topic_link }}">{{ taxon.title }}</a></h2>
+         <p>{{ taxon.description }}</p>
+      </header>
+
+      {% if taxon.results.length > 0 %}
+        <ul>
+          {% for contentItem in taxon.results.slice(0,3) %}
+            <li>
+              <a href="{{ contentItem.link }}">{{ contentItem.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      <p><a class="reveal" href="{{ topic_link }}">See everything in {{ taxon.title }}</a></p>
+    </div>
+
+    {% if presentedContent.relatedContent.length > 1 %}
+    <div class="other-topics">
+      <h2>Other topics</h2>
+
+      <ul>
+        {% for taxon in presentedContent.relatedContent.slice(1) %}
+          {% if presentedContent.breadcrumb.length > 3 %}
+            {% set topic_link = presentedContent.breadcrumb[3].basePath + "#" + taxon.basePath %}
+          {% else %}
+            {% set topic_link = taxon.basePath %}
+          {% endif %}
+          <li><a href="{{ topic_link }}">{{ taxon.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
   </aside>
 </div>
