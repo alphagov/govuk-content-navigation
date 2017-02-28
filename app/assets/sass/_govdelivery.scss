@@ -467,5 +467,67 @@
     text-align: left;
   }
 
+  .tab-content>.tab-pane-js {
+    display: none
+}
+
+.tab-content>.active {
+    display: block
+}
+
+.nav-tabs ul {
+    overflow: hidden
+}
+
+.nav-tabs li {
+    display: inline-block;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+    zoom:1;*display: inline
+}
+
+.nav-tabs a {
+    font-size: 20px;
+    font-size-adjust: .5;
+    background-color: #e1e1e1;
+    font-weight: bold;
+    padding: 5px 7px;
+    background: #eee;
+    background: #eee -moz-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e8e8e8));
+    background: #eee -webkit-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    background: #eee -o-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    background: #eee -ms-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    background: #eee linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+    border-bottom: 1px solid #ffffff;
+    text-decoration: none;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #000;
+    text-shadow: 1 1px rgba(255,255,255,0.75)
+}
+
+.nav-tabs li.active a {
+    color: #efefef;
+    text-shadow: 0 1px rgba(0,0,0,0.75);
+    background: #ccc;
+    background: #ccc -moz-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%);
+    background: #ccc -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255,255,255,0.35)), color-stop(100%, rgba(10,10,10,0.4)));
+    background: #ccc -webkit-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%);
+    background: #ccc -o-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%);
+    background: #ccc -ms-linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%);
+    background: #ccc linear-gradient(top, rgba(255,255,255,0.35) 0%, rgba(10,10,10,0.4) 100%);
+    border-bottom: 1px solid #cccccc;
+}
+
+
 
 }
