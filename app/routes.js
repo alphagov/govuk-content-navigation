@@ -86,8 +86,16 @@ var GuidanceContent = require('./models/guidance_content.js');
       res.render('emails/email-sign-up-page-v1');
   });
 
-    router.get('/gov-delivery-enter/', function (req, res) {
+  router.get('/gov-delivery-enter/', function (req, res) {
       res.render('emails/gov-delivery-enter');
+  });
+
+   router.get('/gov-delivery/email-signup', function (req, res) {
+      res.render('emails/gov-delivery/email-signup');
+  });
+
+    router.get('/gov-delivery/subscriber', function (req, res) {
+      res.render('emails/gov-delivery/subscriber');
   });
 
     router.get('/email-sign-up-page-wellbeing/', function (req, res) {

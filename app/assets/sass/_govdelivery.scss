@@ -1,0 +1,471 @@
+/*updated 7.11.13 - Responsive CSS for Mobile - AEL*/
+/*theme overrides here will be included in base CSS */
+.govdelivery{
+
+  div.fnc {
+   width:70%;
+  }
+  h3.category {
+   font-size:1em;
+  }
+  .button_panel input[type="submit"] {
+    /* min-width: 30%; */
+  }
+  #tabs {
+    border-bottom: 2px solid #c6c6c6;
+    overflow:visible;
+  }
+  #tabs li {
+    margin-right:3px;
+  }
+  #tabs li:last-of-type {
+    margin-right:0;
+  }
+
+  #quick_subscribe_confirmation div.button_panel {
+    margin-top: 15px;
+  }
+  button.treeExpand {
+    margin-left:0px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    div.featured_network input {
+      transform: scale(1,1);
+      -ms-transform: scale(1,1);
+      -webkit-transform: scale(1,1);
+    }
+  }
+  body#shared_bulletin #footer .forward .addthis_button_email {
+    color: #000;
+  }
+  body#shared_bulletin #page .shared_bulletin_header .subscribe {
+    width: 360px;
+  }
+  body#shared_bulletin #page .shared_bulletin_header .subscribe form#sub_form {
+    background: none;
+    width: 337px;
+  }
+  body#sub {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+  }
+  div.qs_banner a img {
+    width: 100%;
+    height: auto;
+    width: auto;
+  }
+  div.qs_banner {
+      padding-bottom: 45px;
+  }
+  ul.mktree li {
+    padding-top: 2pt;
+  }
+  a {
+    color: #0059B3;
+  }
+  form {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0;
+    background: #fff;
+  }
+  legend {
+    font-weight: 700;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 30px;
+  }
+  fieldset legend {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 10px;
+    margin-left: 4pt;
+    padding-top: 3pt;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    position: relative;
+    left: 0px;
+  }
+  p {
+    font-size: 14px;
+    color: #000;
+    padding-left: 5px;
+    margin-bottom: 10px;
+  }
+  h1 {
+    font-size:25px;
+    /*font-size: 1.5em;*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    font-weight: normal;
+    margin-top:5px;
+    margin-bottom:45px;
+  }
+  h2 {
+    padding-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  h3 {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  label {
+    font-weight: bold;
+    line-height: 14px;
+    font-size: 16px;
+  }
+  button {
+    clear: both;
+    margin-left: 150px;
+    width: 50px;
+    height: 31px;
+    background: #ccc;
+    text-align: center;
+    line-height: 31px;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  hr {
+    width: 90%;
+    color: #ccc;
+    height: 1px;
+  }
+  #quick_subscribe_new_instructions {
+    display: none;
+  }
+  /*
+
+  #quick_subscribe_new_instructions {
+  margin: 5px 0px;
+  font-size:.9em;
+  }
+  */
+  #page_margins {
+    width:700px;
+    border: 5px solid #DEE0E2;
+    background-color: #fff;
+  }
+  #col3 {
+    margin: 0 auto;
+    width: 90%;
+  }
+  .panel {
+    padding: 0;
+    margin: 0 1em 1em;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 2px none #BFC1C3;
+  }
+  input, textarea, blockquote {
+    margin: 0;
+    padding: 0 5px 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  #tabs {
+    margin-left: 0.8em;
+  }
+  li.radio_button {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  fieldset ol.form .radio_button label {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding-left: 5px;
+    font-size:14px;
+  }
+  div#digest_instructions {
+    padding-bottom: 7px;
+  }
+  div#digest_postscript {
+    display: none;
+  }
+  /*div#digest_postscript{
+  font-family: Arial,Helvetica,sans-serif;
+  color:#000;
+  padding-top: 5px;
+  }*/
+
+  div#quick_subscribe_email_instructions {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding-left: 5px;
+  }
+  div#quick_subscribe_password_instructions {
+    display: none;
+  }
+  div#quick_subscribe_topic_unsubscribe_instructions {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding-left: 5px;
+    margin-top: 10px;
+  }
+  div#digest_instructions {
+    /*display: none;*/
+  }
+  /*div#quick_subscribe_email_instructions,
+  div#quick_subscribe_password_instructions,
+  div#quick_subscribe_topic_unsubscribe_instructions,
+  div#digest_instructions{
+  font-family: Arial,Helvetica,sans-serif;
+  color:#000;
+  padding-left:5px;
+  }
+  */
+  div.questions_description {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding-left: 5px;
+  }
+  div#questions_instructions {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+  fieldset ol.form {
+    width: 100%;
+    margin-bottom: 0px;
+    font-size:14px;
+  }
+  fieldset ol.form li {
+    padding-bottom: 0px;
+    margin-top:20px;
+    /*margin-bottom:30px;*/
+    width: 100%;
+    display: block;
+  }
+  fieldset ol.form label {
+    width: 550px;
+    float:none;
+      font-weight: normal;
+      margin-right: 10px;
+    color:#000;
+      padding: 5px;
+  }
+  fieldset ol.form label.required {
+    background-image: none;
+    display:none;
+  }
+  #footer {
+    text-align: center;
+    background-color: #DEE0E2;
+    clear: both;
+    padding: 0px 12px 10px 12px;
+    font-size: 14px;
+  }
+  #footer p {
+    padding: 0.5em 0;
+  }
+  #quick_subscribe_new, fieldset {
+    width: 100%;
+  }
+  #quick_subscribe_new h1 {
+    width: 100%;
+    font-size: 19px;
+   /* display: none;*/
+  }
+
+  .data-table {
+    border-top: 2px dotted #BFC1C3;
+    border-bottom: 2px dotted #BFC1C3;
+    margin: 1em 0;
+    width: 100%;
+    font-size: 14px;
+    color: #747474;
+  }
+  .data-table tr td {
+    border-bottom: 2px dotted #BFC1C3;
+    margin: 0;
+    padding: 10px;
+    color: #000;
+  }
+  /*.data-table tr th {
+    display: none;
+  }*/
+  .data-table tr th {
+      background: url("../images/gray-grad.jpg") repeat-x scroll left bottom #EDEDED;
+      border-bottom: 2px solid #BFC1C3;
+      border-top: 2px solid #BFC1C3;
+      margin: 0;
+      padding: 4px;
+    color:#aa0000;
+      white-space: nowrap;
+  }
+  th {
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  #tabs a, #tabs {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    padding-top: 3px;
+  }
+  p.name {
+    padding-top:0px;
+    padding-bottom: 8px;
+    text-align: left;
+    font-size: 24px;
+  }
+  p.name strong {
+    font-weight: normal;
+  }
+  ul+p {
+    margin-top: 10px;
+  }
+  /*fieldset ol.form label.required {
+    -moz-background-clip: border;
+    -moz-background-inline-policy: continuous;
+    -moz-background-origin: padding;
+    background: transparent url(/images/required.gif) no-repeat scroll right top;
+  }*/
+  body#shared_bulletin #page_margins {
+    background: #f6f6f6;
+  }
+  div.fnc span.title {
+    font-size: 18px;
+  }
+  #tabs {
+    /*display: none;*/
+  }
+  .button_panel {
+    text-align: left;
+    padding: 10px 0px;
+  }
+  #quick_subscribe_new fieldset {
+    background-color: #C30;
+  }
+  #new_subscriber_heading {
+    display: none;
+  }
+  .email_fields h2 {
+    display: none;
+  }
+  .email_fields #quick_subscribe_email_instructions {
+    display: none;
+  }
+  #quick_subscribe_topic_unsubscribe fieldset, legend {
+    display: none;
+  }
+  #quick_subscribe_topic_unsubscribe ul {
+    display: none;
+  }
+  .digesting_fields ol {
+    padding-left: 12px;
+    color: #000;
+  }
+  .digesting_fields ol li {
+    line-height: 1.8em;
+    color: #000;
+  }
+  .digesting_fields h2 {
+    font-weight: normal;
+    color: #000;
+  }
+  #quick_subscribe_password h2 {
+    display:none;
+  }
+  .cancel_button {
+    /*margin-left:8px;*/
+    display:none;
+  }
+  .form_button {
+    border:1px solid #dcdcdc;
+    -moz-border-radius:42px;
+    -webkit-border-radius:42px;
+    border-radius:42px;
+    color:#000;
+    font-family:arial;
+    font-size:16px;
+    font-weight:bold;
+    padding:7px 28px;
+    text-decoration:none;
+    cursor:pointer;
+  }
+
+  #quick_subscribe_new img {
+    display:none;
+    height:0px;
+    width:0px;
+  }
+
+  .email_fields img {
+    display:none;
+  }
+
+  #message {
+    display:none;
+  }
+  #tabs li{
+  border:1px solid #BFC1C3;
+  margin: 0px 5px 0px 5px;
+  padding:0px;
+  -webkit-border-top-left-radius: 5px;
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  }
+
+  #tabs li a.active {
+      background-color:#BFC1C3;
+  }
+
+  #tabs li h2 {
+  margin: 2px 5px 2px 5px;
+  color:#000;
+  padding:3px;
+  }
+  #tabs a.active {
+      background-color:#BFC1C3;
+      color: #000;
+      padding: 0;
+  }
+
+  #tabs a {
+      background-color: #fff;
+      color: #000;
+      margin-right: 3px;
+      padding: 2px 2px 0;
+      text-decoration: none;
+  }
+
+  .button_panel a{
+    background: #eee -webkit-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
+    border: 1px solid #aaa;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-radius: 3px;
+    color: #444;
+    display: inline;
+    font-weight: bold;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(255,255,255,0.75);
+    line-height: normal;
+    padding: 8px 10px;
+    font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+  }
+
+  #page_margins {
+    width: 700px;
+    border: 5px solid #DEE0E2;
+    background-color: #fff;
+    margin: 6px auto;
+    text-align: left;
+  }
+
+
+}

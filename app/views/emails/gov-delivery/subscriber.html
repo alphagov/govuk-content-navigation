@@ -1,0 +1,208 @@
+<html><head>
+<title>
+GOV.UK Email alert
+</title>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport">
+<link href="https://www.gov.uk/favicon.ico" rel="SHORTCUT ICON">
+<link href="/public/stylesheets/application.css" media="screen" rel="stylesheet" type="text/css" />
+<link href="/public/stylesheets/examples.css" media="screen" rel="stylesheet" type="text/css" />
+
+
+</head>
+<body id="sub" cz-shortcut-listen="true" style="zoom: 1;">
+<div class="govdelivery subscriber">
+<div id="page_margins">
+<div id="page">
+
+<div class="qs_banner">
+<a href="https://www.gov.uk" target="_blank">
+<img alt="GOV.UK Email Alerts" src="/system/images/34507/original/GOVemailalertsbanner.jpg?1415109321">
+</a>
+</div>
+
+<div id="col3">
+<p class="name">
+Welcome <strong></strong>, you're subscribed to the following alerts
+</p>
+<h1>Subscriber preferences</h1>
+
+<div class="flash message flash-in-left" id="message">
+<div class="icon-message flash-icon">&nbsp;</div>
+<div class="flash_text_content">
+<div class="message-copy">Subscriptions updated</div>
+</div>
+<div class="flash-close">
+<a onclick="$('#message').hide({effect: 'slide', direction: 'left', easing: 'swing', duration: '2000'})" class="icon-close" href="#"></a>
+</div>
+</div>
+<div id="tabs">
+<ul class="nav nav-tabs">
+<li class="active">
+<a data-toggle="tab" href="#tab1">
+Subscriptions
+</a>
+</li>
+<li>
+<a data-toggle="tab" href="#tab2">
+Preferences
+</a>
+</li>
+</ul>
+</div>
+<div class="tab-content">
+<div class="tab-pane panel tab-pane-js active" id="tab1">
+<form id="subscriber_topics_delete_form" action="/accounts/UKGOVUK/subscriber/topics/delete_list" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="delete"><input type="hidden" name="authenticity_token" value="2UH+xzuyxMBYNmjyy6wY4uwC8hlu8mpv4kguX4NjoLoq7YjY254OiY9UokT1Zp9RnH6M2PkCiRadr5Yl0v3nmg==">
+
+<input type="hidden" name="profile" id="profile" value="true">
+<fieldset id="quick_subscribe_topic_unsubscribe">
+<legend>Subscriptions</legend>
+<div id="quick_subscribe_topic_unsubscribe_instructions">
+   
+</div>
+<table class="data-table" id="topics">
+<tbody><tr>
+<th>Topic</th>
+<th></th>
+<th>Unsubscribe</th>
+</tr>
+<tr class="odd_topic" id="odd_topic_203342">
+<td>
+All publications about all topics by all organisations
+</td>
+<td>
+
+</td>
+<td>
+<input type="checkbox" name="selected_subscription_ids[]" id="selected_subscription_ids_" value="203342">
+</td>
+</tr>
+<tr class="even_topic" id="even_topic_202417">
+<td>
+Consultations about all topics by all organisations
+</td>
+<td>
+
+</td>
+<td>
+<input type="checkbox" name="selected_subscription_ids[]" id="selected_subscription_ids_" value="202417">
+</td>
+</tr>
+
+</tbody></table>
+<div class="button_panel">
+<input type="submit" name="commit" value="Save changes" class="form_button"><input type="button" value="Cancel" class="form_button cancel_button">
+</div>
+<ul>
+<li><a data-confirm="Are you sure you want to unsubscribe from all topics and delete your account? This operation cannot be undone." href="/accounts/UKGOVUK/subscriber/unsubscribe">Delete my account</a></li>
+<li><a href="/accounts/UKGOVUK/subscriber/topics">Add subscriptions</a></li>
+</ul>
+</fieldset>
+</form>
+
+</div>
+<div class="tab-pane panel tab-pane-js" id="tab2">
+<form id="subscriber_preferences_destinations_form" action="/accounts/UKGOVUK/subscriber/update_destination" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="C+bSDQNppjWKkAoNc2XiIPWeA73AnVXCPpJmeT3jTsP4SqQS40VsfF3ywLtNr2WTheJ9fFdttrtBdd4DbH0J4w==">
+
+<fieldset class="email_fields">
+<h2>Email address</h2>
+<div id="quick_subscribe_email_instructions">
+<p>To change the email address where you receive updates, please enter it below.</p>
+</div>
+<ol class="form">
+<li>
+<input type="text" name="destination" id="destination" value="caroline.green@digital.cabinet-office.gov.uk" class="long">
+</li>
+</ol>
+</fieldset>
+<div class="button_panel">
+<div>
+Click to save your new address.
+</div>
+<input type="submit" name="commit" value="Save changes" class="form_button">
+</div>
+</form>
+
+<form id="subscriber_preferences_form" action="/accounts/UKGOVUK/subscriber" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="_method" value="patch"><input type="hidden" name="authenticity_token" value="Ll9M0t1WcinWk6GFvD86BdbuA38x6peXFHxNIoMyhM/d8zrNPXq4YAHxazOC9b22ppJ9vqYadO5rm/VY0qzD7w==">
+
+<fieldset class="digesting_fields" style="display: block">
+<h2>Set frequency of emails</h2>
+<div id="digest_instructions">
+Tell us how often you'd like updates sent to you.
+</div>
+<ol class="form">
+<li class="radio_button" style="padding:2px 0">
+<input type="radio" name="subscriber[digest_for]" id="subscriber_digest_for_0" value="0">
+<label for="subscriber_digest_for_0">Immediately</label>
+</li>
+<li class="radio_button" style="padding:2px 0">
+<input type="radio" name="subscriber[digest_for]" id="subscriber_digest_for_1" value="1" checked="checked">
+<label for="subscriber_digest_for_1">Daily</label>
+</li>
+<li class="radio_button" style="padding:2px 0">
+<input type="radio" name="subscriber[digest_for]" id="subscriber_digest_for_7" value="7">
+<label for="subscriber_digest_for_7">Weekly</label>
+</li>
+</ol>
+<div id="digest_postscript">
+Certain high priority updates may be sent regardless of your delivery preferences.
+</div>
+</fieldset>
+
+<fieldset id="quick_subscribe_password">
+<h2>
+Optional password
+</h2>
+<div id="quick_subscribe_password_instructions">
+<p>Enter a password to protect your subscriber preferences.</p>
+</div>
+<ol class="form">
+<li>
+<label for="subscriber_password">Enter new password</label>
+<input type="password" name="subscriber[password]" id="subscriber_password" class="long" autocomplete="off">
+</li>
+<li>
+<label for="subscriber_password_confirm">Confirm new password</label>
+<input type="password" name="subscriber[password_confirm]" id="subscriber_password_confirm" class="long" autocomplete="off">
+</li>
+</ol>
+</fieldset>
+
+<div class="button_panel">
+<input type="submit" name="commit" value="Save changes" class="form_button"><input type="button" value="Cancel" class="form_button cancel_button">
+</div>
+</form>
+
+</div>
+</div>
+<script type="text/javascript">
+  //<![CDATA[
+    var accountSubscribersEdit =  new GD.view.AccountSubscribersEdit({
+      questions_service_path: '/accounts/UKGOVUK/subscriber/questions/record_view'
+    });
+    
+    accountSubscribersEdit.hide();
+    accountSubscribersEdit.init();
+    
+    new GD.view.AccountSubscribersNew({
+      facebookAppId: "188927694463050",
+      facebookLoginURL: "/accounts/UKGOVUK/facebook_subscriber/login",
+      wirelessEnabled: false
+    }).init();
+  //]]>
+</script>
+
+</div>
+</div>
+<div id="footer">
+<p style="text-align: center;"><a href="https://public.govdelivery.com/accounts/UKGOVUK/subscriber/topics?qsp=TRAVEL">Foreign travel alerts</a> &nbsp;&nbsp;<a href="https://www.gov.uk/government/publications" target="_blank" title="Publications">Publications</a>&nbsp;and&nbsp;<a href="https://www.gov.uk/government/announcements" target="_blank" title="announcements">announcements</a>&nbsp;alerts&nbsp;</p>
+<p style="text-align: center;"><a href="https://public.govdelivery.com/accounts/UKGOVUK/subscriber/unsubscribe">Delete my account</a></p>
+<p style="text-align: center;">&nbsp;</p>
+<hr>
+<a id="privacy_policy" target="_blank" href="https://www.gov.uk/support/privacy-policy">Privacy policy</a>
+&nbsp;-&nbsp;
+<a id="help" target="_blank" href="https://subscriberhelp.govdelivery.com/hc/en-us">Help</a>
+</div>
+</div>
+</div>
+</body></html>
