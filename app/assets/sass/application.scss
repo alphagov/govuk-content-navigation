@@ -68,7 +68,7 @@ a {
     padding: 0;
   }
 
-  .detailed-guide {
+  .detailed-guide, .document-collection {
     @include grid-column(2/3);
 
     .govuk-breadcrumbs {
@@ -418,7 +418,7 @@ a {
 
   .govuk-title {
     .context {
-      
+
       a {
         color: $text-colour;
         text-decoration: underline;
@@ -468,7 +468,7 @@ a {
   }
 
   .parent-topic-contents {
-    
+
     @include grid-column(2/3);
 
     .topic-content {
