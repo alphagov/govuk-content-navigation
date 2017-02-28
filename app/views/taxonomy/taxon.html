@@ -15,35 +15,6 @@
 
     <div class="grid-row">
 
-    {% if presentedTaxon.mainstreamContent.length %}
-      <div class="full-width-column top-task-container lines">
-
-        <div class="top-task-list">
-
-          {% if presentedTaxon.mainstreamContent.length > 10 %}
-            {% set column_height = (presentedTaxon.mainstreamContent.length/2) | round(0, "ceil") %}
-          {% else %}
-            {% set column_height = 5 %}
-          {% endif %}
-
-          <h2>Top tasks in {{presentedTaxon.title}}</h2>
-            <ul>
-              {% for mainstreamItem in presentedTaxon.mainstreamContent.slice(0, column_height) %}
-                <li><a href="{{ mainstreamItem.link }}">{{ mainstreamItem.title }}</a></li>
-              {% endfor %}
-            </ul>
-            {% if presentedTaxon.mainstreamContent.length > 5 %}
-            <ul>
-              {% for mainstreamItem in presentedTaxon.mainstreamContent.slice(column_height) %}
-                <li><a href="{{ mainstreamItem.link }}">{{ mainstreamItem.title }}</a></li>
-              {% endfor %}
-            </ul>
-            {% endif %}
-        </div>
-
-      </div>
-    {% endif %}
-
       <div class="full-width-column">
         <nav role="navigation" class="child-topics-list">
           <h2>In this section</h2>
