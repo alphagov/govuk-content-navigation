@@ -373,12 +373,6 @@ a {
     margin-left: 0;
     margin-bottom: $gutter-one-third;
     list-style: none;
-    a {
-      text-decoration: none;
-      &:hover, &:focus {
-        text-decoration: underline;
-      }
-    }
   }
   .reveal {
     display: block;
