@@ -105,6 +105,10 @@ var GuidanceContent = require('./models/guidance_content.js');
       res.render('emails/gov-delivery/subscriber');
   });
 
+    router.get('/gov-delivery/preferences', function (req, res) {
+      res.render('emails/gov-delivery/preferences');
+  });
+
   router.post('/gov-delivery/email-signup', function (req, res) {
     var email = req.body.email;
     res.render('emails/gov-delivery/subscriber', {email: email});

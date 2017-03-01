@@ -713,6 +713,24 @@
        @include media(tablet) {
         background-position: 0 35%;
       }
-    }
+    } 
 
    }
+
+.email {
+      .bullet {
+        list-style-type: disc;
+        padding-left: 18px;
+        padding-bottom: 18px;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: medium;
+      }
+      .paragraph {
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: medium;
+
+      }
+    }
+

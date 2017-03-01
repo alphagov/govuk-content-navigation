@@ -6,17 +6,26 @@
 
 {% block content %}
 
-<main id="content" role="main" class="taxonomy">
+<main id="content" role="main" class="taxonomy email">
 
 <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-xlarge">
-        Sign up to email alerts about {{presentedTaxon.title | lower}}
+      <h1 class="heading-large">
+        Sign up to email alerts about:
+        {{presentedTaxon.title | lower}}
       </h1>
 
-      <p>You will receive alerts about anything published to GOV.UK about {{presentedTaxon.title | lower}}, including {{presentedTaxon.description}}</p>
+      <p class=paragraph>You will receive alerts about everything published to GOV.UK on this topic.</p>
+      
+      <p class=paragraph>This will include {{presentedTaxon.description}}</p>
 
+      <p class=paragraph>You can set your preferences to receive emails:</p>
+        <ul class=bullet>
+          <li>instantly (default setting)</li>
+          <li>daily</li>
+          <li>weekly</li>
+        </ul>
 
 </div>
 
@@ -26,8 +35,8 @@
         <a class="button button-start" href="/gov-delivery/email-signup" role="button">Sign up now</a>
       </p>
 
-	<a title="Navigate to previous part" rel="prev" href="#">
-              <span class="pagination-label">Back</span>
+	<a title="Navigate to previous part" rel="prev" onClick="history.go(-1);return true;">
+              <span class="pagination-label">Go back to select a different topic</span>
 </a>
 
     </div>
