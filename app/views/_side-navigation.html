@@ -2,15 +2,9 @@
   <aside class="related" id="related">
     {% for taxon in presentedContent.relatedContent %}
 
-      {% if presentedContent.breadcrumb.length > 3 %}
-        {% set topic_link = presentedContent.breadcrumb[3].basePath + "#" + taxon.basePath %}
-      {% else %}
-        {% set topic_link = taxon.basePath %}
-      {% endif %}
-
       <div class="related-topic-links">
         <header>
-           <h2><a href="{{ topic_link }}">{{ taxon.title }}</a></h2>
+           <h2><a href="{{ taxon.basePath }}">{{ taxon.title }}</a></h2>
            <p>{{ taxon.description }}</p>
         </header>
 
