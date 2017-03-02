@@ -12,6 +12,16 @@ class ContentItem {
     this.documentCollections = documentCollections;
   }
 
+  isSubsection () {
+    return(
+      [
+        "/what-different-qualification-levels-mean-overview",
+        "/what-different-qualification-levels-mean-list-of-qualification-levels",
+        "/what-different-qualification-levels-mean-compare-different-qualification-levels",
+      ].includes(this.basePath)
+    )
+  }
+
   belongsToDocumentCollection () {
     return (
       this.documentCollections != undefined && this.documentCollections.length > 0

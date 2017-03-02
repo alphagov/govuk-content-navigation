@@ -112,7 +112,8 @@ class Taxon {
         contentItem.document_collections
       );
 
-      if (contentItemModel.belongsToDocumentCollection() == false) {
+      if (contentItemModel.isSubsection() == false &&
+          contentItemModel.belongsToDocumentCollection() == false) {
         taxon.addContent(contentItemModel);
       }
     });
