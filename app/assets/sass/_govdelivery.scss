@@ -288,11 +288,8 @@
     padding: 10px;
     color: #000;
   }
-  /*.data-table tr th {
-    display: none;
-  }*/
+
   .data-table tr th {
-      background: url("../images/gray-grad.jpg") repeat-x scroll left bottom #EDEDED;
       border-bottom: 2px solid #BFC1C3;
       border-top: 2px solid #BFC1C3;
       margin: 0;
@@ -443,6 +440,7 @@
   }
 
   .button_panel input {
+    text-transform: uppercase;
     background: #eee;
     background: #eee -moz-linear-gradient(top, #f9f9f9 0%, #e8e8e8 100%);
     background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%, #fff), color-stop(100%, #e8e8e8));
