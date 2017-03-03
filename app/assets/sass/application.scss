@@ -349,24 +349,31 @@ a {
   margin-top: $gutter-half;
 
   @include media(tablet) {
-    margin-top: $gutter * 1.5;
+    margin-top: $gutter * 2;
   }
 }
 
 .related {
   border-top: 10px solid $govuk-blue;
-  padding-top: 5px;
 
   div {
-    padding-bottom: 9px;
+    padding-top: $gutter-two-thirds;
   }
 
   h2 {
-    @include bold-19;
-    margin-bottom: $gutter-half;
+    @include bold-24;
+    margin-bottom: ($gutter-one-third/2);
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   p {
     @include core-16;
+    margin-bottom: 0;
   }
 
   h3 {
@@ -374,13 +381,20 @@ a {
   }
 
   ul {
-    margin-bottom: $gutter-half;
+    margin-bottom: 0;
   }
 
   li {
-    margin-left: 0;
-    margin-bottom: $gutter-one-third;
+    margin-bottom: 0;
+    padding-left: 15px;
     list-style: none;
+
+    a:before {
+      content: "•";
+      display: inline-block;
+      width: 15px;
+      margin-left: -15px;
+    }
   }
   .reveal {
     display: block;
@@ -391,6 +405,14 @@ a {
 
 #whitehall-wrapper {
   .related {
+    h2 {
+      a {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
     a {
       text-decoration: underline;
     }
