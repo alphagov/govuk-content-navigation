@@ -24,12 +24,6 @@ var path = require('path'),
     useAuth  = useAuth.toLowerCase();
     useHttps   = useHttps.toLowerCase();
 
-// Authenticate against the environment-provided credentials, if running
-// the app in production (Heroku, effectively)
-if (env === 'production' && useAuth === 'true'){
-    app.use(utils.basicAuth(username, password));
-}
-
 // Application settings
 app.set('view engine', 'html');
 app.set('views', [__dirname + '/app/views', __dirname + '/lib/html/']);
@@ -92,6 +86,12 @@ app.use(function (req, res, next) {
 // Force HTTPs on production connections
 if (env === 'production' && useHttps === 'true'){
   app.use(utils.forceHttps);
+}
+
+// Authenticate against the environment-provided credentials, if running
+// the app in production (Heroku, effectively)
+if (env === 'production' && useAuth === 'true'){
+    app.use(utils.basicAuth(username, password));
 }
 
 // Disallow search index idexing
