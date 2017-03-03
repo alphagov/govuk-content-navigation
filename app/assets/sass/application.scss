@@ -209,6 +209,10 @@ a {
 .breadcrumbs {
   @include breadcrumbs;
 
+  li, li.parent {
+    background-position-y: 4px;
+  }
+
    li.current {
      a {
        color: $secondary-text-colour;
@@ -220,7 +224,11 @@ a {
    .breadcrumbs {
       @include breadcrumbs;
 
-      .current {
+      li, li.parent {
+        background-position-y: 4px;
+      }
+
+      li.current {
         a {
           color: $secondary-text-colour;
           text-decoration: none;
