@@ -27,7 +27,7 @@ var GuidanceContent = require('./models/guidance_content.js');
       });
   });
 
-  router.get('/education/:taxon?/email-sign-up-generic/', function (req, res){
+  router.get('/education/:taxon?/email-sign-up-options/', function (req, res){
     var taxonParam = req.params.taxon;
     if(taxonParam === undefined) {
       taxonParam = "/education";
@@ -39,7 +39,7 @@ var GuidanceContent = require('./models/guidance_content.js');
     TaxonomyData.get().
       then(function (taxonomyData) {
         var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
-        res.render('emails/email-sign-up-generic', {presentedTaxon: presentedTaxon});
+        res.render('emails/email-sign-up-options', {presentedTaxon: presentedTaxon});
     });
   });
 
