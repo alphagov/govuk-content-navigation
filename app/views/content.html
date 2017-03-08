@@ -3,6 +3,7 @@
 
 {% block content %}
   <div id="{% if presentedContent.isWhitehall %}whitehall-{% endif %}wrapper"{% if presentedContent.isHtmlManual %} class="html-manual"{% endif %}>
+    {% include "includes/phase_banner_beta.html" %}
     {{ breadcrumb_macro.render_breadcrumb(presentedContent.breadcrumb, presentedContent.title) }}
 
     <div class="grid-row">
