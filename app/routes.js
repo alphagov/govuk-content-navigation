@@ -5,8 +5,6 @@ router.use(bodyParser.json());       // to support JSON-encoded bodies
 router.use(bodyParser.urlencoded({     // to support URL-encoded bodies
   extended: true
 }));
-//router.use(express.json());       // to support JSON-encoded bodies
-//router.use(express.urlencoded());
 
 var DocumentType = require('./models/document_type.js');
 var TaxonPresenter = require('./models/taxon_presenter.js');
@@ -43,6 +41,7 @@ var GuidanceContent = require('./models/guidance_content.js');
     });
   });
 
+<<<<<<< HEAD
     router.get('/education/:taxon?/email-sign-up-single/', function (req, res){
     var taxonParam = req.params.taxon;
     if(taxonParam === undefined) {
@@ -60,6 +59,13 @@ var GuidanceContent = require('./models/guidance_content.js');
   });
 
 
+=======
+   router.post('/gov-delivery/email-signup', function (req, res) {
+      var emailSelected = req.body["radio-group"];
+      res.render('emails/gov-delivery/email-signup', {emailSelected: emailSelected});
+  });
+
+>>>>>>> Add routing for radio buttons
   router.get('/education/:taxon?', function (req, res) {
     var taxonParam = req.params.taxon;
 
@@ -106,16 +112,14 @@ var GuidanceContent = require('./models/guidance_content.js');
       res.render('become-a-childminder');
   });
 
+  /* Email pages are for prototyping how the new subscriptions will fit into the
+   new navigation */
   router.get('/email-sign-up-page-v1/', function (req, res) {
       res.render('emails/email-sign-up-page-v1');
   });
 
   router.get('/gov-delivery-enter/', function (req, res) {
       res.render('emails/gov-delivery-enter');
-  });
-
-   router.get('/gov-delivery/email-signup', function (req, res) {
-      res.render('emails/gov-delivery/email-signup');
   });
 
   router.get('/gov-delivery/subscriber', function (req, res) {
@@ -126,14 +130,28 @@ var GuidanceContent = require('./models/guidance_content.js');
       res.render('emails/gov-delivery/preferences');
   });
 
-  router.post('/gov-delivery/email-signup', function (req, res) {
+  router.post('/emails/gov-delivery/subscriber', function (req, res) {
     var email = req.body.email;
+<<<<<<< HEAD
     res.render('emails/gov-delivery/subscriber', {email: email});
   });
 
   router.get('/email-sign-up-preferences', function (req, res) {
     res.render('emails/email-sign-up-preferences');
   });
+=======
+    var taxonParam = req.body.taxon;
+    TaxonomyData.get().
+      then(function (taxonomyData) {
+        var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
+        res.render('emails/gov-delivery/subscriber',
+          {
+            email: email,
+            taxon: presentedTaxon
+          });
+      });
+   });
+>>>>>>> Add routing for radio buttons
 
   router.get(/\/.+/, function (req, res) {
     var basePath = req.url;

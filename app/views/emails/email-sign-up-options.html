@@ -12,36 +12,36 @@
   <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        Sign up for email alerts    
-      </h1> 
-      <p>What do you want to subscribe to?</p>     
+        Sign up for email alerts
+      </h1>
+      <p>What do you want to subscribe to?</p>
   </div>
 
 <div class="grid-row">
   <div class="column-two-thirds">
-<form>
+<form method="post" action="/gov-delivery/email-signup">
   <div class="form-group">
     <fieldset>
 
       <legend class="visually-hidden">What topic do you want to subscribe to?</legend>
 
       <label class="block-label selection-button-radio" for="radio-1">
-        <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
+        <input id="radio-1" type="radio" name="radio-group" value="{{ presentedTaxon.basePath }}">
         <h3>Everything published to GOV.UK about {{presentedTaxon.title | lower}}</h3> including everything below
       </label>
 
       <p class="form-block">or only</p>
 
 {% for childTaxon in presentedTaxon.children %}
-      <label class="block-label selection-button-radio email-radio" for="radio-{{ loop.index + 1 }}">
-        <input id="radio-{{ loop.index + 1 }}" type="radio" name="radio-group" value="childTaxon.title">
+      <label class="block-label selection-button-radio" for="radio-{{ loop.index + 1 }}">
+        <input id="radio-{{ loop.index + 1 }}" type="radio" name="radio-group" value="{{ childTaxon.basePath }}">
         {{ childTaxon.title }}
       </label>
      {% endfor %} 
 
     </fieldset>
   </div>
-</form>
+
 
   </div>
 </div>
@@ -52,14 +52,14 @@
 <div>
     <div>
       <p>
-        <a class="button button-start" href="/email-sign-up-preferences" role="button">Continue</a>
+        <input type="submit" class="button button-start" value="Sign up now" role="button">
       </p>
 
 	<a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Back</a>
 
     </div>
 
-
+</form>
 
 </main>
 

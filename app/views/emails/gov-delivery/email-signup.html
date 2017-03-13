@@ -27,7 +27,7 @@ GOV.UK Email alert
 </p>
 
 
-<form accept-charset="UTF-8" method="post">
+<form accept-charset="UTF-8" method="post" action="/emails/gov-delivery/subscriber">
 <fieldset id="quick_subscribe_new">
 <h1>
 Subscribe, change your preferences or unsubscribe from GOV.UK emails.
@@ -43,9 +43,9 @@ Subscribe, change your preferences or unsubscribe from GOV.UK emails.
 </li>
 </ol>
 <div class="button_panel">
+<input type="hidden" name="taxon" value="{{ emailSelected }}">
 <input type="submit" name="commit" value="Submit" class="form_button">
 <input type="button" value="Cancel" class="form_button cancel_button">
-<!--<a href="/gov-delivery/subscriber" name="commit" class="form_button">Submit</a><a type="button" value="Cancel" class="form_button cancel_button">Cancel</a>-->
 </div>
 </fieldset>
 </form>
