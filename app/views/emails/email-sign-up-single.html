@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Blank page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="taxonomy email">
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Sign up for email alerts    
+      </h1>
+
+    <div>  
+      <p>You are subscribing to email alerts about {{presentedTaxon.title | lower}}. </p>     
+      <p class=paragraph>This will include {{presentedTaxon.description}}</p>
+
+</div>  
+
+<div>
+    <div class="column-two-thirds">
+      <p>
+        <a class="button button-start" href="/email-sign-up-preferences" role="button">Continue</a>
+      </p>
+
+	<a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Back to select a different topic</a>
+
+    </div>
+
+
+
+</main>
+
+{% endblock %}

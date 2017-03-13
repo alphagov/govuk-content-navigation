@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Blank page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="taxonomy email">
+
+<div class="grid-row">
+  <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Sign up for email alerts    
+      </h1>
+  <div> 
+      <p>You will receive alerts when the government publishes anything to GOV.UK about [chosen taxon].</p>
+
+      <p>You can choose to receive email alerts:</p>
+
+      <ul class="list list-bullet">
+        <li>instantly (default)</li>
+        <li>daily</li>
+        <li>weekly</li>
+      </uL>
+
+      <p>You can set your preferences once you have signed up for email alerts.</p>
+  </div>
+    <div class="panel panel-border-wide">
+      <p>These preferences will apply to all of your email alerts from GOV.UK.</p>
+    </div>
+</div>  
+
+<div>
+    <div class="column-two-thirds">
+      <p>
+        <a class="button button-start" href="/gov-delivery/email-signup" role="button">Sign up now</a>
+      </p>
+
+	<a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Back</a>
+
+    </div>
+
+
+
+</main>
+
+{% endblock %}
