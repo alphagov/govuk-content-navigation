@@ -43,6 +43,23 @@ var GuidanceContent = require('./models/guidance_content.js');
     });
   });
 
+    router.get('/education/:taxon?/email-sign-up-single/', function (req, res){
+    var taxonParam = req.params.taxon;
+    if(taxonParam === undefined) {
+      taxonParam = "/education";
+    }
+    else {
+      taxonParam = "/education/" + taxonParam;
+    }
+
+    TaxonomyData.get().
+      then(function (taxonomyData) {
+        var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
+        res.render('emails/email-sign-up-single', {presentedTaxon: presentedTaxon});
+    });
+  });
+
+
   router.get('/education/:taxon?', function (req, res) {
     var taxonParam = req.params.taxon;
 
@@ -114,16 +131,8 @@ var GuidanceContent = require('./models/guidance_content.js');
     res.render('emails/gov-delivery/subscriber', {email: email});
   });
 
-    router.get('/email-sign-up-page-wellbeing/', function (req, res) {
-      res.render('emails/email-sign-up-page-wellbeing');
-  });
-
-    router.get('/email-sign-up-page-SEND/', function (req, res) {
-      res.render('emails/email-sign-up-page-SEND');
-  });
-
-    router.get('/email-sign-up-page-running/', function (req, res) {
-      res.render('emails/email-sign-up-page-running');
+  router.get('/email-sign-up-preferences', function (req, res) {
+    res.render('emails/email-sign-up-preferences');
   });
 
   router.get(/\/.+/, function (req, res) {

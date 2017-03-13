@@ -23,17 +23,17 @@
   <div class="form-group">
     <fieldset>
 
-      <legend class="visually-hidden">Where do you live?</legend>
+      <legend class="visually-hidden">What topic do you want to subscribe to?</legend>
 
       <label class="block-label selection-button-radio" for="radio-1">
         <input id="radio-1" type="radio" name="radio-group" value="Northern Ireland">
         <h3>Everything published to GOV.UK about {{presentedTaxon.title | lower}}</h3> including everything below
       </label>
 
-      <p class="form-block">or</p>
+      <p class="form-block">or only</p>
 
 {% for childTaxon in presentedTaxon.children %}
-      <label class="block-label selection-button-radio" for="radio-{{ loop.index + 1 }}">
+      <label class="block-label selection-button-radio email-radio" for="radio-{{ loop.index + 1 }}">
         <input id="radio-{{ loop.index + 1 }}" type="radio" name="radio-group" value="childTaxon.title">
         {{ childTaxon.title }}
       </label>
@@ -46,16 +46,16 @@
   </div>
 </div>
 <div>
-      <p class=paragraph>You will receive alerts about everything published to GOV.UK on this topic.</p>
+
 </div>  
 
 <div>
     <div class="column-two-thirds">
       <p>
-        <a class="button button-start" href="/gov-delivery/email-signup" role="button">Sign up now</a>
+        <a class="button button-start" href="/email-sign-up-preferences" role="button">Continue</a>
       </p>
 
-	<a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Go back to select a different topic</a>
+	<a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Back</a>
 
     </div>
 
