@@ -31,7 +31,7 @@
         <h3>Everything published to GOV.UK about {{presentedTaxon.title | lower}}</h3> including all the topics below
       </label>
 
-      <p class="form-block">or only</p>
+      <h3>or only</h3>
 
 {% for childTaxon in presentedTaxon.children %}
       <label class="block-label selection-button-radio" for="radio-{{ loop.index + 1 }}">
