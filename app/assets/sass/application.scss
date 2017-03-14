@@ -752,6 +752,17 @@
         margin-bottom: 40px;
       }
 
+      .button {
+        @include button ($button-colour);
+        @include box-sizing (border-box);
+        vertical-align: top;
+        font-size: 20px;
+        @include media (mobile) {
+        width: 100%;
+        text-align: center;
+      }
+}
+
 
 }
 
