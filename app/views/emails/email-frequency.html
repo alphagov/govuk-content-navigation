@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+{% import "breadcrumb-macro.html" as breadcrumb_macro %}
+
+{% block page_title %}
+  Blank page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main" class="taxonomy">
+{{ breadcrumb_macro.render_breadcrumb(presentedTaxon.breadcrumb, presentedTaxon.title, email=true) }}
+<div class="grid-row">
+    <div class="column-two-thirds">
+
+      <h1 class="heading-large">
+        Sign up for email alerts
+      </h1>
+
+      <p>You can choose to receive email alerts:</p>
+
+      <ul class="list list-bullet">
+        <li>instantly (default setting)</li>
+        <li>daily</li>
+        <li>weekly</li>
+      </uL>
+
+      <p>You can set your preferences once you've signed up for your email alerts.</p>
+      <p>These preference will apply to all of your email alerts from GOV.UK.</p>
+</div>
+
+<div>
+    <div class="column-two-thirds">
+      <form method="post" action="/gov-delivery/email-signup">
+      <input type="hidden" name="emailSelected" value="{{ emailSelected }}">
+      <p>
+        <input type="submit" name="commit" value="Sign up now" class="button button-start">
+      </p>
+      </form>
+
+
+	<a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Go back to select a different topic</a>
+</div>
+
+
+
+</main>
+
+{% endblock %}

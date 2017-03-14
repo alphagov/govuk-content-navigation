@@ -1,11 +1,16 @@
-{% macro render_breadcrumb(pages, title) %}
+{% macro render_breadcrumb(pages, title, email=false) %}
   {% block breadcrumb %}
     <div class="breadcrumbs">
       <ol>
         {% for page in pages %}
           <li{% if loop.last %} class="parent"{% endif %}><a href="{{ page.basePath }}/"> {{ page.title }}</a></li>
         {% endfor %}
+        {% if not email %}
         <li class="current"><a href="#content">{{ title }}</a></li>
+        {% else %}
+        <li><a href="{{ basePath }}/"> {{ title }}</a>
+        <li class="current"><a href="#content">Sign up for email alerts</a></li>
+        {% endif %}
       </ol>
     </div>
   {% endblock %}
