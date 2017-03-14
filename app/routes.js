@@ -119,10 +119,12 @@ var GuidanceContent = require('./models/guidance_content.js');
     TaxonomyData.get().
       then(function (taxonomyData) {
         var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
+        var emailTaxon = new TaxonPresenter(emailSelected, taxonomyData);
         res.render('emails/email-sign-up-preferences',
           {
             emailSelected: emailSelected,
-            presentedTaxon: presentedTaxon
+            presentedTaxon: presentedTaxon,
+            emailTaxon: emailTaxon
           });
       });
   });
