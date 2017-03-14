@@ -3,7 +3,7 @@
     <div class="breadcrumbs">
       <ol>
         {% for page in pages %}
-          <li{% if loop.last %} class="parent"{% endif %}><a href="{{ page.basePath }}/"> {{ page.title }}</a></li>
+          <li{% if loop.last %} class="parent"{% endif %}><a href="javascript:history.go(-1);"> {{ page.title }}</a></li>
         {% endfor %}
         {% if not email %}
         <li class="current"><a href="#content">{{ title }}</a></li>
