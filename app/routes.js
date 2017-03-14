@@ -42,6 +42,7 @@ var GuidanceContent = require('./models/guidance_content.js');
   });
 
     router.get('/education/:taxon?/email-sign-up-single/', function (req, res){
+    var emailSelected = req.params.taxon;
     var taxonParam = req.params.taxon;
     if(taxonParam === undefined) {
       taxonParam = "/education";
@@ -53,7 +54,10 @@ var GuidanceContent = require('./models/guidance_content.js');
     TaxonomyData.get().
       then(function (taxonomyData) {
         var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
-        res.render('emails/email-sign-up-single', {presentedTaxon: presentedTaxon});
+        res.render('emails/email-sign-up-single', {
+          presentedTaxon: presentedTaxon,
+          emailSelected: emailSelected
+        });
     });
   });
 
@@ -96,8 +100,14 @@ var GuidanceContent = require('./models/guidance_content.js');
   /* Email pages are for prototyping how the new subscriptions will fit into the
    new navigation */
 
-  router.post('/education/:taxon?/frequency', function (req, res) {
-    var emailSelected = req.body["radio-group"];
+  router.post('/education/:taxon?/preferences', function (req, res) {
+    if (req.body["radio-group"] !== undefined){
+      var emailSelected = req.body["radio-group"];
+    }
+    else
+    {
+      var emailSelected = '/education/' + req.body.emailSelected;
+    }
     var taxonParam = req.params.taxon;
     if(taxonParam === undefined) {
       taxonParam = "/education";
@@ -109,7 +119,7 @@ var GuidanceContent = require('./models/guidance_content.js');
     TaxonomyData.get().
       then(function (taxonomyData) {
         var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
-        res.render('emails/email-frequency',
+        res.render('emails/email-sign-up-preferences',
           {
             emailSelected: emailSelected,
             presentedTaxon: presentedTaxon

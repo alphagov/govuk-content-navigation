@@ -21,10 +21,14 @@ Blank page
       <p>This will include {{presentedTaxon.description}}</p>
       </div>  
 
-      <div>
-        <p>
-          <a class="button button-start" href="/email-sign-up-preferences" role="button">Continue</a>
-        </p>
+<div>
+    <div class="column-two-thirds">
+  <form method="post" action="{{ presentedTaxon.basePath }}/preferences">
+      <input type="hidden" name="emailSelected" value="{{ emailSelected }}">
+      <p>
+        <input type="submit" class="button button-start" value="Continue" role="button">
+      </p>
+  </form>
 
         <a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Back to select a different topic</a>
 
