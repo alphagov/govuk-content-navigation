@@ -124,12 +124,6 @@ var GuidanceContent = require('./models/guidance_content.js');
 
   router.post('/emails/gov-delivery/subscriber', function (req, res) {
     var email = req.body.email;
-    res.render('emails/gov-delivery/subscriber', {email: email});
-  });
-
-  router.get('/email-sign-up-preferences', function (req, res) {
-    res.render('emails/email-sign-up-preferences');
-  });
     var taxonParam = req.body.emailSelected;
     TaxonomyData.get().
       then(function (taxonomyData) {
