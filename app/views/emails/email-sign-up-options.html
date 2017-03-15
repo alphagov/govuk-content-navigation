@@ -25,10 +25,13 @@
 
       <label class="block-label selection-button-radio" data-target="radio1" for="radio-1">
         <input id="radio-1" type="radio" name="radio-group" value="{{ presentedTaxon.basePath }}">
-        <h3>Everything published to GOV.UK about {{presentedTaxon.title | lower}}</h3> including all the topics below
+        <h3>Everything published to GOV.UK about {{presentedTaxon.title | lower}}</h3> including alerts about all the topics below
       </label>
 
-      <div class="panel panel-border-narrow js-hidden" id="radio1">
+      <div
+        style="margin-left: 16px;"
+        class="panel panel-border-narrow js-hidden" id="radio1"
+      >
         
           <input type="submit" class="button button-start" value="Continue" role="button">
       </div>
@@ -41,8 +44,11 @@
         {{ childTaxon.title }}
       </label>
 
-      <div class="panel panel-border-narrow js-hidden" id="radio{{ loop.index + 1 }}">
-        <p class=paragraph>This will include {{childTaxon.description}}</p>
+      <div
+        style="margin-left: 16px;"
+        class="panel panel-border-narrow js-hidden" id="radio{{ loop.index + 1 }}"
+      >
+        <p class=paragraph>This will include alerts about {{childTaxon.description}}</p>
           <input type="submit" class="button button-start" value="Continue" role="button">
       </div>
 
