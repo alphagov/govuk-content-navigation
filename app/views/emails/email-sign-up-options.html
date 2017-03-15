@@ -38,10 +38,13 @@
         <input id="radio-{{ loop.index + 1 }}" type="radio" name="radio-group" value="{{ childTaxon.basePath }}">
         {{ childTaxon.title }}
       </label>
-      <div class="panel panel-border-narrow js-hidden" id="something">
+ 
+      <div class="panel panel-border-narrow js-hidden" id="something"> <div class="form-group">
       <p class=paragraph>This will include {{presentedTaxon.description}}</p>
         <input type="submit" class="button button-start" value="Continue" role="button">
       </div>
+      </div>
+
      {% endfor %} 
 
     </fieldset>

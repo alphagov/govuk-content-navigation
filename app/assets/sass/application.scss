@@ -386,7 +386,7 @@
     @include bold-24();
 
     margin-top: $gutter * 1.5;
-    margin-bottom: 0;
+    margin-bottom: $gutter;
 
     &.subsection__title {
       margin: 0;
@@ -728,7 +728,7 @@
       }
 
       .paragraph {
-        font-size: 20px;
+        font-size: 19px;
         line-height: 24px;
         font-weight: medium;
       }
@@ -746,6 +746,7 @@
       .block-label {
         margin-bottom: 10px;
         margin-top: 10px;
+        font-size: 19px;
       }
   
       .heading-large {
@@ -761,7 +762,16 @@
         width: 100%;
         text-align: center;
       }
-}
+      }
+
+      .panel{
+        padding-left: 28px;
+        margin-left: 16px;
+      }
+
+      .form-group{
+        margin-top: -10px;
+      }
 
 
 }
