@@ -24,7 +24,7 @@
     @include core-16;
     float: left;
 
-    background-image: file-url("separator.png");
+    background-image: url(https://assets.publishing.service.gov.uk/static/separator-871ef28abf1920b1b8050934ebec4366c18e3cba6ddb704392935e076a7e744d.png);
 
     @include device-pixel-ratio() {
       background-image: file-url("separator-2x.png");
@@ -78,7 +78,7 @@
         margin-left: 0.6em;
         padding-left: 0.9em;
 
-        background-image: file-url("separator.png");
+        background-image: url(https://assets.publishing.service.gov.uk/static/separator-871ef28abf1920b1b8050934ebec4366c18e3cba6ddb704392935e076a7e744d.png);
 
         @include device-pixel-ratio() {
           background-image: file-url("separator-2x.png");

@@ -16,10 +16,7 @@
         Get email alerts
       </h1>
       <p>What do you want to subscribe to?</p>
-  </div>
 
-<div class="grid-row">
-  <div class="column-two-thirds">
 <form method="post" action="{{ presentedTaxon.basePath }}/preferences">
   <div class="form-group">
     <fieldset>
@@ -32,11 +29,11 @@
       </label>
 
       <div class="panel panel-border-narrow js-hidden" id="radio1">
-        <p class=paragraph>including all the topics below</p>
+        
           <input type="submit" class="button button-start" value="Continue" role="button">
       </div>
 
-      <h3>or only</h3>
+      <h3 class="heading2hack">or only</h3>
 
 {% for childTaxon in presentedTaxon.children %}
       <label class="block-label selection-button-radio" data-target="radio{{ loop.index + 1 }}" for="radio-{{ loop.index + 1 }}">
@@ -47,7 +44,6 @@
       <div class="panel panel-border-narrow js-hidden" id="radio{{ loop.index + 1 }}">
         <p class=paragraph>This will include {{childTaxon.description}}</p>
           <input type="submit" class="button button-start" value="Continue" role="button">
-      </div>
       </div>
 
      {% endfor %} 
