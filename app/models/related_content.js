@@ -22,7 +22,7 @@ class RelatedContent {
 
     return new Promise((resolve, reject) =>
       https.get({
-        host: 'www.gov.uk',
+        host: 'www-origin.staging.publishing.service.gov.uk',
         path: path,
       }, function (response) {
         var body = '';
