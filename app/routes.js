@@ -20,6 +20,43 @@ var GuidanceContent = require('./models/guidance_content.js');
       });
   });
 
+  router.get('/parenting-childcare/:taxon?', function (req, res) {
+    var taxonParam = req.params.taxon;
+
+    if(taxonParam == undefined) {
+      taxonParam = "/parenting-childcare";
+    }
+    else {
+      taxonParam = "/parenting-childcare/" + taxonParam;
+    }
+    var viewAll = !(typeof(req.query.viewAll) === "undefined");
+
+    var taxonPresenter = new TaxonPresenter(taxonParam);
+    taxonPresenter.build().then(presentTaxon);
+
+    function presentTaxon(presentedTaxon) {
+      if (viewAll) {
+        var backTo = presentedTaxon.determineBackToLink(req.url);
+        res.render('taxonomy/view-all', {
+          presentedTaxon: presentedTaxon,
+          backTo: backTo,
+        });
+
+        return;
+      }
+
+      if (presentedTaxon.isPenultimate) {
+        res.render('taxonomy/penultimate-taxon', {
+          presentedTaxon: presentedTaxon,
+        });
+      } else {
+        res.render('taxonomy/taxon', {
+          presentedTaxon: presentedTaxon,
+        });
+      }
+    }
+  });
+
   router.get('/education/:taxon?', function (req, res) {
     var taxonParam = req.params.taxon;
 
