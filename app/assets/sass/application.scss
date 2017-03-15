@@ -386,7 +386,7 @@
     @include bold-24();
 
     margin-top: $gutter * 1.5;
-    margin-bottom: $gutter;
+    margin-bottom: 0;
 
     &.subsection__title {
       margin: 0;

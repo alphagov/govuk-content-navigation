@@ -18,9 +18,9 @@
         <div class="topic-content">
         <ul class="subscriptions-accordion">
         {% if not presentedTaxon.children.length %}
-        <li class="email-alerts"><a href='{{presentedTaxon.basePath}}/email-sign-up-single/'>Get email alerts</a></li>
+        <li class="email-alerts"><a href='{{presentedTaxon.basePath}}/email-sign-up-single/'>Get email alerts for this topic</a></li>
         {% else %}
-        <li class="email-alerts"><a href='{{presentedTaxon.basePath}}/email-sign-up-options/'>Get email alerts</a></li>
+        <li class="email-alerts"><a href='{{presentedTaxon.basePath}}/email-sign-up-options/'>Get email alerts for this topic</a></li>
         {% endif %}
         </ul>
 
@@ -38,7 +38,7 @@
                   <div class="subsection__content" id="subsection_content_{{ (loop.index+1) | pad(2, '0') }}">
                     <ul class="subsection__list">
                       <ul class="subscriptions-accordion">
-                        <li class="email-alerts"><a href='{{childTaxon.basePath}}/email-sign-up-single/'>Get email alerts</a></li>
+                        <li class="email-alerts"><a href='{{childTaxon.basePath}}/email-sign-up-single/'>Get email alerts for this topic</a></li>
                       </ul>
                       {% for document in childTaxon.guidance.atozContent() %}
                         <li class="subsection__list-item">

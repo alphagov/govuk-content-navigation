@@ -34,10 +34,14 @@
       <h3>or only</h3>
 
 {% for childTaxon in presentedTaxon.children %}
-      <label class="block-label selection-button-radio" for="radio-{{ loop.index + 1 }}">
+      <label class="block-label selection-button-radio" data-target="something" for="radio-{{ loop.index + 1 }}">
         <input id="radio-{{ loop.index + 1 }}" type="radio" name="radio-group" value="{{ childTaxon.basePath }}">
         {{ childTaxon.title }}
       </label>
+      <div class="panel panel-border-narrow js-hidden" id="something">
+      <p class=paragraph>This will include {{presentedTaxon.description}}</p>
+        <input type="submit" class="button button-start" value="Continue" role="button">
+      </div>
      {% endfor %} 
 
     </fieldset>
@@ -50,14 +54,8 @@
 
 </div>  
 
-<div>
     <div>
-      <p>
-        <input type="submit" class="button button-start" value="Continue" role="button">
-      </p>
-
 	<a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Back</a>
-
     </div>
 
 </form>
