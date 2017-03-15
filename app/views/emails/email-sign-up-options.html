@@ -26,22 +26,27 @@
 
       <legend class="visually-hidden">What topic do you want to subscribe to?</legend>
 
-      <label class="block-label selection-button-radio" for="radio-1">
+      <label class="block-label selection-button-radio" data-target="radio1" for="radio-1">
         <input id="radio-1" type="radio" name="radio-group" value="{{ presentedTaxon.basePath }}">
         <h3>Everything published to GOV.UK about {{presentedTaxon.title | lower}}</h3> including all the topics below
       </label>
 
+      <div class="panel panel-border-narrow js-hidden" id="radio1">
+        <p class=paragraph>including all the topics below</p>
+          <input type="submit" class="button button-start" value="Continue" role="button">
+      </div>
+
       <h3>or only</h3>
 
 {% for childTaxon in presentedTaxon.children %}
-      <label class="block-label selection-button-radio" data-target="something" for="radio-{{ loop.index + 1 }}">
+      <label class="block-label selection-button-radio" data-target="radio{{ loop.index + 1 }}" for="radio-{{ loop.index + 1 }}">
         <input id="radio-{{ loop.index + 1 }}" type="radio" name="radio-group" value="{{ childTaxon.basePath }}">
         {{ childTaxon.title }}
       </label>
- 
-      <div class="panel panel-border-narrow js-hidden" id="something"> <div class="form-group">
-      <p class=paragraph>This will include {{presentedTaxon.description}}</p>
-        <input type="submit" class="button button-start" value="Continue" role="button">
+
+      <div class="panel panel-border-narrow js-hidden" id="radio{{ loop.index + 1 }}">
+        <p class=paragraph>This will include {{childTaxon.description}}</p>
+          <input type="submit" class="button button-start" value="Continue" role="button">
       </div>
       </div>
 
