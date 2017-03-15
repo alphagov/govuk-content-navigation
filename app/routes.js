@@ -36,7 +36,7 @@ var GuidanceContent = require('./models/guidance_content.js');
 
     TaxonomyData.get().
       then(function (taxonomyData) {
-        var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData);
+        var presentedTaxon = new TaxonPresenter(taxonParam, taxonomyData, true);
         res.render('emails/email-sign-up-options', {presentedTaxon: presentedTaxon});
     });
   });

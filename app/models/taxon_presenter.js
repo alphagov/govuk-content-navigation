@@ -4,9 +4,10 @@ var Taxon = require('./taxon.js');
 var BreadcrumbMaker = require('../../lib/js/breadcrumb_maker.js');
 
 class TaxonPresenter {
-  constructor (taxonParam, taxonomyData) {
+  constructor (taxonParam, taxonomyData, isEmailPage) {
     this.taxonomyData = taxonomyData;
     this.basePath = taxonParam;
+    this.isEmailPage = isEmailPage;
 
     this.build();
   }
@@ -28,7 +29,14 @@ class TaxonPresenter {
 
   buildBreadcrumb () {
     var breadcrumbMaker = new BreadcrumbMaker(this.taxonomyData);
-    this.breadcrumb =  breadcrumbMaker.getBreadcrumbForTaxon([this.basePath]);
+    if (this.isEmailPage) {
+      this.breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([this.basePath])
+      this.breadcrumb.push(
+        { title: this.title, basePath: this.basePath }
+      );
+    } else {
+      this.breadcrumb = breadcrumbMaker.getBreadcrumbForTaxon([this.basePath]);
+    }
   }
 
   buildParent () {
