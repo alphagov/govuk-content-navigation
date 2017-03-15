@@ -41,9 +41,14 @@ with open(lib_directory("python/data/content.csv")) as content_file:
                 url,
                 auth=HTTPBasicAuth(HTTP_AUTH_USER, HTTP_AUTH_PASS)
             )
-            time.sleep(0.05)
+            time.sleep(0.15)
 
-            results = response.json()['results']
+            try:
+                results = response.json()['results']
+            except ValueError:
+                print "Could not find results for {}".format(base_path)
+                results = []
+
             if results:
                 link_format = results[0]['format']
             else:
