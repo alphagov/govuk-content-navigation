@@ -490,6 +490,8 @@ a {
   }
 
   .child-topics-list {
+
+
     ul {
       list-style-type: none;
       @extend %grid-row;
@@ -512,6 +514,47 @@ a {
         clear: left;
       }
     }
+
+    .subscriptions {
+      margin-left: 2px;
+
+    li {
+      min-height: 0 ;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      //margin-left: $gutter;
+    }
+
+    a {
+      color: $govuk-blue;
+      @include bold-19;
+      text-decoration: none;
+      //padding-left: 28px;
+      height: 16px;
+      background-repeat: no-repeat;
+      margin-left: $gutter-half;
+    }
+   }
+    .feed {
+      background-image: url("/public/images/feed-icon-black.png");
+      background-position: 0 20%;
+       @include media(tablet) {
+        background-position: 0 35%;
+      }
+    }
+
+    .email-alerts {
+      background-image: url("/public/images/mail-icon.png");
+      background-position: 0 20%;
+
+      @include device-pixel-ratio() {
+        background-image: url("/public/images/mail-icon-x2.png") ;
+        background-size: 20px 14px;
+      }
+       @include media(tablet) {
+        background-position: 0 35%;
+      }
+    }
   }
 
   .parent-topic-contents {
@@ -519,6 +562,7 @@ a {
     @include grid-column(2/3);
 
     .topic-content {
+
       padding-bottom: $gutter;
 
       ul {
@@ -581,3 +625,48 @@ a {
     background-color: $govuk-blue;
   }
 }
+
+   .subscriptions-accordion {
+      margin-left: 2px;
+      padding-bottom: $gutter;
+
+    li {
+      min-height: 0 ;
+      padding-bottom: 0;
+      background-repeat: no-repeat;
+      display: inline;
+      //margin-left: $gutter;
+    }
+
+    a {
+      color: $govuk-blue;
+      @include bold-19;
+      text-decoration: none;
+      padding-left: 18px;
+      height: 16px;
+      background-repeat: no-repeat;
+      margin-left: $gutter-half;
+    }
+    .feed {
+      background-image: url("/public/images/feed-icon-black.png");
+      background-position: 0 20%;
+       @include media(tablet) {
+        background-position: 0 35%;
+      }
+    margin-left: $gutter;
+    }
+
+    .email-alerts {
+      background-image: url("/public/images/mail-icon.png");
+      background-position: 0 20%;
+
+      @include device-pixel-ratio() {
+        background-image: url("/public/images/mail-icon-x2.png") ;
+        background-size: 20px 14px;
+      }
+       @include media(tablet) {
+        background-position: 0 35%;
+      }
+    }
+
+   }
