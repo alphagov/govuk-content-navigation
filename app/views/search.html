@@ -1,17 +1,76 @@
 {% extends "layout.html" %}
 
-{% block page_title %}
-    GOV.UK Search
-{% endblock %}
-
 {% block content %}
 
-<main id="content" class="search" role="main">
-    {% for result in scopedSearch.results %}
-        <ol>
-            <li>{{ result.title_with_highlighting }}</li>
-        </ol>
-    {% endfor %}
-    {{ allGovUkResultsCount }}
+<main id="content" role="main" class="group search one">
+  <form action="/search" method="get" accept-charset="utf-8" role="search" class="js-live-search-form">
+
+    <div class="grid-row">
+      <div class="column-two-thirds">
+        <div class="search-header">
+          <div class="searchfield">
+            <fieldset class="search-input">
+              <label for="search-main">
+                <h1>
+                  <span class="result-count " id="js-live-search-result-count" aria-hidden="true">
+				            {{ scopedSearch.total }} results found
+                  </span> for:
+                  <span class="visuallyhidden">“{{ searchQuery }}”</span>
+                </h1>
+              </label>
+
+              <input type="search" name="q" value="{{ searchQuery }}" id="search-main">
+
+            </fieldset>
+
+            <fieldset class="search-submit">
+              <button type="submit" class="button">Search</button>
+            </fieldset>
+
+          </div>
+
+          <div class="scoped-search_category">
+            <p>Within "Parenting, childcare and children's services"</p>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+
+    <div id="results" class="js-live-search-results-block">
+      <div aria-live="assertive" class="js-aria-live-count visuallyhidden">{{ scopedSearch.total }} search results found</div>
+
+      <div class="results-block">
+        <div class="inner-block js-live-search-results-list">
+
+          <ol class="results-list" id="js-live-search-results" start="1">
+            {% for result in scopedSearch.results.slice(0,3) %}
+              {% include "_search-result.html" %}
+            {% endfor %}
+
+            <li>
+              <div class="panel panel-border-wide scoped-search-panel">
+                <h3 class="heading-medium">You’re currently searching in the "Parenting, childcare and children's services" category</h3>
+                <p>There are <span class="scoped-search-panel-results">{{ allGovUkResultsCount }} results</span> for your keyword in other categories</p>
+                <a href="">See all results on Gov.uk</a>
+              </div>
+            </li>
+
+            {% for result in scopedSearch.results.slice(3) %}
+              {% include "_search-result.html" %}
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+
+    </div>
+  </form>
 </main>
+
+
 {% endblock %}
+
+
