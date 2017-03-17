@@ -3,7 +3,6 @@ var urlHelper = require('url');
 var Taxon = require('./taxon.js');
 var BreadcrumbMaker = require('../../lib/js/breadcrumb_maker.js');
 var TaxonomyData = require('./taxonomy_data.js');
-var MainstreamContent = require('./mainstream_content');
 
 class TaxonPresenter {
   constructor (taxonParam) {
@@ -26,17 +25,6 @@ class TaxonPresenter {
             return presentedTaxon;
           }
         );
-      })
-      .then(function(presentedTaxon) {
-        if (presentedTaxon.isRootTaxon()) {
-          return Promise.resolve(presentedTaxon);
-        } else {
-          return MainstreamContent.forTaxonAndDescendants(presentedTaxon.taxon.contentId)
-            .then(function (mainstreamContent) {
-              presentedTaxon.mainstreamContent = mainstreamContent;
-              return presentedTaxon;
-            });
-        }
       });
   }
 
