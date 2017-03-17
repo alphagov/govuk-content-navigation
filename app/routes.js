@@ -6,6 +6,7 @@ var TaxonPresenter = require('./models/taxon_presenter.js');
 var TaxonomyData = require('./models/taxonomy_data.js');
 var ContentPresenter = require('./models/content_presenter.js');
 var GuidanceContent = require('./models/guidance_content.js');
+var SearchService = require('./models/search_service');
 
   router.get('/', function (req, res) {
     TaxonomyData.get().
@@ -96,7 +97,24 @@ var GuidanceContent = require('./models/guidance_content.js');
 
   router.get('/home/?', function(req, res) {
     res.render('home');
-  })
+  });
+
+  router.get('/search', function(req, res) {
+    var scopedSearch = SearchService.scopedSearch(
+      req.query.q,
+      'c58fdadd-7743-46d6-9629-90bb3ccc4ef0'
+    );
+
+    var allGovUkResultCount = SearchService.count(req.query.q);
+
+    Promise.all([scopedSearch, allGovUkResultCount])
+      .then(function (promiseResolution) {
+        res.render('search', {
+          scopedSearch: promiseResolution[0],
+          allGovUkResultsCount: promiseResolution[1]
+        });
+      });
+  });
 
   router.get(/\/.+/, function (req, res) {
     var basePath = req.url;
