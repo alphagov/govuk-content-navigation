@@ -102,7 +102,7 @@ var SearchService = require('./models/search_service');
   router.get('/search', function(req, res) {
     var scopedSearch = SearchService.scopedSearch(
       req.query.q,
-      'c58fdadd-7743-46d6-9629-90bb3ccc4ef0'
+      req.query.scope
     );
 
     var allGovUkResultCount = SearchService.count(req.query.q);
@@ -110,7 +110,7 @@ var SearchService = require('./models/search_service');
     Promise.all([scopedSearch, allGovUkResultCount])
       .then(function (promiseResolution) {
         res.render('search', {
-          searchQuery: req.query.q,
+          queryParams: req.query,
           scopedSearch: promiseResolution[0],
           allGovUkResultsCount: promiseResolution[1]
         });

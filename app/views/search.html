@@ -1,4 +1,4 @@
-{% extends "layout.html" %}
+{% extends "layout_no_search.html" %}
 
 {% block content %}
 
@@ -15,11 +15,12 @@
                   <span class="result-count " id="js-live-search-result-count" aria-hidden="true">
 				            {{ scopedSearch.total }} results found
                   </span> for:
-                  <span class="visuallyhidden">“{{ searchQuery }}”</span>
+                  <span class="visuallyhidden">“{{ queryParams.q }}”</span>
                 </h1>
               </label>
 
-              <input type="search" name="q" value="{{ searchQuery }}" id="search-main">
+              <input type="search" name="q" value="{{ queryParams.q }}" id="search-main" placeholder="Search">
+              <input type="hidden" name="scope" value="{{ queryParams.scope }}">
 
             </fieldset>
 
@@ -29,10 +30,11 @@
 
           </div>
 
-          <div class="scoped-search_category">
-            <p>Within "Parenting, childcare and children's services"</p>
-          </div>
-
+          {% if queryParams.scope %}
+            <div class="scoped-search_category">
+              <p>Within "Parenting, childcare and children's services"</p>
+            </div>
+          {% endif %}
 
         </div>
       </div>
@@ -51,13 +53,15 @@
               {% include "_search-result.html" %}
             {% endfor %}
 
-            <li>
-              <div class="panel panel-border-wide scoped-search-panel">
-                <h3 class="heading-medium">You’re currently searching in the "Parenting, childcare and children's services" category</h3>
-                <p>There are <span class="scoped-search-panel-results">{{ allGovUkResultsCount }} results</span> for your keyword in other categories</p>
-                <a href="">See all results on Gov.uk</a>
-              </div>
-            </li>
+            {% if queryParams.scope %}
+              <li>
+                <div class="panel panel-border-wide scoped-search-panel">
+                  <h3 class="heading-medium">You’re currently searching in the "Parenting, childcare and children's services" category</h3>
+                  <p>There are <span class="scoped-search-panel-results">{{ allGovUkResultsCount }} results</span> for your keyword in other categories</p>
+                  <a href="/search?q={{ queryParams.q}}">See all results on GOV.UK</a>
+                </div>
+              </li>
+            {% endif %}
 
             {% for result in scopedSearch.results.slice(3) %}
               {% include "_search-result.html" %}

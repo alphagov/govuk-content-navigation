@@ -49,9 +49,7 @@ class SearchService {
    * @returns a promise that resolves the full Rummager response (an object containing "total", "results", etc.)
    */
   static scopedSearch(searchQuery, parentTaxonId) {
-    return SearchService.search({
-      q: searchQuery,
-      filter_part_of_taxonomy_tree: parentTaxonId,
+    var queryObject = {
       count: 10,
       fields: [
         'title_with_highlighting',
@@ -61,7 +59,17 @@ class SearchService {
         'display_type',
         'organisations'
       ]
-    });
+    };
+
+    if (searchQuery) {
+      queryObject.q = searchQuery;
+    }
+
+    if (parentTaxonId) {
+      queryObject.filter_part_of_taxonomy_tree = parentTaxonId;
+    }
+
+    return SearchService.search(queryObject);
   }
 
   /**
