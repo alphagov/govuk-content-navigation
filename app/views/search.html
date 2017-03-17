@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+    GOV.UK Search
+{% endblock %}
+
+{% block content %}
+
+<main id="content" class="search" role="main">
+    {% for result in scopedSearch.results %}
+        <ol>
+            <li>{{ result.title_with_highlighting }}</li>
+        </ol>
+    {% endfor %}
+    {{ allGovUkResultsCount }}
+</main>
+{% endblock %}
