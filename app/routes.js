@@ -110,6 +110,7 @@ var SearchService = require('./models/search_service');
     Promise.all([scopedSearch, allGovUkResultCount])
       .then(function (promiseResolution) {
         res.render('search', {
+          searchQuery: req.query.q,
           scopedSearch: promiseResolution[0],
           allGovUkResultsCount: promiseResolution[1]
         });

@@ -4,6 +4,7 @@
 
 @import 'modules/subsections';
 @import 'breadcrumbs';
+@import 'search';
 
 // Nicer underlines in iOS / OSX Safari
 a {
@@ -52,14 +53,6 @@ a {
 }
 
 // Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
-
-#content {
-  margin: 0;
-
-  @include media(tablet) {
-    margin: 0;
-  }
-}
 
 #whitehall-wrapper {
   @extend %site-width-container;

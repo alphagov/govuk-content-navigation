@@ -54,9 +54,12 @@ class SearchService {
       filter_part_of_taxonomy_tree: parentTaxonId,
       count: 10,
       fields: [
-        'title',
         'title_with_highlighting',
-        'link'
+        'description_with_highlighting',
+        'link',
+        'public_timestamp',
+        'display_type',
+        'organisations'
       ]
     });
   }

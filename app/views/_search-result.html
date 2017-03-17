@@ -1,0 +1,23 @@
+<li>
+  <h3>
+    <a href="{{ result.link }}">{{ result.title_with_highlighting | safe }}</a>
+  </h3>
+
+  <ul class="attributes">
+    {% if result.public_timestamp %}
+      <li> {{ result.public_timestamp | date('d MMMM YYYY') }} </li>
+    {% endif %}
+    {% if result.display_type %}
+      <li> {{ result.display_type }} </li>
+    {% endif %}
+    {% if (result.organisations.length) %}
+      <li>
+        <abbr title="{{ results.organisations[0].title }}">
+          {{ result.organisations[0].acronym }}
+        </abbr>
+      </li>
+    {% endif %}
+  </ul>
+
+  <p>{{ result.description_with_highlighting | safe }}</p>
+</li>
