@@ -574,3 +574,9 @@ a {
     background-color: $govuk-blue;
   }
 }
+
+.results-list {
+  .panel {
+    margin-bottom: 0px;
+  }
+}

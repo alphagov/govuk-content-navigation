@@ -32,7 +32,7 @@
 
           {% if queryParams.scope %}
             <div class="scoped-search_category">
-              <p>Within "Parenting, childcare and children's services"</p>
+              <p>Within: Parenting, childcare and children’s services</p>
             </div>
           {% endif %}
 
@@ -56,9 +56,10 @@
             {% if queryParams.scope %}
               <li>
                 <div class="panel panel-border-wide scoped-search-panel">
-                  <h3 class="heading-medium">You’re currently searching in the "Parenting, childcare and children's services" category</h3>
-                  <p>There are <span class="scoped-search-panel-results">{{ allGovUkResultsCount }} results</span> for your keyword in other categories</p>
-                  <a href="/search?q={{ queryParams.q}}">See all results on GOV.UK</a>
+                  <h3 class="heading-medium">You’re currently searching in: Parenting, childcare and children’s services</h3>
+                  <p>There are <span class="scoped-search-panel-results">{{
+                    allGovUkResultsCount }} results</span> for your search term across the whole of GOV.UK.</p>
+                  <a href="/search?q={{ queryParams.q}}">See all results</a>
                 </div>
               </li>
             {% endif %}
