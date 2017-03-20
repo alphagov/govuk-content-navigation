@@ -13,10 +13,11 @@
   <div class="column-two-thirds">
 
       <h1 class="heading-large">
-        Get email alerts    
+        What you'll get    
       </h1>
   <div> 
-      <p>You'll get alerts when the government publishes or updates anything on GOV.UK about {{ emailTaxon.title }}.</p>
+      <p>You'll get alerts when the government publishes or updates anything on GOV.UK about: {{ emailTaxon.title }}.</p>
+      <p>This might be from [0 to 5] items a week.</p>
   <div> 
       <p>You can choose to receive email alerts:</p>
 
@@ -40,7 +41,7 @@
        <form method="post" action="/gov-delivery/email-signup">
       <input type="hidden" name="emailSelected" value="{{ emailSelected }}">
       <p>
-        <input type="submit" name="commit" value="Sign up now" class="button button-start">
+        <input type="submit" name="commit" value="Sign up now" class="button">
       </p>
       </form>
 

@@ -268,7 +268,6 @@
 
   .govuk-title {
     margin-top: $gutter-half;
-
     @include media(tablet) {
       margin-top: $gutter * 1.5;
     }
@@ -408,6 +407,8 @@
   }
 
   .govuk-title {
+    margin-bottom: 0px;
+    
     .context {
 
       a {
@@ -750,7 +751,7 @@
       }
   
       .heading-large {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
       }
 
       .button {
@@ -766,25 +767,32 @@
 
       .panel{
         padding-left: 28px;
+        padding-top: 0px;
+        padding-bottom: 10px;
+
       }
 
       .panel .panel-border-wide {
         padding-left: 28px;
         margin-left: 0px;
+
+
       }
 
       .form-group{
         margin-top: -10px;
       }
 
-
-
 }
 
 .taxonomy .heading2hack {
   @include core-24();
   clear: both;
+  font-weight: normal;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
+
 
 
 
