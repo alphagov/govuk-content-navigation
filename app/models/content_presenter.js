@@ -1,3 +1,4 @@
+var _ = require('lodash');
 var fs = require('fs');
 var Promise = require('bluebird');
 var readFile = Promise.promisify(fs.readFile);
@@ -64,7 +65,7 @@ class ContentPresenter {
   getRelatedContentPromise () {
     return RelatedContent.get("/" + this.basePath).
       then(function (relatedContent) {
-        return relatedContent;
+        return _.sortBy(relatedContent, "title");
       });
   }
 
