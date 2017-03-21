@@ -18128,12 +18128,6 @@
           "format": "publication",
           "public_timestamp": "2015-03-26T12:17:00.000+00:00",
           "document_collections": [
-            {
-              "slug": "departmental-advice-schools",
-              "title": "Schools: departmental advice",
-              "content_id": "5ef4d489-7631-11e4-a3cb-005056011aef",
-              "link": "/government/collections/departmental-advice-schools"
-            }
           ],
           "index": "government",
           "es_score": null,
