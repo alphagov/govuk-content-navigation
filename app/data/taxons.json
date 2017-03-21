@@ -1,23 +1,479 @@
 [
   {
-    "content_id": "e324abdb-7100-49f7-bc22-0eba2ba1e890",
-    "base_path": "/education/dance-and-drama-funding-for-16-to-19-year-olds"
+    "content_id": "feff15f9-a998-4552-8e54-25833b5650ee",
+    "base_path": "/parenting-childcare/financial-help-if-youre-a-student-with-children"
   },
   {
-    "content_id": "fed09305-c819-4139-8b05-4b5375a1a582",
-    "base_path": "/education/primary-curriculum-key-stage-2-programmes-of-study"
+    "content_id": "55de7f6a-101a-4022-893a-54cba33dfd8e",
+    "base_path": "/parenting-childcare/childrens-rights"
+  },
+  {
+    "content_id": "7382b055-911f-494a-a014-454a1320128d",
+    "base_path": "/parenting-childcare/childrens-health-and-welfare"
+  },
+  {
+    "content_id": "c5ff3019-c22e-429f-b30b-0eae03b5bce3",
+    "base_path": "/parenting-childcare/childrens-centres"
+  },
+  {
+    "content_id": "340fec89-791f-4b3b-b73c-3c2c945e9e7a",
+    "base_path": "/parenting-childcare/inspection-of-childrens-social-care-providers"
+  },
+  {
+    "content_id": "224f1100-394c-48ee-b97a-af2016b15b2f",
+    "base_path": "/parenting-childcare/becoming-a-childrens-social-care-provider"
+  },
+  {
+    "content_id": "5608a35e-e760-4cb7-9aaf-4fea29b36e34",
+    "base_path": "/parenting-childcare/childrens-social-care-providers"
+  },
+  {
+    "content_id": "8fab78d2-0c3a-4a5f-b734-905c6c1abf05",
+    "base_path": "/parenting-childcare/childrens-homes-and-other-accommodation"
+  },
+  {
+    "content_id": "02246fba-889a-43e9-a636-4fea1ec1e125",
+    "base_path": "/parenting-childcare/working-and-time-off-when-youre-having-a-baby"
+  },
+  {
+    "content_id": "51af09f1-486c-46e8-9070-8c598e8d6e6b",
+    "base_path": "/parenting-childcare"
+  },
+  {
+    "content_id": "969945c2-b33f-4a3b-885d-ac33a03f2696",
+    "base_path": "/parenting-childcare/young-people"
+  },
+  {
+    "content_id": "381c6fec-0993-4171-8391-146adbd4678b",
+    "base_path": "/parenting-childcare/tax-credits-if-you-have-children"
+  },
+  {
+    "content_id": "97339f24-3769-4693-99d7-e312f8c06b0a",
+    "base_path": "/parenting-childcare/young-carers"
+  },
+  {
+    "content_id": "6367312a-c8ae-4930-9661-ae5d168a18be",
+    "base_path": "/parenting-childcare/starting-and-attending-school"
+  },
+  {
+    "content_id": "bc382105-7545-44aa-b660-3df2b09f9670",
+    "base_path": "/parenting-childcare/special-guardianship"
+  },
+  {
+    "content_id": "e0a9a432-7b85-4c7b-b6fb-023c689923ee",
+    "base_path": "/parenting-childcare/surrogacy"
+  },
+  {
+    "content_id": "eaf73625-d54c-431e-8fa1-d55a7e2749f1",
+    "base_path": "/parenting-childcare/schooling-and-education"
+  },
+  {
+    "content_id": "8d2247d8-2514-4655-88e2-2743cbe85348",
+    "base_path": "/parenting-childcare/savings-accounts-for-children"
+  },
+  {
+    "content_id": "3828bf37-8ac9-4240-88f6-7d0a45612e27",
+    "base_path": "/parenting-childcare/social-care-provider-complaints"
+  },
+  {
+    "content_id": "abf21e71-9c6b-46ef-a736-9c7dbcf0d673",
+    "base_path": "/parenting-childcare/serious-case-reviews"
+  },
+  {
+    "content_id": "35740015-8ac6-4829-87dd-ef4486b69d80",
+    "base_path": "/parenting-childcare/safeguarding-and-child-protection"
+  },
+  {
+    "content_id": "7e062e4b-1610-4eba-bfcd-15a709de01b3",
+    "base_path": "/parenting-childcare/register-the-birth-of-a-child"
+  },
+  {
+    "content_id": "ad855980-d5e1-4403-8ecf-777bca9d19a8",
+    "base_path": "/parenting-childcare/safeguarding-inspection"
+  },
+  {
+    "content_id": "8b900f7b-c35f-4e3a-9cf5-46aba5b7337b",
+    "base_path": "/parenting-childcare/recruiting-and-managing-early-years-staff"
+  },
+  {
+    "content_id": "5bb4c1e3-d702-4911-a255-9af0fba5018a",
+    "base_path": "/parenting-childcare/qualifications-training-and-professional-development-for-childcare-providers"
+  },
+  {
+    "content_id": "b6e4850d-9189-402c-952e-2c13ecfa812e",
+    "base_path": "/parenting-childcare/providing-childcare"
+  },
+  {
+    "content_id": "c46bb88a-7d65-44d4-bb22-576ec3f9a627",
+    "base_path": "/parenting-childcare/refugee-runaway-and-homeless-children"
+  },
+  {
+    "content_id": "c4d94536-2e26-4c0e-9501-26ec858d1035",
+    "base_path": "/parenting-childcare/preventing-neglect-abuse-and-exploitation"
+  },
+  {
+    "content_id": "8de31ab1-cc6c-4fb2-a2f5-3d81f5080575",
+    "base_path": "/parenting-childcare/pregnancy-and-birth"
+  },
+  {
+    "content_id": "8b791e68-1c5d-45ac-b224-b2748ed848d6",
+    "base_path": "/parenting-childcare/pre-schools-and-nurseries"
+  },
+  {
+    "content_id": "046c44ce-dbe5-48e2-ae91-68451fa0f544",
+    "base_path": "/parenting-childcare/looked-after-children-and-children-in-care"
+  },
+  {
+    "content_id": "01132a62-420c-4fa9-937a-5fdfe59730c6",
+    "base_path": "/parenting-childcare/mental-health-of-children-and-young-people"
+  },
+  {
+    "content_id": "d302b910-714d-4eca-b7f4-b4274a13f6ef",
+    "base_path": "/parenting-childcare/performance-and-inspection-of-childcare-providers"
+  },
+  {
+    "content_id": "4078c095-b66b-48d8-9d50-cc1c82b23983",
+    "base_path": "/parenting-childcare/local-authority-early-years-funding-and-obligations"
+  },
+  {
+    "content_id": "0d68e960-d5de-46b7-816a-20f97d62cea5",
+    "base_path": "/parenting-childcare/home-schooling"
+  },
+  {
+    "content_id": "e0eca999-4393-4100-bc29-299a9eefecbc",
+    "base_path": "/parenting-childcare/intercountry-adoption"
+  },
+  {
+    "content_id": "07901474-afe6-49b5-8a9b-55db518a2562",
+    "base_path": "/parenting-childcare/local-authority-early-years-and-childcare-data-collection-and-reporting"
+  },
+  {
+    "content_id": "62882da4-e587-4c63-aeea-de50cc19b78d",
+    "base_path": "/parenting-childcare/funding-and-finance-for-childcare-providers"
+  },
+  {
+    "content_id": "69ce9537-6fb1-47b6-b8c4-1442cdd35a88",
+    "base_path": "/parenting-childcare/help-with-school-costs"
+  },
+  {
+    "content_id": "b6a75f77-651e-4849-a693-7336a9e7125d",
+    "base_path": "/parenting-childcare/help-for-children-with-a-long-term-illness-or-disability"
+  },
+  {
+    "content_id": "44682fca-db46-40e4-bb54-20b981af5c8b",
+    "base_path": "/parenting-childcare/fostering"
+  },
+  {
+    "content_id": "395fb33e-9069-493e-843e-33c62e891392",
+    "base_path": "/parenting-childcare/financial-support-when-your-child-is-at-school"
+  },
+  {
+    "content_id": "65b9bfc2-129c-41c2-a7f2-4681d23f8bd7",
+    "base_path": "/parenting-childcare/find-childcare"
+  },
+  {
+    "content_id": "13234765-06b7-478b-b822-1cc3554f8643",
+    "base_path": "/parenting-childcare/finding-childcare"
+  },
+  {
+    "content_id": "e9b5dd08-b1b1-4fd3-a79a-f6ed902fdfa0",
+    "base_path": "/parenting-childcare/financial-help-when-having-a-baby"
+  },
+  {
+    "content_id": "9f0bccf1-0bc4-4463-892d-839a01ed999e",
+    "base_path": "/parenting-childcare/financial-support-towards-the-costs-of-having-a-child"
+  },
+  {
+    "content_id": "421761e2-f276-4b65-99d2-96c60bd4836a",
+    "base_path": "/parenting-childcare/financial-support-for-childcare"
+  },
+  {
+    "content_id": "33758b73-36ee-45f3-b5f1-e31ec7a47b3b",
+    "base_path": "/parenting-childcare/financial-help-if-you-have-a-disabled-child"
+  },
+  {
+    "content_id": "2a0cb7a3-3c81-4852-91fa-bb44d033d1ae",
+    "base_path": "/parenting-childcare/financial-help-for-post-16-education"
+  },
+  {
+    "content_id": "814d58cc-6210-4fa0-8593-1076cacfad15",
+    "base_path": "/parenting-childcare/early-years-foundation-stage-profile-return"
+  },
+  {
+    "content_id": "1e429541-2a9f-4486-a3af-2aa6970f236c",
+    "base_path": "/parenting-childcare/financial-help-if-you-have-children"
+  },
+  {
+    "content_id": "cef4fb71-85f2-4713-9959-27ef4829b2dc",
+    "base_path": "/parenting-childcare/divorce-separation-and-legal-issues"
+  },
+  {
+    "content_id": "28008b40-6452-47df-8e10-4da1d9b1a019",
+    "base_path": "/parenting-childcare/early-years-census"
+  },
+  {
+    "content_id": "535c2ea5-d042-40a6-8525-763e819f657b",
+    "base_path": "/parenting-childcare/early-years-curriculum-0-to-5"
+  },
+  {
+    "content_id": "408fd86d-5a94-4e56-b01e-5665fda5461c",
+    "base_path": "/parenting-childcare/data-collection-for-looked-after-children"
+  },
+  {
+    "content_id": "75c70bcc-b3da-451a-afda-8eb1bbc2fff1",
+    "base_path": "/parenting-childcare/dealing-with-problems-at-school"
+  },
+  {
+    "content_id": "d616cfb5-0783-44d8-a2b7-4245c9c0e7de",
+    "base_path": "/parenting-childcare/disagreements-about-parentage"
+  },
+  {
+    "content_id": "69331065-bc5b-4d10-9e7f-52e80d5b6207",
+    "base_path": "/parenting-childcare/data-collection-for-safeguarding-and-child-protection"
+  },
+  {
+    "content_id": "40bc072b-faa4-4c9b-8a2a-b37adf401121",
+    "base_path": "/parenting-childcare/childminding"
+  },
+  {
+    "content_id": "52404e05-e181-4c2e-b218-cc9038364c46",
+    "base_path": "/parenting-childcare/children-and-young-people-leaving-care"
+  },
+  {
+    "content_id": "bd42a3e4-eac6-4cd7-a477-aa1bfbf637d9",
+    "base_path": "/parenting-childcare/child-poverty"
+  },
+  {
+    "content_id": "b8261775-1f17-4769-a4fb-116e409d6068",
+    "base_path": "/parenting-childcare/childcare-and-early-years"
+  },
+  {
+    "content_id": "c2ded50f-e76b-407b-90db-280435691d75",
+    "base_path": "/parenting-childcare/childcare-for-school-age-children"
+  },
+  {
+    "content_id": "9938200f-ac16-48a2-b1e3-d2fccbd58d84",
+    "base_path": "/parenting-childcare/child-maintenance"
+  },
+  {
+    "content_id": "9c44d54a-14b5-47f6-a4ba-278d6aa4f946",
+    "base_path": "/parenting-childcare/child-and-family-social-workers"
+  },
+  {
+    "content_id": "3a63a000-dc97-4208-99be-b920f3876eb0",
+    "base_path": "/parenting-childcare/child-custody"
+  },
+  {
+    "content_id": "5b256812-4303-4a56-8a00-a3338d5d6c54",
+    "base_path": "/parenting-childcare/child-benefit"
+  },
+  {
+    "content_id": "4656949b-4369-4f76-aeae-cafe78645f72",
+    "base_path": "/parenting-childcare/child-abduction-and-cross-border-child-protection"
+  },
+  {
+    "content_id": "f17aa682-6e1e-48a0-9e98-488421eeac19",
+    "base_path": "/parenting-childcare/becoming-a-childcare-provider"
+  },
+  {
+    "content_id": "a470095e-732c-48f7-a594-5c0c1f392167",
+    "base_path": "/parenting-childcare/adoption-fostering-and-surrogacy"
+  },
+  {
+    "content_id": "bb7b6f52-7c6c-4572-91c9-26538a3f1492",
+    "base_path": "/parenting-childcare/adoption"
+  },
+  {
+    "content_id": "b1c2f080-6434-428b-a88f-d58ff8f8d4d9",
+    "base_path": "/parenting-childcare/admissions-and-census-data-for-childcare-providers"
+  },
+  {
+    "content_id": "27af9b0f-9ddf-47e2-9103-2f6f72d9ddf7",
+    "base_path": "/education/further-education-funding"
+  },
+  {
+    "content_id": "2b5a2c65-e176-466a-873e-712bef4f57f1",
+    "base_path": "/education/set-up-develop-multi-academy-trust"
+  },
+  {
+    "content_id": "d8b83666-c939-48fa-9526-49eb8fe0cffe",
+    "base_path": "/education/set-up-a-free-school"
+  },
+  {
+    "content_id": "46f0975c-86c4-4599-aeb0-e465a546c005",
+    "base_path": "/education/set-up-or-convert-to-an-academy"
   },
   {
     "content_id": "b0fcf462-e6b9-44e1-9145-48f66d53c81f",
     "base_path": "/education/primary-curriculum-key-stage-1-programmes-of-study"
   },
   {
-    "content_id": "1255e19a-f02d-485f-8d5f-000688312bd9",
-    "base_path": "/education/financial-help-for-students-who-are-parents-or-carers"
+    "content_id": "fed09305-c819-4139-8b05-4b5375a1a582",
+    "base_path": "/education/primary-curriculum-key-stage-2-programmes-of-study"
+  },
+  {
+    "content_id": "71440b25-319a-4a42-b755-2d5369091a45",
+    "base_path": "/education/school-admission-appeals-data-collection"
+  },
+  {
+    "content_id": "b6a5a98d-34dc-4388-8bb6-4c8025b9c0e4",
+    "base_path": "/education/alternative-provision-census"
+  },
+  {
+    "content_id": "ffd3a6b0-acfb-4c6b-8eff-7082988510dd",
+    "base_path": "/education/school-census"
+  },
+  {
+    "content_id": "6c56f715-3ed7-4563-86da-7e3dfb2d82c9",
+    "base_path": "/education/school-preference-data-collections"
+  },
+  {
+    "content_id": "520e5c39-ab50-499b-90e0-37cfbd87f784",
+    "base_path": "/education/administering-student-funding"
+  },
+  {
+    "content_id": "7eda7c71-7721-42af-982a-58e4310331d1",
+    "base_path": "/education/school-level-annual-school-census"
+  },
+  {
+    "content_id": "6f0f8db1-9fe9-4f6a-92c7-7f9ce48117ab",
+    "base_path": "/education/school-workforce-census"
+  },
+  {
+    "content_id": "513907fb-03bf-44d9-bcc0-2d360739a049",
+    "base_path": "/education/early-years-data"
+  },
+  {
+    "content_id": "2682bef9-0963-43e3-8610-30b31ec1c4d0",
+    "base_path": "/education/apprenticeships-funding"
+  },
+  {
+    "content_id": "c9a4751f-875b-4a22-aa6d-dbc4c5b39186",
+    "base_path": "/education/adult-education-funding"
+  },
+  {
+    "content_id": "17fb491a-15f3-4c71-8e25-f645ff8b3ed3",
+    "base_path": "/education/school-attendance-and-absence"
+  },
+  {
+    "content_id": "5b021981-2999-4da1-9a4e-03c64b70168c",
+    "base_path": "/education/careers-guidance-in-further-and-higher-education"
+  },
+  {
+    "content_id": "ce8f2272-2a01-4c0c-850e-b824f5fe823d",
+    "base_path": "/education/functional-skills"
+  },
+  {
+    "content_id": "2a87e67e-3294-4753-9561-511f8a2cbd1a",
+    "base_path": "/education/principal-learning-qualifications"
   },
   {
     "content_id": "5c9372ef-8cac-4c41-b95b-6117ea052b78",
     "base_path": "/education/student-loans-bursaries-and-sponsorship"
+  },
+  {
+    "content_id": "1255e19a-f02d-485f-8d5f-000688312bd9",
+    "base_path": "/education/financial-help-for-students-who-are-parents-or-carers"
+  },
+  {
+    "content_id": "98d9143e-174f-4a72-9a9d-5c8eef101cb6",
+    "base_path": "/education/further-education-building-and-premises"
+  },
+  {
+    "content_id": "56b78356-c7bf-4460-8775-d04b590ec7ca",
+    "base_path": "/education/employers-and-training-organisations"
+  },
+  {
+    "content_id": "09a7fc9f-c9d8-45fe-8066-1bf7a6dd4a22",
+    "base_path": "/education/school-to-school-support"
+  },
+  {
+    "content_id": "cb910f96-f842-4cfc-9e20-d99683504529",
+    "base_path": "/education/school-admissions"
+  },
+  {
+    "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
+    "base_path": "/education/primary-curriculum-key-stage-1"
+  },
+  {
+    "content_id": "07299ca5-bc4d-48dd-a3f1-edd3b170bb4a",
+    "base_path": "/education/early-years-curriculum"
+  },
+  {
+    "content_id": "7c75c541-403f-4cb1-9b34-4ddde816a80d",
+    "base_path": "/education/school-curriculum"
+  },
+  {
+    "content_id": "8a2141ae-2493-491c-8e5f-2bd23c1a6afe",
+    "base_path": "/education/primary-curriculum-key-stage-1-science"
+  },
+  {
+    "content_id": "f5babf0a-9e91-4a70-97fb-7e4ffaee33a0",
+    "base_path": "/education/primary-curriculum-key-stage-2-science"
+  },
+  {
+    "content_id": "dc1d6a10-7f7b-464c-bd1f-3bdb66d096d0",
+    "base_path": "/education/primary-curriculum-key-stage-1-english"
+  },
+  {
+    "content_id": "35d3e1b5-5777-4cbb-b4c7-0a20f9d6d7e2",
+    "base_path": "/education/primary-curriculum-key-stage-2-english"
+  },
+  {
+    "content_id": "9104dfd2-4da9-4309-98dc-dc54f7d8d2db",
+    "base_path": "/education/primary-curriculum-key-stage-1-maths"
+  },
+  {
+    "content_id": "6fe00099-9771-4889-8638-c7f4247a168c",
+    "base_path": "/education/primary-curriculum-key-stage-2-maths"
+  },
+  {
+    "content_id": "64aa6eec-48b5-481d-9131-9c8b6326eea1",
+    "base_path": "/education/student-grants-bursaries-scholarships"
+  },
+  {
+    "content_id": "27c5c52b-3b36-4119-b461-976197d929bf",
+    "base_path": "/education/running-a-further-or-higher-education-institution"
+  },
+  {
+    "content_id": "dd767840-363e-43ad-8835-c9ab516633de",
+    "base_path": "/education/further-and-higher-education-skills-and-vocational-training"
+  },
+  {
+    "content_id": "1ddd7a85-6c64-4b1e-9e54-55b50a0ae3f3",
+    "base_path": "/education/primary-curriculum-key-stage-1-tests-and-assessments"
+  },
+  {
+    "content_id": "bf9ba557-b3d8-4c4e-8e39-0d09466808b4",
+    "base_path": "/education/primary-curriculum-key-stage-2-tests-and-assessments"
+  },
+  {
+    "content_id": "78cfdb08-0629-42d9-80eb-edbf9b36e0c3",
+    "base_path": "/education/funding-for-high-needs"
+  },
+  {
+    "content_id": "0f92387b-f477-4592-85e6-0742f3fcf696",
+    "base_path": "/education/support-for-special-educational-needs-and-disability-send"
+  },
+  {
+    "content_id": "e69dc613-58af-47aa-8d8e-79708fbfe677",
+    "base_path": "/education/free-meals-for-16-to-18-year-olds"
+  },
+  {
+    "content_id": "31024c7d-70a3-4d5b-bf53-a375cdab3b63",
+    "base_path": "/education/types-of-apprenticeships"
+  },
+  {
+    "content_id": "ca3c2e22-9ba0-4163-b4a6-7dbf355b9846",
+    "base_path": "/education/initial-teacher-training-itt"
+  },
+  {
+    "content_id": "f0dcb0b9-2f2c-46b0-adea-42a4fe608170",
+    "base_path": "/education/inspections-and-performance-of-education-providers"
+  },
+  {
+    "content_id": "e324abdb-7100-49f7-bc22-0eba2ba1e890",
+    "base_path": "/education/dance-and-drama-funding-for-16-to-19-year-olds"
   },
   {
     "content_id": "538c61de-1de6-4fc3-8e72-a06de44e1b04",
@@ -40,16 +496,8 @@
     "base_path": "/education/european-social-fund-esf-and-skills-funding"
   },
   {
-    "content_id": "98d9143e-174f-4a72-9a9d-5c8eef101cb6",
-    "base_path": "/education/further-education-building-and-premises"
-  },
-  {
     "content_id": "66cc145f-9dfd-47db-bb98-457a61668d14",
     "base_path": "/education/further-education-funding-data"
-  },
-  {
-    "content_id": "27c5c52b-3b36-4119-b461-976197d929bf",
-    "base_path": "/education/running-a-further-or-higher-education-institution"
   },
   {
     "content_id": "86aaefa2-52db-4d8d-911d-5fff034ed035",
@@ -82,10 +530,6 @@
   {
     "content_id": "4842335f-2e17-4aa7-ade8-a9f7ca21072d",
     "base_path": "/education/learning-records-service-lrs"
-  },
-  {
-    "content_id": "5b021981-2999-4da1-9a4e-03c64b70168c",
-    "base_path": "/education/careers-guidance-in-further-and-higher-education"
   },
   {
     "content_id": "41ae5900-f8e5-4840-b58f-734631029fd6",
@@ -130,10 +574,6 @@
   {
     "content_id": "b376d700-3928-4540-b216-683dd39fb75c",
     "base_path": "/education/school-bullying"
-  },
-  {
-    "content_id": "17fb491a-15f3-4c71-8e25-f645ff8b3ed3",
-    "base_path": "/education/school-attendance-and-absence"
   },
   {
     "content_id": "bcb4bdf3-5807-4421-a427-7dfe78d5f6d5",
@@ -248,38 +688,6 @@
     "base_path": "/education/gcse-subject-content-and-requirements"
   },
   {
-    "content_id": "f5babf0a-9e91-4a70-97fb-7e4ffaee33a0",
-    "base_path": "/education/primary-curriculum-key-stage-2-science"
-  },
-  {
-    "content_id": "8a2141ae-2493-491c-8e5f-2bd23c1a6afe",
-    "base_path": "/education/primary-curriculum-key-stage-1-science"
-  },
-  {
-    "content_id": "6fe00099-9771-4889-8638-c7f4247a168c",
-    "base_path": "/education/primary-curriculum-key-stage-2-maths"
-  },
-  {
-    "content_id": "9104dfd2-4da9-4309-98dc-dc54f7d8d2db",
-    "base_path": "/education/primary-curriculum-key-stage-1-maths"
-  },
-  {
-    "content_id": "35d3e1b5-5777-4cbb-b4c7-0a20f9d6d7e2",
-    "base_path": "/education/primary-curriculum-key-stage-2-english"
-  },
-  {
-    "content_id": "dc1d6a10-7f7b-464c-bd1f-3bdb66d096d0",
-    "base_path": "/education/primary-curriculum-key-stage-1-english"
-  },
-  {
-    "content_id": "bf9ba557-b3d8-4c4e-8e39-0d09466808b4",
-    "base_path": "/education/primary-curriculum-key-stage-2-tests-and-assessments"
-  },
-  {
-    "content_id": "1ddd7a85-6c64-4b1e-9e54-55b50a0ae3f3",
-    "base_path": "/education/primary-curriculum-key-stage-1-tests-and-assessments"
-  },
-  {
     "content_id": "47b6ce42-0bfa-42ee-9ff1-7a9c71ee9727",
     "base_path": "/education/special-educational-needs-and-disability-send-and-high-needs"
   },
@@ -290,14 +698,6 @@
   {
     "content_id": "2dc353bf-d481-4c81-9f8f-25e1d4bc5da9",
     "base_path": "/education/inspection-and-performance-of-further-education-providers"
-  },
-  {
-    "content_id": "f0dcb0b9-2f2c-46b0-adea-42a4fe608170",
-    "base_path": "/education/inspections-and-performance-of-education-providers"
-  },
-  {
-    "content_id": "0f92387b-f477-4592-85e6-0742f3fcf696",
-    "base_path": "/education/special-educational-needs-and-disability-send-support"
   },
   {
     "content_id": "c58fdadd-7743-46d6-9629-90bb3ccc4ef0",
@@ -326,10 +726,6 @@
   {
     "content_id": "c2f971d6-e0b4-4b00-87a4-074d6c96b2c9",
     "base_path": "/education/data-collection-for-pupil-data-and-school-censuses"
-  },
-  {
-    "content_id": "146758aa-55d1-4cef-935d-3ce41a128bbd",
-    "base_path": "/education/academy-intervention-notices-and-reports"
   },
   {
     "content_id": "49322f0a-04e1-4d08-9e18-e096cfa3301c",
@@ -368,10 +764,6 @@
     "base_path": "/education/setting-up-or-changing-the-status-of-a-school"
   },
   {
-    "content_id": "cb910f96-f842-4cfc-9e20-d99683504529",
-    "base_path": "/education/school-admissions"
-  },
-  {
     "content_id": "d2005b89-352f-4896-aced-1d17504330e6",
     "base_path": "/education/education-of-disadvantaged-children"
   },
@@ -380,20 +772,12 @@
     "base_path": "/education/funding-and-finance-for-students"
   },
   {
-    "content_id": "78cfdb08-0629-42d9-80eb-edbf9b36e0c3",
-    "base_path": "/education/high-needs-funding"
-  },
-  {
-    "content_id": "dd767840-363e-43ad-8835-c9ab516633de",
-    "base_path": "/education/further-and-higher-education-skills-and-vocational-training"
+    "content_id": "e16b62e0-9c54-4547-b8c0-7589d8af3906",
+    "base_path": "/education/funding-for-special-educational-needs-and-disability-send"
   },
   {
     "content_id": "ff00b8b2-dcdb-4659-93c2-291c9be354f3",
     "base_path": "/education/teaching-and-leadership"
-  },
-  {
-    "content_id": "e16b62e0-9c54-4547-b8c0-7589d8af3906",
-    "base_path": "/education/funding-for-special-educational-needs-and-disability-send"
   },
   {
     "content_id": "db605204-0f03-441b-837f-16613c6b3f8f",
@@ -408,10 +792,6 @@
     "base_path": "/education/school-trips-and-extracurricular-activity"
   },
   {
-    "content_id": "09a7fc9f-c9d8-45fe-8066-1bf7a6dd4a22",
-    "base_path": "/education/school-to-school-support"
-  },
-  {
     "content_id": "42e6e5c3-3a06-4a6f-abd4-a4b85d9c6b16",
     "base_path": "/education/running-and-managing-a-school"
   },
@@ -424,10 +804,6 @@
     "base_path": "/education/school-planning"
   },
   {
-    "content_id": "7c75c541-403f-4cb1-9b34-4ddde816a80d",
-    "base_path": "/education/school-curriculum"
-  },
-  {
     "content_id": "72aed311-e76e-4b4e-88db-e14d8bedbee1",
     "base_path": "/education/careers-guidance-in-schools"
   },
@@ -436,20 +812,12 @@
     "base_path": "/education/school-governance"
   },
   {
-    "content_id": "07299ca5-bc4d-48dd-a3f1-edd3b170bb4a",
-    "base_path": "/education/early-years-curriculum"
-  },
-  {
-    "content_id": "904cfd73-2707-47b8-8754-5765ec5a5b68",
-    "base_path": "/education/primary-curriculum-key-stage-1"
+    "content_id": "931dc3bb-827b-4490-8013-111689b25142",
+    "base_path": "/education/primary-curriculum-key-stage-2"
   },
   {
     "content_id": "0d76003d-76ba-4af5-a19e-31ab3f8ba689",
     "base_path": "/education/phonics"
-  },
-  {
-    "content_id": "931dc3bb-827b-4490-8013-111689b25142",
-    "base_path": "/education/primary-curriculum-key-stage-2"
   },
   {
     "content_id": "a28530a2-b0a3-46f9-89b9-3d98fc18e39d",
@@ -466,10 +834,6 @@
   {
     "content_id": "e86e90e0-af4f-4cd9-8b6a-f2d177575290",
     "base_path": "/education/home-schooling"
-  },
-  {
-    "content_id": "38955795-335d-489f-83e3-3f4e935938d3",
-    "base_path": "/education/school-insurance-and-risk-management"
   },
   {
     "content_id": "e3cb8b57-6331-419a-b344-7a8148d561cb",
@@ -496,28 +860,8 @@
     "base_path": "/education/teacher-training-and-professional-development"
   },
   {
-    "content_id": "27af9b0f-9ddf-47e2-9103-2f6f72d9ddf7",
-    "base_path": "/education/further-education-funding"
-  },
-  {
     "content_id": "aaeb7f58-d410-4c42-8775-05b0bdeceeea",
     "base_path": "/education/apprenticeships-traineeships-and-internships"
-  },
-  {
-    "content_id": "ca3c2e22-9ba0-4163-b4a6-7dbf355b9846",
-    "base_path": "/education/initial-teacher-training-itt"
-  },
-  {
-    "content_id": "31024c7d-70a3-4d5b-bf53-a375cdab3b63",
-    "base_path": "/education/types-of-apprenticeships"
-  },
-  {
-    "content_id": "56b78356-c7bf-4460-8775-d04b590ec7ca",
-    "base_path": "/education/employers-and-training-organisations"
-  },
-  {
-    "content_id": "e69dc613-58af-47aa-8d8e-79708fbfe677",
-    "base_path": "/education/free-meals-for-16-to-18-year-olds"
   },
   {
     "content_id": "c1b4353c-c05f-494c-8f94-10f7c6959287",

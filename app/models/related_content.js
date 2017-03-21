@@ -1,7 +1,6 @@
 var fs = require('fs');
-var https = require('https');
-var querystring = require('querystring');
 var Promise = require('bluebird');
+var SearchService = require('./search_service');
 var TaxonomyData = require('./taxonomy_data.js');
 var readFile = Promise.promisify(fs.readFile);
 var Taxon = require('./taxon.js');
@@ -9,38 +8,14 @@ var GuidanceContent = require('./guidance_content');
 
 class RelatedContent {
   static esRelatedLinks (contentBasePath, parentTaxon) {
-    var queryParams = {
+    return SearchService.search({
       similar_to: contentBasePath,
       start: 0,
       count: 5,
       filter_taxons: [parentTaxon],
       filter_content_store_document_type: GuidanceContent.guidanceDocumentTypes(),
       fields: 'title,description,link'
-    }
-    var queryString = querystring.stringify(queryParams);
-    var path = "/api/search.json?" + queryString;
-
-    return new Promise((resolve, reject) =>
-      https.get({
-        host: 'www.gov.uk',
-        path: path,
-      }, function (response) {
-        var body = '';
-
-        response.on('data', function (d) {
-            body += d;
-        });
-
-        response.on('end', function () {
-          var parsed = JSON.parse(body);
-          var data = parsed.results;
-
-          resolve(data);
-        });
-
-        response.on('error', reject);
-      })
-    );
+    });
   }
 
   static allTaxonsPromise () {
@@ -72,7 +47,8 @@ class RelatedContent {
 
     return parentTaxonsPromise.then(function (parentTaxons) {
       var searchResults = parentTaxons.map(function (parentTaxon) {
-        return that.esRelatedLinks(contentBasePath, parentTaxon.contentId).then(function (results) {
+        return that.esRelatedLinks(contentBasePath, parentTaxon.contentId).then(function (searchResponse) {
+          var results = searchResponse.results;
           return {
             results: results,
             basePath: parentTaxon.basePath,
