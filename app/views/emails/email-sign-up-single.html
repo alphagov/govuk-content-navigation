@@ -17,16 +17,22 @@ Blank page
       
       <p>This will include: {{presentedTaxon.description}}</p>
 
-      <input type="submit" class="button" value="Continue" role="button">
-    </div>
+ <div>
+  <form method="post" action="{{ presentedTaxon.basePath }}/preferences">
+      <input type="hidden" name="emailSelected" value="{{ emailSelected }}">
+      <p>
+        <input type="submit" class="button" value="Continue" role="button">
+      </p>
+  </form>
 
+        <a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Go back to GOV.UK to select a different topic</a>
 
-    <div class="column-two-thirds">
-      <a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Or go back to GOV.UK to select a different topic</a>
-    </div>
+      </div>
 
   </div>
 
 </main>
 
   {% endblock %}
+
+
