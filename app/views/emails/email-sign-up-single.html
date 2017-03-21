@@ -11,20 +11,22 @@ Blank page
   <div class="grid-row">
     <div class="column-two-thirds">
 
-      <h1 class="heading-large">
-        Get email alerts
-      </h1>
+      <h1 class="heading-large">Get email alerts</h1>
+      
       <h3 class="heading2hack">You are signing up to get alerts about: {{presentedTaxon.title}}.</h3>
+      
       <p>This will include: {{presentedTaxon.description}}</p>
 
       <input type="submit" class="button" value="Continue" role="button">
     </div>
 
 
-<div class="column-two-thirds">
+    <div class="column-two-thirds">
       <a title="Navigate to previous part" rel="prev" href="javascript:history.go(-1);">Or go back to GOV.UK to select a different topic</a>
-</div>
-</div>
-  </main>
+    </div>
+
+  </div>
+
+</main>
 
   {% endblock %}
