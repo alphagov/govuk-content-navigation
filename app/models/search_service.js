@@ -7,7 +7,7 @@ var querystring = require('querystring');
 class SearchService {
 
   /**
-   * Performs a search query against Rummager on staging
+   * Performs a search query against Rummager
    *
    * @param searchQuery an object of search parameters matching the Rummager API, or a simple string containing a
    * search query
@@ -17,14 +17,13 @@ class SearchService {
     var searchQueryObject = SearchService.stringOrObjectToQueryObject(searchQuery);
 
     return https.get({
-      host: 'www.staging.publishing.service.gov.uk',
-      path: '/api/search.json?' + querystring.stringify(searchQueryObject),
-      rejectUnauthorized: false
+      host: 'www.gov.uk',
+      path: '/api/search.json?' + querystring.stringify(searchQueryObject)
     });
   }
 
   /**
-   * Perform a search query against Rummager on staging and return the total number of results
+   * Perform a search query against Rummager and return the total number of results
    *
    * @param searchQuery an object of search parameters matching the Rummager API, or a simple string containing a
    * search query
@@ -41,7 +40,7 @@ class SearchService {
   }
 
   /**
-   * Perform a taxonomy-scoped search against Rummager on staging
+   * Perform a taxonomy-scoped search against Rummager
    *
    * @param searchQuery an object of search parameters matching the Rummager API, or a simple string containing a
    * search query
