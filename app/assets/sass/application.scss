@@ -29,21 +29,6 @@ a {
   }
 }
 
-.list-iterations {
-  li {
-    border-bottom: 1px solid $border-colour;
-    margin-bottom: $gutter;
-  }
-
-  h2 {
-    @include bold-24;
-  }
-
-  .date {
-    color: $secondary-text-colour;
-  }
-}
-
 .js-show {
   display: none;
 }
@@ -578,5 +563,31 @@ a {
 .results-list {
   .panel {
     margin-bottom: 0px;
+  }
+}
+
+.list-iterations {
+  li {
+    border-bottom: 2px solid $black;
+    margin-bottom: $gutter;
+  }
+
+  h2 {
+    @include bold-24;
+    margin: 0;
+  }
+
+  .date {
+    color: $secondary-text-colour;
+  }
+
+  .changes {
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      padding-bottom: $gutter-half;
+    }
   }
 }
