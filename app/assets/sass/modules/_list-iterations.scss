@@ -1,0 +1,25 @@
+.list-iterations {
+  li {
+    border-bottom: 2px solid $black;
+    margin-bottom: $gutter;
+  }
+
+  h2 {
+    @include bold-24;
+    margin: 0;
+  }
+
+  .date {
+    color: $secondary-text-colour;
+  }
+
+  .changes {
+    dt {
+      font-weight: bold;
+    }
+
+    dd {
+      padding-bottom: $gutter-half;
+    }
+  }
+}
