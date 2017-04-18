@@ -5,7 +5,7 @@ var readFile = Promise.promisify(fs.readFile);
 var glob = Promise.promisify(require('glob'));
 
 var RelatedContent = require('./related_content.js');
-var BreadcrumbMaker = require('../../lib/js/breadcrumb_maker.js');
+var Breadcrumbs = require('../../lib/js/breadcrumbs.js');
 var TaxonomyData = require('./taxonomy_data.js');
 var Taxon = require('./taxon.js');
 var cheerio = require('cheerio');
@@ -70,15 +70,8 @@ class ContentPresenter {
   }
 
   getBreadcrumbPromise () {
-    const basePath = this.basePath
-
-    return TaxonomyData.get().
-      then(function (metadata) {
-        var breadcrumbMaker = new BreadcrumbMaker(metadata);
-        var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(basePath);
-
-        return breadcrumb;
-      });
+    const basePath = this.basePath;
+    return Breadcrumbs.forBasePath(basePath);
   }
 
   getTaxonsPromise () {
