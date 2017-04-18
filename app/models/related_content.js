@@ -1,10 +1,9 @@
 var fs = require('fs');
 var Promise = require('bluebird');
 var SearchService = require('./search_service');
-var TaxonomyData = require('./taxonomy_data.js');
-var readFile = Promise.promisify(fs.readFile);
 var Taxon = require('./taxon.js');
 var GuidanceContent = require('./guidance_content');
+var https = require('./https');
 
 class RelatedContent {
   static esRelatedLinks (contentBasePath, parentTaxon) {
@@ -18,32 +17,25 @@ class RelatedContent {
     });
   }
 
-  static allTaxonsPromise () {
-    var readSourceData = readFile('app/data/taxons.json');
-
-    return readSourceData.
-      then(function (data) {
-        return JSON.parse(data);
-      });
-  }
-
   static get (contentBasePath) {
     var that = this;
-    var allTaxons = this.allTaxonsPromise();
-    var parentTaxonsPromise = allTaxons.then(function (taxons) {
-      return TaxonomyData.get().
-        then(function (metadata) {
-          return metadata.taxons_for_content[contentBasePath.slice(1)].map(function (taxonBasePath) {
-            var parentTaxon = taxons.find(function (taxon) {
-              return taxon.base_path == taxonBasePath;
-            });
-            var contentItem = Taxon.fromMetadata(taxonBasePath, metadata);
-            contentItem.contentId = parentTaxon.content_id;
 
-            return contentItem;
-          })
+    return Promise.resolve([]);
+
+    var parentTaxonsPromise = https.get({
+      host: 'www.gov.uk',
+      path: '/api/content' + contentBasePath
+    })
+      .then(function (contentItem) {
+        var links = contentItem.links || [];
+        var taxons = links.taxons || [];
+
+        var taxonPromises = taxons.map(function (taxon) {
+          return Taxon.fromBasePath(taxon.base_path);
         });
-    });
+
+        return Promise.all(taxonPromises);
+      });
 
     return parentTaxonsPromise.then(function (parentTaxons) {
       var searchResults = parentTaxons.map(function (parentTaxon) {

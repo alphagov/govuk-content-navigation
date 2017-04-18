@@ -23,9 +23,7 @@ class ContentItem {
   }
 
   belongsToDocumentCollection () {
-    return (
-      this.documentCollections != undefined && this.documentCollections.length > 0
-    )
+    return !!(this.documentCollections && this.documentCollections.length);
   }
 
   getHeading () {

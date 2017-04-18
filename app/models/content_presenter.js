@@ -6,10 +6,11 @@ var glob = Promise.promisify(require('glob'));
 
 var RelatedContent = require('./related_content.js');
 var Breadcrumbs = require('../../lib/js/breadcrumbs.js');
-var TaxonomyData = require('./taxonomy_data.js');
 var Taxon = require('./taxon.js');
 var cheerio = require('cheerio');
+var https = require('./https');
 
+// TODO: We should present items to the controllers as raw JSON from the content store
 class ContentPresenter {
   constructor (basePath) {
     this.basePath = basePath.slice(1, basePath.length); // base path without leading slash
@@ -75,13 +76,21 @@ class ContentPresenter {
   }
 
   getTaxonsPromise () {
-    const basePath = this.basePath
+    const basePath = this.basePath;
 
-    return TaxonomyData.get().
-      then(function (metadata) {
-        return metadata.taxons_for_content[basePath].map(function (taxonBasePath) {
-          return Taxon.fromMetadata(taxonBasePath, metadata);
-        })
+    return https.get({
+      host: 'www.gov.uk',
+      path: '/api/content' + basePath
+    })
+      .then(function (contentItem) {
+        var links = contentItem.links || [];
+        var taxons = links.taxons || [];
+
+        var taxonPromises = taxons.map(function (taxon) {
+          return Taxon.fromBasePath(taxon.base_path);
+        });
+
+        return Promise.all(taxonPromises);
       });
   }
 }

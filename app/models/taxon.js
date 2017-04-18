@@ -1,7 +1,9 @@
 "use strict";
 
 var ContentItem = require("./content_item.js");
+var https = require('./https');
 
+// TODO: We should delete this class and present items to the controllers as raw JSON from the content store
 class Taxon {
   constructor(title, basePath, contentId, description, options) {
     this.title = title;
@@ -16,30 +18,62 @@ class Taxon {
   }
 
   filterByHeading (headingId) {
-    var filteredContent = this.content.filter(
-      function (child) {
-        var heading = child.getHeading();
+    var taxon = this;
 
-        return heading !== null && heading.id === headingId;
-      }
-    );
-    var filteredTaxon = new Taxon(
-      this.title, this.basePath, this.contentId, this.description,
-      {
-        content: filteredContent,
-        children: this.children
-      }
-    );
+    var contentPromise = this.content.length
+      ? Promise.resolve(this.content)
+      : this.getContent();
 
-    return filteredTaxon;
+    return contentPromise.then(function (content) {
+      taxon.content = content;
+
+      var filteredContent = content.filter(
+        function (child) {
+          var heading = child.getHeading();
+          return heading !== null && heading.id === headingId;
+        }
+      );
+
+      return new Taxon(
+        taxon.title, taxon.basePath, taxon.contentId, taxon.description,
+        {
+          content: filteredContent,
+          children: taxon.children
+        }
+      );
+    });
   }
 
-  addContent (content) {
-    this.content.push(content);
-  }
+  getContent() {
+    var taxon = this;
 
-  addChild (taxon) {
-    this.children.push(taxon);
+    return https.get({
+      host: 'www.gov.uk',
+      path: '/api/search.json?fields[]=content_store_document_type,title,public_timestamp,link,document_collections,description&count=1000&filter_taxons[]=' + taxon.contentId
+    })
+      .then(function (contentItems) {
+        return contentItems.results
+          .map(function (contentItem) {
+            var publicTimestamp = contentItem.public_timestamp;
+
+            // Manual sections are missing a public timestamp: make one up
+            if (typeof(publicTimestamp) === "undefined") {
+              publicTimestamp = '2016-01-01T00:00:00+00:00';
+            }
+
+            return new ContentItem(
+              contentItem.title,
+              contentItem.link,
+              contentItem.content_store_document_type,
+              new Date(publicTimestamp),
+              contentItem.description,
+              contentItem.document_collections
+            );
+          })
+          .filter(function (contentItem) {
+            return !contentItem.isSubsection() && !contentItem.belongsToDocumentCollection();
+          });
+      });
   }
 
   popularContent (maxDocuments) {
@@ -73,59 +107,52 @@ class Taxon {
   }
 
   atozChildren () {
-    return this.children.sort(function (a, b) {
-      if (a.title >= b.title) {
-        return 1;
-      }
+    var childrenPromise = this.children.length
+      ? Promise.resolve(this.children)
+      : this.getChildren();
 
-      return -1;
+    return childrenPromise.then(function (children) {
+      return children.sort(function (a, b) {
+        return a.title.localeCompare(b.title);
+      });
     });
   }
 
-  static fromMetadata (basePath, metadata) {
-    var taxonInformation = metadata.taxon_information[basePath];
-    if (typeof(taxonInformation) === "undefined") {
-      console.log("Missing taxon information for %s", basePath);
+  getChildren() {
+    var taxon = this;
 
-      return null;
-    }
+    return https.get({
+      host: 'www.gov.uk',
+      path: '/api/content' + taxon.basePath
+    })
+      .then(function (contentItem) {
+        var links = contentItem.links || [];
+        var childTaxons = links.child_taxons || [];
 
-    var taxon = new Taxon(taxonInformation.title, basePath, taxonInformation.content_id, taxonInformation.description);
-    var contentItems = metadata.documents_in_taxon[basePath].results;
-    var childTaxons = metadata.children_of_taxon[basePath];
+        return childTaxons.map(function (childTaxon) {
+          return new Taxon(
+            childTaxon.title,
+            childTaxon.base_path,
+            childTaxon.content_id,
+            childTaxon.description
+          );
+        });
+      });
+  }
 
-    contentItems.forEach(function (contentItem) {
-      var documentType = metadata.document_metadata[contentItem.link.substring(1)].document_type;
-      var publicTimestamp = contentItem.public_timestamp;
-
-      // Manual sections are missing a public timestamp: make one up
-      if (typeof(publicTimestamp) === "undefined") {
-          publicTimestamp = '2016-01-01T00:00:00+00:00';
-      }
-
-      var contentItemModel = new ContentItem(
-        contentItem.title,
-        contentItem.link,
-        documentType,
-        new Date(publicTimestamp),
-        contentItem.description,
-        contentItem.document_collections
-      );
-
-      if (contentItemModel.isSubsection() == false &&
-          contentItemModel.belongsToDocumentCollection() == false) {
-        taxon.addContent(contentItemModel);
-      }
-    });
-
-    childTaxons.forEach(function (childTaxonBasePath) {
-      var childTaxon = Taxon.fromMetadata(childTaxonBasePath, metadata);
-      if (childTaxon !== null) {
-        taxon.addChild(childTaxon);
-      }
-    });
-
-    return taxon;
+  static fromBasePath(basePath) {
+    return https.get({
+      host: 'www.gov.uk',
+      path: '/api/content' + basePath
+    })
+      .then(function (contentItem) {
+        return new Taxon(
+          contentItem.title,
+          contentItem.base_path,
+          contentItem.content_id,
+          contentItem.description
+        );
+      });
   }
 }
 
