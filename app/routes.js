@@ -1,22 +1,21 @@
 var express = require('express');
 var router = express.Router();
 
-var DocumentType = require('./models/document_type.js');
+var DocumentTypes = require('./models/document_types.js');
 var TaxonPresenter = require('./models/taxon_presenter.js');
-var TaxonomyData = require('./models/taxonomy_data.js');
 var ContentPresenter = require('./models/content_presenter.js');
 var GuidanceContent = require('./models/guidance_content.js');
 var SearchService = require('./models/search_service');
 
   router.get('/', function (req, res) {
-    TaxonomyData.get().
-      then(function (taxonomyData) {
-        var documentTypeExamples = DocumentType.getExamples(taxonomyData.document_metadata)
-          .filter(function(documentTypeExample) {
-            return GuidanceContent.isGuidanceContent(documentTypeExample.documentType);
-          });
+    DocumentTypes.examples()
+      .then(function (examples) {
+        var guidanceExamples = examples.filter(function (example) {
+          return GuidanceContent.isGuidanceContent(example.documentType);
+        });
+
         res.render('index', {
-          documentTypeExamples: documentTypeExamples
+          documentTypeExamples: guidanceExamples
         });
       });
   });
