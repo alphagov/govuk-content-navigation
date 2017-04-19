@@ -29,11 +29,11 @@ router.get('/search', function (req, res) {
   var allGovUkResultCount = SearchService.count(req.query.q);
 
   Promise.all([scopedSearch, allGovUkResultCount]).
-    then(function (promiseResolution) {
+    then(function ([scopedSearchResults, allResults]) {
       res.render('search', {
         queryParams: req.query,
-        scopedSearch: promiseResolution[0],
-        allGovUkResultsCount: promiseResolution[1]
+        scopedSearch: scopedSearchResults,
+        allGovUkResultsCount: allResults
       });
     });
 });
