@@ -86,19 +86,6 @@ class TaxonPresenter {
     });
   }
 
-  determineBackToLink(pageUrl) {
-    var backTo = null;
-    // The 'back to' link behaviour differs depending on whether we are showing
-    // a leaf node taxon or a taxon higher up in the taxonomy.
-    if (this.children.length > 0) {
-      backTo = urlHelper.parse(pageUrl).pathname;
-    } else {
-      backTo = this.parent.basePath;
-    }
-
-    return backTo;
-  }
-
   isRootTaxon() {
     return this.parent.title === 'Home';
   }
