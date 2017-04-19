@@ -20,8 +20,6 @@ class RelatedContent {
   static get (contentBasePath) {
     var that = this;
 
-    return Promise.resolve([]);
-
     var parentTaxonsPromise = https.get({
       host: 'www.gov.uk',
       path: '/api/content' + contentBasePath
