@@ -4,20 +4,16 @@ var router = express.Router();
 var DocumentTypes = require('./models/document_types.js');
 var TaxonPresenter = require('./models/taxon_presenter.js');
 var ContentPresenter = require('./models/content_presenter.js');
-var GuidanceContent = require('./models/guidance_content.js');
 var SearchService = require('./models/search_service');
 
 router.get('/', function (req, res) {
-  DocumentTypes.examples().
-    then(function (examples) {
-      var guidanceExamples = examples.filter(function (example) {
-        return GuidanceContent.isGuidanceContent(example.documentType);
-      });
-
-      res.render('index', {
-        documentTypeExamples: guidanceExamples
-      });
-    });
+  DocumentTypes.guidanceExamples().
+    then(function (guidanceExamples) {
+      res.render(
+        'index',
+        {documentTypeExamples: guidanceExamples}
+      );
+  });
 });
 
 router.get('/education/:taxon?', function (req, res) {

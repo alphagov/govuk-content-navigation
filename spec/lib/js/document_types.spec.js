@@ -1,7 +1,7 @@
 "use strict";
 var rewire = require('rewire')
 
-describe('examples()', function() {
+describe('guidanceExamples()', function() {
   var DocumentTypes = rewire('../../../app/models/document_types');
   DocumentTypes.__set__('SearchService', {
     search: function() {
@@ -9,6 +9,21 @@ describe('examples()', function() {
         "facets": {
           "content_store_document_type": {
             "options": [
+              {
+                "value": {
+                  "slug": "guidance",
+                  "example_info": {
+                    "total": 21333,
+                    "examples": [
+                      {
+                        "title": "Rates of vehicle tax (V149 and V149/1)",
+                        "link": "/government/publications/rates-of-vehicle-tax-v149"
+                      }
+                    ]
+                  }
+                },
+                "documents": 19376
+              },
               {
                 "value": {
                   "slug": "press_release",
@@ -46,18 +61,14 @@ describe('examples()', function() {
     }
   });
 
-  it('returns a list of example document types and base paths', function(done) {
-    DocumentTypes.examples()
-      .then(function (examples) {
-        expect(examples).toEqual([
-          {
-            documentType: 'hmrc_manual_section',
-            basePath: '/hmrc-internal-manuals/employment-income-manual/eim32712'
-          },
-          {
-            documentType: 'press_release',
-            basePath: '/government/news/updated-measures-to-protect-poultry-against-avian-flu'
-          }
+  it('returns a list of guidance example document types and base paths', function(done) {
+    DocumentTypes.guidanceExamples()
+      .then(function (guidanceExamples) {
+        expect(guidanceExamples).toEqual([
+            {
+              documentType: 'guidance',
+              basePath: "/government/publications/rates-of-vehicle-tax-v149"
+            }
         ]);
       })
       .then(done);
