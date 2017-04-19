@@ -2,9 +2,9 @@ var express = require('express');
 var router = express.Router();
 
 var SearchRoutes = require('./routes/search');
+var TaxonRoutes = require('./routes/taxons');
 
 var DocumentTypes = require('./models/document_types.js');
-var TaxonPresenter = require('./models/taxon_presenter.js');
 var ContentPresenter = require('./models/content_presenter.js');
 
 router.get('/', function (req, res) {
@@ -22,33 +22,7 @@ router.get('/home/?', function (req, res) {
 });
 
 router.get('/search', SearchRoutes.show);
-
-router.get('/:theme/:taxon?', function (req, res) {
-  var theme = "/" + req.params.theme;
-  var taxonParam = req.params.taxon;
-
-  if(!taxonParam) {
-    taxonParam = theme;
-  }
-  else {
-    taxonParam = theme + "/" + taxonParam;
-  }
-
-  var taxonPresenter = new TaxonPresenter(taxonParam);
-  taxonPresenter.build().then(presentTaxon);
-
-  function presentTaxon (presentedTaxon) {
-    if (presentedTaxon.isPenultimate) {
-      res.render('taxonomy/penultimate-taxon', {
-        presentedTaxon: presentedTaxon,
-      });
-    } else {
-      res.render('taxonomy/taxon', {
-        presentedTaxon: presentedTaxon,
-      });
-    }
-  }
-});
+router.get('/:theme/:taxon?', TaxonRoutes.show);
 
 router.get(/\/.+/, function (req, res) {
   var basePath = req.url;
