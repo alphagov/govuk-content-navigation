@@ -50,7 +50,10 @@ class ContentPresenter {
           return {
             title: title,
             content: content,
-            breadcrumb: breadcrumb,
+            // TODO: The breadcrumbs will return the current item as the last item in the array, but this is currently
+            // handled elsewhere in the prototype. We should remove that special handling, and use the full breadcrumbs
+            // from here. For now, just remove the last item from the array
+            breadcrumb: breadcrumb.slice(0, -1),
             taxons: taxons,
             isWhitehall: isWhitehall,
             isHtmlManual: isHtmlManual,
