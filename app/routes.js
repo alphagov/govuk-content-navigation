@@ -1,10 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
+var SearchRoutes = require('./routes/search');
+
 var DocumentTypes = require('./models/document_types.js');
 var TaxonPresenter = require('./models/taxon_presenter.js');
 var ContentPresenter = require('./models/content_presenter.js');
-var SearchService = require('./models/search_service');
 
 router.get('/', function (req, res) {
   DocumentTypes.guidanceExamples().
@@ -20,23 +21,7 @@ router.get('/home/?', function (req, res) {
   res.render('home');
 });
 
-router.get('/search', function (req, res) {
-  var scopedSearch = SearchService.scopedSearch(
-    req.query.q,
-    req.query.scope
-  );
-
-  var allGovUkResultCount = SearchService.count(req.query.q);
-
-  Promise.all([scopedSearch, allGovUkResultCount]).
-    then(function ([scopedSearchResults, allResults]) {
-      res.render('search', {
-        queryParams: req.query,
-        scopedSearch: scopedSearchResults,
-        allGovUkResultsCount: allResults
-      });
-    });
-});
+router.get('/search', SearchRoutes.show);
 
 router.get('/:theme/:taxon?', function (req, res) {
   var theme = "/" + req.params.theme;
