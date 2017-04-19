@@ -1,7 +1,11 @@
 var TaxonPresenter = require('../models/taxon_presenter.js');
 
 class TaxonRoutes {
-  static show (req, res) {
+  static show (req, res, next) {
+    if(!TaxonPresenter.isValidTheme(req.params.theme)) {
+      return next();
+    }
+
     var theme = "/" + req.params.theme;
     var taxonParam = req.params.taxon;
 
