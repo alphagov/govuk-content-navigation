@@ -16,14 +16,37 @@ router.get('/', function (req, res) {
   });
 });
 
-router.get('/education/:taxon?', function (req, res) {
+router.get('/home/?', function (req, res) {
+  res.render('home');
+});
+
+router.get('/search', function (req, res) {
+  var scopedSearch = SearchService.scopedSearch(
+    req.query.q,
+    req.query.scope
+  );
+
+  var allGovUkResultCount = SearchService.count(req.query.q);
+
+  Promise.all([scopedSearch, allGovUkResultCount]).
+    then(function (promiseResolution) {
+      res.render('search', {
+        queryParams: req.query,
+        scopedSearch: promiseResolution[0],
+        allGovUkResultsCount: promiseResolution[1]
+      });
+    });
+});
+
+router.get('/:theme/:taxon?', function (req, res) {
+  var theme = "/" + req.params.theme;
   var taxonParam = req.params.taxon;
 
   if(!taxonParam) {
-    taxonParam = "/education";
+    taxonParam = theme;
   }
   else {
-    taxonParam = "/education/" + taxonParam;
+    taxonParam = theme + "/" + taxonParam;
   }
   var viewAll = !(typeof(req.query.viewAll) === "undefined");
 
@@ -51,28 +74,6 @@ router.get('/education/:taxon?', function (req, res) {
       });
     }
   }
-});
-
-router.get('/home/?', function (req, res) {
-  res.render('home');
-});
-
-router.get('/search', function (req, res) {
-  var scopedSearch = SearchService.scopedSearch(
-    req.query.q,
-    req.query.scope
-  );
-
-  var allGovUkResultCount = SearchService.count(req.query.q);
-
-  Promise.all([scopedSearch, allGovUkResultCount]).
-    then(function (promiseResolution) {
-      res.render('search', {
-        queryParams: req.query,
-        scopedSearch: promiseResolution[0],
-        allGovUkResultsCount: promiseResolution[1]
-      });
-    });
 });
 
 router.get(/\/.+/, function (req, res) {
