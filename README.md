@@ -21,19 +21,65 @@ HTML data from GOV.UK.
 
 ### Installation
 
+### Local setup
+
+First, you will have to clone the repository:
+
+```
+$ cd ~/govuk
+$ git clone git@github.com:alphagov/govuk-content-navigation.git
+$ cd govuk-content-navigation
+```
+
 We use `nvm` to manage node.js versions. Follow the steps below to install and
 use it:
 
-- Install `nvm` (`brew install nvm`)
+- install `nvm` (`brew install nvm`)
 - follow the post-install instructions for `nvm`
-- go into the project directory
-- run `nvm install`
+- from inside the govuk-content-navigation directory, run `nvm install`
 - run `nvm use` to verify everything is working.
 
 You can now install the dependencies with:
 
 ```
 npm install
+```
+
+At this point, you should have a working version of the prototype. Start the
+server with `npm start` and verify it's working on `http://localhost:3000`.
+
+#### Deploy to Heroku
+
+In order to deploy your code to Heroku, you will need a Heroku account. Please
+create one with your work email address and ask a team member to add yourself to
+the Heroku application.
+
+Then:
+
+- install the Toolbelt (https://devcenter.heroku.com/articles/heroku-cli)
+- login via the CLI tool with `heroku login`
+
+At this point you can add the heroku app as a remote:
+
+```
+$ cd ~/govuk/govuk-content-navigation
+$ heroku git:remote -a govuk-nav-prototype
+```
+
+In order to check it's working properly, run the following command:
+
+```
+git fetch --all
+```
+
+If the command runs without errors, you should have access to the Heroku app.
+
+The application is deployed automatically on a successful PR merge, which means
+we don't generally have to manually deploy the app. However, if you would like
+to push a certain version live, you can push it to the correct remote:
+
+```
+git push heroku master
 ```
 
 ### Importing new content
