@@ -48,22 +48,11 @@ router.get('/:theme/:taxon?', function (req, res) {
   else {
     taxonParam = theme + "/" + taxonParam;
   }
-  var viewAll = !(typeof(req.query.viewAll) === "undefined");
 
   var taxonPresenter = new TaxonPresenter(taxonParam);
   taxonPresenter.build().then(presentTaxon);
 
   function presentTaxon (presentedTaxon) {
-    if (viewAll) {
-      var backTo = presentedTaxon.determineBackToLink(req.url);
-      res.render('taxonomy/view-all', {
-        presentedTaxon: presentedTaxon,
-        backTo: backTo,
-      });
-
-      return;
-    }
-
     if (presentedTaxon.isPenultimate) {
       res.render('taxonomy/penultimate-taxon', {
         presentedTaxon: presentedTaxon,
