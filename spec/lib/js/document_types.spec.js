@@ -3,8 +3,8 @@ var rewire = require('rewire')
 
 describe('examples()', function() {
   var DocumentTypes = rewire('../../../app/models/document_types');
-  DocumentTypes.__set__('https', {
-    get: function() {
+  DocumentTypes.__set__('SearchService', {
+    search: function() {
       return Promise.resolve({
         "facets": {
           "content_store_document_type": {

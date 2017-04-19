@@ -19,11 +19,7 @@ class TaxonPresenter {
               presentedTaxon.buildChildren(),
               presentedTaxon.buildContent()
             ])
-              .then(function (promises) {
-                var breadcrumbs = promises[0];
-                var children = promises[1];
-                var guidanceContent = promises[2];
-
+              .then(function ([breadcrumbs, children, guidanceContent]) {
                 presentedTaxon.title = taxon.title;
                 presentedTaxon.description = taxon.description;
                 // TODO: The breadcrumbs will return the current item as the last item in the array, but this is currently

@@ -2,6 +2,7 @@
 
 var ContentItem = require("./content_item.js");
 var https = require('./https');
+var SearchService = require('./search_service');
 
 class Taxon {
   constructor(title, basePath, contentId, description, options) {
@@ -46,9 +47,17 @@ class Taxon {
   getContent() {
     var taxon = this;
 
-    return https.get({
-      host: 'www.gov.uk',
-      path: '/api/search.json?fields[]=content_store_document_type,title,public_timestamp,link,document_collections,description&count=1000&filter_taxons[]=' + taxon.contentId
+    return SearchService.search({
+      fields: [
+        'content_store_document_type',
+        'title',
+        'public_timestamp',
+        'link',
+        'document_collections',
+        'description'
+      ],
+      count: 1000,
+      filter_taxons: [taxon.contentId]
     })
       .then(function (contentItems) {
         return contentItems.results

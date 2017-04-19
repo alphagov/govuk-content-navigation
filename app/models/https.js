@@ -1,3 +1,5 @@
+"use strict";
+
 var https = require('https');
 var querystring = require('querystring');
 var Promise = require('bluebird');
