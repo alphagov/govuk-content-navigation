@@ -10,7 +10,6 @@ var Taxon = require('./taxon.js');
 var cheerio = require('cheerio');
 var https = require('./https');
 
-// TODO: We should present items to the controllers as raw JSON from the content store
 class ContentPresenter {
   constructor (basePath) {
     this.basePath = basePath.slice(1, basePath.length); // base path without leading slash
@@ -43,7 +42,7 @@ class ContentPresenter {
         var content_dom = cheerio.load(content);
         var title = content_dom('h1').first().text();
 
-        const presented = Promise.all([
+        return Promise.all([
           that.getBreadcrumbPromise(),
           that.getTaxonsPromise(),
           that.getRelatedContentPromise(),
@@ -57,9 +56,7 @@ class ContentPresenter {
             isHtmlManual: isHtmlManual,
             relatedContent: relatedContent,
           }
-        })
-
-        return presented;
+        });
       });
   }
 
@@ -71,12 +68,12 @@ class ContentPresenter {
   }
 
   getBreadcrumbPromise () {
-    const basePath = this.basePath;
+    const basePath = '/' + this.basePath;
     return Breadcrumbs.forBasePath(basePath);
   }
 
   getTaxonsPromise () {
-    const basePath = this.basePath;
+    const basePath = '/' + this.basePath;
 
     return https.get({
       host: 'www.gov.uk',

@@ -3,7 +3,6 @@
 var ContentItem = require("./content_item.js");
 var https = require('./https');
 
-// TODO: We should delete this class and present items to the controllers as raw JSON from the content store
 class Taxon {
   constructor(title, basePath, contentId, description, options) {
     this.title = title;
