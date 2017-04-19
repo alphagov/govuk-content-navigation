@@ -16,12 +16,12 @@ class TaxonRoutes {
     taxonPresenter.build().then(presentTaxon);
 
     function presentTaxon (presentedTaxon) {
-      if (presentedTaxon.isPenultimate) {
-        res.render('taxonomy/penultimate-taxon', {
+      if (presentedTaxon.hasGrandchildren) {
+        res.render('taxonomy/grid', {
           presentedTaxon: presentedTaxon,
         });
       } else {
-        res.render('taxonomy/taxon', {
+        res.render('taxonomy/accordion', {
           presentedTaxon: presentedTaxon,
         });
       }

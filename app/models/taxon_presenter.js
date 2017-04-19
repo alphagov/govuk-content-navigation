@@ -31,11 +31,11 @@ class TaxonPresenter {
                   guidance: guidanceContent
                 };
                 presentedTaxon.buildParent();
-                presentedTaxon.checkIfPenultimate();
 
-                return presentedTaxon.checkIfPenultimate()
-                  .then(function (isPenultimate) {
-                    presentedTaxon.isPenultimate = isPenultimate;
+                return presentedTaxon.hasGrandchildren().
+                  then(function (hasGrandchildren) {
+                    presentedTaxon.hasGrandchildren = hasGrandchildren;
+
                     return presentedTaxon;
                   });
               });
@@ -74,14 +74,14 @@ class TaxonPresenter {
     return this.taxon.filterByHeading('guidance');
   }
 
-  checkIfPenultimate() {
+  hasGrandchildren() {
     var grandchildPromises = this.children.map(function (child) {
       return child.atozChildren();
     });
 
     return Promise.all(grandchildPromises).then(function (childrensChildren) {
-      return childrensChildren.every(function (childsChildren) {
-        return !childsChildren.length;
+      return childrensChildren.some(function (childsChildren) {
+        return childsChildren.length > 0;
       });
     });
   }
