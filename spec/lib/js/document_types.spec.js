@@ -1,3 +1,4 @@
+"use strict";
 var rewire = require('rewire')
 
 describe('examples()', function() {

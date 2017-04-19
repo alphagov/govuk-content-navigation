@@ -24,7 +24,6 @@ class TaxonPresenter {
                 var children = promises[1];
                 var guidanceContent = promises[2];
 
-                presentedTaxon.taxon = taxon;
                 presentedTaxon.title = taxon.title;
                 presentedTaxon.description = taxon.description;
                 // TODO: The breadcrumbs will return the current item as the last item in the array, but this is currently
