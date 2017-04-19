@@ -1,67 +1,92 @@
 var urlHelper = require('url');
 
 var Taxon = require('./taxon.js');
-var BreadcrumbMaker = require('../../lib/js/breadcrumb_maker.js');
-var TaxonomyData = require('./taxonomy_data.js');
+var Breadcrumbs = require('../../lib/js/breadcrumbs.js');
 
 class TaxonPresenter {
-  constructor (taxonParam) {
+  constructor(taxonParam) {
     this.basePath = taxonParam;
   }
 
-  build () {
+  build() {
     return Promise.resolve(this)
       .then(function(presentedTaxon) {
-        return TaxonomyData.get().then(
-          function(taxonomyData) {
-            presentedTaxon.taxonomyData = taxonomyData;
-            presentedTaxon.buildTaxon();
-            presentedTaxon.buildBreadcrumb();
-            presentedTaxon.buildParent();
-            presentedTaxon.buildChildren();
-            presentedTaxon.buildContent();
-            presentedTaxon.checkIfPenultimate();
+        return presentedTaxon.buildTaxon()
+          .then(function (taxon) {
+            presentedTaxon.taxon = taxon;
+            return Promise.all([
+              presentedTaxon.buildBreadcrumb(),
+              presentedTaxon.buildChildren(),
+              presentedTaxon.buildContent()
+            ])
+              .then(function ([breadcrumbs, children, guidanceContent]) {
+                presentedTaxon.title = taxon.title;
+                presentedTaxon.description = taxon.description;
+                // TODO: The breadcrumbs will return the current item as the last item in the array, but this is currently
+                // handled elsewhere in the prototype. We should remove that special handling, and use the full breadcrumbs
+                // from here. For now, just remove the last item from the array
+                presentedTaxon.breadcrumb = breadcrumbs.slice(0, -1);
+                presentedTaxon.children = children;
+                presentedTaxon.content = {
+                  guidance: guidanceContent
+                };
+                presentedTaxon.buildParent();
+                presentedTaxon.checkIfPenultimate();
 
-            return presentedTaxon;
-          }
-        );
+                return presentedTaxon.checkIfPenultimate()
+                  .then(function (isPenultimate) {
+                    presentedTaxon.isPenultimate = isPenultimate;
+                    return presentedTaxon;
+                  });
+              });
+          });
       });
   }
 
-  buildTaxon () {
-    this.taxon = Taxon.fromMetadata(this.basePath, this.taxonomyData);
-    this.title = this.taxon.title;
-    this.description = this.taxon.description;
+  buildTaxon() {
+    return Taxon.fromBasePath(this.basePath);
   }
 
-  buildBreadcrumb () {
-    var breadcrumbMaker = new BreadcrumbMaker(this.taxonomyData);
-    this.breadcrumb =  breadcrumbMaker.getBreadcrumbForTaxon([this.basePath]);
+  buildBreadcrumb() {
+    return Breadcrumbs.forBasePath(this.basePath);
   }
 
-  buildParent () {
+  buildParent() {
     this.parent = this.breadcrumb[this.breadcrumb.length - 1];
   }
 
-  buildChildren () {
-    this.children = this.taxon.atozChildren().map(function (child) {
-      child.guidance = child.filterByHeading('guidance');
+  buildChildren() {
+    return this.taxon.atozChildren()
+      .then(function (children) {
+        var childrenPromises = children.map(function (child) {
+          return child.filterByHeading('guidance')
+            .then(function (filteredChild) {
+              child.guidance = filteredChild;
+              return child;
+            });
+        });
 
-      return child;
+        return Promise.all(childrenPromises);
+      });
+  }
+
+  buildContent() {
+    return this.taxon.filterByHeading('guidance');
+  }
+
+  checkIfPenultimate() {
+    var grandchildPromises = this.children.map(function (child) {
+      return child.atozChildren();
+    });
+
+    return Promise.all(grandchildPromises).then(function (childrensChildren) {
+      return childrensChildren.every(function (childsChildren) {
+        return !childsChildren.length;
+      });
     });
   }
 
-  buildContent () {
-    this.content = {};
-    this.content.guidance = this.taxon.filterByHeading('guidance');
-  }
-
-  checkIfPenultimate () {
-    var hasChildren = (childTaxon) => childTaxon.children.length > 0;
-    this.isPenultimate = !(this.children.find(hasChildren));
-  }
-
-  determineBackToLink (pageUrl) {
+  determineBackToLink(pageUrl) {
     var backTo = null;
     // The 'back to' link behaviour differs depending on whether we are showing
     // a leaf node taxon or a taxon higher up in the taxonomy.

@@ -5,10 +5,10 @@ var readFile = Promise.promisify(fs.readFile);
 var glob = Promise.promisify(require('glob'));
 
 var RelatedContent = require('./related_content.js');
-var BreadcrumbMaker = require('../../lib/js/breadcrumb_maker.js');
-var TaxonomyData = require('./taxonomy_data.js');
+var Breadcrumbs = require('../../lib/js/breadcrumbs.js');
 var Taxon = require('./taxon.js');
 var cheerio = require('cheerio');
+var https = require('./https');
 
 class ContentPresenter {
   constructor (basePath) {
@@ -42,7 +42,7 @@ class ContentPresenter {
         var content_dom = cheerio.load(content);
         var title = content_dom('h1').first().text();
 
-        const presented = Promise.all([
+        return Promise.all([
           that.getBreadcrumbPromise(),
           that.getTaxonsPromise(),
           that.getRelatedContentPromise(),
@@ -56,9 +56,7 @@ class ContentPresenter {
             isHtmlManual: isHtmlManual,
             relatedContent: relatedContent,
           }
-        })
-
-        return presented;
+        });
       });
   }
 
@@ -70,25 +68,26 @@ class ContentPresenter {
   }
 
   getBreadcrumbPromise () {
-    const basePath = this.basePath
-
-    return TaxonomyData.get().
-      then(function (metadata) {
-        var breadcrumbMaker = new BreadcrumbMaker(metadata);
-        var breadcrumb = breadcrumbMaker.getBreadcrumbForContent(basePath);
-
-        return breadcrumb;
-      });
+    const basePath = '/' + this.basePath;
+    return Breadcrumbs.forBasePath(basePath);
   }
 
   getTaxonsPromise () {
-    const basePath = this.basePath
+    const basePath = '/' + this.basePath;
 
-    return TaxonomyData.get().
-      then(function (metadata) {
-        return metadata.taxons_for_content[basePath].map(function (taxonBasePath) {
-          return Taxon.fromMetadata(taxonBasePath, metadata);
-        })
+    return https.get({
+      host: 'www.gov.uk',
+      path: '/api/content' + basePath
+    })
+      .then(function (contentItem) {
+        var links = contentItem.links || [];
+        var taxons = links.taxons || [];
+
+        var taxonPromises = taxons.map(function (taxon) {
+          return Taxon.fromBasePath(taxon.base_path);
+        });
+
+        return Promise.all(taxonPromises);
       });
   }
 }
