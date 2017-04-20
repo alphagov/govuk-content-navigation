@@ -8,6 +8,12 @@ class TaxonPresenter {
     this.basePath = taxonParam;
   }
 
+  // For now, the only valid theme is Education. There is no way of determining
+  // taxon themes programatically yet, so they still need to be hardcoded.
+  static isValidTheme (theme) {
+    return ['education'].includes(theme);
+  }
+
   build() {
     return Promise.resolve(this)
       .then(function(presentedTaxon) {
