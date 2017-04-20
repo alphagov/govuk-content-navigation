@@ -1,6 +1,6 @@
 "use strict";
 
-var https = require('../../app/models/https');
+var https = require('./https');
 
 class Breadcrumbs {
   static fromBasePath(basePath) {

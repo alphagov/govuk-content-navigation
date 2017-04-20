@@ -2,7 +2,7 @@ var fs = require('fs');
 var Promise = require('bluebird');
 var SearchService = require('../services/search_service');
 var GuidanceContent = require('../services/guidance_content');
-var https = require('./https');
+var https = require('../services/https');
 
 class RelatedContent {
   static esRelatedLinks(contentBasePath, parentTaxon) {
