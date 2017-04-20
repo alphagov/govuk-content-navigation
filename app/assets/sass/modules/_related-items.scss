@@ -1,0 +1,35 @@
+// Related items
+// (These styles will be moved to GOV.UK elements, duplicating here for now.)
+
+.related-container {
+  @include grid-column(1/3);
+  margin-top: $gutter-half;
+
+  @include media(tablet) {
+    margin-top: $gutter * 2;
+  }
+}
+
+.govuk-related-items {
+  margin-top: $gutter;
+  border-top: 10px solid $govuk-blue;
+  padding-top: 5px;
+
+  .heading-medium {
+    margin-top: 0.3em;
+    margin-bottom: 0.5em
+  }
+
+  li {
+    margin-bottom: 10px;
+    list-style-type: none;
+  }
+}
+
+.js-show {
+  display: none;
+}
+
+.js-enabled .js-show {
+  display: block;
+}

@@ -1,0 +1,20 @@
+#wrapper {
+  @extend %site-width-container;
+
+  .govuk-title,
+  .page-header {
+    margin-top: $gutter-half;
+
+    @include media(tablet) {
+      margin-top: $gutter * 1.5;
+    }
+
+    h1 {
+      padding-top: 0;
+    }
+
+    .context {
+      margin-bottom: 5px;
+    }
+  }
+}
