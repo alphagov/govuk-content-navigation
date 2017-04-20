@@ -1,6 +1,6 @@
 "use strict";
 
-var https = require('../models/https');
+var https = require('./https');
 
 /**
  * A service for interaction with the content store running outside the prototype, making real HTTPS requests.

@@ -7,7 +7,7 @@ var glob = Promise.promisify(require('glob'));
 var RelatedContent = require('../models/related_content.js');
 var Breadcrumbs = require('../services/breadcrumbs.js');
 var cheerio = require('cheerio');
-var https = require('../models/https');
+var https = require('../services/https');
 
 class ContentPresenter {
   constructor (basePath) {
