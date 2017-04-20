@@ -1,6 +1,6 @@
 "use strict";
-var SearchService = require('./search_service');
-var GuidanceContent = require('./guidance_content.js');
+var SearchService = require('../services/search_service');
+var GuidanceContent = require('../services/guidance_content.js');
 
 class DocumentTypes {
   static guidanceExamples() {

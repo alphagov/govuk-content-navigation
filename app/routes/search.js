@@ -1,4 +1,4 @@
-var SearchService = require('../models/search_service');
+var SearchService = require('../services/search_service');
 
 class SearchRoutes {
   static show (req, res) {

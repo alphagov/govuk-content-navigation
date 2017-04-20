@@ -3,10 +3,20 @@
     <div class="breadcrumbs">
       <ol>
         {% for page in pages %}
-          {% if loop.index0 == 3 %}{% set parent_path = page.basePath %}{% endif %}
-          <li{% if loop.last %} class="parent"{% endif %}><a href="{% if loop.index0 < 4 %}{{ page.basePath }}{% else %}{{ parent_path }}#{{ page.basePath }}{% endif %}"> {{ page.title }}</a></li>
+          {% set href = page.basePath %}
+          {% if loop.index0 == loop.length - 2 %}
+            {% set li_class = 'parent' %}
+          {% endif %}
+          {% if loop.last %}
+            {% set li_class = 'current' %}
+            {% set href = '#content' %}
+          {% endif %}
+          <li class="{{ li_class }}">
+            <a href="{{ href }}">
+              {{ page.title }}
+            </a>
+          </li>
         {% endfor %}
-        <li class="current"><a href="#content">{{ title }}</a></li>
       </ol>
     </div>
   {% endblock %}

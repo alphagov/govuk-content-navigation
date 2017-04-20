@@ -4,11 +4,10 @@ var Promise = require('bluebird');
 var readFile = Promise.promisify(fs.readFile);
 var glob = Promise.promisify(require('glob'));
 
-var RelatedContent = require('./related_content.js');
-var Breadcrumbs = require('../../lib/js/breadcrumbs.js');
-var Taxon = require('./taxon.js');
+var RelatedContent = require('../models/related_content.js');
+var Breadcrumbs = require('../services/breadcrumbs.js');
 var cheerio = require('cheerio');
-var https = require('./https');
+var https = require('../models/https');
 
 class ContentPresenter {
   constructor (basePath) {
@@ -50,10 +49,7 @@ class ContentPresenter {
           return {
             title: title,
             content: content,
-            // TODO: The breadcrumbs will return the current item as the last item in the array, but this is currently
-            // handled elsewhere in the prototype. We should remove that special handling, and use the full breadcrumbs
-            // from here. For now, just remove the last item from the array
-            breadcrumb: breadcrumb.slice(0, -1),
+            breadcrumb: breadcrumb,
             taxons: taxons,
             isWhitehall: isWhitehall,
             isHtmlManual: isHtmlManual,
@@ -72,7 +68,7 @@ class ContentPresenter {
 
   getBreadcrumbPromise () {
     const basePath = '/' + this.basePath;
-    return Breadcrumbs.forBasePath(basePath);
+    return Breadcrumbs.fromBasePath(basePath);
   }
 
   getTaxonsPromise () {
@@ -84,15 +80,9 @@ class ContentPresenter {
     })
       .then(function (contentItem) {
         var links = contentItem.links || [];
-        var taxons = links.taxons || [];
-
-        var taxonPromises = taxons.map(function (taxon) {
-          return Taxon.fromBasePath(taxon.base_path);
-        });
-
-        return Promise.all(taxonPromises);
+        return links.taxons || [];
       });
   }
 }
 
-module.exports = ContentPresenter
+module.exports = ContentPresenter;

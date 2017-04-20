@@ -1,17 +1,17 @@
-{% macro content_list(taxon, taxonContent, count=5) %}
+{% macro content_list(taxon, count=5) %}
 
-{% if taxonContent.length > 0 %}
+{% if taxon.taggedContent.length > 0 %}
   {% if taxon.children.length > 0 %}
-  <h2>{{ taxon.title }} guidance</h2>
+  <h2>{{ taxon.contentItem.title }} guidance</h2>
 
-  {% if taxon.description %}<p>{{ taxon.description }}</p>{% endif %}
+  {% if taxon.contentItem.description %}<p>{{ taxon.contentItem.description }}</p>{% endif %}
   {% endif %}
 
   <ul>
-    {% for document in taxonContent %}
+    {% for document in taxon.taggedContent %}
       {% if loop.index0 < count %}
       <li>
-        <h3><a href="{{ document.basePath }}">{{ document.title }}</a></h3>
+        <h3><a href="{{ document.link }}">{{ document.title }}</a></h3>
         <p>{{ document.description }}</p>
       </li>
       {% endif %}

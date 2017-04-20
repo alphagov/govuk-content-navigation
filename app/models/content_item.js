@@ -1,6 +1,6 @@
 "use strict";
 
-var GuidanceContent = require('./guidance_content');
+var GuidanceContent = require('../services/guidance_content');
 
 class ContentItem {
   constructor(title, basePath, documentType, publicTimestamp, description, documentCollections) {

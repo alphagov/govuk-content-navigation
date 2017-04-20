@@ -1,166 +1,164 @@
 "use strict";
 
-var ContentItem = require("./content_item.js");
-var https = require('./https');
-var SearchService = require('./search_service');
+var ContentStore = require('../services/content_store');
+var SearchService = require('../services/search_service');
 
+/**
+ * This class is an asynchronous representation of a taxon, which acts as a Promise builder.
+ *
+ * Example usage:
+ *
+ *   Taxon.fromBasePath('/education')
+ *     .withChildren()
+ *     .asPromise()
+ *     .then(function (taxon) {
+ *       // We are now guaranteed have taxon.children available:
+ *       taxon.children.forEach(doSomething);
+ *     });
+ *
+ * This behaviour is achieved with an array of Promises that are resolved before invoking the callback. This promises
+ * are built up using the provided convenience methods such as .withChildren(), which will add a promise to the list
+ * of promises that must be resolved before the callback is invoked.
+ */
 class Taxon {
-  constructor(title, basePath, contentId, description, options) {
-    this.title = title;
-    this.basePath = basePath;
-    this.contentId = contentId;
-    this.description = description;
-    if (typeof(options) === "undefined") {
-      options = {};
-    }
-    this.content = options.content || [];
-    this.children = options.children || [];
-  }
-
-  filterByHeading (headingId) {
-    var taxon = this;
-
-    var contentPromise = this.content.length
-      ? Promise.resolve(this.content)
-      : this.getContent();
-
-    return contentPromise.then(function (content) {
-      taxon.content = content;
-
-      var filteredContent = content.filter(
-        function (child) {
-          var heading = child.getHeading();
-          return heading !== null && heading.id === headingId;
-        }
-      );
-
-      return new Taxon(
-        taxon.title, taxon.basePath, taxon.contentId, taxon.description,
-        {
-          content: filteredContent,
-          children: taxon.children
-        }
-      );
-    });
-  }
-
-  getContent() {
-    var taxon = this;
-
-    return SearchService.search({
-      fields: [
-        'content_store_document_type',
-        'title',
-        'public_timestamp',
-        'link',
-        'document_collections',
-        'description'
-      ],
-      count: 1000,
-      filter_taxons: [taxon.contentId]
-    })
-      .then(function (contentItems) {
-        return contentItems.results
-          .map(function (contentItem) {
-            var publicTimestamp = contentItem.public_timestamp;
-
-            // Manual sections are missing a public timestamp: make one up
-            if (typeof(publicTimestamp) === "undefined") {
-              publicTimestamp = '2016-01-01T00:00:00+00:00';
-            }
-
-            return new ContentItem(
-              contentItem.title,
-              contentItem.link,
-              contentItem.content_store_document_type,
-              new Date(publicTimestamp),
-              contentItem.description,
-              contentItem.document_collections
-            );
-          })
-          .filter(function (contentItem) {
-            return !contentItem.isSubsection() && !contentItem.belongsToDocumentCollection();
-          });
-      });
-  }
-
-  popularContent (maxDocuments) {
-    return this.content.slice(0, maxDocuments);
-  }
-
-  atozContent (maxDocuments) {
-    var sorted = this.content.sort(function (a, b) {
-      if (a.title > b.title) {
-        return 1;
-      }
-
-      if (a.title < b.title) {
-        return -1;
-      }
-
-      return 0;
-    });
-
-    if (typeof(maxDocuments) !== "undefined") {
-      return sorted.slice(0, maxDocuments);
-    }
-
-    return sorted;
-  }
-
-  recentContent (maxDocuments) {
-    return this.content.sort(function (a, b) {
-      return b.publicTimestamp.getTime() - a.publicTimestamp.getTime();
-    }).slice(0, maxDocuments);
-  }
-
-  atozChildren () {
-    var childrenPromise = this.children.length
-      ? Promise.resolve(this.children)
-      : this.getChildren();
-
-    return childrenPromise.then(function (children) {
-      return children.sort(function (a, b) {
-        return a.title.localeCompare(b.title);
-      });
-    });
-  }
-
-  getChildren() {
-    var taxon = this;
-
-    return https.get({
-      host: 'www.gov.uk',
-      path: '/api/content' + taxon.basePath
-    })
-      .then(function (contentItem) {
-        var links = contentItem.links || [];
-        var childTaxons = links.child_taxons || [];
-
-        return childTaxons.map(function (childTaxon) {
-          return new Taxon(
-            childTaxon.title,
-            childTaxon.base_path,
-            childTaxon.content_id,
-            childTaxon.description
-          );
-        });
-      });
-  }
-
   static fromBasePath(basePath) {
-    return https.get({
-      host: 'www.gov.uk',
-      path: '/api/content' + basePath
-    })
-      .then(function (contentItem) {
-        return new Taxon(
-          contentItem.title,
-          contentItem.base_path,
-          contentItem.content_id,
-          contentItem.description
-        );
+    return new Taxon(basePath);
+  }
+
+  constructor(basePath) {
+    this.basePath = basePath;
+    this.promises = [];
+  }
+
+  /**
+   * @returns Promise that will resolve to a Taxon with the requested fields available
+   */
+  asPromise() {
+    var taxon = this;
+    return Promise.all(this.promises)
+      .then(function () {
+        return taxon;
       });
+  }
+
+  /**
+   * @returns a Taxon object which will resolve with the Content Store representation of the Taxon
+   */
+  withContentItem() {
+    var taxon = this;
+    return this.resolveIfNeeded({
+      key: 'contentItem',
+      promise: () => ContentStore.contentItem(taxon.basePath)
+        .then(function (contentItem) {
+          taxon.contentItem = contentItem;
+        })
+    });
+  }
+
+  /**
+   * @returns a Taxon object which will resolve with its children
+   */
+  withChildren() {
+    var taxon = this;
+    return this.resolveIfNeeded({
+      key: 'children',
+      dependencies: this.withContentItem(),
+      promise: (taxonWithContentItem) => {
+        var links = taxonWithContentItem.contentItem.links || {};
+        var childTaxons = links.child_taxons || [];
+        taxon.children = childTaxons.map(function (childTaxon) {
+          return Taxon.fromBasePath(childTaxon.base_path);
+        })
+      }
+    });
+  }
+
+  /**
+   * This method ensures the children of the Taxon are available on the Taxon object when the callback .then()
+   * function is called. It will also perform an operation on each child, defined by the provided mappingPromise, and
+   * ensure that those promises have all resolved when the callback function is invoked.
+   *
+   * Example usage:
+   *
+   *   Taxon.fromBasePath('/education')
+   *     .eachChild(function (child) {
+   *       // This would ensure all children have their content store representations available in .then()
+   *       return child.withContentItem().asPromise();
+   *     })
+   *     .asPromise()
+   *     .then(function (taxon) {
+   *       // Each taxon child now has its content store representation available
+   *       taxon.children.forEach(function(child) {
+   *         console.log(child.contentItem);
+   *       });
+   *     });
+   *
+   * @param mappingPromise a Promise that accepts a Taxon child as an argument
+   * @returns a Taxon object which will resolve with the children, having been manipulated by mappingPromise
+   */
+  eachChild(mappingPromise) {
+    return this.resolveIfNeeded({
+      key: mappingPromise,
+      dependencies: this.withChildren(),
+      promise: (taxonWithChildren) => {
+        var promises = taxonWithChildren.children.map(function (child) {
+          return mappingPromise(child);
+        });
+
+        return Promise.all(promises);
+      }
+    })
+  }
+
+  /**
+   * @returns Taxon which will resolve with its tagged content items
+   */
+  withTaggedContent() {
+    var taxon = this;
+    return this.resolveIfNeeded({
+      key: 'taggedContent',
+      dependencies: this.withContentItem(),
+      promise: (taxonWithContentItem) => {
+        return SearchService.search({
+          fields: [
+            'content_store_document_type',
+            'title',
+            'public_timestamp',
+            'link',
+            'document_collections',
+            'description'
+          ],
+          count: 1000,
+          filter_taxons: [taxonWithContentItem.contentItem.content_id]
+        }).then(function (searchResponse) {
+          taxon.taggedContent = searchResponse.results;
+        });
+      }
+    })
+  }
+
+  /**
+   * This method will resolve the provided promise, unless it's already enqueued.
+   * @param options:
+   * {
+   *   key: 'string',      // The key at which the requested property will be available
+   *   promise: Function,  // A function (that may be a Promise) that will be queued to resolve before the callback
+   *   dependencies: Taxon // a Taxon object with the required dependencies resolved
+   * }
+   * @returns Taxon object which will only resolve once the provided promise has resolved
+   */
+  resolveIfNeeded(options) {
+    var key = options.key;
+    var promise = options.promise;
+    var taxon = options.dependencies || this;
+
+    if (!taxon.hasOwnProperty(key)) {
+      // Store a temporary null in this key to prevent multiple invocations of the same promise
+      taxon[key] = null;
+      taxon.promises.push(taxon.asPromise().then(promise));
+    }
+
+    return taxon;
   }
 }
 
