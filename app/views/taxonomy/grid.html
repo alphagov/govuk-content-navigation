@@ -10,7 +10,7 @@
 
   <main id="content" class="taxonomy" role="main">
     {% include "includes/phase_banner_beta.html" %}
-    {{ breadcrumb_macro.render_breadcrumb(presentedTaxon.breadcrumb, presentedTaxon.title) }}
+    {{ breadcrumb_macro.render_breadcrumb(taxon.breadcrumbs, taxon.contentItem.title) }}
 
     {% include 'taxonomy/_taxon-heading.html' %}
 
@@ -20,10 +20,10 @@
         <nav role="navigation" class="child-topics-list">
           <h2>In this section</h2>
           <ul>
-            {% for childTaxon in presentedTaxon.children %}
+            {% for childTaxon in taxon.children %}
               <li>
-                <h3><a href="{{ childTaxon.basePath }}">{{ childTaxon.title }}</a></h3>
-                <p>{{ childTaxon.description }}</p>
+                <h3><a href="{{ childTaxon.basePath }}">{{ childTaxon.contentItem.title }}</a></h3>
+                <p>{{ childTaxon.contentItem.description }}</p>
               </li>
             {% endfor %}
           </ul>
@@ -32,7 +32,7 @@
 
       <div class="parent-topic-contents">
         <div class="topic-content">
-          {{ content_list_macro.content_list(presentedTaxon, presentedTaxon.content.guidance.atozContent()) }}
+          {{ content_list_macro.content_list(taxon) }}
         </div>
       </div>
     </div>

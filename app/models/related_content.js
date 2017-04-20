@@ -1,12 +1,11 @@
 var fs = require('fs');
 var Promise = require('bluebird');
-var SearchService = require('./search_service');
-var Taxon = require('./taxon.js');
-var GuidanceContent = require('./guidance_content');
+var SearchService = require('../services/search_service');
+var GuidanceContent = require('../services/guidance_content');
 var https = require('./https');
 
 class RelatedContent {
-  static esRelatedLinks (contentBasePath, parentTaxon) {
+  static esRelatedLinks(contentBasePath, parentTaxon) {
     return SearchService.search({
       similar_to: contentBasePath,
       start: 0,
@@ -17,10 +16,10 @@ class RelatedContent {
     });
   }
 
-  static get (contentBasePath) {
+  static get(contentBasePath) {
     var that = this;
 
-    var parentTaxonsPromise = https.get({
+    return https.get({
       host: 'www.gov.uk',
       path: '/api/content' + contentBasePath
     })
@@ -28,29 +27,21 @@ class RelatedContent {
         var links = contentItem.links || [];
         var taxons = links.taxons || [];
 
-        var taxonPromises = taxons.map(function (taxon) {
-          return Taxon.fromBasePath(taxon.base_path);
+        var searchResults = taxons.map(function (taxon) {
+          return that.esRelatedLinks(contentBasePath, taxon.content_id).then(function (searchResponse) {
+            var results = searchResponse.results;
+            return {
+              results: results,
+              basePath: taxon.base_path,
+              title: taxon.title,
+              contentId: taxon.content_id,
+              description: taxon.description
+            };
+          });
         });
 
-        return Promise.all(taxonPromises);
+        return Promise.all(searchResults);
       });
-
-    return parentTaxonsPromise.then(function (parentTaxons) {
-      var searchResults = parentTaxons.map(function (parentTaxon) {
-        return that.esRelatedLinks(contentBasePath, parentTaxon.contentId).then(function (searchResponse) {
-          var results = searchResponse.results;
-          return {
-            results: results,
-            basePath: parentTaxon.basePath,
-            title: parentTaxon.title,
-            contentId: parentTaxon.contentId,
-            description: parentTaxon.description
-          };
-        });
-      });
-
-      return Promise.all(searchResults);
-    });
   }
 }
 

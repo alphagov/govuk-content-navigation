@@ -10,7 +10,7 @@
 
   <main id="content" class="taxonomy" role="main">
     {% include "includes/phase_banner_beta.html" %}
-    {{ breadcrumb_macro.render_breadcrumb(presentedTaxon.breadcrumb, presentedTaxon.title) }}
+    {{ breadcrumb_macro.render_breadcrumb(taxon.breadcrumbs, taxon.contentItem.title) }}
 
     {% include 'taxonomy/_taxon-heading.html' %}
 
@@ -18,20 +18,20 @@
       <div class="column-two-thirds">
         <div class="topic-content">
 
-          {% if presentedTaxon.children.length %}
+          {% if taxon.children.length %}
           <div data-module="accordion-with-descriptions">
             <div class="subsection-wrapper">
               <div class="subsection">
                 <div class="subsection__header">
                   <h2 class="subsection__title">General information and guidance</h2>
-                  <p class="subsection__description">{{ presentedTaxon.description }}</p>
+                  <p class="subsection__description">{{ taxon.contentItem.description }}</p>
                 </div>
 
                 <div class="subsection__content" id="subsection_content_99">
                   <ul class="subsection__list">
-                    {% for document in presentedTaxon.content.guidance.atozContent() %}
+                    {% for document in taxon.taggedContent %}
                       <li class="subsection__list-item">
-                        <a href="{{ document.basePath }}">{{ document.title }}</a>
+                        <a href="{{ document.link }}">{{ document.title }}</a>
 
                         <p>{{ document.description }}</p>
                       </li>
@@ -39,18 +39,18 @@
                   </ul>
                 </div>
               </div>
-              {% for childTaxon in presentedTaxon.children %}
+              {% for childTaxon in taxon.children %}
                 <div class="subsection">
                   <div class="subsection__header">
-                    <h2 class="subsection__title">{{ childTaxon.title }}</h2>
-                    <p class="subsection__description">{{ childTaxon.description }}</p>
+                    <h2 class="subsection__title">{{ childTaxon.contentItem.title }}</h2>
+                    <p class="subsection__description">{{ childTaxon.contentItem.description }}</p>
                   </div>
 
                   <div class="subsection__content" id="subsection_content_{{ (loop.index+1) | pad(2, '0') }}">
                     <ul class="subsection__list">
-                      {% for document in childTaxon.guidance.atozContent() %}
+                      {% for document in childTaxon.taggedContent %}
                         <li class="subsection__list-item">
-                          <a href="{{ document.basePath }}">{{ document.title }}</a>
+                          <a href="{{ document.link }}">{{ document.title }}</a>
 
                           <p>{{ document.description }}</p>
                         </li>
@@ -62,8 +62,7 @@
             </div>
           </div>
           {% else %}
-            {{ content_list_macro.content_list(presentedTaxon,
-            presentedTaxon.content.guidance.atozContent()) }}
+            {{ content_list_macro.content_list(taxon) }}
           {% endif %}
         </div>
       </div>

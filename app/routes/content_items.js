@@ -1,4 +1,4 @@
-var ContentPresenter = require('../models/content_presenter.js');
+var ContentPresenter = require('../presenters/content_presenter.js');
 
 class ContentItemRoutes {
   static show (req, res) {

@@ -1,6 +1,6 @@
 "use strict";
 
-var https = require('./https');
+var https = require('../models/https');
 var querystring = require('querystring');
 
 /**
