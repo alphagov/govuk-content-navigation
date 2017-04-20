@@ -22,6 +22,10 @@ class DocumentTypes {
           .filter(function (documentTypeExample) {
             return GuidanceContent.isGuidanceContent(documentTypeExample.documentType);
           });
+      })
+      .catch(function (error) {
+        console.error((new Error(error)).stack);
+        process.exit(1);
       });
   }
 }
