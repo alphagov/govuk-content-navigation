@@ -11,9 +11,10 @@ class ContentItemRoutes {
           presentedContent: presentedContent,
         })
       }).
-      catch(function () {
-        res.status(404).render('404');
-      })
+      catch(function (error) {
+        console.error((new Error(error)).stack);
+        process.exit(1);
+      });
   }
 }
 

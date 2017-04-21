@@ -57,7 +57,7 @@ class Https {
 
         function fail(message) {
           reject(
-            `Error fetching  ${options.host}${options.path}
+            `Error fetching https://${options.host}${options.path}
              HTTP Status Code: ${response.statusCode}
              ${message || ''}
              === RESPONSE BODY ===

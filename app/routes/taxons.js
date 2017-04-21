@@ -16,7 +16,12 @@ class TaxonRoutes {
       taxonParam = theme + "/" + taxonParam;
     }
 
-    TaxonPresenter.build(taxonParam).then(presentTaxon);
+    TaxonPresenter.build(taxonParam)
+      .then(presentTaxon)
+      .catch(function (error) {
+        console.error((new Error(error)).stack);
+        process.exit(1);
+      });
 
     function presentTaxon(taxon) {
       if (taxon.hasGrandchildren) {

@@ -8,7 +8,11 @@ class SiteRoutes {
           'index',
           {documentTypeExamples: guidanceExamples}
         );
-    });
+      })
+      .catch(function (error) {
+        console.error((new Error(error)).stack);
+        process.exit(1);
+      });;
   }
 
   static home (req, res) {

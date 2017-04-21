@@ -16,6 +16,10 @@ class SearchRoutes {
           scopedSearch: scopedSearchResults,
           allGovUkResultsCount: allResults
         });
+      })
+      .catch(function (error) {
+        console.error((new Error(error)).stack);
+        process.exit(1);
       });
   }
 }
