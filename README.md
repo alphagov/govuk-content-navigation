@@ -1,4 +1,14 @@
-# GOV.UK Navigation Prototype 2016
+# DEPRECATED!!
+
+**This is no longer the most up-to-date navigation prototype repository and should
+not be used.**
+
+For the new prototype, please visit
+https://github.com/alphagov/govuk-nav-prototype
+
+---
+
+## GOV.UK Navigation Prototype 2016
 
 This app serves up prototype navigation flows for the work-in-progress GOV.UK
 navigation.
@@ -8,20 +18,20 @@ The `master` branch is deployed to https://govuk-nav-prototype.herokuapp.com/.
 See also the previous prototype:
 [https://github.com/alphagov/govuk-navigation-prototype](govuk-navigation-prototype).
 
-## Nomenclature
+### Nomenclature
 
 - **Taxon**: a single node within the taxonomy
 
-## Technical documentation
+### Technical documentation
 
 This is a node app built using the govuk_prototype_kit.
 
 All the data for the prototype comes from a pre-built JSON file and scraped
 HTML data from GOV.UK.
 
-### Installation
+#### Installation
 
-### Local setup
+#### Local setup
 
 First, you will have to clone the repository:
 
@@ -48,7 +58,7 @@ npm install
 At this point, you should have a working version of the prototype. Start the
 server with `npm start` and verify it's working on `http://localhost:3000`.
 
-#### Deploy to Heroku
+##### Deploy to Heroku
 
 In order to deploy your code to Heroku, you will need a Heroku account. Please
 create one with your work email address and ask a team member to add yourself to
@@ -82,19 +92,19 @@ to push a certain version live, you can push it to the correct remote:
 git push heroku master
 ```
 
-### Importing new content
+#### Importing new content
 
 The content in the prototype comes from inventories of education pages on
 GOV.UK.
 
-#### Prerequisites
+##### Prerequisites
 
   - Working installs of Python 2 and Ruby 2.
   - A Python virtual env set up for this project. See
     https://virtualenvwrapper.readthedocs.io/en/latest/
 
 
-#### Instructions
+##### Instructions
 
 Before you import new content, delete the old content from `app/content`.
 Furthermore, check if the taxonomy has changed. If there are new taxons, of base
@@ -130,12 +140,12 @@ The script executes the following:
     * Fetches taxon and content page metadata (e.g. which pages link to which
       taxons). This will be saved in `app/data/metadata_and_taxons.json`.
 
-#### Fetching content lists for topic pages
+##### Fetching content lists for topic pages
 
 This information comes from rummager. We ignore any results we don't have html
 for, to avoid dead links.
 
-#### Redirected content
+##### Redirected content
 
 When we import content we're currently skipping redirected pages.
 
@@ -143,7 +153,7 @@ In most cases it's fine to use the tags from the original inventory with the
 page the url is redirected to, but sometimes the pages are redirected to more
 generic information.
 
-#### Checking the content
+##### Checking the content
 
 - `bundle exec rake validate` checks that all pages have taxons associated with
   them
@@ -154,19 +164,19 @@ generic information.
   linkchecker 'http://localhost:3000'
   ```
 
-### Dependencies
+#### Dependencies
 
 - [Content store](https://github.com/alphagov/content-store) - provides taxon
   data
 - [Rummager](https://github.com/alphagov/rummager) - provides data about pages
   tagged to the new taxonomy
 
-### Running the application
+#### Running the application
 
 Run `npm start`
 
 Open the app at [http://localhost:3000/](http://localhost:3000/)
 
-## Licence
+### Licence
 
 [MIT License](LICENCE)
