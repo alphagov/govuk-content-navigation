@@ -144,6 +144,12 @@
     }
   }
 
+  .subsection__content {
+    h3 {
+      margin-top: $gutter * 1.5;
+    }
+  }
+
   .subsection__list-item {
     a {
       font-weight: bold;
