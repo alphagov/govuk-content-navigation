@@ -1,0 +1,145 @@
+{% extends "layout.html" %}
+{% import "taxonomy/content-list-macro.html" as content_list_macro %}
+{% import "breadcrumb-macro.html" as breadcrumb_macro %}
+
+{% block page_title %}
+  GOV.UK Content Navigation prototype
+{% endblock %}
+
+{% block content %}
+
+  <main id="content" class="taxonomy" role="main">
+    {% include "includes/phase_banner_beta.html" %}
+    {{ breadcrumb_macro.render_breadcrumb(taxon.breadcrumbs, taxon.contentItem.title) }}
+
+    {% include 'taxonomy/_taxon-heading.html' %}
+
+    <div class="grid-row child-topic-contents">
+      <div class="column-two-thirds">
+        <div class="topic-content">
+
+          <div data-module="accordion-with-descriptions">
+            <div class="subsection-wrapper">
+              <div class="subsection">
+                <div class="subsection__header">
+                  <h2 class="subsection__title">General information and guidance</h2>
+                  <p class="subsection__description">Overview of financial help available for students.</p>
+                </div>
+
+                <div class="subsection__content" id="subsection_content_99">
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/career-skills-and-training">Career skills and training</a><p>Find courses and training online with the National Careers Service and get advice on funding the costs of learning</p></li>
+                    <li class="subsection__list-item"><a href="/extra-money-pay-university">Extra money to pay for university</a><p>Bursaries and scholarships from universities or colleges including the National Scholarship Programme and hardship funds</p></li>
+                    <li class="subsection__list-item"><a href="/government/publications/financial-support-for-full-time-students-of-higher-education-in-2016-to-2017">Financial support for full-time students of higher education in 2016 to 2017</a><p>Information about tuition fees and loans available to students going to university or college in 2016 to 2017.</p></li>
+                    <li class="subsection__list-item"><a href="/further-education-courses">Further education courses and funding</a><p>Find and apply for a further or adult education course and work out what financial help you can get</p></li>
+                    <li class="subsection__list-item"><a href="/guidance/student-bursary-support-service">Student Bursary Support Service</a><p>Information about the Student Bursary Support Service</p></li>
+                    <li class="subsection__list-item"><a href="/student-finance">Student finance</a><p>Student finance - student loans or student grants for tuition fees and living costs, extra help, student loan repayments</p></li>
+
+
+                    <li class="subsection__list-item"><a href="/guidance/16-to-19-education-financial-support-for-students">16 to 19 education: financial support for students</a><p>Advice for institutions on the financial support young people may be able to access to help them participate in education and training.</p></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="subsection">
+                <div class="subsection__header">
+                  <h2 class="subsection__title">Student finance</h2>
+                  <p class="subsection__description">Apply for a loan, eligibility, repaying your loan, calculator, sign in to your account.</p>
+                </div>
+
+                <div class="subsection__content" id="subsection_content_02">
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/contact-student-finance-england">Contact Student Finance England</a><p>Contact details for Student Finance England - including complaints and student finance appeals, Advanced Learner Loan</p></li>
+                    <li class="subsection__list-item"><a href="/repaying-your-student-loan">Repaying your student loan</a><p>When you start repaying your student loan, your monthly repayments, what to do if you have 2 jobs or are self-employed, how to get a refund if you've overpaid</p></li>
+                    <li class="subsection__list-item"><a href="/student-finance">Student finance</a><p>Student finance - student loans or student grants for tuition fees and living costs, extra help, student loan repayments</p></li>
+                    <li class="subsection__list-item"><a href="/student-finance-calculator">Student finance calculator</a><p>Student finance calculator - get a quick estimate of what student loans, grants, bursaries and other funding you could get - for full-time, part-time and EU students</p></li>
+                    <li class="subsection__list-item"><a href="/student-finance-forms">Student finance forms</a><p>Download Student Finance England application forms and guidance notes - including forms PN1, PR1, PTG1, PFF2 and CYI</p></li>
+                    <li class="subsection__list-item"><a href="/student-finance-for-existing-students">Student finance if you started before 1 September 2012</a><p>For courses before September 2012 - student loans, grants, application forms, Tuition Fee Grant, Course Grant and guidance notes</p></li>
+                    <li class="subsection__list-item"><a href="/student-finance-register-login">Student finance login</a><p>Your student finance online account - check payment dates, track an application, change details, reset password, find customer reference numbers</p></li>
+                    <li class="subsection__list-item"><a href="/apply-for-student-finance">Student finance: how to apply</a><p>How to apply or support an application for student finance - when to apply, deadlines, proof of identity, parents, income, change an application</p></li>
+                    <li class="subsection__list-item"><a href="/government/publications/simplified-student-loan-repayment-model">Student loan repayment model</a><p>Spreadsheet that calculates student loan repayments.</p></li>
+                  </ul>
+                </div>
+
+              <div class="subsection">
+                <div class="subsection__header">
+                  <h2 class="subsection__title">Student loans, grants, bursaries and scholarships</h2>
+                  <p class="subsection__description">NHS bursary, 16 to 19 Bursary Fund, repay your loan, funding for parents and carers, Care to Learn.</p>
+                </div>
+
+                <div class="subsection__content" id="subsection_content_01">
+                  <h3>Student loans</h3>
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/advanced-learner-loan">Advanced Learner Loan</a><p>Advanced Learner Loan and the Bursary Fund help with college or training course costs - funding, how to apply, application forms, repayments</p></li>
+                    <li class="subsection__list-item"><a href="/postgraduate-loan">Postgraduate loans</a><p>Get a postgraduate loan to help fund a full-time or part-time master's degree: find out if you're eligible and how much you can get</p></li>
+                    <li class="subsection__list-item"><a href="/career-development-loans">Professional and Career Development Loans</a><p>Professional and Career Development Loans are low interest loans to pay for courses and training that help with your career - eligibility, and repayments and interest, helpline</p></li>
+                    <li class="subsection__list-item"><a href="/repaying-your-student-loan">Repaying your student loan</a><p>When you start repaying your student loan, your monthly repayments, what to do if you have 2 jobs or are self-employed, how to get a refund if you've overpaid</p></li>
+                    <li class="subsection__list-item"><a href="/student-finance">Student finance</a><p>Student finance - student loans or student grants for tuition fees and living costs, extra help, student loan repayments</p></li>
+                    <li class="subsection__list-item"><a href="/student-finance-for-existing-students">Student finance if you started before 1 September 2012</a><p>For courses before September 2012 - student loans, grants, application forms, Tuition Fee Grant, Course Grant and guidance notes</p></li>
+                    <li class="subsection__list-item"><a href="/government/publications/simplified-student-loan-repayment-model">Student loan repayment model</a><p>Spreadsheet that calculates student loan repayments.</p></li>
+                  </ul>
+
+                  <h3>Vocational funding</h3>
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/nhs-bursaries">NHS bursaries</a><p>NHS bursary and grants for medicine, dentistry and healthcare courses</p></li>
+                    <li class="subsection__list-item"><a href="/government/collections/nhs-bursary-reform-and-nurse-education">NHS bursary reform</a><p>Information about the proposed reform of the NHS bursary system.</p></li>
+                    <li class="subsection__list-item"><a href="/career-development-loans">Professional and Career Development Loans</a><p>Professional and Career Development Loans are low interest loans to pay for courses and training that help with your career - eligibility, and repayments and interest, helpline</p></li>
+                    <li class="subsection__list-item"><a href="/social-work-bursaries">Social work bursaries</a><p>Social work bursaries for help with tuition fees and living costs</p></li>
+                    <li class="subsection__list-item"><a href="/teacher-training-funding">Teacher training funding</a><p>Teacher training - funding for full or part-time teacher training courses including Postgraduate Certificate of Education (PGCE)</p></li>
+                  </ul>
+
+                  <h3>Bursaries for 16-19 year olds</h3>
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/1619-bursary-fund">16 to 19 Bursary Fund</a><p>Bursaries of up to £1,200 for students in further education, training or unpaid apprenticeships - what’s available, eligibility and how to apply</p></li>
+                    <li class="subsection__list-item"><a href="/guidance/advice-for-young-people-16-to-19-bursary-fund-guide">Advice for young people: 16 to 19 Bursary Fund guide</a><p>Guidance for young people about the 16 to 19 Bursary Fund in the 2017 to 2018 academic year.</p></li>
+                    <li class="subsection__list-item"><a href="/guidance/advice-for-young-people-2016-to-2017-16-to-19-bursary-fund-guide">Advice for young people: 2016 to 2017 16 to 19 Bursary Fund guide</a><p>Guidance for all institutions administering the 16 to 19 Bursary Fund in 2016 to 2017.</p></li>
+                    <li class="subsection__list-item"><a href="/education-maintenance-allowance-ema">Education Maintenance Allowance (EMA)</a><p>Education Maintenance Allowance (EMA) if you're studying in Northern Ireland, Scotland or Wales</p></li>
+                  </ul>
+
+                  <h3>Funding for students aged 20 and over</h3>
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/advanced-learner-loan">Advanced Learner Loan</a><p>Advanced Learner Loan and the Bursary Fund help with college or training course costs - funding, how to apply, application forms, repayments</p></li>
+                    <li class="subsection__list-item"><a href="/discretionary-learner-support">Discretionary Learner Support</a><p>Discretionary Learner Support - funding for students aged over 19 in further education and financial hardship</p></li>
+                    <li class="subsection__list-item"><a href="/funding-for-postgraduate-study">Funding for postgraduate study</a><p>Postgraduate funding - find grants, loans, studentships and scholarships</p></li>
+                    <li class="subsection__list-item"><a href="/grant-bursary-adult-learners">Grants and bursaries for adult learners</a><p>Funding for adult learners - grants and bursaries for study and training costs</p></li>
+                    <li class="subsection__list-item"><a href="/postgraduate-loan">Postgraduate loans</a><p>Get a postgraduate loan to help fund a full-time or part-time master's degree: find out if you're eligible and how much you can get</p></li>
+                  </ul>
+
+                  <h3>Funding for parents and carers</h3>
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/adult-dependants-grant">Adult Dependants' Grant</a><p>Adult Dependants' Grant for full-time students who financially support an adult - funding, how to apply, eligibility</p></li>
+                    <li class="subsection__list-item"><a href="/care-to-learn">Care to Learn</a><p>Care to Learn helps pay for childcare while you're studying - how to apply, money you get, courses that qualify, eligibility</p></li>
+                    <li class="subsection__list-item"><a href="/childcare-grant">Childcare Grant</a><p>Childcare Grants for full-time students in higher education - grants, CCG1, CCG2 forms, how to apply, eligibility</p></li>
+                    <li class="subsection__list-item"><a href="/parents-learning-allowance">Parents' Learning Allowance</a><p>Parents' Learning Allowance for full-time students with children - funding, apply, eligibility</p></li>
+                  </ul>
+
+                  <h3>Funding for accommodation</h3>
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/residential-support-scheme">Get funding for college accommodation</a><p>Help with term-time accommodation when you're studying away from home - what you'll get, eligibility, how to claim</p></li>
+                    <li class="subsection__list-item"><a href="/guidance/specialist-residential-institutions">Specialist residential institutions offering residential bursary fund: academic year 2016 to 2017</a><p>Specialist residential institutions offering the Residential Bursary Fund in the 2016 to 2017 academic year</p></li>
+                    <li class="subsection__list-item"><a href="/guidance/specialist-residential-institutions-offering-residential-bursary-fund-academic-year-2017-to-2018">Specialist residential institutions offering residential bursary fund: academic year 2017 to 2018</a><p>Specialist residential institutions offering the Residential Bursary Fund in the 2017 to 2018 academic year</p></li>
+                  </ul>
+
+                  <h3>Funding for students from overseas</h3>
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/guidance/chevening-scholarships-for-students-from-overseas">Chevening Scholarships for students from overseas</a><p>Chevening Scholarships are one-year Masters’ degrees for graduates from eligible countries who could be future leaders. Find out about eligibility and how to apply.</p></li>
+                    <li class="subsection__list-item"><a href="/guidance/marshall-scholarships-for-american-students">Marshall Scholarships for American students</a><p>Marshall Scholarships finance high-calibre young graduates or soon-to-be graduates from the USA to study in the UK: find out how to apply.</p></li>
+                  </ul>
+
+                  <h3>Other types of funding</h3>
+                  <ul class="subsection__list">
+                    <li class="subsection__list-item"><a href="/disabled-students-allowances-dsas">Disabled Students' Allowances (DSAs)</a><p>Disabled Students' Allowance is extra money for higher education students - DSA1 forms, eligibility, how to apply, needs assessment</p></li>
+                    <li class="subsection__list-item"><a href="/dance-drama-awards">Dance and Drama Awards: funding for students</a><p>Dance and Drama Awards (DaDAs) help talented students with the cost of performing arts training - how much you'll get, how to apply</p></li>
+                    <li class="subsection__list-item"><a href="/travel-grants-students-england">Studying abroad: travel grants for students (England)</a><p>Travel grants for students including medical and dental students - travel costs, Erasmus placements, how to apply, eligibility, travel expenses forms</p></li>
+                    <li class="subsection__list-item"><a href="/support-military-bereaved-children">Scholarships for children whose parent died in service</a><p>Apply for financial help to pay for university, higher and further education if one of your parents died while serving in the armed forces - who can apply, how much you can get, how to apply, how long it takes</p></li>
+                    <li class="subsection__list-item"><a href="/subsidised-college-transport-16-19">Subsidised transport for 16 to 19 year olds in education</a><p>Find the discounts and concessions that are available in your area for travel to school sixth form or college through your local council website</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock %}

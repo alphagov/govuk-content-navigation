@@ -28,6 +28,10 @@ class TaxonRoutes {
         res.render('taxonomy/grid', {
           taxon: taxon,
         });
+      } else if (req.path == '/education/funding-and-finance-for-students') {
+        res.render('taxonomy/accordion-student-finance', {
+          taxon: taxon,
+        });
       } else {
         res.render('taxonomy/accordion', {
           taxon: taxon,
